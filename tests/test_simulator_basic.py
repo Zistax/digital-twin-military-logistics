@@ -6,7 +6,7 @@ def test_run_simulation_basic():
     """Verifica che la simulazione base giri senza errori e produca eventi."""
     config = SimConfig(
         simulation_name="test_run",
-        total_minutes=60,
+        total_minutes=200,
         timestep_minutes=10,
         n_convoys=3,
         depot_capacity=2,

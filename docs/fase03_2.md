@@ -98,8 +98,8 @@ def compute_basic_kpis(df: pd.DataFrame) -> Dict[str, Any]:
 5. Salva il file.
 
 **Checklist**
-- [ ] Esiste `src\sim\metrics.py`
-- [ ] Il file contiene le funzioni `load_events_csv` e `compute_basic_kpis`
+- [x] Esiste `src\sim\metrics.py`
+- [x] Il file contiene le funzioni `load_events_csv` e `compute_basic_kpis`
 
 ---
 
@@ -116,7 +116,7 @@ python
 ```python
 from src.sim.metrics import load_events_csv, compute_basic_kpis
 
-df = load_events_csv("data/raw/sim_events_20250101_153000.csv")  # <-- metti un tuo file
+df = load_events_csv("data/raw/sim_events_20251117_152933.csv")  # <-- metti un tuo file
 kpis = compute_basic_kpis(df)
 print(kpis)
 ```
@@ -130,9 +130,9 @@ exit()
 ```
 
 **Checklist (fine Giorno 5)**
-- [ ] `metrics.py` è importabile senza errori
-- [ ] `load_events_csv` carica un CSV reale
-- [ ] `compute_basic_kpis` restituisce un dizionario con i KPI
+- [x] `metrics.py` è importabile senza errori
+- [x] `load_events_csv` carica un CSV reale
+- [x] `compute_basic_kpis` restituisce un dizionario con i KPI
 
 ---
 
@@ -211,8 +211,8 @@ if __name__ == "__main__":
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `src\sim\analyze_last_run.py`
-- [ ] Lo script importa `load_events_csv` e `compute_basic_kpis`
+- [x] Esiste `src\sim\analyze_last_run.py`
+- [x] Lo script importa `load_events_csv` e `compute_basic_kpis`
 
 ---
 
@@ -238,9 +238,9 @@ python -m src.sim.analyze_last_run
 - eventuali messaggi finali.
 
 **Checklist (fine Giorno 6)**
-- [ ] `python -m src.sim.analyze_last_run` funziona senza errori
-- [ ] Lo script individua l’ultimo CSV (anche se ce ne sono più di uno)
-- [ ] I KPI stampati hanno senso rispetto alla simulazione eseguita
+- [x] `python -m src.sim.analyze_last_run` funziona senza errori
+- [x] Lo script individua l’ultimo CSV (anche se ce ne sono più di uno)
+- [x] I KPI stampati hanno senso rispetto alla simulazione eseguita
 
 ---
 
@@ -323,8 +323,8 @@ def test_compute_basic_kpis_no_completed():
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `tests\test_metrics_basic.py`
-- [ ] Dentro ci sono 3 funzioni di test come sopra
+- [x] Esiste `tests\test_metrics_basic.py`
+- [x] Dentro ci sono 3 funzioni di test come sopra
 
 ---
 
@@ -339,8 +339,8 @@ pytest
 Controlla che tutti i test passino (quelli della Fase 01, Fase 02 e anche i nuovi).
 
 **Checklist**
-- [ ] `pytest` gira senza errori
-- [ ] I test in `test_metrics_basic.py` passano
+- [x] `pytest` gira senza errori
+- [x] I test in `test_metrics_basic.py` passano
 
 ---
 
@@ -366,7 +366,7 @@ python -m src.sim.analyze_last_run
 Salva il file `run_checks.bat` dopo le modifiche.
 
 **Checklist (opzionale)**
-- [ ] `run_checks.bat` ora esegue anche `python -m src.sim.analyze_last_run`
+- [x] `run_checks.bat` ora esegue anche `python -m src.sim.analyze_last_run`
 
 ---
 

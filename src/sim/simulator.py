@@ -46,26 +46,28 @@ class SimState:
 
         # Calcoliamo di quanto avanza il 'progress' a ogni passo
         if self.config.total_minutes > 0:
-            progress_increment = 100.0 * self.config.timestep_minutes / self.config.total_minutes 
+            progress_increment = self.config.timestep_minutes / self.config.total_minutes 
         else:
-            progress_increment = 100.0
+            progress_increment = 1.0
 
         for convoy in self.convoys:
-            if convoy.state == ConvoyState.EN_ROUTE:
-                old_progress = convoy.progress
-                convoy.progress = min(100.0, convoy.progress + progress_increment)
+            if convoy.state == ConvoyState.COMPLETED:
+                continue
+            
+            old_progress = convoy.progress
+            convoy.progress = min(1.0, convoy.progress + progress_increment)
 
-                # Se il convoglio ha appena completato la missione, registriamo un evento
-                if old_progress < 100.0 and convoy.progress >= 100.0:
-                    convoy.state = ConvoyState.COMPLETED
-                    events.append(
-                        {
-                            "event_type": "convoy_completed",
-                            "convoy_id": convoy.id,
-                            "minute": self.current_minute,
-                            "progress": convoy.progress,
-                        }
-                    )
+            # Se il convoglio ha appena completato la missione, registriamo un evento
+            if old_progress < 1.0 and convoy.progress >= 1.0:
+                convoy.state = ConvoyState.COMPLETED
+                events.append(
+                    {
+                        "event_type": "convoy_completed",
+                        "convoy_id": convoy.id,
+                        "minute": self.current_minute,
+                        "progress": convoy.progress,
+                    }
+                )
 
         return events
 

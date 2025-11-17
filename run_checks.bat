@@ -29,9 +29,17 @@ python -m src.sim.main_sim
 
 echo.
 echo ==============================
+echo Eseguo analisi dell'ultima simulazione...
+echo ==============================
+
+python -m src.sim.analyze_last_run
+
+echo.
+echo ==============================
 echo Controlli completati.
 echo Premi un tasto per chiudere.
 echo ==============================
 pause
+
 
 endlocal
