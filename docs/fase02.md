@@ -60,8 +60,8 @@ cd C:\Users\TUO_UTENTE\Progetti\digital-twin-logistico
 4. Verifica che vedi `(.venv)` all’inizio della riga del terminale.
 
 **Checklist**
-- [ ] Sono nella cartella `digital-twin-logistico`
-- [ ] L’ambiente `.venv` è attivo (`(.venv)` nel prompt)
+- [x] Sono nella cartella `digital-twin-logistico`
+- [x] L’ambiente `.venv` è attivo (`(.venv)` nel prompt)
 
 ---
 
@@ -94,8 +94,8 @@ class SimConfig:
 5. Salva il file (`Ctrl + S`).
 
 **Checklist**
-- [ ] Esiste il file `src\sim\config.py`
-- [ ] Il file contiene la classe `SimConfig` con i campi indicati
+- [x] Esiste il file `src\sim\config.py`
+- [x] Il file contiene la classe `SimConfig` con i campi indicati
 
 ---
 
@@ -165,9 +165,9 @@ py -m src.sim.main_sim
 Dovresti vedere il testo con la configurazione stampata.
 
 **Checklist (fine Giorno 1)**
-- [ ] `src\sim\config.py` creato
-- [ ] `main_sim.py` aggiornato con uso di `SimConfig`
-- [ ] Il comando `python -m src.sim.main_sim` (o `py ...`) funziona e mostra la configurazione
+- [x] `src\sim\config.py` creato
+- [x] `main_sim.py` aggiornato con uso di `SimConfig`
+- [x] Il comando `python -m src.sim.main_sim` (o `py ...`) funziona e mostra la configurazione
 
 ---
 
@@ -232,8 +232,8 @@ class Depot:
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `src\sim\models.py`
-- [ ] Dentro sono definiti `ConvoyState`, `Convoy`, `Depot`
+- [x] Esiste `src\sim\models.py`
+- [x] Dentro sono definiti `ConvoyState`, `Convoy`, `Depot`
 
 ---
 
@@ -267,7 +267,7 @@ exit()
 ```
 
 **Checklist (fine Giorno 2)**
-- [ ] `Convoy`, `Depot` e `ConvoyState` sono definiti
+- [x] `Convoy`, `Depot` e `ConvoyState` sono definiti
 - [ ] (Opzionale) Ho fatto una prova veloce nel REPL
 
 ---
@@ -402,8 +402,8 @@ def run_simulation(config: SimConfig) -> Tuple[List[Dict[str, object]], Dict[str
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `src\sim\simulator.py`
-- [ ] Dentro sono definiti `SimState` e `run_simulation`
+- [x] Esiste `src\sim\simulator.py`
+- [x] Dentro sono definiti `SimState` e `run_simulation`
 
 ---
 
@@ -469,9 +469,9 @@ python -m src.sim.main_sim
 Dovresti vedere un riassunto della simulazione (convogli tutti completati se il tempo totale è sufficiente).
 
 **Checklist (fine Giorno 3)**
-- [ ] `simulator.py` creato con `SimState` e `run_simulation`
-- [ ] `main_sim.py` aggiornato per usare `run_simulation`
-- [ ] `python -m src.sim.main_sim` funziona e mostra un riassunto
+- [x] `simulator.py` creato con `SimState` e `run_simulation`
+- [x] `main_sim.py` aggiornato per usare `run_simulation`
+- [x] `python -m src.sim.main_sim` funziona e mostra un riassunto
 
 ---
 
@@ -554,8 +554,8 @@ def run_simulation(config: SimConfig) -> Tuple[List[Dict[str, object]], Dict[str
 2. La parte successiva della funzione (`# Calcoliamo un piccolo riassunto`) può rimanere come prima.
 
 **Checklist**
-- [ ] `run_simulation` ora aggiunge eventi di tipo `"convoy_spawned"` all’inizio
-- [ ] Gli eventi di completamento hanno i campi `event_type`, `convoy_id`, `minute`, `step_index`, `progress`
+- [x] `run_simulation` ora aggiunge eventi di tipo `"convoy_spawned"` all’inizio
+- [x] Gli eventi di completamento hanno i campi `event_type`, `convoy_id`, `minute`, `step_index`, `progress`
 
 ---
 
@@ -570,8 +570,8 @@ python -m src.sim.main_sim
 Non vedrai ancora i dettagli degli eventi a schermo, ma il comportamento generale non dovrebbe dare errori.
 
 **Checklist (fine Giorno 4)**
-- [ ] `python -m src.sim.main_sim` gira senza errori dopo le modifiche
-- [ ] `run_simulation` restituisce una lista di eventi con struttura più ricca (lo verificherai meglio domani)
+- [x] `python -m src.sim.main_sim` gira senza errori dopo le modifiche
+- [x] `run_simulation` restituisce una lista di eventi con struttura più ricca (lo verificherai meglio domani)
 
 ---
 
@@ -628,9 +628,9 @@ def run_simulation(config: SimConfig, save_to_csv: bool = True) -> Tuple[List[Di
 - scrive il percorso nel `summary`.
 
 **Checklist**
-- [ ] `simulator.py` importa `datetime`, `Path`, `pandas as pd`
-- [ ] `run_simulation` ha il parametro `save_to_csv`
-- [ ] Esiste il blocco che salva gli eventi in CSV in `data\raw`
+- [x] `simulator.py` importa `datetime`, `Path`, `pandas as pd`
+- [x] `run_simulation` ha il parametro `save_to_csv`
+- [x] Esiste il blocco che salva gli eventi in CSV in `data\raw`
 
 ---
 
@@ -693,9 +693,9 @@ Apri Esplora File e verifica che il file esista:
 - dovresti vedere il file `sim_events_...csv`
 
 **Checklist (fine Giorno 5)**
-- [ ] `python -m src.sim.main_sim` esegue la simulazione e mostra il percorso del CSV
-- [ ] Esiste un file `sim_events_YYYYMMDD_HHMMSS.csv` in `data\raw`
-- [ ] Il file CSV si apre (anche con Blocco Note o Excel) e contiene righe di eventi
+- [x] `python -m src.sim.main_sim` esegue la simulazione e mostra il percorso del CSV
+- [x] Esiste un file `sim_events_YYYYMMDD_HHMMSS.csv` in `data\raw`
+- [x] Il file CSV si apre (anche con Blocco Note o Excel) e contiene righe di eventi
 
 ---
 
@@ -819,9 +819,9 @@ python -m src.sim.main_sim
 - Prova a mettere un valore non valido (es. testo) e verifica che venga usato il default.
 
 **Checklist (fine Giorno 6)**
-- [ ] `main_sim.py` chiede i parametri da console
-- [ ] Posso eseguire la simulazione con diversi parametri
-- [ ] I CSV in `data\raw` vengono creati ad ogni esecuzione
+- [x] `main_sim.py` chiede i parametri da console
+- [x] Posso eseguire la simulazione con diversi parametri
+- [x] I CSV in `data\raw` vengono creati ad ogni esecuzione
 
 ---
 
@@ -891,9 +891,9 @@ tests/test_simulator_basic.py .
 (se hai solo i due test, vedrai 2 test passati).
 
 **Checklist (fine Giorno 7)**
-- [ ] Esiste `tests\test_simulator_basic.py`
-- [ ] `pytest` gira senza errori
-- [ ] Il test `test_run_simulation_basic` passa
+- [x] Esiste `tests\test_simulator_basic.py`
+- [x] `pytest` gira senza errori
+- [x] Il test `test_run_simulation_basic` passa
 
 ---
 
@@ -916,7 +916,7 @@ L’importante è che:
 - lanci `python -m src.sim.main_sim`.
 
 **Checklist**
-- [ ] `run_checks.bat` esiste e contiene i comandi per attivare `.venv`, eseguire `pytest`, eseguire `python -m src.sim.main_sim`
+- [x] `run_checks.bat` esiste e contiene i comandi per attivare `.venv`, eseguire `pytest`, eseguire `python -m src.sim.main_sim`
 
 ---
 
@@ -935,9 +935,9 @@ L’importante è che:
    - la simulazione venga eseguita chiedendo i parametri da console.
 
 **Checklist**
-- [ ] `run_checks.bat` gira senza errori
-- [ ] I test passano
-- [ ] La simulazione parte al termine dei test
+- [x] `run_checks.bat` gira senza errori
+- [x] I test passano
+- [x] La simulazione parte al termine dei test
 
 ---
 
