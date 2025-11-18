@@ -1,5 +1,6 @@
 from .config import SimConfig
 from .simulator import run_simulation
+from src.config.config_loader import load_sim_config
 
 def ask_int(prompt: str,default: int) -> int:
     """Chiede un intero all'utente con un valore di default.
@@ -30,12 +31,17 @@ def main() -> None:
     print("Premi Invio per accettare i valori di default indicati tra parentesi quadre.")
     print()
 
-    default_config = SimConfig()
+    sim_conf = load_sim_config()
 
-    total_minutes = ask_int("Durata totale simulazione (minuti)", default_config.total_minutes)
-    timestep_minutes = ask_int("Durata di ogni passo (minuti)", default_config.timestep_minutes)
-    n_convoys = ask_int("Numero di convogli", default_config.n_convoys)
-    depot_capacity = ask_int("Capacità del deposito (placeholder)", default_config.depot_capacity)
+    default_total_minutes = int(sim_conf.get("total_minutes", 120))
+    default_timestep_minutes = int(sim_conf.get("timestep_minutes", 10))
+    default_n_convoys = int(sim_conf.get("n_convoys", 5))
+    default_depot_capacity = int(sim_conf.get("depot_capacity", 2))
+
+    total_minutes = ask_int("Durata totale simulazione (minuti)", default_total_minutes)
+    timestep_minutes = ask_int("Durata di ogni passo (minuti)", default_timestep_minutes)
+    n_convoys = ask_int("Numero di convogli", default_n_convoys)
+    depot_capacity = ask_int("Capacità del deposito", default_depot_capacity)
 
     # Creiamo una nuova configurazione con i valori scelti
     config = SimConfig(

@@ -65,3 +65,20 @@ Il sistema utilizza una **soglia di rischio predefinita**:
 Questa soglia è stata scelta analizzando precision, recall e F1 nel notebook
 `notebooks/evaluate_risk_model.ipynb`. Tutti i componenti (CLI, API, UI)
 usano questa soglia per decidere se un convoglio è considerato "ad alto rischio".
+
+## Configurazione & riproducibilità
+
+Il progetto utilizza file YAML nella cartella `conf/` per gestire i valori di default:
+
+- `conf/sim/default.yml` → parametri di simulazione (durata, timestep, n_convoys, ecc.)
+- `conf/ml/default.yml` → parametri di training ML (test_size, random_state, max_iter, ecc.)
+
+Le funzioni `load_sim_config()` e `load_ml_config()` (in `src/config/config_loader.py`)
+caricano queste impostazioni. In particolare:
+
+- il campo `random_state` in `conf/ml/default.yml` controlla la riproducibilità
+  del train/test split e del modello di rischio.
+
+Ad ogni esecuzione di `python -m src.ml.train_risk_model` viene creato/aggiornato
+un file `models/risk_model.report.json` con un riepilogo dei parametri di training
+e delle metriche ottenute.

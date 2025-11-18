@@ -1,0 +1,5 @@
+ml:
+  test_size: 0.3            # percentuale di dati nel test set
+  random_state: 1452          # seed usato per train/test split e modello
+  model_type: "logreg"      # per ora solo Logistic Regression
+  max_iter: 1000            # max iterazioni della Logistic Regression

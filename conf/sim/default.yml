@@ -1,0 +1,6 @@
+sim:
+  total_minutes: 120        # durata totale simulazione (minuti)
+  timestep_minutes: 10      # durata di ogni passo (minuti)
+  n_convoys: 5              # numero di convogli
+  depot_capacity: 2         # capacità del deposito
+  random_seed: 42     

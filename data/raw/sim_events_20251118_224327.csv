@@ -1,0 +1,11 @@
+event_type,convoy_id,minute,step_index,progress
+convoy_spawned,1,0,-1,0.0
+convoy_spawned,2,0,-1,0.0
+convoy_spawned,3,0,-1,0.0
+convoy_spawned,4,0,-1,0.0
+convoy_spawned,5,0,-1,0.0
+convoy_completed,1,120,11,1.0
+convoy_completed,2,120,11,1.0
+convoy_completed,3,120,11,1.0
+convoy_completed,4,120,11,1.0
+convoy_completed,5,120,11,1.0
