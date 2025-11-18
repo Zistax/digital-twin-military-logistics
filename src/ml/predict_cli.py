@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from .predict import load_risk_model, predict_convoy_risk_proba
-
+from .risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
 
 def ask_int(prompt: str, default: int) -> int:
     """Chiede un intero all'utente con un valore di default.
@@ -60,14 +60,21 @@ def main() -> None:
         timestep_minutes=timestep_minutes,
         n_convoys=n_convoys,
     )
+    df_result["is_high_risk"] = df_result["risk_proba"].apply(
+        lambda p: is_high_risk(float(p))
+    )
 
     print()
     print("=== Risultati ===")
-    print("Convoglio  Prob_rischio")
+    print(f"Soglia di rischio predefinita: {RISK_THRESHOLD_DEFAULT:.2f}")
+    print()
+    print("Convoglio  Prob_rischio  Alto_rischio")
     for _, row in df_result.iterrows():
         convoy_id = int(row["convoy_id"])
         prob = float(row["risk_proba"])
-        print(f"{convoy_id:8d}  {prob:11.3f}")
+        high = bool(row["is_high_risk"])
+        flag = "SI" if high else "no"
+        print(f"{convoy_id:8d}  {prob:11.3f}  {flag:11s}")
 
     print()
     print("Interpretazione (semplificata):")

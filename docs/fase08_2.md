@@ -67,9 +67,9 @@ def is_high_risk(prob: float, threshold: float | None = None) -> bool:
 5. Salva il file.
 
 **Checklist**
-- [ ] Esiste `src\ml\risk_threshold.py`
-- [ ] Ho impostato `RISK_THRESHOLD_DEFAULT` al valore scelto nel notebook
-- [ ] La funzione `is_high_risk` è definita
+- [x] Esiste `src\ml\risk_threshold.py`
+- [x] Ho impostato `RISK_THRESHOLD_DEFAULT` al valore scelto nel notebook
+- [x] La funzione `is_high_risk` è definita
 
 ---
 
@@ -93,8 +93,8 @@ is_high_risk(0.2), is_high_risk(0.8)
 Verifica che i valori tornino come ti aspetti (a seconda della soglia scelta).
 
 **Checklist (fine Giorno 4)**
-- [ ] Posso importare `RISK_THRESHOLD_DEFAULT` e `is_high_risk` senza errori
-- [ ] Il comportamento di `is_high_risk` è coerente con la soglia scelta
+- [x] Posso importare `RISK_THRESHOLD_DEFAULT` e `is_high_risk` senza errori
+- [x] Il comportamento di `is_high_risk` è coerente con la soglia scelta
 
 ---
 
@@ -169,9 +169,9 @@ con:
 Salva il file.
 
 **Checklist**
-- [ ] La CLI importa `RISK_THRESHOLD_DEFAULT` e `is_high_risk`
-- [ ] La CLI aggiunge una colonna `is_high_risk` a `df_result`
-- [ ] L’output CLI mostra per ogni convoglio se è “Alto_rischio”
+- [x] La CLI importa `RISK_THRESHOLD_DEFAULT` e `is_high_risk`
+- [x] La CLI aggiunge una colonna `is_high_risk` a `df_result`
+- [x] L’output CLI mostra per ogni convoglio se è “Alto_rischio”
 
 ---
 
@@ -281,8 +281,8 @@ a:
 Salva il file.
 
 **Checklist**
-- [ ] L’API ora restituisce `risk_threshold_used` nella risposta
-- [ ] Ogni elemento in `results` ha `convoy_id`, `risk_proba`, `is_high_risk`
+- [x] L’API ora restituisce `risk_threshold_used` nella risposta
+- [x] Ogni elemento in `results` ha `convoy_id`, `risk_proba`, `is_high_risk`
 
 ---
 
@@ -356,9 +356,9 @@ Sostituisci il blocco dove filtravi con `risk_proba >= 0.5` con qualcosa del tip
 Salva il file.
 
 **Checklist (fine Giorno 5)**
-- [ ] La CLI mostra la soglia usata e indica “Alto_rischio” sì/no
-- [ ] L’API restituisce `risk_threshold_used` e `is_high_risk` nel JSON
-- [ ] La UI mostra la soglia, colonna `is_high_risk` e convogli filtrati usando `is_high_risk`
+- [x] La CLI mostra la soglia usata e indica “Alto_rischio” sì/no
+- [x] L’API restituisce `risk_threshold_used` e `is_high_risk` nel JSON
+- [x] La UI mostra la soglia, colonna `is_high_risk` e convogli filtrati usando `is_high_risk`
 
 ---
 
@@ -397,8 +397,8 @@ def test_is_high_risk_respects_threshold():
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `tests\test_risk_threshold.py`
-- [ ] Il test verifica il comportamento di `is_high_risk` rispetto a `RISK_THRESHOLD_DEFAULT`
+- [x] Esiste `tests\test_risk_threshold.py`
+- [x] Il test verifica il comportamento di `is_high_risk` rispetto a `RISK_THRESHOLD_DEFAULT`
 
 ---
 
@@ -426,7 +426,7 @@ Esempio (solo la parte di asserzioni finali, da adattare al tuo file):
 Salva il file dei test.
 
 **Checklist**
-- [ ] Il test API è aggiornato per tener conto di `risk_threshold_used` e `is_high_risk`
+- [x] Il test API è aggiornato per tener conto di `risk_threshold_used` e `is_high_risk`
 
 ---
 
@@ -444,7 +444,7 @@ Assicurati che:
 - non ci siano errori su API, CLI, model, dataset, ecc.
 
 **Checklist**
-- [ ] `pytest` gira senza errori
+- [x] `pytest` gira senza errori
 
 ---
 
@@ -467,7 +467,7 @@ usano questa soglia per decidere se un convoglio è considerato "ad alto rischio
 Salva il `README.md`.
 
 **Checklist**
-- [ ] Il README documenta l’esistenza e il ruolo di `RISK_THRESHOLD_DEFAULT`
+- [x] Il README documenta l’esistenza e il ruolo di `RISK_THRESHOLD_DEFAULT`
 
 ---
 

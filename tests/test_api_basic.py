@@ -65,3 +65,14 @@ def test_predict_risk_basic(monkeypatch):
     for item in results:
         assert "convoy_id" in item
         assert "risk_proba" in item
+
+    data = response.json()
+
+    assert "risk_threshold_used" in data
+    results = data["results"]
+    assert len(results) == 3
+
+    for item in results:
+        assert "convoy_id" in item
+        assert "risk_proba" in item
+        assert "is_high_risk" in item

@@ -55,3 +55,13 @@ La pagina permette di:
 - calcolare le probabilità di rischio usando il modello `models/risk_model.pkl`,
 - vedere una tabella ordinata per rischio e un grafico a barre,
 - evidenziare i convogli con rischio maggiore di una soglia (es. 0.5).
+
+### Soglia di rischio predefinita
+
+Il sistema utilizza una **soglia di rischio predefinita**:
+
+- `RISK_THRESHOLD_DEFAULT` (definita in `src/ml/risk_threshold.py`)
+
+Questa soglia è stata scelta analizzando precision, recall e F1 nel notebook
+`notebooks/evaluate_risk_model.ipynb`. Tutti i componenti (CLI, API, UI)
+usano questa soglia per decidere se un convoglio è considerato "ad alto rischio".
