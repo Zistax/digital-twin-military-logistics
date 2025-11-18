@@ -36,9 +36,19 @@ python -m src.sim.analyze_last_run
 
 echo.
 echo ==============================
-echo Controlli completati.
-echo Premi un tasto per chiudere.
+echo Eseguo i test con pytest...
 echo ==============================
+
+pytest
+
+echo.
+echo ==============================
+echo Per avviare l'API REST usa:
+echo   uvicorn src.api.app:app --reload
+echo ==============================
+
+echo.
+echo Controlli completati.
 pause
 
 

@@ -4,3 +4,5 @@ matplotlib
 jupyter
 pytest
 scikit-learn
+fastapi
+uvicorn
