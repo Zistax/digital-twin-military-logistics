@@ -27,3 +27,31 @@ Il progetto espone un'API REST locale (FastAPI) per stimare il rischio dei convo
 
 - Documentazione interattiva (Swagger UI):
   - `http://127.0.0.1:8000/docs`
+
+## UI Web (Streamlit) – Rischio Convoglio
+
+Per avviare una semplice interfaccia web che permette di inserire i parametri di scenario
+e vedere la probabilità di rischio per ciascun convoglio:
+
+1. Attiva l'ambiente virtuale:
+
+   ```bash
+   .venv\Scripts\activate.bat
+   ```
+
+   (oppure, in PowerShell: `.venv\Scripts\Activate.ps1`)
+
+2. Avvia Streamlit dalla root del progetto:
+
+   ```bash
+   streamlit run src/ui/dashboard.py
+   ```
+
+3. Apri il browser all'indirizzo: <http://localhost:8501>
+
+La pagina permette di:
+
+- impostare `total_minutes`, `timestep_minutes`, `n_convoys`,
+- calcolare le probabilità di rischio usando il modello `models/risk_model.pkl`,
+- vedere una tabella ordinata per rischio e un grafico a barre,
+- evidenziare i convogli con rischio maggiore di una soglia (es. 0.5).

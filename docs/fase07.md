@@ -48,7 +48,7 @@ streamlit
 3. Salva il file.
 
 **Checklist**
-- [ ] `requirements.txt` contiene anche la voce `streamlit`
+- [x] `requirements.txt` contiene anche la voce `streamlit`
 
 ---
 
@@ -81,8 +81,8 @@ pip install -r requirements.txt
 Attendi la fine dell'installazione (potrebbe richiedere un po', la prima volta).
 
 **Checklist**
-- [ ] Ambiente `.venv` attivo
-- [ ] `pip install -r requirements.txt` eseguito senza errori critici
+- [x] Ambiente `.venv` attivo
+- [x] `pip install -r requirements.txt` eseguito senza errori critici
 
 ---
 
@@ -116,8 +116,8 @@ if __name__ == "__main__":
 5. Salva il file (`Ctrl + S`).
 
 **Checklist**
-- [ ] Esiste `src\ui\dashboard.py`
-- [ ] Il file contiene una funzione `main()` con `st.title(...)` e una descrizione
+- [x] Esiste `src\ui\dashboard.py`
+- [x] Il file contiene una funzione `main()` con `st.title(...)` e una descrizione
 
 ---
 
@@ -153,8 +153,8 @@ Dovresti vedere il titolo e la descrizione della UI.
 > Per fermarla, premi `Ctrl + C` nel terminale.
 
 **Checklist (fine Giorno 1)**
-- [ ] `streamlit run src/ui/dashboard.py` parte senza errori
-- [ ] Vedo la pagina con titolo e testo introduttivo su `http://localhost:8501`
+- [x] `streamlit run src/ui/dashboard.py` parte senza errori
+- [x] Vedo la pagina con titolo e testo introduttivo su `http://localhost:8501`
 
 ---
 
@@ -188,7 +188,7 @@ from src.ml.predict import load_risk_model, predict_convoy_risk_proba
 ```
 
 **Checklist**
-- [ ] `dashboard.py` importa `load_risk_model` e `predict_convoy_risk_proba`
+- [x] `dashboard.py` importa `load_risk_model` e `predict_convoy_risk_proba`
 
 ---
 
@@ -253,9 +253,9 @@ def main():
 Salva il file.
 
 **Checklist**
-- [ ] La sidebar contiene 3 campi numerici per i parametri
-- [ ] È presente il pulsante `Calcola rischio convogli`
-- [ ] Viene mostrato un riepilogo dei parametri nel corpo della pagina
+- [x] La sidebar contiene 3 campi numerici per i parametri
+- [x] È presente il pulsante `Calcola rischio convogli`
+- [x] Viene mostrato un riepilogo dei parametri nel corpo della pagina
 
 ---
 
@@ -318,9 +318,9 @@ streamlit run src/ui/dashboard.py
    - dovresti vedere una tabella con `convoy_id` e `risk_proba`.
 
 **Checklist (fine Giorno 2)**
-- [ ] La UI mostra una sidebar con i parametri e un pulsante
-- [ ] Cliccando sul pulsante viene caricato il modello senza errori
-- [ ] Vedo una tabella con le probabilità di rischio per ogni convoglio
+- [x] La UI mostra una sidebar con i parametri e un pulsante
+- [x] Cliccando sul pulsante viene caricato il modello senza errori
+- [x] Vedo una tabella con le probabilità di rischio per ogni convoglio
 
 ---
 
@@ -355,7 +355,7 @@ Ricontrolla che la variabile usata più avanti (per il grafico) sia `df_result_s
 Salva il file.
 
 **Checklist**
-- [ ] La tabella ora è ordinata per `risk_proba` decrescente
+- [x] La tabella ora è ordinata per `risk_proba` decrescente
 
 ---
 
@@ -375,7 +375,7 @@ Sempre dentro il blocco `if run_button:`, **subito dopo** la `st.dataframe(df_re
 Questo crea un semplice bar-chart usando le funzionalità integrate di Streamlit.
 
 **Checklist**
-- [ ] Dopo la tabella, vedo un grafico a barre con un valore per ogni convoglio
+- [x] Dopo la tabella, vedo un grafico a barre con un valore per ogni convoglio
 
 ---
 
@@ -420,9 +420,9 @@ Salva il file.
 > Se vedi sempre le stesse probabilità per tutti i convogli, è normale: nella versione attuale del modello tutti i convogli condividono le stesse feature. Il valore assoluto della probabilità può comunque cambiare variando i parametri di scenario.
 
 **Checklist (fine Giorno 3)**
-- [ ] La UI mostra tabella ordinata per rischio
-- [ ] Vedo un grafico a barre delle probabilità di rischio
-- [ ] Posso vedere (se presenti) i convogli con rischio >= 0.5 in una tabella dedicata
+- [x] La UI mostra tabella ordinata per rischio
+- [x] Vedo un grafico a barre delle probabilità di rischio
+- [x] Posso vedere (se presenti) i convogli con rischio >= 0.5 in una tabella dedicata
 
 ---
 
@@ -459,8 +459,8 @@ Per ogni scenario, osserva:
 - se la sezione “convogli ad alto rischio” si popola o rimane vuota.
 
 **Checklist**
-- [ ] Ho provato almeno 2–3 scenari diversi nella UI senza errori
-- [ ] Ho capito come interpretare tabella e grafico (anche se il modello è ancora semplice)
+- [x] Ho provato almeno 2–3 scenari diversi nella UI senza errori
+- [x] Ho capito come interpretare tabella e grafico (anche se il modello è ancora semplice)
 
 ---
 
@@ -501,7 +501,7 @@ La pagina permette di:
 Salva il `README.md`.
 
 **Checklist**
-- [ ] `README.md` contiene una sezione che spiega come avviare la UI Streamlit
+- [x] `README.md` contiene una sezione che spiega come avviare la UI Streamlit
 
 ---
 
