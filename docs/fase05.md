@@ -72,8 +72,8 @@ cd C:\Users\TUO_UTENTE\Progetti\digital-twin-logistico
 4. Verifica che vedi `(.venv)` nel prompt.
 
 **Checklist**
-- [ ] Sono nella cartella del progetto
-- [ ] L’ambiente `.venv` è attivo
+- [x] Sono nella cartella del progetto
+- [x] L’ambiente `.venv` è attivo
 
 ---
 
@@ -170,8 +170,8 @@ def predict_convoy_risk_proba(
 5. Salva il file (`Ctrl + S`).
 
 **Checklist**
-- [ ] Esiste `src\ml\predict.py`
-- [ ] Le funzioni `load_risk_model`, `prepare_convoy_features`, `predict_convoy_risk_proba` sono presenti
+- [x] Esiste `src\ml\predict.py`
+- [x] Le funzioni `load_risk_model`, `prepare_convoy_features`, `predict_convoy_risk_proba` sono presenti
 
 ---
 
@@ -210,9 +210,9 @@ exit()
 
 **Checklist (fine Giorno 1)**
 
-- [ ] `predict.py` è importabile senza errori
-- [ ] Posso caricare il modello con `load_risk_model`
-- [ ] Posso chiamare `predict_convoy_risk_proba` e ottenere un DataFrame con `risk_proba`
+- [x] `predict.py` è importabile senza errori
+- [x] Posso caricare il modello con `load_risk_model`
+- [x] Posso chiamare `predict_convoy_risk_proba` e ottenere un DataFrame con `risk_proba`
 
 ---
 
@@ -320,8 +320,8 @@ if __name__ == "__main__":
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `src\ml\predict_cli.py`
-- [ ] La funzione `main()` è definita ed esegue la logica di CLI
+- [x] Esiste `src\ml\predict_cli.py`
+- [x] La funzione `main()` è definita ed esegue la logica di CLI
 
 ---
 
@@ -359,9 +359,9 @@ Convoglio  Prob_rischio
 
 **Checklist (fine Giorno 2)**
 
-- [ ] Posso eseguire `python -m src.ml.predict_cli` senza errori
-- [ ] Se il modello manca, vedo un messaggio chiaro su cosa fare
-- [ ] Se il modello esiste, vedo una tabella con `Convoglio` e `Prob_rischio`
+- [x] Posso eseguire `python -m src.ml.predict_cli` senza errori
+- [x] Se il modello manca, vedo un messaggio chiaro su cosa fare
+- [x] Se il modello esiste, vedo una tabella con `Convoglio` e `Prob_rischio`
 
 ---
 
@@ -435,8 +435,8 @@ def test_predict_convoy_risk_proba_with_dummy_model():
 4. Salva il file.
 
 **Checklist**
-- [ ] Esiste `tests\test_ml_predict.py`
-- [ ] Sono definiti i due test `test_prepare_convoy_features_basic` e `test_predict_convoy_risk_proba_with_dummy_model`
+- [x] Esiste `tests\test_ml_predict.py`
+- [x] Sono definiti i due test `test_prepare_convoy_features_basic` e `test_predict_convoy_risk_proba_with_dummy_model`
 
 ---
 
@@ -457,8 +457,8 @@ Se vedi errori, controlla con attenzione il messaggio e correggi i punti indicat
 
 **Checklist (fine Giorno 3)**
 
-- [ ] `pytest` gira senza errori
-- [ ] I test in `test_ml_predict.py` passano
+- [x] `pytest` gira senza errori
+- [x] I test in `test_ml_predict.py` passano
 
 ---
 
@@ -507,9 +507,9 @@ python -m src.ml.predict_cli
 6. Prova a cambiare i parametri (es: `total_minutes` molto bassi, timestep alti, ecc.) e osserva come varia (o non varia) la probabilità di rischio.
 
 **Checklist**
-- [ ] Posso rigenerare il dataset e riallenare il modello senza errori
-- [ ] `pytest` passa per tutti i test
-- [ ] `python -m src.ml.predict_cli` funziona e mostra le probabilità di rischio
+- [x] Posso rigenerare il dataset e riallenare il modello senza errori
+- [x] `pytest` passa per tutti i test
+- [x] `python -m src.ml.predict_cli` funziona e mostra le probabilità di rischio
 
 ---
 
