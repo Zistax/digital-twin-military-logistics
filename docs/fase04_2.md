@@ -42,8 +42,8 @@ pip install -r requirements.txt
 Attendi che l’installazione finisca.
 
 **Checklist**
-- [ ] `requirements.txt` contiene `scikit-learn`
-- [ ] `pip install -r requirements.txt` è andato a buon fine
+- [x] `requirements.txt` contiene `scikit-learn`
+- [x] `pip install -r requirements.txt` è andato a buon fine
 
 ---
 
@@ -58,7 +58,7 @@ mkdir models
 Se esiste già, nessun problema.
 
 **Checklist**
-- [ ] La cartella `models` esiste nella root del progetto
+- [x] La cartella `models` esiste nella root del progetto
 
 ---
 
@@ -128,9 +128,9 @@ def split_features_labels(
 
 **Checklist (fine Giorno 5)**
 
-- [ ] `scikit-learn` è installato nel tuo ambiente `.venv`
-- [ ] Esiste `src\ml\dataset.py`
-- [ ] Le funzioni `load_convoy_risk_dataset` e `split_features_labels` sono definite
+- [x] `scikit-learn` è installato nel tuo ambiente `.venv`
+- [x] Esiste `src\ml\dataset.py`
+- [x] Le funzioni `load_convoy_risk_dataset` e `split_features_labels` sono definite
 
 ---
 
@@ -236,9 +236,9 @@ Se tutto va bene, dovresti vedere:
 
 **Checklist (fine Giorno 6)**
 
-- [ ] `src\ml\train_risk_model.py` esiste
-- [ ] `python -m src.ml.train_risk_model` gira senza errori
-- [ ] In `models` compare un file `risk_model.pkl`
+- [x] `src\ml\train_risk_model.py` esiste
+- [x] `python -m src.ml.train_risk_model` gira senza errori
+- [x] In `models` compare un file `risk_model.pkl`
 
 ---
 
@@ -283,8 +283,8 @@ def test_split_features_labels_basic():
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `tests\test_ml_dataset.py`
-- [ ] C’è almeno il test `test_split_features_labels_basic`
+- [x] Esiste `tests\test_ml_dataset.py`
+- [x] C’è almeno il test `test_split_features_labels_basic`
 
 ---
 
@@ -335,7 +335,7 @@ def test_train_risk_model_creates_file(tmp_path):
 > Nota: `tmp_path` è una fixture di pytest che crea una cartella temporanea per ogni test.
 
 **Checklist**
-- [ ] Esiste un test che verifica la creazione di un file modello con `train_risk_model`
+- [x] Esiste un test che verifica la creazione di un file modello con `train_risk_model`
 
 ---
 
@@ -354,8 +354,8 @@ Assicurati che:
 
 **Checklist (fine Giorno 7)**
 
-- [ ] `pytest` gira senza errori
-- [ ] Tutti i test, inclusi quelli di `test_ml_dataset.py` e `test_train_risk_model.py`, passano
+- [x] `pytest` gira senza errori
+- [x] Tutti i test, inclusi quelli di `test_ml_dataset.py` e `test_train_risk_model.py`, passano
 
 ---
 
@@ -394,9 +394,9 @@ python -m src.ml.train_risk_model
 ```
 
 **Checklist**
-- [ ] Sono riuscito a rifare l’intera pipeline senza errori
-- [ ] Ho un nuovo `convoy_risk_dataset.csv` aggiornato
-- [ ] Ho un nuovo `models\risk_model.pkl` aggiornato
+- [x] Sono riuscito a rifare l’intera pipeline senza errori
+- [x] Ho un nuovo `convoy_risk_dataset.csv` aggiornato
+- [x] Ho un nuovo `models\risk_model.pkl` aggiornato
 
 ---
 
