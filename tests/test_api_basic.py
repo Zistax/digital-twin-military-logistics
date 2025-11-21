@@ -19,7 +19,6 @@ def test_predict_risk_basic(monkeypatch):
     Usiamo monkeypatch per evitare di caricare il vero modello da disco,
     sostituendo load_risk_model con una versione fittizia se necessario.
     """
-    from src.api.app import load_risk_model, predict_convoy_risk_proba
 
     class DummyModel:
         def predict_proba(self, X):

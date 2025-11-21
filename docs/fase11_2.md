@@ -47,7 +47,7 @@ pip-audit
 3. Salva il file.
 
 **Checklist**
-- [ ] `requirements.txt` contiene `pip-audit`
+- [x] `requirements.txt` contiene `pip-audit`
 
 
 ---
@@ -67,7 +67,7 @@ pip-audit --help
 ```
 
 **Checklist**
-- [ ] `pip-audit` è installato e risponde a `--help`
+- [x] `pip-audit` è installato e risponde a `--help`
 
 
 ---
@@ -99,8 +99,8 @@ testpaths = tests
 4. Salva `pytest.ini`.
 
 **Checklist**
-- [ ] Esiste `pytest.ini` nella root con `addopts` che includono `--cov`
-- [ ] (Se vuoi) hai impostato una soglia `--cov-fail-under=60` o un altro valore
+- [x] Esiste `pytest.ini` nella root con `addopts` che includono `--cov`
+- [x] (Se vuoi) hai impostato una soglia `--cov-fail-under=60` o un altro valore
 
 
 ---
@@ -122,8 +122,8 @@ Dovresti vedere:
 > Se al momento il progetto ha pochi test e la coverage è molto bassa, puoi iniziare con una soglia anche **40%** o **30%**. L’importante è che esista una **barriera minima**.
 
 **Checklist (fine Giorno 4)**
-- [ ] `pytest` legge `pytest.ini` e mostra la coverage
-- [ ] Hai una soglia minima di coverage, anche se bassa (es. 40–60%)  
+- [x] `pytest` legge `pytest.ini` e mostra la coverage
+- [x] Hai una soglia minima di coverage, anche se bassa (es. 40–60%)  
 
 
 ---
@@ -181,8 +181,8 @@ pause
 3. Salva il file.
 
 **Checklist**
-- [ ] Esiste `run_security.bat` nella root del progetto
-- [ ] Lo script attiva `.venv` e lancia `pip-audit`
+- [x] Esiste `run_security.bat` nella root del progetto
+- [x] Lo script attiva `.venv` e lancia `pip-audit`
 
 
 ---
@@ -198,8 +198,8 @@ pause
 > Segnati almeno i pacchetti più critici (segnalati da pip‑audit) e potrai pianificare un aggiornamento in una fase futura.
 
 **Checklist**
-- [ ] Ho eseguito `run_security.bat` almeno una volta
-- [ ] Ho visto se ci sono vulnerabilità segnalate
+- [x] Ho eseguito `run_security.bat` almeno una volta
+- [x] Ho visto se ci sono vulnerabilità segnalate
 
 
 ---
@@ -225,8 +225,8 @@ In questo modo, dopo Ruff, Black e pytest, ti verrà chiesto se vuoi lanciare an
 Salva `run_quality.bat` se lo modifichi.
 
 **Checklist (fine Giorno 5)**
-- [ ] Ho uno script `run_security.bat` separato
-- [ ] (Se voglio) `run_quality.bat` può richiamare `run_security.bat` alla fine
+- [x] Ho uno script `run_security.bat` separato
+- [x] (Se voglio) `run_quality.bat` può richiamare `run_security.bat` alla fine
 
 
 ---
@@ -289,7 +289,7 @@ Adatta il testo se hai scelto soglie diverse o vuoi aggiungere altro.
 Salva il `README.md`.
 
 **Checklist**
-- [ ] Il README spiega come usare `run_quality.bat` e `run_security.bat`
+- [x] Il README spiega come usare `run_quality.bat` e `run_security.bat`
 
 
 ---

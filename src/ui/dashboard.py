@@ -1,7 +1,6 @@
 import streamlit as st
 
 import requests
-import streamlit as st
 
 from ml.risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
 

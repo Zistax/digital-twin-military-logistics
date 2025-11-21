@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 from src.ml.predict import prepare_convoy_features, predict_convoy_risk_proba
 

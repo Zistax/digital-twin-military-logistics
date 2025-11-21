@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+include = '\\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | data
+  | models
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = [
+    ".git",
+    ".venv",
+    "build",
+    "dist",
+    "data",
+    "models",
+]
+
+[tool.ruff.lint]
+# Attiviamo un set base di regole (leggere) per iniziare
+select = ["E", "F"]
+ignore = []
+
+[tool.ruff.format]
+# Per compatibilità con black style (se in futuro vuoi usare ruff format)
+quote-style = "double"

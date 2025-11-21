@@ -9,3 +9,7 @@ uvicorn
 streamlit
 PyYAML
 requests
+black
+ruff
+pytest-cov
+pip-audit

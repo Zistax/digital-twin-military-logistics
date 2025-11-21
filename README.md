@@ -114,3 +114,38 @@ La documentazione interattiva è disponibile su <http://127.0.0.1:8000/docs>.
   il valore configurabile nella sidebar (default `http://127.0.0.1:8000`).
 
 Per usare correttamente la UI è necessario che il server FastAPI sia in esecuzione.
+
+## Qualita' & Sicurezza (uso locale)
+
+Per mantenere il progetto in buona salute è disponibile una serie di comandi:
+
+### Controlli di qualita'
+
+- Script Windows:
+
+  ```bat
+  run_quality.bat
+  ```
+
+Questo script:
+- attiva l'ambiente `.venv`,
+- esegue il linting con **Ruff** (`ruff check src tests`),
+- controlla la formattazione con **Black** (`black --check src tests`),
+- esegue i test con coverage (`pytest` con impostazioni da `pytest.ini`).
+
+La coverage minima è configurata tramite `pytest.ini` (opzione `--cov-fail-under`):
+se la coverage scende sotto la soglia, i test falliscono.
+
+### Controlli di sicurezza
+
+- Script Windows:
+
+  ```bat
+  run_security.bat
+  ```
+
+Questo script attiva `.venv` ed esegue:
+
+- `pip-audit` per controllare se alcune dipendenze hanno vulnerabilita' note.
+
+In caso di vulnerabilita', valuta l'aggiornamento delle versioni interessate.
