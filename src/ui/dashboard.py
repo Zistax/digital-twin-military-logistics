@@ -1,7 +1,11 @@
 import streamlit as st
 
-from src.ml.predict import load_risk_model, predict_convoy_risk_proba
-from src.ml.risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
+import requests
+import streamlit as st
+
+from ml.risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
+
+API_BASE_URL = "http://127.0.0.1:8000"
 
 def main():
     st.set_page_config(page_title="Digital Twin Logistico – Rischio Convoglio", page_icon="🚚")
@@ -9,9 +13,16 @@ def main():
     st.title("Digital Twin Logistico – Rischio Convoglio")
     st.write(
         """
-        Questa UI ti permette di inserire i parametri di simulazione e calcolare
-        le probabilità di rischio per ciascun convoglio usando il modello addestrato.
+        Questa UI usa l'API FastAPI locale per calcolare il rischio dei convogli.
+        Assicurati di aver avviato il server con:
+        `uvicorn src.api.app:app --reload`
         """
+    )
+
+    api_url = st.sidebar.text_input(
+        "API base URL",
+        value=API_BASE_URL,
+        help="Endpoint base dell'API FastAPI (es. http://127.0.0.1:8000)",
     )
 
     st.sidebar.header("Parametri di scenario")
@@ -51,50 +62,57 @@ def main():
     )
 
     if run_button:
-        st.write("Calcolo del rischio in corso...")
+        st.write("Calcolo del rischio in corso tramite API...")
 
-        # Carichiamo il modello
+        payload = {
+            "schema_version": "1.0",
+            "total_minutes": int(total_minutes),
+            "timestep_minutes": int(timestep_minutes),
+            "n_convoys": int(n_convoys),
+        }
+
         try:
-            model = load_risk_model("models/risk_model.pkl")
-        except FileNotFoundError as exc:
-            st.error(
-                f"Impossibile caricare il modello: {exc}. "
-                "Assicurati di aver eseguito prima 'python -m src.ml.train_risk_model'."
-            )
+            resp = requests.post(f"{api_url}/predict", json=payload, timeout=10)
+        except requests.RequestException as exc:
+            st.error(f"Errore di comunicazione con l'API: {exc}")
             return
 
-        # Calcoliamo le probabilità di rischio
-        df_result = predict_convoy_risk_proba(
-            model,
-            total_minutes=int(total_minutes),
-            timestep_minutes=int(timestep_minutes),
-            n_convoys=int(n_convoys),
-        )
+        if resp.status_code != 200:
+            st.error(f"L'API ha risposto con status {resp.status_code}: {resp.text}")
+            return
 
-        df_result["is_high_risk"] = df_result["risk_proba"].apply(lambda p: is_high_risk(float(p)))
-        # Ordiniamo per rischio decrescente
+        data = resp.json()
+
+        # Estraiamo soglia e risultati
+        threshold_used = float(data.get("risk_threshold_used", RISK_THRESHOLD_DEFAULT))
+        results = data.get("results", [])
+
+        if not results:
+            st.warning("L'API ha restituito una lista vuota di risultati.")
+            return
+
+        import pandas as pd
+
+        df_result = pd.DataFrame(results)
+
+                # Se l'API non ha già fornito la colonna is_high_risk, la calcoliamo noi
+        if "is_high_risk" not in df_result.columns:
+            df_result["is_high_risk"] = df_result["risk_proba"].apply(
+                lambda p: is_high_risk(float(p), threshold_used)
+            )
+
         df_result_sorted = (
             df_result.sort_values("risk_proba", ascending=False)
             .reset_index(drop=True)
         )
 
         st.subheader("Risultati – Probabilità di rischio per convoglio (ordinate)")
-        st.write(f"Soglia di rischio predefinita: **{RISK_THRESHOLD_DEFAULT:.2f}**")
-        st.dataframe(df_result_sorted)
-
-        st.subheader("Risultati – Probabilità di rischio per convoglio (ordinate)")
+        st.write(f"Soglia di rischio usata: **{threshold_used:.2f}**")
         st.dataframe(df_result_sorted)
 
         st.subheader("Grafico – Probabilità di rischio per convoglio")
-
-        # Usiamo il convoglio come etichetta sull'asse X
         chart_data = df_result_sorted.set_index("convoy_id")["risk_proba"]
-
         st.bar_chart(chart_data)
-
- # Analisi semplice: quali convogli hanno rischio > soglia?
-        risk_threshold = 0.5
-        high_risk = df_result_sorted[df_result_sorted["risk_proba"] >= risk_threshold]
 
         st.subheader("Convogli ad alto rischio")
 
@@ -102,17 +120,14 @@ def main():
 
         if high_risk.empty:
             st.info(
-                f"Nessun convoglio supera la soglia di rischio selezionata ({RISK_THRESHOLD_DEFAULT:.2f})."
+                f"Nessun convoglio supera la soglia di rischio selezionata ({threshold_used:.2f})."
             )
         else:
             st.warning(
-                f"Attenzione: alcuni convogli superano la soglia di rischio ({RISK_THRESHOLD_DEFAULT:.2f}). "
+                f"Attenzione: alcuni convogli superano la soglia di rischio ({threshold_used:.2f}). "
                 "Elenco convogli ad alto rischio:"
             )
             st.table(high_risk)
-            
-        st.subheader("Risultati – Probabilità di rischio per convoglio")
-        st.dataframe(df_result)
 
 
 if __name__ == "__main__":

@@ -76,3 +76,32 @@ def test_predict_risk_basic(monkeypatch):
         assert "convoy_id" in item
         assert "risk_proba" in item
         assert "is_high_risk" in item
+
+def test_simulate_basic():
+    """Verifica che l'endpoint /simulate risponda 200 e contenga i campi principali."""
+    payload = {
+        "schema_version": "1.0",
+        "total_minutes": 60,
+        "timestep_minutes": 10,
+        "n_convoys": 3,
+        "depot_capacity": 2,
+        "simulation_name": "test_sim",
+    }
+
+    response = client.post("/simulate", json=payload)
+    assert response.status_code == 200
+
+    data = response.json()
+
+    # Controlliamo alcuni campi chiave
+    assert data["schema_version"] == "1.0"
+    assert data["simulation_name"] == "test_sim"
+    assert data["total_minutes"] == 60
+    assert data["timestep_minutes"] == 10
+    assert data["n_convoys"] == 3
+
+    assert "kpi" in data
+    kpi = data["kpi"]
+    assert "n_convoys" in kpi
+    assert "n_completed_convoys" in kpi
+    assert "n_not_completed_convoys" in kpi

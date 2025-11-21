@@ -82,3 +82,35 @@ caricano queste impostazioni. In particolare:
 Ad ogni esecuzione di `python -m src.ml.train_risk_model` viene creato/aggiornato
 un file `models/risk_model.report.json` con un riepilogo dei parametri di training
 e delle metriche ottenute.
+
+## Flusso API + UI
+
+Il progetto espone un'API FastAPI e una UI Streamlit.
+
+### API FastAPI
+
+- Avvio server (da root progetto, ambiente attivo):
+
+  ```bash
+  uvicorn src.api.app:app --reload
+  ```
+
+- Endpoint principali:
+  - `GET /health` → stato API
+  - `POST /predict` / `POST /predict_risk` → rischio convoglio
+  - `POST /simulate` → esegue una simulazione e restituisce KPI di base
+
+La documentazione interattiva è disponibile su <http://127.0.0.1:8000/docs>.
+
+### UI Streamlit
+
+- Avvio UI (da root progetto, ambiente attivo):
+
+  ```bash
+  streamlit run src/ui/dashboard.py
+  ```
+
+- La UI chiama l'endpoint `POST /predict` dell'API, utilizzando come URL base
+  il valore configurabile nella sidebar (default `http://127.0.0.1:8000`).
+
+Per usare correttamente la UI è necessario che il server FastAPI sia in esecuzione.
