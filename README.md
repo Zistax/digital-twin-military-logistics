@@ -149,3 +149,28 @@ Questo script attiva `.venv` ed esegue:
 - `pip-audit` per controllare se alcune dipendenze hanno vulnerabilita' note.
 
 In caso di vulnerabilita', valuta l'aggiornamento delle versioni interessate.
+
+## Etica & Privacy (senza PII)
+
+Questo progetto e' pensato per lavorare con **dati sintetici** e/o dati
+che non contengono **informazioni personali identificabili (PII)**.
+
+Principi chiave:
+
+- i log e i dataset usano ID pseudonimizzati (es. `session_id`, `convoy_id`),
+- non vengono registrati nomi, cognomi, email, numeri di telefono, targhe reali, ecc.,
+- i file di log seguono uno schema documentato (vedi `04 — Logging & Schema Dati`)
+  e sono pensati per scopi di simulazione e analisi tecnica.
+
+Per maggiori dettagli, vedi: `docs/etica_terminologia_licensing.md`.
+
+## Licenza
+
+Il core del progetto (cartella `src/` e file principali alla radice del repository)
+e' rilasciato sotto licenza **Apache-2.0**. Vedi il file:
+
+- `LICENSE`
+
+La cartella `plugins/` e' pensata per contenere estensioni, connettori o integrazioni
+che possono essere soggette a licenze diverse (incluse licenze proprietarie).
+In tal caso, ogni plugin dovrebbe avere un proprio `README.md` con note di licensing.

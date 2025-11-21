@@ -1,0 +1,6 @@
+terminology:
+  # Termini "canonici" → label tenant di default
+  attack: "threat_event"
+  breakdown: "mech_failure"
+  mission_complete: "mission_complete"
+  depot: "logistics_node"

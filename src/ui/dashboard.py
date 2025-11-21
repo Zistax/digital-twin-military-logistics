@@ -3,10 +3,18 @@ import streamlit as st
 import requests
 
 from ml.risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
-
+from config.terminology_loader import load_terminology, translate_term
 API_BASE_URL = "http://127.0.0.1:8000"
 
 def main():
+
+    term_map = {}
+    try:
+        term_map = load_terminology()
+    except FileNotFoundError:
+        # Terminologia non configurata; useremo i termini canonici
+        term_map = {}
+
     st.set_page_config(page_title="Digital Twin Logistico – Rischio Convoglio", page_icon="🚚")
 
     st.title("Digital Twin Logistico – Rischio Convoglio")
@@ -15,6 +23,16 @@ def main():
         Questa UI usa l'API FastAPI locale per calcolare il rischio dei convogli.
         Assicurati di aver avviato il server con:
         `uvicorn src.api.app:app --reload`
+        """
+    )
+
+    attack_label = translate_term("attack", term_map)
+    breakdown_label = translate_term("breakdown", term_map)
+
+    st.write(
+        f"""
+        Il modello stima il rischio per i convogli considerando diversi tipi di eventi
+        (es. `{attack_label}`, `{breakdown_label}`, ecc.), in base al dataset di addestramento.
         """
     )
 

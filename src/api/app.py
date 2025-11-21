@@ -8,6 +8,8 @@ from src.ml.risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
 from src.sim.simulator import run_simulation
 from src.sim.metrics import compute_basic_kpis, load_events_csv
 from src.sim.config import SimConfig
+from src.ml.model_info import get_model_version
+from src.api.api_audit import log_predict_call
 
 app = FastAPI(
     title="Digital Twin Logistico – API Rischio Convoglio",
@@ -36,6 +38,7 @@ class PredictResponse(BaseModel):
     """Schema della risposta per /predict."""
 
     schema_version: str
+    model_version: str | None = None
     total_minutes: int
     timestep_minutes: int
     n_convoys: int
@@ -105,14 +108,24 @@ def predict_risk(request: PredictRequest) -> PredictResponse:
             )
         )
 
+    model_version = get_model_version("models/risk_model.pkl")
+
     response = PredictResponse(
         schema_version="1.0",
+        model_version=model_version,
         total_minutes=request.total_minutes,
         timestep_minutes=request.timestep_minutes,
         n_convoys=request.n_convoys,
         risk_threshold_used=RISK_THRESHOLD_DEFAULT,
         results=results,
     )
+
+    # Audit di base: logghiamo la chiamata (senza PII)
+    try:
+        log_predict_call(request.dict(), response.dict())
+    except Exception as exc:  # noqa: BLE001
+        # Non vogliamo che un problema di logging blocchi l'API
+        print(f"[WARN] Impossibile loggare la chiamata /predict: {exc}")
 
     return response
 
