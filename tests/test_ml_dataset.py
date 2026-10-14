@@ -3,6 +3,7 @@ import pandas as pd
 from src.ml.dataset import split_features_labels
 from src.ml.train_risk_model import train_risk_model
 
+
 def test_split_features_labels_basic():
     """Verifica che la funzione divida correttamente X e y."""
     data = {
@@ -12,7 +13,9 @@ def test_split_features_labels_basic():
     }
     df = pd.DataFrame(data)
 
-    X_train, X_test, y_train, y_test = split_features_labels(df, test_size=0.5, random_state=0)
+    X_train, X_test, y_train, y_test = split_features_labels(
+        df, test_size=0.5, random_state=0
+    )
 
     # Controlliamo le dimensioni
     assert len(X_train) + len(X_test) == len(df)
@@ -20,6 +23,7 @@ def test_split_features_labels_basic():
 
     # Verifichiamo che le colonne di X siano solo le feature numeriche
     assert list(X_train.columns) == ["total_minutes", "timestep_minutes"]
+
 
 def test_train_risk_model_creates_file(tmp_path):
     """Verifica che train_risk_model crei un file modello su un dataset finto."""

@@ -1,0 +1,33 @@
+{
+  "removed": [
+    {
+      "path": "reports/d03-batch-v1/bundles/scenario-1025-perturbed-attempt-1/.operational_events.jsonl.uC7hM2",
+      "bytes": 3407872
+    },
+    {
+      "path": "reports/d03-batch-v1/bundles/scenario-1029-regular-attempt-1/.operational_events.jsonl.l3unTO",
+      "bytes": 91488256
+    },
+    {
+      "path": "reports/d03-batch-v1/bundles/scenario-1017-regular-attempt-1/.operational_events.jsonl.zkhbnE",
+      "bytes": 38535168
+    },
+    {
+      "path": "reports/d03-batch-v1/bundles/scenario-1025-pressure-attempt-1/.planning_contexts.jsonl.Od3hKM",
+      "bytes": 29622272
+    },
+    {
+      "path": "reports/d03-batch-v1/bundles/scenario-1017-pressure-attempt-1/.planning_contexts.jsonl.0c0tN6",
+      "bytes": 66322432
+    },
+    {
+      "path": "reports/d03-batch-v1/bundles/scenario-1017-pressure-attempt-1/.planning_contexts.jsonl.w7BsY4",
+      "bytes": 63700992
+    },
+    {
+      "path": "reports/d03-batch-v1/traces/.scenario-1013-perturbed-attempt-1.jsonl.oyDKmO",
+      "bytes": 12845056
+    }
+  ],
+  "accepted_exports_already_verified": 90
+}

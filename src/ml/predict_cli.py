@@ -3,6 +3,7 @@ from __future__ import annotations
 from .predict import load_risk_model, predict_convoy_risk_proba
 from .risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
 
+
 def ask_int(prompt: str, default: int) -> int:
     """Chiede un intero all'utente con un valore di default.
 
@@ -40,7 +41,9 @@ def main() -> None:
     default_n_convoys = 5
 
     total_minutes = ask_int("Durata totale simulazione (minuti)", default_total_minutes)
-    timestep_minutes = ask_int("Durata di ogni passo (minuti)", default_timestep_minutes)
+    timestep_minutes = ask_int(
+        "Durata di ogni passo (minuti)", default_timestep_minutes
+    )
     n_convoys = ask_int("Numero di convogli da valutare", default_n_convoys)
 
     print()
@@ -50,7 +53,12 @@ def main() -> None:
         model = load_risk_model("models/risk_model.pkl")
     except FileNotFoundError as exc:
         print(f"ERRORE: {exc}")
-        print("Suggerimento: esegui prima 'python -m src.ml.train_risk_model' per creare il modello.")
+        print(
+            (
+                "Suggerimento: esegui prima 'python -m "
+                "src.ml.train_risk_model' per creare il modello."
+            )
+        )
         return
 
     print("Calcolo le probabilità di rischio...")
@@ -78,11 +86,26 @@ def main() -> None:
 
     print()
     print("Interpretazione (semplificata):")
-    print("- Prob_rischio ~ 0.0  -> convoglio probabilmente 'sicuro' (secondo il modello).")
-    print("- Prob_rischio ~ 1.0  -> convoglio probabilmente 'a rischio' di non completare la missione.")
+    print(
+        (
+            "- Prob_rischio ~ 0.0  -> convoglio probabilmente "
+            "'sicuro' (secondo il modello)."
+        )
+    )
+    print(
+        (
+            "- Prob_rischio ~ 1.0  -> convoglio probabilmente 'a "
+            "rischio' di non completare la missione."
+        )
+    )
     print()
     print("Nota: in questa versione tutti i convogli hanno le stesse feature,")
-    print("quindi spesso avranno la stessa probabilità. In fasi successive aggiungerai feature più ricche.")
+    print(
+        (
+            "quindi spesso avranno la stessa probabilità. In fasi "
+            "successive aggiungerai feature più ricche."
+        )
+    )
 
 
 if __name__ == "__main__":

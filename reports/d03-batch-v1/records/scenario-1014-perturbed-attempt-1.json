@@ -1,0 +1,49 @@
+{
+  "attempt": 1,
+  "bundle": "bundles/scenario-1014-perturbed-attempt-1",
+  "creation_training_eligibility": {
+    "censored": 7,
+    "classification": 69,
+    "delay_regression": 55
+  },
+  "executor": "release-before-independent-read-v1",
+  "group_id": "base-seed-1014",
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 62,
+    "mean_delay_reached_minutes": 4073.631451612903,
+    "missions": 69,
+    "on_time_reached": 7,
+    "quota_censored": 7,
+    "quota_reached": 62,
+    "timing_unknown": 0
+  },
+  "manifest_sha256": "a05257a96adf924a9de1f579c6f0c18632a9a2dd78858429231a9e7e885fbd65",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "profile": "perturbed",
+  "rolling_training_eligibility": {
+    "censored": 1528,
+    "classification": 2377,
+    "duration_regression": 6175
+  },
+  "rows": {
+    "cargo_events.jsonl": 379,
+    "delivery_events.jsonl": 370,
+    "labels.jsonl": 69,
+    "observations.jsonl": 69,
+    "operational_events.jsonl": 2008,
+    "planning_contexts.jsonl": 7938,
+    "rolling_observations.jsonl": 7869,
+    "rolling_targets.jsonl": 7869
+  },
+  "seed": 1014,
+  "simulation_id": "scenario-1014-perturbed",
+  "split": "training",
+  "stop_reason": "time_limit",
+  "stopped_s": 1209600,
+  "trace": "traces/scenario-1014-perturbed-attempt-1.jsonl",
+  "trace_sha256": "f466bcac895f8584dd64551ca8856f6b51d832a4a596d368031b306a62185946",
+  "unexplained_open_missions": [],
+  "valid": true,
+  "wall_seconds": 295.737
+}

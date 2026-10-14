@@ -1,0 +1,9 @@
+{
+  "expected_runs": 90,
+  "latest": {
+    "simulation_id": "scenario-1024-pressure",
+    "valid": true,
+    "wall_seconds": 578.069
+  },
+  "verified_runs": 90
+}

@@ -1,0 +1,517 @@
+{
+  "deadline_sources": {
+    "configured_allowance": 123,
+    "observable_estimate": 16
+  },
+  "diagnostics": {
+    "incident_counts": {
+      "cold_alarm": 2,
+      "cold_restored": 2,
+      "inspection": 414,
+      "mechanical_failure": 1,
+      "vehicle_restored": 1
+    },
+    "local_backlog_units": 471,
+    "mission_statuses": {
+      "en_route": 5,
+      "logistics_complete": 84,
+      "waiting": 50
+    },
+    "open_missions": [
+      {
+        "missing_reservation_units": 37,
+        "mission_id": "request-3",
+        "required_units": 220,
+        "reserved_units": 183,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 3,
+        "mission_id": "request-12",
+        "required_units": 271,
+        "reserved_units": 268,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 55,
+        "mission_id": "request-25",
+        "required_units": 222,
+        "reserved_units": 167,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-34",
+        "required_units": 201,
+        "reserved_units": 201,
+        "status": "waiting",
+        "trips": {
+          "queued": 1
+        }
+      },
+      {
+        "missing_reservation_units": 24,
+        "mission_id": "request-60",
+        "required_units": 59,
+        "reserved_units": 35,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 17,
+        "mission_id": "request-61",
+        "required_units": 153,
+        "reserved_units": 136,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 10,
+        "mission_id": "request-68",
+        "required_units": 77,
+        "reserved_units": 67,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-69",
+        "required_units": 114,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-73",
+        "required_units": 183,
+        "reserved_units": 183,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-75",
+        "required_units": 194,
+        "reserved_units": 194,
+        "status": "waiting",
+        "trips": {
+          "queued": 1
+        }
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-76",
+        "required_units": 318,
+        "reserved_units": 318,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-77",
+        "required_units": 212,
+        "reserved_units": 212,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-80",
+        "required_units": 349,
+        "reserved_units": 349,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 10,
+        "mission_id": "request-84",
+        "required_units": 178,
+        "reserved_units": 168,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 3,
+        "mission_id": "request-85",
+        "required_units": 117,
+        "reserved_units": 114,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 28,
+        "mission_id": "request-87",
+        "required_units": 283,
+        "reserved_units": 255,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 52,
+        "mission_id": "request-88",
+        "required_units": 214,
+        "reserved_units": 162,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-90",
+        "required_units": 164,
+        "reserved_units": 164,
+        "status": "waiting",
+        "trips": {
+          "queued": 1
+        }
+      },
+      {
+        "missing_reservation_units": 9,
+        "mission_id": "request-92",
+        "required_units": 238,
+        "reserved_units": 229,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-94",
+        "required_units": 268,
+        "reserved_units": 268,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 41,
+        "mission_id": "request-97",
+        "required_units": 323,
+        "reserved_units": 282,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-98",
+        "required_units": 313,
+        "reserved_units": 313,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 36,
+        "mission_id": "request-99",
+        "required_units": 224,
+        "reserved_units": 188,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-100",
+        "required_units": 207,
+        "reserved_units": 207,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 100,
+        "mission_id": "request-102",
+        "required_units": 353,
+        "reserved_units": 253,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-103",
+        "required_units": 218,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 2
+        }
+      },
+      {
+        "missing_reservation_units": 19,
+        "mission_id": "request-106",
+        "required_units": 66,
+        "reserved_units": 47,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-107",
+        "required_units": 48,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": 47,
+        "mission_id": "request-108",
+        "required_units": 78,
+        "reserved_units": 31,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 189,
+        "mission_id": "request-109",
+        "required_units": 251,
+        "reserved_units": 62,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 84,
+        "mission_id": "request-110",
+        "required_units": 370,
+        "reserved_units": 286,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-111",
+        "required_units": 126,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-112",
+        "required_units": 315,
+        "reserved_units": 315,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-113",
+        "required_units": 184,
+        "reserved_units": 184,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-114",
+        "required_units": 79,
+        "reserved_units": 79,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-115",
+        "required_units": 337,
+        "reserved_units": 337,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 95,
+        "mission_id": "request-116",
+        "required_units": 246,
+        "reserved_units": 151,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-117",
+        "required_units": 177,
+        "reserved_units": 177,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-118",
+        "required_units": 269,
+        "reserved_units": 269,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-119",
+        "required_units": 13,
+        "reserved_units": 13,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-120",
+        "required_units": 38,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": 14,
+        "mission_id": "request-121",
+        "required_units": 105,
+        "reserved_units": 91,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-122",
+        "required_units": 106,
+        "reserved_units": 106,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 89,
+        "mission_id": "request-123",
+        "required_units": 248,
+        "reserved_units": 159,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 72,
+        "mission_id": "request-124",
+        "required_units": 172,
+        "reserved_units": 100,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-125",
+        "required_units": 15,
+        "reserved_units": 15,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 28,
+        "mission_id": "request-127",
+        "required_units": 28,
+        "reserved_units": 0,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 172,
+        "mission_id": "request-129",
+        "required_units": 225,
+        "reserved_units": 53,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 86,
+        "mission_id": "request-130",
+        "required_units": 132,
+        "reserved_units": 46,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 42,
+        "mission_id": "request-131",
+        "required_units": 122,
+        "reserved_units": 80,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-133",
+        "required_units": 352,
+        "reserved_units": 352,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 41,
+        "mission_id": "request-134",
+        "required_units": 62,
+        "reserved_units": 21,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-135",
+        "required_units": 299,
+        "reserved_units": 299,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 90,
+        "mission_id": "request-138",
+        "required_units": 246,
+        "reserved_units": 156,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 10,
+        "mission_id": "request-139",
+        "required_units": 46,
+        "reserved_units": 36,
+        "status": "waiting",
+        "trips": {}
+      }
+    ],
+    "peak_sampled": {
+      "internal_queue": 10,
+      "local_backlog_units": 806,
+      "open_missions": 102
+    },
+    "recovery_statuses": {},
+    "supplies_by_status": {
+      "closed": 252,
+      "waiting": 105
+    },
+    "wait_seconds": {
+      "berth": 975320,
+      "opening": 6150601,
+      "space": 13200,
+      "stock": 32400
+    }
+  },
+  "estimate_unavailable_reasons": {
+    "insufficient_free_compatible_fleet": 29,
+    "stock_without_usable_arrival_promise": 94
+  },
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 121,
+    "mean_delay_reached_minutes": 3950.3305555555553,
+    "missions": 139,
+    "on_time_reached": 18,
+    "quota_censored": 55,
+    "quota_reached": 84,
+    "timing_unknown": 0
+  },
+  "profile": "pressure",
+  "result_sha256": "cc8e9a6047c6f4b0e73e394ba3dcf7019fae9e3c5ae97742430460b435966c54",
+  "rolling_samples": 19870,
+  "seed": 0,
+  "stop_reason": "time_limit",
+  "stopped_s": 1209600,
+  "valid": true,
+  "wall_seconds": 267.095
+}

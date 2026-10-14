@@ -23,7 +23,11 @@ def load_terminology(env: str | None = None) -> Dict[str, str]:
         raise FileNotFoundError(f"File terminologia non trovato: {path}")
 
     with path.open("r", encoding="utf-8") as f:
-        data = yaml.safe_load(f) or {}
+        data = yaml.safe_load(f)
+    if data is None:
+        data = {}
+    if not isinstance(data, dict):
+        raise ValueError("terminology configuration must be a dictionary")
 
     term_map = data.get("terminology", {})
     if not isinstance(term_map, dict):
@@ -35,5 +39,6 @@ def load_terminology(env: str | None = None) -> Dict[str, str]:
 
 
 def translate_term(term: str, mapping: Dict[str, str]) -> str:
-    """Traduce un termine canonico usando il mapping; se non trovato, restituisce l'originale."""
+    """Traduce un termine canonico usando il mapping; se non trovato, restituisce
+    l'originale."""
     return mapping.get(term.lower(), term)

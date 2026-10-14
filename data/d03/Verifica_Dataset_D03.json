@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "accepted_runs": 90,
+  "paired_groups": 30,
+  "verified_unique_entries": 1014,
+  "original_verified_archive_sha256": "8019aafbfaaca8e8bd15e33aa05be0e70a83be67b89fb62cd716d4f82818e19d",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "instructions": "Extract all four ZIP archives into the same directory.",
+  "parts": [
+    {
+      "filename": "Dataset_D03_Parte_1_di_4.zip",
+      "bytes": 396152022,
+      "sha256": "b94f15a78e35359055c9cd374e58b022d1a4b94e12c9908ab460c0f056c3c7f5",
+      "groups": [
+        "base-seed-1001",
+        "base-seed-1009",
+        "base-seed-1010",
+        "base-seed-1023",
+        "base-seed-1025",
+        "base-seed-1027",
+        "base-seed-1028"
+      ],
+      "runs": 21,
+      "verified_entries": 255
+    },
+    {
+      "filename": "Dataset_D03_Parte_2_di_4.zip",
+      "bytes": 397038877,
+      "sha256": "c96e0b1ad5239c4aa698172eedd832c6e6fbfa783a914730859b107328c9e7fb",
+      "groups": [
+        "base-seed-1005",
+        "base-seed-1007",
+        "base-seed-1013",
+        "base-seed-1017",
+        "base-seed-1021",
+        "base-seed-1024",
+        "base-seed-1029"
+      ],
+      "runs": 21,
+      "verified_entries": 255
+    },
+    {
+      "filename": "Dataset_D03_Parte_3_di_4.zip",
+      "bytes": 435747694,
+      "sha256": "8c6771bbf211b40be3044ad9821dff03dff8da6a4bc888f5be9c5071e387e27b",
+      "groups": [
+        "base-seed-1000",
+        "base-seed-1002",
+        "base-seed-1004",
+        "base-seed-1014",
+        "base-seed-1016",
+        "base-seed-1018",
+        "base-seed-1019",
+        "base-seed-1022"
+      ],
+      "runs": 24,
+      "verified_entries": 288
+    },
+    {
+      "filename": "Dataset_D03_Parte_4_di_4.zip",
+      "bytes": 430542067,
+      "sha256": "1140b0352ab5ec6ad02336c0afdf5df19901b7fe9bc91984b7cc68b342c169e1",
+      "groups": [
+        "base-seed-1003",
+        "base-seed-1006",
+        "base-seed-1008",
+        "base-seed-1011",
+        "base-seed-1012",
+        "base-seed-1015",
+        "base-seed-1020",
+        "base-seed-1026"
+      ],
+      "runs": 24,
+      "verified_entries": 288
+    }
+  ]
+}

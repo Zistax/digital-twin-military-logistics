@@ -1,0 +1,262 @@
+{
+  "deadline_sources": {
+    "configured_allowance": 4,
+    "observable_estimate": 5
+  },
+  "diagnostics": {
+    "final_allocation_reasons": {
+      "no_feasible_greedy_plan": 1
+    },
+    "incident_counts": {
+      "inspection": 20
+    },
+    "local_backlog_units": 2,
+    "mission_allocation_wait_seconds": {
+      "empty_travel": 10150,
+      "no_feasible_greedy_plan": 31500,
+      "stock": 384236
+    },
+    "mission_statuses": {
+      "en_route": 1,
+      "logistics_complete": 6,
+      "waiting": 2
+    },
+    "open_missions": [
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-2",
+        "required_units": 158,
+        "reserved_units": 158,
+        "status": "waiting",
+        "trips": {
+          "queued": 1
+        }
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-6",
+        "required_units": 217,
+        "reserved_units": 217,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-7",
+        "required_units": 232,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      }
+    ],
+    "peak_sampled": {
+      "internal_queue": 3,
+      "local_backlog_units": 117,
+      "open_missions": 7
+    },
+    "recovery_statuses": {},
+    "supplies_by_status": {
+      "closed": 23,
+      "expected": 2,
+      "waiting": 2
+    },
+    "supply_wait_by_order": {
+      "reorder-1": {
+        "berth": 0,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-10": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-11": {
+        "berth": 16200,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-12": {
+        "berth": 18600,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-13": {
+        "berth": 21300,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-14": {
+        "berth": 23700,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-15": {
+        "berth": 25800,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-16": {
+        "berth": 27900,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-17": {
+        "berth": 31200,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-18": {
+        "berth": 31200,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-19": {
+        "berth": 10800,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-2": {
+        "berth": 3300,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-20": {
+        "berth": 14100,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-21": {
+        "berth": 16800,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-22": {
+        "berth": 19500,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-23": {
+        "berth": 21600,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-24": {
+        "berth": 32400,
+        "opening": 36000,
+        "space": 0
+      },
+      "reorder-25": {
+        "berth": 0,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-26": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-27": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-3": {
+        "berth": 5700,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-4": {
+        "berth": 8700,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-5": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-6": {
+        "berth": 0,
+        "opening": 50400,
+        "space": 0
+      },
+      "reorder-7": {
+        "berth": 1800,
+        "opening": 50400,
+        "space": 0
+      },
+      "reorder-8": {
+        "berth": 3300,
+        "opening": 50400,
+        "space": 0
+      },
+      "reorder-9": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      }
+    },
+    "supply_wait_seconds": {
+      "berth": 333900,
+      "opening": 525600,
+      "space": 0
+    },
+    "terminal_blockers": {
+      "request-2": [
+        {
+          "depot": "local-b",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-8-0"
+        }
+      ],
+      "request-6": [
+        {
+          "free_vehicles": 8,
+          "kind": "fleet_or_route"
+        }
+      ],
+      "request-7": [
+        {
+          "depot": "local-c",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-7-0"
+        }
+      ]
+    },
+    "wait_seconds": {
+      "berth": 18525,
+      "opening": 154250,
+      "space": 0,
+      "stock": 0
+    }
+  },
+  "estimate_unavailable_reasons": {
+    "stock_without_usable_arrival_promise": 4
+  },
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 1,
+    "mean_delay_reached_minutes": 0.0,
+    "missions": 9,
+    "on_time_reached": 6,
+    "quota_censored": 3,
+    "quota_reached": 6,
+    "timing_unknown": 2
+  },
+  "profile": "regular",
+  "result_sha256": "43f2a3df6c4122988e609ea3a187464455e82aa99b12c21a6d465e3e380f996b",
+  "rolling_samples": 213,
+  "seed": 3,
+  "stop_reason": "time_limit",
+  "stopped_s": 172800,
+  "trace_rows": 48,
+  "trace_sha256": "1dd8cbfe5d2a46183e51acf2b5187aff9070873cda2dfc8a2ac6ce48516075aa",
+  "unexplained_open_missions": [],
+  "valid": true,
+  "wall_seconds": 3.196
+}

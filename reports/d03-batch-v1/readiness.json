@@ -1,0 +1,11 @@
+{
+  "core_coverage": 91.78325560737287,
+  "files_sha256": {
+    "docs/protocollo-d03-v1.md": "3e2dc550581536389df09134ff1e899685318fbfe538521ffc822e7f3af5c602",
+    "reports/d02-closeout-20261013/acceptance.json": "352875c6f16ca8e5bb98485df2a8f7cb0bffaa98f7f293b5152b4ab34752ac54",
+    "reports/d03-quality-preflight/quality.json": "b46cd9d72a9558288ff71848db71ef67a9036b205752dd3cd6d1e220cc976b2f",
+    "reports/foundation-closeout-20261013/acceptance.json": "a3bce73f27a00c04d699a3ceb4c8e35b753beabba1da6d893f023234ae886daa"
+  },
+  "passed": true,
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0"
+}

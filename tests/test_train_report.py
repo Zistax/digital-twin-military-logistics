@@ -1,4 +1,3 @@
-
 import pandas as pd
 
 from src.ml.train_risk_model import train_risk_model

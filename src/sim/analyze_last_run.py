@@ -36,12 +36,17 @@ def main() -> None:
     print(f"Convogli completati:         {kpis['n_completed_convoys']}")
     print(f"Convogli non completati:     {kpis['n_not_completed_convoys']}")
 
-    if kpis['avg_completion_minute'] is not None:
+    if kpis["avg_completion_minute"] is not None:
         print(f"Minuto medio completamento:  {kpis['avg_completion_minute']:.1f}")
         print(f"Minuto minimo completamento: {kpis['min_completion_minute']:.1f}")
         print(f"Minuto massimo completamento:{kpis['max_completion_minute']:.1f}")
     else:
-        print("Nessun convoglio completato: impossibile calcolare i tempi di completamento.")
+        print(
+            (
+                "Nessun convoglio completato: impossibile "
+                "calcolare i tempi di completamento."
+            )
+        )
 
     print()
     print("Analisi completata.")

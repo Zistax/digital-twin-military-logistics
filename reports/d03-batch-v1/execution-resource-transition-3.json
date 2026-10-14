@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-14T20:01:48.074793+00:00",
+  "previous_policy": {
+    "executor_sha256": "1e62f9bf3cc659c1688f2d3452cd31b302f20d852f86c5e91cef4d5aa495ed6e",
+    "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+    "pressure_limit": 2,
+    "release_state_before_read": true,
+    "workers": 5
+  },
+  "new_policy": {
+    "executor_sha256": "1e62f9bf3cc659c1688f2d3452cd31b302f20d852f86c5e91cef4d5aa495ed6e",
+    "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+    "pressure_limit": 3,
+    "release_state_before_read": true,
+    "workers": 3
+  },
+  "accepted_checkpoints": 79,
+  "reason": "Only pressure profiles remain; use three total workers instead of five, with three pressure slots. Observed anonymous memory 1.49 GiB with two active pressure workers under an 8 GiB limit. No OOM in current session. Engine, executor source, seeds, split and simulation parameters unchanged. Previous process terminated before transition."
+}

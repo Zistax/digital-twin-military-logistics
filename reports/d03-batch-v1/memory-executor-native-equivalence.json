@@ -1,0 +1,17 @@
+{
+  "simulation_id": "scenario-1025-regular",
+  "baseline_unaccepted_attempt": 1,
+  "accepted_memory_executor_attempt": 2,
+  "all_nine_files_byte_equivalent": true,
+  "checks": {
+    "rolling_targets.jsonl": true,
+    "delivery_events.jsonl": true,
+    "planning_contexts.jsonl": true,
+    "rolling_observations.jsonl": true,
+    "labels.jsonl": true,
+    "operational_events.jsonl": true,
+    "cargo_events.jsonl": true,
+    "observations.jsonl": true,
+    "manifest.json": true
+  }
+}

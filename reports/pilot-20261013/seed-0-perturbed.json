@@ -1,0 +1,71 @@
+{
+  "deadline_sources": {
+    "configured_allowance": 51,
+    "observable_estimate": 10
+  },
+  "diagnostics": {
+    "incident_counts": {
+      "cold_alarm": 3,
+      "cold_restored": 3,
+      "inspection": 322,
+      "mechanical_failure": 6,
+      "vehicle_restored": 6
+    },
+    "local_backlog_units": 386,
+    "mission_statuses": {
+      "logistics_complete": 60,
+      "waiting": 1
+    },
+    "open_missions": [
+      {
+        "missing_reservation_units": 14,
+        "mission_id": "request-61",
+        "required_units": 153,
+        "reserved_units": 139,
+        "status": "waiting",
+        "trips": {}
+      }
+    ],
+    "peak_sampled": {
+      "internal_queue": 10,
+      "local_backlog_units": 457,
+      "open_missions": 45
+    },
+    "recovery_statuses": {
+      "completed": 6
+    },
+    "supplies_by_status": {
+      "closed": 221,
+      "expected": 1,
+      "waiting": 10
+    },
+    "wait_seconds": {
+      "berth": 573031,
+      "opening": 3859408,
+      "space": 0,
+      "stock": 0
+    }
+  },
+  "estimate_unavailable_reasons": {
+    "insufficient_free_compatible_fleet": 12,
+    "stock_without_usable_arrival_promise": 39
+  },
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 51,
+    "mean_delay_reached_minutes": 3897.0002777777777,
+    "missions": 61,
+    "on_time_reached": 10,
+    "quota_censored": 1,
+    "quota_reached": 60,
+    "timing_unknown": 0
+  },
+  "profile": "perturbed",
+  "result_sha256": "343fc8644eec7b22a0b1fc4a2655c5606433a700627e8c016be87df00512d1e6",
+  "rolling_samples": 6265,
+  "seed": 0,
+  "stop_reason": "time_limit",
+  "stopped_s": 1209600,
+  "valid": true,
+  "wall_seconds": 119.625
+}

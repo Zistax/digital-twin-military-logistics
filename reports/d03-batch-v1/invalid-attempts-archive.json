@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "archive": "invalid-attempts-preserved.zip",
+  "archive_sha256": "bfa84586677b3c868d4f9160ec9eb48df1b1509dc251a66ed90aa21911a2da07",
+  "original_file_sha256": {
+    "bundles/scenario-1017-pressure-attempt-1/cargo_events.jsonl": "2259217babdc195812057e6b4bbc020c1b9920f611f8ca3b2eeea34ed21cc6ed",
+    "bundles/scenario-1017-pressure-attempt-1/delivery_events.jsonl": "0a05f48e75990a4cf3690e52b008cadb83641574da891271a1aa07548bf09d83",
+    "bundles/scenario-1017-pressure-attempt-1/labels.jsonl": "5dbc356c12894a07b1c12ff9b51dcb340cc745a43ac49b141452dc5872186aff",
+    "bundles/scenario-1017-pressure-attempt-1/manifest.json": "7427bcd60d6f108b7ef4c2b361ae35ecb6470f442771e5013f174062983cd500",
+    "bundles/scenario-1017-pressure-attempt-1/observations.jsonl": "e7bde9c84acb28e2bddfce46a91bd63634310861fb649c09c46597c804d1e877",
+    "bundles/scenario-1017-pressure-attempt-1/operational_events.jsonl": "c8a98f27bbd7975b6939e80d17442a766fd4efeed020dc4b2e578945a13a6a6c",
+    "bundles/scenario-1017-pressure-attempt-1/planning_contexts.jsonl": "da610a4db44fdcbeb8c1986f7fd6d3e7b538be9266c9f210ad2d5a4c9f7670ba",
+    "bundles/scenario-1017-pressure-attempt-1/rolling_observations.jsonl": "99fc92e80c7c80fbadabb03f874b0443fa08c8fd0a90c2e68517fa6b1811d856",
+    "bundles/scenario-1017-pressure-attempt-1/rolling_targets.jsonl": "9b45ddfb6d87ce427ae2bef330b288ca2b103f91f1610943f03d76eb3ba1a881",
+    "bundles/scenario-1025-regular-attempt-1/cargo_events.jsonl": "ed87e60e18302333be55a78a993dfd80600a6852333e7e6d555b7e0608734302",
+    "bundles/scenario-1025-regular-attempt-1/delivery_events.jsonl": "5062b777376caa520a906cef25d2a6992f5ceb514fce166a1c30936c6cdb6c75",
+    "bundles/scenario-1025-regular-attempt-1/labels.jsonl": "cce4f50a3b891a3b50f53084f29d4b3635f2d27a29aa378580a6ed78c6651410",
+    "bundles/scenario-1025-regular-attempt-1/manifest.json": "197bd907ee5b35ce6e7184a9309b6a366c32b48a74840ae7e29d4e7337854090",
+    "bundles/scenario-1025-regular-attempt-1/observations.jsonl": "f9faac84af51ea67443dfad93cf858a1d0863d3c3eecfcbb85a75a2723661d4e",
+    "bundles/scenario-1025-regular-attempt-1/operational_events.jsonl": "1724800cb4fcc87865d35e8aedc42d6016ff09ece0c908918c3ce1422848c1cc",
+    "bundles/scenario-1025-regular-attempt-1/planning_contexts.jsonl": "7f0fe50e2f0d36bdbb56372983b66f90a14f14891396dee203b8fabdb286b186",
+    "bundles/scenario-1025-regular-attempt-1/rolling_observations.jsonl": "3f418665f99f99d63e5ed31b0ffcdef6b393b65d69a757a00af1a9bb478b5fb5",
+    "bundles/scenario-1025-regular-attempt-1/rolling_targets.jsonl": "becef50355d732149ce312e06808810d997eb2e9f57a393e18a4c93f3a9b96d0"
+  },
+  "failed_attempts": 2,
+  "native_accepted_bundles_unchanged": true
+}

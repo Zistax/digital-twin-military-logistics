@@ -2,7 +2,6 @@ from fastapi.testclient import TestClient
 
 from src.api.app import app
 
-
 client = TestClient(app)
 
 
@@ -31,7 +30,9 @@ def test_predict_risk_basic(monkeypatch):
     def dummy_load_risk_model(path):
         return DummyModel()
 
-    def dummy_predict_convoy_risk_proba(model, total_minutes, timestep_minutes, n_convoys):
+    def dummy_predict_convoy_risk_proba(
+        model, total_minutes, timestep_minutes, n_convoys
+    ):
         import pandas as pd
 
         return pd.DataFrame(
@@ -43,7 +44,9 @@ def test_predict_risk_basic(monkeypatch):
 
     # Sostituiamo temporaneamente le funzioni reali con le versioni dummy
     monkeypatch.setattr("src.api.app.load_risk_model", dummy_load_risk_model)
-    monkeypatch.setattr("src.api.app.predict_convoy_risk_proba", dummy_predict_convoy_risk_proba)
+    monkeypatch.setattr(
+        "src.api.app.predict_convoy_risk_proba", dummy_predict_convoy_risk_proba
+    )
 
     payload = {
         "total_minutes": 120,
@@ -75,6 +78,7 @@ def test_predict_risk_basic(monkeypatch):
         assert "convoy_id" in item
         assert "risk_proba" in item
         assert "is_high_risk" in item
+
 
 def test_simulate_basic():
     """Verifica che l'endpoint /simulate risponda 200 e contenga i campi principali."""

@@ -1,0 +1,8 @@
+{
+  "executor_regression_tests_passed": 2,
+  "orphan_bundles_preserved": [],
+  "physics_sources_unchanged": true,
+  "plan_unchanged": true,
+  "reason": "Release simulated result before independent bundle parsing to reduce memory peak",
+  "valid_checkpoints_preserved": 10
+}

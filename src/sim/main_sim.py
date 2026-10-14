@@ -2,7 +2,8 @@ from .config import SimConfig
 from .simulator import run_simulation
 from src.config.config_loader import load_sim_config
 
-def ask_int(prompt: str,default: int) -> int:
+
+def ask_int(prompt: str, default: int) -> int:
     """Chiede un intero all'utente con un valore di default.
 
     Se l'utente preme solo Invio oppure inserisce un valore non valido,
@@ -26,9 +27,14 @@ def ask_int(prompt: str,default: int) -> int:
 
     return value
 
+
 def main() -> None:
-    print("=== Simulatore logistico – Fase 02 (simulatore base, parametri da console) ===")
-    print("Premi Invio per accettare i valori di default indicati tra parentesi quadre.")
+    print(
+        "=== Simulatore logistico – Fase 02 (simulatore base, parametri da console) ==="
+    )
+    print(
+        "Premi Invio per accettare i valori di default indicati tra parentesi quadre."
+    )
     print()
 
     sim_conf = load_sim_config()
@@ -39,7 +45,9 @@ def main() -> None:
     default_depot_capacity = int(sim_conf.get("depot_capacity", 2))
 
     total_minutes = ask_int("Durata totale simulazione (minuti)", default_total_minutes)
-    timestep_minutes = ask_int("Durata di ogni passo (minuti)", default_timestep_minutes)
+    timestep_minutes = ask_int(
+        "Durata di ogni passo (minuti)", default_timestep_minutes
+    )
     n_convoys = ask_int("Numero di convogli", default_n_convoys)
     depot_capacity = ask_int("Capacità del deposito", default_depot_capacity)
 
@@ -76,7 +84,12 @@ def main() -> None:
         print(f"Log eventi salvato in: {csv_path}")
 
     print()
-    print("Fase 02: ora puoi lanciare simulazioni cambiando i parametri direttamente dalla console.")
+    print(
+        (
+            "Fase 02: ora puoi lanciare simulazioni cambiando i "
+            "parametri direttamente dalla console."
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,837 @@
+{
+  "assignment": "SHA256(d03-split-v1|seed), 18/6/6 paired seed groups",
+  "created_utc": "2026-10-13T19:56:55.967536+00:00",
+  "development_seeds_excluded": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "extension_days": 7,
+  "generation_days": 7,
+  "groups": [
+    {
+      "group_id": "base-seed-1029",
+      "seed": 1029,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1017",
+      "seed": 1017,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1004",
+      "seed": 1004,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1023",
+      "seed": 1023,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1025",
+      "seed": 1025,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1027",
+      "seed": 1027,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1013",
+      "seed": 1013,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1005",
+      "seed": 1005,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1001",
+      "seed": 1001,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1008",
+      "seed": 1008,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1007",
+      "seed": 1007,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1000",
+      "seed": 1000,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1009",
+      "seed": 1009,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1026",
+      "seed": 1026,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1020",
+      "seed": 1020,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1014",
+      "seed": 1014,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1018",
+      "seed": 1018,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1012",
+      "seed": 1012,
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1006",
+      "seed": 1006,
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1015",
+      "seed": 1015,
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1010",
+      "seed": 1010,
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1019",
+      "seed": 1019,
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1022",
+      "seed": 1022,
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1003",
+      "seed": 1003,
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1016",
+      "seed": 1016,
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1011",
+      "seed": 1011,
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1002",
+      "seed": 1002,
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1028",
+      "seed": 1028,
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1021",
+      "seed": 1021,
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1024",
+      "seed": 1024,
+      "split": "test"
+    }
+  ],
+  "invalid_policy": "Keep failed attempts; retry same frozen seed, never silently replace",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "plan_version": 1,
+  "runs": [
+    {
+      "group_id": "base-seed-1029",
+      "profile": "regular",
+      "seed": 1029,
+      "simulation_id": "scenario-1029-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1029",
+      "profile": "pressure",
+      "seed": 1029,
+      "simulation_id": "scenario-1029-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1029",
+      "profile": "perturbed",
+      "seed": 1029,
+      "simulation_id": "scenario-1029-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1017",
+      "profile": "regular",
+      "seed": 1017,
+      "simulation_id": "scenario-1017-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1017",
+      "profile": "pressure",
+      "seed": 1017,
+      "simulation_id": "scenario-1017-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1017",
+      "profile": "perturbed",
+      "seed": 1017,
+      "simulation_id": "scenario-1017-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1004",
+      "profile": "regular",
+      "seed": 1004,
+      "simulation_id": "scenario-1004-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1004",
+      "profile": "pressure",
+      "seed": 1004,
+      "simulation_id": "scenario-1004-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1004",
+      "profile": "perturbed",
+      "seed": 1004,
+      "simulation_id": "scenario-1004-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1023",
+      "profile": "regular",
+      "seed": 1023,
+      "simulation_id": "scenario-1023-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1023",
+      "profile": "pressure",
+      "seed": 1023,
+      "simulation_id": "scenario-1023-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1023",
+      "profile": "perturbed",
+      "seed": 1023,
+      "simulation_id": "scenario-1023-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1025",
+      "profile": "regular",
+      "seed": 1025,
+      "simulation_id": "scenario-1025-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1025",
+      "profile": "pressure",
+      "seed": 1025,
+      "simulation_id": "scenario-1025-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1025",
+      "profile": "perturbed",
+      "seed": 1025,
+      "simulation_id": "scenario-1025-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1027",
+      "profile": "regular",
+      "seed": 1027,
+      "simulation_id": "scenario-1027-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1027",
+      "profile": "pressure",
+      "seed": 1027,
+      "simulation_id": "scenario-1027-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1027",
+      "profile": "perturbed",
+      "seed": 1027,
+      "simulation_id": "scenario-1027-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1013",
+      "profile": "regular",
+      "seed": 1013,
+      "simulation_id": "scenario-1013-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1013",
+      "profile": "pressure",
+      "seed": 1013,
+      "simulation_id": "scenario-1013-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1013",
+      "profile": "perturbed",
+      "seed": 1013,
+      "simulation_id": "scenario-1013-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1005",
+      "profile": "regular",
+      "seed": 1005,
+      "simulation_id": "scenario-1005-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1005",
+      "profile": "pressure",
+      "seed": 1005,
+      "simulation_id": "scenario-1005-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1005",
+      "profile": "perturbed",
+      "seed": 1005,
+      "simulation_id": "scenario-1005-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1001",
+      "profile": "regular",
+      "seed": 1001,
+      "simulation_id": "scenario-1001-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1001",
+      "profile": "pressure",
+      "seed": 1001,
+      "simulation_id": "scenario-1001-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1001",
+      "profile": "perturbed",
+      "seed": 1001,
+      "simulation_id": "scenario-1001-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1008",
+      "profile": "regular",
+      "seed": 1008,
+      "simulation_id": "scenario-1008-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1008",
+      "profile": "pressure",
+      "seed": 1008,
+      "simulation_id": "scenario-1008-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1008",
+      "profile": "perturbed",
+      "seed": 1008,
+      "simulation_id": "scenario-1008-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1007",
+      "profile": "regular",
+      "seed": 1007,
+      "simulation_id": "scenario-1007-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1007",
+      "profile": "pressure",
+      "seed": 1007,
+      "simulation_id": "scenario-1007-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1007",
+      "profile": "perturbed",
+      "seed": 1007,
+      "simulation_id": "scenario-1007-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1000",
+      "profile": "regular",
+      "seed": 1000,
+      "simulation_id": "scenario-1000-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1000",
+      "profile": "pressure",
+      "seed": 1000,
+      "simulation_id": "scenario-1000-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1000",
+      "profile": "perturbed",
+      "seed": 1000,
+      "simulation_id": "scenario-1000-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1009",
+      "profile": "regular",
+      "seed": 1009,
+      "simulation_id": "scenario-1009-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1009",
+      "profile": "pressure",
+      "seed": 1009,
+      "simulation_id": "scenario-1009-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1009",
+      "profile": "perturbed",
+      "seed": 1009,
+      "simulation_id": "scenario-1009-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1026",
+      "profile": "regular",
+      "seed": 1026,
+      "simulation_id": "scenario-1026-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1026",
+      "profile": "pressure",
+      "seed": 1026,
+      "simulation_id": "scenario-1026-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1026",
+      "profile": "perturbed",
+      "seed": 1026,
+      "simulation_id": "scenario-1026-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1020",
+      "profile": "regular",
+      "seed": 1020,
+      "simulation_id": "scenario-1020-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1020",
+      "profile": "pressure",
+      "seed": 1020,
+      "simulation_id": "scenario-1020-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1020",
+      "profile": "perturbed",
+      "seed": 1020,
+      "simulation_id": "scenario-1020-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1014",
+      "profile": "regular",
+      "seed": 1014,
+      "simulation_id": "scenario-1014-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1014",
+      "profile": "pressure",
+      "seed": 1014,
+      "simulation_id": "scenario-1014-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1014",
+      "profile": "perturbed",
+      "seed": 1014,
+      "simulation_id": "scenario-1014-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1018",
+      "profile": "regular",
+      "seed": 1018,
+      "simulation_id": "scenario-1018-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1018",
+      "profile": "pressure",
+      "seed": 1018,
+      "simulation_id": "scenario-1018-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1018",
+      "profile": "perturbed",
+      "seed": 1018,
+      "simulation_id": "scenario-1018-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1012",
+      "profile": "regular",
+      "seed": 1012,
+      "simulation_id": "scenario-1012-regular",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1012",
+      "profile": "pressure",
+      "seed": 1012,
+      "simulation_id": "scenario-1012-pressure",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1012",
+      "profile": "perturbed",
+      "seed": 1012,
+      "simulation_id": "scenario-1012-perturbed",
+      "split": "training"
+    },
+    {
+      "group_id": "base-seed-1006",
+      "profile": "regular",
+      "seed": 1006,
+      "simulation_id": "scenario-1006-regular",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1006",
+      "profile": "pressure",
+      "seed": 1006,
+      "simulation_id": "scenario-1006-pressure",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1006",
+      "profile": "perturbed",
+      "seed": 1006,
+      "simulation_id": "scenario-1006-perturbed",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1015",
+      "profile": "regular",
+      "seed": 1015,
+      "simulation_id": "scenario-1015-regular",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1015",
+      "profile": "pressure",
+      "seed": 1015,
+      "simulation_id": "scenario-1015-pressure",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1015",
+      "profile": "perturbed",
+      "seed": 1015,
+      "simulation_id": "scenario-1015-perturbed",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1010",
+      "profile": "regular",
+      "seed": 1010,
+      "simulation_id": "scenario-1010-regular",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1010",
+      "profile": "pressure",
+      "seed": 1010,
+      "simulation_id": "scenario-1010-pressure",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1010",
+      "profile": "perturbed",
+      "seed": 1010,
+      "simulation_id": "scenario-1010-perturbed",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1019",
+      "profile": "regular",
+      "seed": 1019,
+      "simulation_id": "scenario-1019-regular",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1019",
+      "profile": "pressure",
+      "seed": 1019,
+      "simulation_id": "scenario-1019-pressure",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1019",
+      "profile": "perturbed",
+      "seed": 1019,
+      "simulation_id": "scenario-1019-perturbed",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1022",
+      "profile": "regular",
+      "seed": 1022,
+      "simulation_id": "scenario-1022-regular",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1022",
+      "profile": "pressure",
+      "seed": 1022,
+      "simulation_id": "scenario-1022-pressure",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1022",
+      "profile": "perturbed",
+      "seed": 1022,
+      "simulation_id": "scenario-1022-perturbed",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1003",
+      "profile": "regular",
+      "seed": 1003,
+      "simulation_id": "scenario-1003-regular",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1003",
+      "profile": "pressure",
+      "seed": 1003,
+      "simulation_id": "scenario-1003-pressure",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1003",
+      "profile": "perturbed",
+      "seed": 1003,
+      "simulation_id": "scenario-1003-perturbed",
+      "split": "calibration"
+    },
+    {
+      "group_id": "base-seed-1016",
+      "profile": "regular",
+      "seed": 1016,
+      "simulation_id": "scenario-1016-regular",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1016",
+      "profile": "pressure",
+      "seed": 1016,
+      "simulation_id": "scenario-1016-pressure",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1016",
+      "profile": "perturbed",
+      "seed": 1016,
+      "simulation_id": "scenario-1016-perturbed",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1011",
+      "profile": "regular",
+      "seed": 1011,
+      "simulation_id": "scenario-1011-regular",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1011",
+      "profile": "pressure",
+      "seed": 1011,
+      "simulation_id": "scenario-1011-pressure",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1011",
+      "profile": "perturbed",
+      "seed": 1011,
+      "simulation_id": "scenario-1011-perturbed",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1002",
+      "profile": "regular",
+      "seed": 1002,
+      "simulation_id": "scenario-1002-regular",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1002",
+      "profile": "pressure",
+      "seed": 1002,
+      "simulation_id": "scenario-1002-pressure",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1002",
+      "profile": "perturbed",
+      "seed": 1002,
+      "simulation_id": "scenario-1002-perturbed",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1028",
+      "profile": "regular",
+      "seed": 1028,
+      "simulation_id": "scenario-1028-regular",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1028",
+      "profile": "pressure",
+      "seed": 1028,
+      "simulation_id": "scenario-1028-pressure",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1028",
+      "profile": "perturbed",
+      "seed": 1028,
+      "simulation_id": "scenario-1028-perturbed",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1021",
+      "profile": "regular",
+      "seed": 1021,
+      "simulation_id": "scenario-1021-regular",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1021",
+      "profile": "pressure",
+      "seed": 1021,
+      "simulation_id": "scenario-1021-pressure",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1021",
+      "profile": "perturbed",
+      "seed": 1021,
+      "simulation_id": "scenario-1021-perturbed",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1024",
+      "profile": "regular",
+      "seed": 1024,
+      "simulation_id": "scenario-1024-regular",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1024",
+      "profile": "pressure",
+      "seed": 1024,
+      "simulation_id": "scenario-1024-pressure",
+      "split": "test"
+    },
+    {
+      "group_id": "base-seed-1024",
+      "profile": "perturbed",
+      "seed": 1024,
+      "simulation_id": "scenario-1024-perturbed",
+      "split": "test"
+    }
+  ],
+  "source_sha256": {
+    "__init__.py": "9588c86df5505b0668b5bb57d8e29410ed82fdea6c734d2184614e0a7b1bfb80",
+    "batch.py": "fb50b3476189f2eb65448164b742fae23eea9a36781e62c4c117fc7bf50b82c5",
+    "bundles.py": "1d444fcc1511f95ba39673da7165aea16bf1c2c32ad424f4c493ddf4990e0fa0",
+    "calendars.py": "84afda75b2a089cd44d6f1f2b6f37a13f3e557f45b159dc4173c5325295aa80d",
+    "cargo_ledger.py": "559eed34996098072c7870950e2b7607861459c07ef4d51361d3c10ee4a438f8",
+    "context.py": "645b526db55b4e19d805f1398355ade426701d5897b458f69e99b1875c1647c5",
+    "core.py": "2b424071a118bac312aa0e02295ea5e6bb8203e80f4b7bb175b6f2457637c0fb",
+    "dataset.py": "35717cece531c4771ae2060f0c0171869606a04713f7e651d5d07db37bb1da79",
+    "delivery_ledger.py": "3b23c108b8330667ae1d00ad19f6d799834b638c2ee1c0fd2065f2199b012a3a",
+    "demo.py": "cc530e228011094b54f056e95ae172650f0ebf1d574673b2a4783266f87c0e27",
+    "environment.py": "aa8ceb2a1fb622f65cf10fd1810f8d3fb8042b3663f24c926bcd31266e51f326",
+    "estimates.py": "e59c5f20cb7fb9edbf716ee37dea7cd17f8a43c5e70509e7e2c04e6e9e5f2ce8",
+    "experiments.py": "124916ec9168b105dd23d11d108d28a93501461a3373a6a5577cf0bf1c00c3d0",
+    "imports.py": "acbbc1f0c0a96e3d390a72c1fc8c414c6fc9e42d379cc3267693a5d53eaf3dbe",
+    "incidents.py": "5843c59e14cc5e1522cc426b42e222128540540d659f6d761a5dec656b425874",
+    "journal.py": "773c0ebc77a42699723b888fc437da355d591118466fbe9ee8befa836fd0ba21",
+    "operations.py": "502d5388f2934a4d94c6cf7f54901bbd2dece5827dc1e11c42a6c3f2d0730537",
+    "operations_demo.py": "793522174a18aa7f3b304ec1367b70a873ba6f91fbf506fd7792dca7c62fcfc9",
+    "pilot.py": "8741aa3c619e29614c18cb10748e055a38d6d156c1f221a6eed30fee206ce64e",
+    "pilot_checks.py": "62980579224ee971b473e3649400783ae1e98121b8305b0c13526614f955adf0",
+    "pilot_gate.py": "599f5c685e2ccb968a49a5cb918f5d999c0c1fe31e32924c31de62b39d559aca",
+    "provenance.py": "4b63f9224b1f0f3418fc983ecf169f1b7575d2a9c48dd71b3cf35e93ecbe8f32",
+    "recovery.py": "d7038717325cd9ad7fd99440567cf7a0165cf160f9b727b534db3ad561ace71f",
+    "recovery_demo.py": "4abce2b1d8e80b92051c919da33d2e300a2a0234f47aa8b61a061ad32343d36c",
+    "roads.py": "1824f9108d544456e04c664e430d852626b1363098daa2220539f5e5a52158a0",
+    "rolling.py": "36ab4ebea62502115b6535acf5421de102002b0725208867f2891085ca02b303",
+    "scenarios.py": "0d4bff13765a3d9dd333630e4b9dfb52a941b41dfccc5b68ddcc416e833a12a7",
+    "supply.py": "4ef0e6fb3f362aba1159793fc41223d1bf721bb15a0689fbb3eb96d94d310b1a",
+    "supply_demo.py": "36a1050a6aad3cdff8a9a14de2a0ecdfc3fdb737b0656f06b112c20cb886ca8e",
+    "table_import.py": "8f858bbf9478e21d10e7be2d0fcbd2b4ea3c8e5777a01f99fb0ec0191b0cb532",
+    "training_masks.py": "4f516b3e55df2ad99c9e043a0cdadf2cee2668b836b43959d5f073bec2328494",
+    "transport.py": "c6db304d0d76e57aaf45cacd1629d81a68b088c9879ca2f50043e96f6f91c5cc",
+    "transport_demo.py": "8aedab0439c4bf59ba45638c5d32b735237eeb978648bb18900cf7a727f325d8",
+    "warehouse.py": "9111d41067b86d14ccc00e4211018e5be32f000d80daa8a22b0a128f3c1f6bc5",
+    "warehouse_demo.py": "c2647e785514ac8b0394df9fe4998f6a80baeaf9c51e4787be09816bf1bc19df"
+  },
+  "test_usage": "Integrity and descriptive counts only; no model/threshold selection"
+}

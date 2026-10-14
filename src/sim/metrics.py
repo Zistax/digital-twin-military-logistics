@@ -28,7 +28,12 @@ def compute_basic_kpis(df: pd.DataFrame) -> Dict[str, Any]:
     - max_completion_minute
     """
     if "convoy_id" not in df.columns or "event_type" not in df.columns:
-        raise ValueError("Il DataFrame non contiene le colonne richieste ('convoy_id', 'event_type').")
+        raise ValueError(
+            (
+                "Il DataFrame non contiene le colonne richieste "
+                "('convoy_id', 'event_type')."
+            )
+        )
 
     n_convoys = int(df["convoy_id"].nunique())
 
@@ -37,11 +42,7 @@ def compute_basic_kpis(df: pd.DataFrame) -> Dict[str, Any]:
     n_not_completed_convoys = int(n_convoys - n_completed_convoys)
 
     if n_completed_convoys > 0:
-        completion_minutes_by_convoy = (
-            df_completed
-            .groupby("convoy_id")["minute"]
-            .min()
-        )
+        completion_minutes_by_convoy = df_completed.groupby("convoy_id")["minute"].min()
 
         avg_completion_minute = float(completion_minutes_by_convoy.mean())
         min_completion_minute = float(completion_minutes_by_convoy.min())

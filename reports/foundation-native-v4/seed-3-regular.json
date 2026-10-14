@@ -1,0 +1,8 @@
+{
+  "error": "context environment differs from journal",
+  "error_type": "ValueError",
+  "profile": "regular",
+  "seed": 3,
+  "valid": false,
+  "wall_seconds": 3.049
+}

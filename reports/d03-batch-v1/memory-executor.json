@@ -1,0 +1,7 @@
+{
+  "executor_sha256": "1e62f9bf3cc659c1688f2d3452cd31b302f20d852f86c5e91cef4d5aa495ed6e",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "pressure_limit": 3,
+  "release_state_before_read": true,
+  "workers": 3
+}

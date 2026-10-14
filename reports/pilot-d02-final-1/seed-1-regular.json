@@ -1,0 +1,1374 @@
+{
+  "deadline_sources": {
+    "configured_allowance": 55,
+    "observable_estimate": 19
+  },
+  "diagnostics": {
+    "final_allocation_reasons": {
+      "stock": 3
+    },
+    "incident_counts": {
+      "inspection": 391,
+      "mechanical_failure": 3,
+      "recovery_reservation_transfer": 1,
+      "transfer_completed": 2,
+      "transfer_started": 2,
+      "vehicle_restored": 3
+    },
+    "local_backlog_units": 382,
+    "mission_allocation_wait_seconds": {
+      "empty_travel": 445597,
+      "no_feasible_greedy_plan": 6714242,
+      "stock": 10316341
+    },
+    "mission_statuses": {
+      "en_route": 2,
+      "loading": 1,
+      "logistics_complete": 67,
+      "waiting": 4
+    },
+    "open_missions": [
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-54",
+        "required_units": 239,
+        "reserved_units": 239,
+        "status": "waiting",
+        "trips": {
+          "queued": 1
+        }
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-63",
+        "required_units": 448,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": 6,
+        "mission_id": "request-70",
+        "required_units": 239,
+        "reserved_units": 233,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 16,
+        "mission_id": "request-71",
+        "required_units": 118,
+        "reserved_units": 102,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": 29,
+        "mission_id": "request-72",
+        "required_units": 252,
+        "reserved_units": 223,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-73",
+        "required_units": 254,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-74",
+        "required_units": 130,
+        "reserved_units": 55,
+        "status": "loading",
+        "trips": {
+          "loaded": 1,
+          "queued": 1
+        }
+      }
+    ],
+    "peak_sampled": {
+      "internal_queue": 10,
+      "local_backlog_units": 494,
+      "open_missions": 41
+    },
+    "recovery_statuses": {
+      "completed": 5
+    },
+    "supplies_by_status": {
+      "closed": 211,
+      "expected": 1,
+      "waiting": 18
+    },
+    "supply_wait_by_order": {
+      "reorder-1": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-10": {
+        "berth": 0,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-100": {
+        "berth": 15300,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-101": {
+        "berth": 16800,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-102": {
+        "berth": 21300,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-103": {
+        "berth": 80400,
+        "opening": 295200,
+        "space": 0
+      },
+      "reorder-104": {
+        "berth": 83400,
+        "opening": 295200,
+        "space": 0
+      },
+      "reorder-105": {
+        "berth": 85200,
+        "opening": 295200,
+        "space": 0
+      },
+      "reorder-106": {
+        "berth": 8142,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-107": {
+        "berth": 9551,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-108": {
+        "berth": 11742,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-109": {
+        "berth": 13451,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-11": {
+        "berth": 2400,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-110": {
+        "berth": 7200,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-111": {
+        "berth": 83400,
+        "opening": 280800,
+        "space": 0
+      },
+      "reorder-112": {
+        "berth": 0,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-113": {
+        "berth": 140100,
+        "opening": 288000,
+        "space": 0
+      },
+      "reorder-114": {
+        "berth": 117600,
+        "opening": 237600,
+        "space": 0
+      },
+      "reorder-115": {
+        "berth": 120900,
+        "opening": 237600,
+        "space": 0
+      },
+      "reorder-116": {
+        "berth": 140400,
+        "opening": 288000,
+        "space": 0
+      },
+      "reorder-117": {
+        "berth": 125100,
+        "opening": 237600,
+        "space": 0
+      },
+      "reorder-118": {
+        "berth": 127200,
+        "opening": 237600,
+        "space": 0
+      },
+      "reorder-119": {
+        "berth": 138000,
+        "opening": 288000,
+        "space": 0
+      },
+      "reorder-12": {
+        "berth": 5100,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-120": {
+        "berth": 148200,
+        "opening": 288000,
+        "space": 0
+      },
+      "reorder-121": {
+        "berth": 149400,
+        "opening": 288000,
+        "space": 0
+      },
+      "reorder-122": {
+        "berth": 0,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-123": {
+        "berth": 3000,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-124": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-125": {
+        "berth": 3300,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-126": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-127": {
+        "berth": 137400,
+        "opening": 280800,
+        "space": 0
+      },
+      "reorder-128": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-129": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-13": {
+        "berth": 7200,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-130": {
+        "berth": 600,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-131": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-132": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-133": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-134": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-135": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-136": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-137": {
+        "berth": 4800,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-138": {
+        "berth": 18900,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-139": {
+        "berth": 56400,
+        "opening": 226800,
+        "space": 0
+      },
+      "reorder-14": {
+        "berth": 9300,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-140": {
+        "berth": 57900,
+        "opening": 226800,
+        "space": 0
+      },
+      "reorder-141": {
+        "berth": 0,
+        "opening": 25200,
+        "space": 0
+      },
+      "reorder-142": {
+        "berth": 0,
+        "opening": 21600,
+        "space": 0
+      },
+      "reorder-143": {
+        "berth": 600,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-144": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-145": {
+        "berth": 2700,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-146": {
+        "berth": 5100,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-147": {
+        "berth": 154500,
+        "opening": 644400,
+        "space": 7500
+      },
+      "reorder-148": {
+        "berth": 154500,
+        "opening": 644400,
+        "space": 7500
+      },
+      "reorder-149": {
+        "berth": 154500,
+        "opening": 644400,
+        "space": 7500
+      },
+      "reorder-15": {
+        "berth": 54000,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-150": {
+        "berth": 154500,
+        "opening": 644400,
+        "space": 7500
+      },
+      "reorder-151": {
+        "berth": 154500,
+        "opening": 644400,
+        "space": 7500
+      },
+      "reorder-152": {
+        "berth": 154500,
+        "opening": 644400,
+        "space": 7500
+      },
+      "reorder-153": {
+        "berth": 28200,
+        "opening": 219600,
+        "space": 0
+      },
+      "reorder-154": {
+        "berth": 45900,
+        "opening": 273600,
+        "space": 0
+      },
+      "reorder-155": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-156": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-157": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-158": {
+        "berth": 48000,
+        "opening": 219600,
+        "space": 0
+      },
+      "reorder-159": {
+        "berth": 51000,
+        "opening": 219600,
+        "space": 0
+      },
+      "reorder-16": {
+        "berth": 61800,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-160": {
+        "berth": 54900,
+        "opening": 219600,
+        "space": 0
+      },
+      "reorder-161": {
+        "berth": 56400,
+        "opening": 219600,
+        "space": 0
+      },
+      "reorder-162": {
+        "berth": 81000,
+        "opening": 187200,
+        "space": 0
+      },
+      "reorder-163": {
+        "berth": 0,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-164": {
+        "berth": 0,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-165": {
+        "berth": 0,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-166": {
+        "berth": 3600,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-167": {
+        "berth": 4200,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-168": {
+        "berth": 4500,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-169": {
+        "berth": 68100,
+        "opening": 180000,
+        "space": 0
+      },
+      "reorder-17": {
+        "berth": 57000,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-170": {
+        "berth": 69600,
+        "opening": 180000,
+        "space": 0
+      },
+      "reorder-171": {
+        "berth": 58500,
+        "opening": 183600,
+        "space": 0
+      },
+      "reorder-172": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-173": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-174": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-175": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-176": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-177": {
+        "berth": 300,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-178": {
+        "berth": 3600,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-179": {
+        "berth": 4200,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-18": {
+        "berth": 59700,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-180": {
+        "berth": 4500,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-181": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-182": {
+        "berth": 154500,
+        "opening": 536400,
+        "space": 7500
+      },
+      "reorder-183": {
+        "berth": 154500,
+        "opening": 536400,
+        "space": 7500
+      },
+      "reorder-184": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-185": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-186": {
+        "berth": 0,
+        "opening": 27000,
+        "space": 0
+      },
+      "reorder-187": {
+        "berth": 0,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-188": {
+        "berth": 0,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-189": {
+        "berth": 3300,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-19": {
+        "berth": 62700,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-190": {
+        "berth": 3600,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-191": {
+        "berth": 4800,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-192": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-193": {
+        "berth": 71100,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-194": {
+        "berth": 72600,
+        "opening": 144000,
+        "space": 0
+      },
+      "reorder-195": {
+        "berth": 73800,
+        "opening": 144000,
+        "space": 0
+      },
+      "reorder-196": {
+        "berth": 154500,
+        "opening": 464400,
+        "space": 7500
+      },
+      "reorder-197": {
+        "berth": 154500,
+        "opening": 464400,
+        "space": 7500
+      },
+      "reorder-198": {
+        "berth": 154500,
+        "opening": 464400,
+        "space": 7500
+      },
+      "reorder-199": {
+        "berth": 154500,
+        "opening": 460800,
+        "space": 7500
+      },
+      "reorder-2": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-20": {
+        "berth": 66900,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-200": {
+        "berth": 154500,
+        "opening": 460800,
+        "space": 7500
+      },
+      "reorder-201": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-202": {
+        "berth": 154500,
+        "opening": 435600,
+        "space": 7500
+      },
+      "reorder-203": {
+        "berth": 150900,
+        "opening": 421200,
+        "space": 7500
+      },
+      "reorder-204": {
+        "berth": 64200,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-205": {
+        "berth": 66000,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-206": {
+        "berth": 127800,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-207": {
+        "berth": 45600,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-208": {
+        "berth": 47700,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-209": {
+        "berth": 58200,
+        "opening": 108000,
+        "space": 0
+      },
+      "reorder-21": {
+        "berth": 64200,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-210": {
+        "berth": 59700,
+        "opening": 108000,
+        "space": 0
+      },
+      "reorder-211": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-212": {
+        "berth": 104700,
+        "opening": 144000,
+        "space": 0
+      },
+      "reorder-213": {
+        "berth": 106200,
+        "opening": 144000,
+        "space": 0
+      },
+      "reorder-214": {
+        "berth": 43800,
+        "opening": 97200,
+        "space": 0
+      },
+      "reorder-215": {
+        "berth": 122100,
+        "opening": 410400,
+        "space": 7500
+      },
+      "reorder-216": {
+        "berth": 122100,
+        "opening": 410400,
+        "space": 7500
+      },
+      "reorder-217": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-218": {
+        "berth": 71700,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-219": {
+        "berth": 12900,
+        "opening": 43200,
+        "space": 0
+      },
+      "reorder-22": {
+        "berth": 72600,
+        "opening": 100800,
+        "space": 0
+      },
+      "reorder-220": {
+        "berth": 24300,
+        "opening": 43200,
+        "space": 0
+      },
+      "reorder-221": {
+        "berth": 63600,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-222": {
+        "berth": 65100,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-223": {
+        "berth": 66300,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-224": {
+        "berth": 67800,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-225": {
+        "berth": 69300,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-226": {
+        "berth": 30600,
+        "opening": 43200,
+        "space": 0
+      },
+      "reorder-227": {
+        "berth": 32100,
+        "opening": 43200,
+        "space": 0
+      },
+      "reorder-228": {
+        "berth": 32400,
+        "opening": 248400,
+        "space": 0
+      },
+      "reorder-229": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-23": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-230": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-24": {
+        "berth": 0,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-25": {
+        "berth": 0,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-26": {
+        "berth": 2400,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-27": {
+        "berth": 2400,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-28": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-29": {
+        "berth": 63300,
+        "opening": 93600,
+        "space": 0
+      },
+      "reorder-3": {
+        "berth": 12600,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-30": {
+        "berth": 0,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-31": {
+        "berth": 2400,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-32": {
+        "berth": 10800,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-33": {
+        "berth": 13500,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-34": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-35": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-36": {
+        "berth": 64800,
+        "opening": 72000,
+        "space": 0
+      },
+      "reorder-37": {
+        "berth": 66300,
+        "opening": 72000,
+        "space": 0
+      },
+      "reorder-38": {
+        "berth": 89400,
+        "opening": 122400,
+        "space": 0
+      },
+      "reorder-39": {
+        "berth": 117000,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-4": {
+        "berth": 15300,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-40": {
+        "berth": 91200,
+        "opening": 122400,
+        "space": 0
+      },
+      "reorder-41": {
+        "berth": 93000,
+        "opening": 122400,
+        "space": 0
+      },
+      "reorder-42": {
+        "berth": 114600,
+        "opening": 172800,
+        "space": 0
+      },
+      "reorder-43": {
+        "berth": 0,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-44": {
+        "berth": 3900,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-45": {
+        "berth": 13200,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-46": {
+        "berth": 15000,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-47": {
+        "berth": 18900,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-48": {
+        "berth": 21900,
+        "opening": 18000,
+        "space": 0
+      },
+      "reorder-49": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-5": {
+        "berth": 18300,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-50": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-51": {
+        "berth": 24900,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-52": {
+        "berth": 27000,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-53": {
+        "berth": 29400,
+        "opening": 10800,
+        "space": 0
+      },
+      "reorder-54": {
+        "berth": 40500,
+        "opening": 61200,
+        "space": 0
+      },
+      "reorder-55": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-56": {
+        "berth": 31800,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-57": {
+        "berth": 46200,
+        "opening": 57600,
+        "space": 0
+      },
+      "reorder-58": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-59": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-6": {
+        "berth": 34500,
+        "opening": 23700,
+        "space": 0
+      },
+      "reorder-60": {
+        "berth": 2400,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-61": {
+        "berth": 3600,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-62": {
+        "berth": 5100,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-63": {
+        "berth": 6300,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-64": {
+        "berth": 9300,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-65": {
+        "berth": 9600,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-66": {
+        "berth": 12900,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-67": {
+        "berth": 15600,
+        "opening": 28800,
+        "space": 0
+      },
+      "reorder-68": {
+        "berth": 20400,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-69": {
+        "berth": 22800,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-7": {
+        "berth": 26100,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-70": {
+        "berth": 94800,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-71": {
+        "berth": 93600,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-72": {
+        "berth": 96300,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-73": {
+        "berth": 98400,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-74": {
+        "berth": 94800,
+        "opening": 147600,
+        "space": 0
+      },
+      "reorder-75": {
+        "berth": 100800,
+        "opening": 151200,
+        "space": 0
+      },
+      "reorder-76": {
+        "berth": 1800,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-77": {
+        "berth": 19200,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-78": {
+        "berth": 19200,
+        "opening": 46800,
+        "space": 0
+      },
+      "reorder-79": {
+        "berth": 21900,
+        "opening": 46800,
+        "space": 0
+      },
+      "reorder-8": {
+        "berth": 29400,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-80": {
+        "berth": 24000,
+        "opening": 46800,
+        "space": 0
+      },
+      "reorder-81": {
+        "berth": 13800,
+        "opening": 43200,
+        "space": 0
+      },
+      "reorder-82": {
+        "berth": 26400,
+        "opening": 43200,
+        "space": 0
+      },
+      "reorder-83": {
+        "berth": 27900,
+        "opening": 29400,
+        "space": 0
+      },
+      "reorder-84": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-85": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-86": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-87": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-88": {
+        "berth": 4200,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-89": {
+        "berth": 5400,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-9": {
+        "berth": 31500,
+        "opening": 39600,
+        "space": 0
+      },
+      "reorder-90": {
+        "berth": 8400,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-91": {
+        "berth": 9300,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-92": {
+        "berth": 129300,
+        "opening": 240600,
+        "space": 0
+      },
+      "reorder-93": {
+        "berth": 97500,
+        "opening": 118800,
+        "space": 0
+      },
+      "reorder-94": {
+        "berth": 100800,
+        "opening": 118800,
+        "space": 0
+      },
+      "reorder-95": {
+        "berth": 102600,
+        "opening": 118800,
+        "space": 0
+      },
+      "reorder-96": {
+        "berth": 106500,
+        "opening": 118800,
+        "space": 0
+      },
+      "reorder-97": {
+        "berth": 108000,
+        "opening": 255600,
+        "space": 0
+      },
+      "reorder-98": {
+        "berth": 110400,
+        "opening": 255600,
+        "space": 0
+      },
+      "reorder-99": {
+        "berth": 126900,
+        "opening": 255600,
+        "space": 0
+      }
+    },
+    "supply_wait_seconds": {
+      "berth": 10011886,
+      "opening": 23591100,
+      "space": 127500
+    },
+    "terminal_blockers": {
+      "request-54": [
+        {
+          "depot": "local-c",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-71-0"
+        }
+      ],
+      "request-63": [
+        {
+          "depot": "local-c",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-63-0"
+        }
+      ],
+      "request-70": [
+        {
+          "deficit": {
+            "food-large": 0,
+            "food-medium": 0,
+            "medical-large": 6,
+            "medical-medium": 0,
+            "medical-small": 0,
+            "spares-large": 0,
+            "spares-medium": 0,
+            "spares-small": 0
+          },
+          "kind": "stock"
+        }
+      ],
+      "request-71": [
+        {
+          "deficit": {
+            "electronics-large": 0,
+            "electronics-medium": 16,
+            "food-large": 0,
+            "food-medium": 0,
+            "spares-small": 0
+          },
+          "kind": "stock"
+        }
+      ],
+      "request-72": [
+        {
+          "deficit": {
+            "electronics-large": 0,
+            "electronics-medium": 13,
+            "medical-large": 16,
+            "medical-medium": 0,
+            "medical-small": 0,
+            "spares-large": 0,
+            "spares-small": 0
+          },
+          "kind": "stock"
+        }
+      ],
+      "request-73": [
+        {
+          "depot": "local-c",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-69-0"
+        }
+      ],
+      "request-74": [
+        {
+          "depot": "local-b",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-66-1"
+        }
+      ]
+    },
+    "wait_seconds": {
+      "berth": 977286,
+      "opening": 5160542,
+      "space": 44100,
+      "stock": 64500
+    }
+  },
+  "estimate_unavailable_reasons": {
+    "insufficient_free_compatible_fleet": 13,
+    "stock_without_usable_arrival_promise": 42
+  },
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 53,
+    "mean_delay_reached_minutes": 3272.8592039800997,
+    "missions": 74,
+    "on_time_reached": 21,
+    "quota_censored": 7,
+    "quota_reached": 67,
+    "timing_unknown": 0
+  },
+  "profile": "regular",
+  "result_sha256": "beb8f1de8e97e6b1ee746c9be808565ad2f8520e6fb68d5a0027823dd5dd29aa",
+  "rolling_samples": 7104,
+  "seed": 1,
+  "stop_reason": "time_limit",
+  "stopped_s": 1209600,
+  "trace_rows": 336,
+  "trace_sha256": "85cc896d63631ee43f78f3a00e5d831b94a817d5dab923d918605a6d02a8b3f9",
+  "unexplained_open_missions": [],
+  "valid": true,
+  "wall_seconds": 134.788
+}

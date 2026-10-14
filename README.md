@@ -1,3 +1,30 @@
+# Digital twin logistico
+
+## Stato del nuovo nucleo — 14 ottobre 2026
+
+**D03 completato, dodicesima voce su 18.** Simulatore operativo, contratti v4,
+90 simulazioni native verificate, 30 gruppi seed e split 54/18/18.
+8239 missioni e 1040241 snapshot rolling. Prossima voce: M01, non ancora iniziata.
+
+- [Roadmap completa](docs/stato-roadmap.md)
+- [Specifica unificata](docs/Specifica_Unificata_Logistica_Predittiva_v1.md)
+- [Chiusura D03](reports/d03-closeout-20261014/Chiusura_D03.md)
+- [Contratti e decisioni](docs/decisioni-nucleo-v1.md)
+- [Dataset: distribuzione e riproduzione](data/d03/README.md)
+
+Qualità verificata: 268 test e 16 sotto-test; copertura del nucleo 91,78%.
+Per ripetere i controlli, installare le dipendenze runtime e
+`requirements-quality.txt`, quindi eseguire:
+
+```bash
+python scripts/check_quality.py --report reports/quality-nuova-verifica
+```
+
+Le sezioni seguenti descrivono il prototipo storico. La nuova API/UI e i nuovi
+modelli predittivi restano nelle fasi M01–U01 della roadmap.
+
+---
+
 Questo progetto ha l'obiettivo di creare un primo prototipo (MVP) di digital twin logistico con:
 
 - Simulatore di convogli e depositi

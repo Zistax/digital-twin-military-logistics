@@ -1,0 +1,134 @@
+[
+  {
+    "profile": "perturbed",
+    "urgent": false,
+    "cold": false,
+    "missions": 1384,
+    "quota_reached": 1111,
+    "quota_censored": 273,
+    "cancelled": 0,
+    "known_late": 1150,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "perturbed",
+    "urgent": false,
+    "cold": true,
+    "missions": 286,
+    "quota_reached": 240,
+    "quota_censored": 46,
+    "cancelled": 0,
+    "known_late": 256,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "perturbed",
+    "urgent": true,
+    "cold": false,
+    "missions": 320,
+    "quota_reached": 319,
+    "quota_censored": 1,
+    "cancelled": 0,
+    "known_late": 202,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "perturbed",
+    "urgent": true,
+    "cold": true,
+    "missions": 67,
+    "quota_reached": 67,
+    "quota_censored": 0,
+    "cancelled": 0,
+    "known_late": 45,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "pressure",
+    "urgent": false,
+    "cold": false,
+    "missions": 2787,
+    "quota_reached": 1284,
+    "quota_censored": 1503,
+    "cancelled": 0,
+    "known_late": 2522,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "pressure",
+    "urgent": false,
+    "cold": true,
+    "missions": 548,
+    "quota_reached": 259,
+    "quota_censored": 289,
+    "cancelled": 0,
+    "known_late": 514,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "pressure",
+    "urgent": true,
+    "cold": false,
+    "missions": 642,
+    "quota_reached": 635,
+    "quota_censored": 7,
+    "cancelled": 0,
+    "known_late": 403,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "pressure",
+    "urgent": true,
+    "cold": true,
+    "missions": 148,
+    "quota_reached": 144,
+    "quota_censored": 4,
+    "cancelled": 0,
+    "known_late": 105,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "regular",
+    "urgent": false,
+    "cold": false,
+    "missions": 1384,
+    "quota_reached": 1157,
+    "quota_censored": 227,
+    "cancelled": 0,
+    "known_late": 1068,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "regular",
+    "urgent": false,
+    "cold": true,
+    "missions": 286,
+    "quota_reached": 275,
+    "quota_censored": 11,
+    "cancelled": 0,
+    "known_late": 237,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "regular",
+    "urgent": true,
+    "cold": false,
+    "missions": 320,
+    "quota_reached": 320,
+    "quota_censored": 0,
+    "cancelled": 0,
+    "known_late": 170,
+    "timing_unknown": 0
+  },
+  {
+    "profile": "regular",
+    "urgent": true,
+    "cold": true,
+    "missions": 67,
+    "quota_reached": 67,
+    "quota_censored": 0,
+    "cancelled": 0,
+    "known_late": 36,
+    "timing_unknown": 0
+  }
+]

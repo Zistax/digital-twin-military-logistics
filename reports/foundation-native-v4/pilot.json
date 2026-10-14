@@ -1,0 +1,40 @@
+{
+  "all_valid": false,
+  "extension_days": 1,
+  "generation_days": 1,
+  "limitations": [
+    "Exploratory pilot, not the 90-run dataset or statistical validation",
+    "Predictive quality and the independent 90-run dataset are not evaluated",
+    "Queue peaks sampled at observation intervals, not continuous maxima"
+  ],
+  "pilot_version": 1,
+  "runs": [
+    {
+      "error": "context environment differs from journal",
+      "error_type": "ValueError",
+      "profile": "regular",
+      "seed": 3,
+      "valid": false,
+      "wall_seconds": 3.049
+    },
+    {
+      "error": "context environment differs from journal",
+      "error_type": "ValueError",
+      "profile": "pressure",
+      "seed": 3,
+      "valid": false,
+      "wall_seconds": 5.547
+    },
+    {
+      "error": "context environment differs from journal",
+      "error_type": "ValueError",
+      "profile": "perturbed",
+      "seed": 3,
+      "valid": false,
+      "wall_seconds": 3.156
+    }
+  ],
+  "seeds": [
+    3
+  ]
+}

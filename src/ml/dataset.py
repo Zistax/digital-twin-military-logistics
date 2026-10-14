@@ -28,7 +28,9 @@ def split_features_labels(
 ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:
     """Divide il dataset in train/test per un problema di classificazione binaria."""
     if label_col not in df.columns:
-        raise ValueError(f"La colonna label '{label_col}' non è presente nel DataFrame.")
+        raise ValueError(
+            f"La colonna label '{label_col}' non è presente nel DataFrame."
+        )
 
     if feature_cols is None:
         # Usiamo un set minimo di feature numeriche (puoi estenderlo in futuro)
@@ -36,7 +38,9 @@ def split_features_labels(
 
     for col in feature_cols:
         if col not in df.columns:
-            raise ValueError(f"La colonna di feature '{col}' non è presente nel DataFrame.")
+            raise ValueError(
+                f"La colonna di feature '{col}' non è presente nel DataFrame."
+            )
 
     X = df[feature_cols].copy()
     y = df[label_col].astype(int).copy()

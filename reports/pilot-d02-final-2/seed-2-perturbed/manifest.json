@@ -1,0 +1,48 @@
+{
+  "config": {
+    "extension_days": 7,
+    "generation_days": 7,
+    "profile": "perturbed",
+    "seed": 2
+  },
+  "feature_version": "creation-v1",
+  "files": {
+    "cargo_events.jsonl": {
+      "rows": 318,
+      "sha256": "b642069138d7c3782bdb605958760b7a8cac49415323f671ffe28d9fcf3c66a5"
+    },
+    "delivery_events.jsonl": {
+      "rows": 309,
+      "sha256": "29141ce923cf7a6b34d9486664a28c9377c29b59ffac2e8796540cb22a0dae54"
+    },
+    "labels.jsonl": {
+      "rows": 65,
+      "sha256": "cd687d83c29bb09d50e546c9b92879871c64c9b7cad19250dddf2eddd69b8206"
+    },
+    "observations.jsonl": {
+      "rows": 65,
+      "sha256": "02d7ca22815dbbac782215b9bce7349602ab8aea9c37fa93008a1e2578d70577"
+    },
+    "rolling_observations.jsonl": {
+      "rows": 7096,
+      "sha256": "58cb4068fdd205f81f20a9c3a1776e9bf269fdd2325982d68a3c071c66742561"
+    },
+    "rolling_targets.jsonl": {
+      "rows": 7096,
+      "sha256": "cf4f5a882f75bf5455a0668483374c150c5e1dd1daff84b5a0361fa11a035fca"
+    }
+  },
+  "group_id": "base-seed-2",
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 52,
+    "mean_delay_reached_minutes": 3636.3562500000003,
+    "missions": 65,
+    "on_time_reached": 13,
+    "quota_censored": 9,
+    "quota_reached": 56,
+    "timing_unknown": 0
+  },
+  "rolling_feature_version": "rolling-v1",
+  "schema_version": 3
+}

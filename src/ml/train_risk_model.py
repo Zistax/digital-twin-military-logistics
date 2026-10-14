@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
 from pathlib import Path
 
 import joblib
@@ -8,6 +10,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 from .dataset import load_convoy_risk_dataset, split_features_labels
 from src.config.config_loader import load_ml_config
+
 
 def train_risk_model(
     dataset_path: str | Path = "data/processed/convoy_risk_dataset.csv",
@@ -51,10 +54,9 @@ def train_risk_model(
     print("=== Classification Report ===")
     print(classification_report(y_test, y_pred, digits=3))
 
-    from datetime import datetime
-
-    # Versione modello: timestamp ISO semplice (puoi sostituirlo con qualcosa di più evoluto in futuro)
-    model_version = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    # Versione modello: timestamp ISO semplice (puoi sostituirlo con qualcosa di più
+    # evoluto in futuro)
+    model_version = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
     report_dict = {
         "model_version": model_version,

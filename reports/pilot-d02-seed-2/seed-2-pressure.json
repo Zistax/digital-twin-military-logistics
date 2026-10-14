@@ -1,0 +1,8 @@
+{
+  "error": "'medical-large'",
+  "error_type": "KeyError",
+  "profile": "pressure",
+  "seed": 2,
+  "valid": false,
+  "wall_seconds": 38.321
+}

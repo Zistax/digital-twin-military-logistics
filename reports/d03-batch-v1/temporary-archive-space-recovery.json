@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-14T19:40:47.222032+00:00",
+  "reason": "Reclaim reproducible temporary archive space before remaining native runs; accepted bundles preserved",
+  "removed": [
+    {
+      "name": "Dataset_D03_in_preparazione.zip",
+      "bytes": 1545833904
+    },
+    {
+      "name": "Dataset_D03_diagnostica_incompleto.zip",
+      "bytes": 165782415
+    }
+  ]
+}

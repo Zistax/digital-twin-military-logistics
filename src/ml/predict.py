@@ -30,7 +30,8 @@ def prepare_convoy_features(
 
     In questa versione semplificata:
     - tutti i convogli hanno le stesse feature (total_minutes, timestep_minutes)
-    - la differenza tra convogli non è ancora modellata (sarà migliorato in fasi successive)
+    - la differenza tra convogli non è ancora modellata (sarà migliorato in fasi
+    successive)
     """
     if n_convoys <= 0:
         raise ValueError("n_convoys deve essere > 0")

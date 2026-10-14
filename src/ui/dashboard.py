@@ -4,7 +4,9 @@ import requests
 
 from ml.risk_threshold import RISK_THRESHOLD_DEFAULT, is_high_risk
 from config.terminology_loader import load_terminology, translate_term
+
 API_BASE_URL = "http://127.0.0.1:8000"
+
 
 def main():
 
@@ -15,26 +17,25 @@ def main():
         # Terminologia non configurata; useremo i termini canonici
         term_map = {}
 
-    st.set_page_config(page_title="Digital Twin Logistico – Rischio Convoglio", page_icon="🚚")
+    st.set_page_config(
+        page_title="Digital Twin Logistico – Rischio Convoglio", page_icon="🚚"
+    )
 
     st.title("Digital Twin Logistico – Rischio Convoglio")
-    st.write(
-        """
+    st.write("""
         Questa UI usa l'API FastAPI locale per calcolare il rischio dei convogli.
         Assicurati di aver avviato il server con:
         `uvicorn src.api.app:app --reload`
-        """
-    )
+        """)
 
     attack_label = translate_term("attack", term_map)
     breakdown_label = translate_term("breakdown", term_map)
 
-    st.write(
-        f"""
+    st.write(f"""
         Il modello stima il rischio per i convogli considerando diversi tipi di eventi
-        (es. `{attack_label}`, `{breakdown_label}`, ecc.), in base al dataset di addestramento.
-        """
-    )
+        (es. `{attack_label}`, `{breakdown_label}`, ecc.),
+        in base al dataset di addestramento.
+        """)
 
     api_url = st.sidebar.text_input(
         "API base URL",
@@ -112,16 +113,15 @@ def main():
 
         df_result = pd.DataFrame(results)
 
-                # Se l'API non ha già fornito la colonna is_high_risk, la calcoliamo noi
+        # Se l'API non ha già fornito la colonna is_high_risk, la calcoliamo noi
         if "is_high_risk" not in df_result.columns:
             df_result["is_high_risk"] = df_result["risk_proba"].apply(
                 lambda p: is_high_risk(float(p), threshold_used)
             )
 
-        df_result_sorted = (
-            df_result.sort_values("risk_proba", ascending=False)
-            .reset_index(drop=True)
-        )
+        df_result_sorted = df_result.sort_values(
+            "risk_proba", ascending=False
+        ).reset_index(drop=True)
 
         st.subheader("Risultati – Probabilità di rischio per convoglio (ordinate)")
         st.write(f"Soglia di rischio usata: **{threshold_used:.2f}**")
@@ -137,11 +137,13 @@ def main():
 
         if high_risk.empty:
             st.info(
-                f"Nessun convoglio supera la soglia di rischio selezionata ({threshold_used:.2f})."
+                "Nessun convoglio supera la soglia di rischio selezionata "
+                f"({threshold_used:.2f})."
             )
         else:
             st.warning(
-                f"Attenzione: alcuni convogli superano la soglia di rischio ({threshold_used:.2f}). "
+                "Attenzione: alcuni convogli superano la soglia di rischio "
+                f"({threshold_used:.2f}). "
                 "Elenco convogli ad alto rischio:"
             )
             st.table(high_risk)

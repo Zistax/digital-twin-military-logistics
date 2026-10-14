@@ -6,7 +6,6 @@ from typing import Any, Dict
 import os
 import yaml
 
-
 # Cartella base delle configurazioni
 BASE_CONF_DIR = Path("conf")
 
@@ -20,10 +19,14 @@ def _load_yaml_file(path: Path) -> Dict[str, Any]:
         raise FileNotFoundError(f"File di configurazione non trovato: {path}")
 
     with path.open("r", encoding="utf-8") as f:
-        data = yaml.safe_load(f) or {}
+        data = yaml.safe_load(f)
+    if data is None:
+        data = {}
 
     if not isinstance(data, dict):
-        raise ValueError(f"Il file di configurazione {path} non contiene un dict YAML valido.")
+        raise ValueError(
+            f"Il file di configurazione {path} non contiene un dict YAML valido."
+        )
 
     return data
 
@@ -42,6 +45,8 @@ def load_sim_config(env: str | None = None) -> Dict[str, Any]:
     path = BASE_CONF_DIR / "sim" / f"{env}.yml"
     raw = _load_yaml_file(path)
     sim_conf = raw.get("sim", raw)
+    if not isinstance(sim_conf, dict):
+        raise ValueError("sim section must be a dictionary")
     return sim_conf
 
 
@@ -59,4 +64,6 @@ def load_ml_config(env: str | None = None) -> Dict[str, Any]:
     path = BASE_CONF_DIR / "ml" / f"{env}.yml"
     raw = _load_yaml_file(path)
     ml_conf = raw.get("ml", raw)
+    if not isinstance(ml_conf, dict):
+        raise ValueError("ml section must be a dictionary")
     return ml_conf

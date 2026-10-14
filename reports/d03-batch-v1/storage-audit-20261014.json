@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "accepted_records_scanned": 49,
+  "failures": [
+    {
+      "simulation_id": "scenario-1004-perturbed",
+      "record": "records/scenario-1004-perturbed-attempt-1.json",
+      "path": "bundles/scenario-1004-perturbed-attempt-1/operational_events.jsonl",
+      "expected_sha256": "e1d4619195f71aed4545adc3f8af55484faeaa7d53a47216c9e222e21f88cc6b",
+      "actual_sha256": "a700bb2cbdb595d72fc9d043c72db27ea3d8f1c5fc92fe1c2e87103f407e9f72",
+      "stored_bytes": 308736
+    }
+  ]
+}

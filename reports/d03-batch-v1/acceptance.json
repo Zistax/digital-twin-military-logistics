@@ -1,0 +1,90 @@
+{
+  "batch_version": 1,
+  "distributions": {
+    "all": {
+      "cancelled": 0,
+      "known_late": 6708,
+      "missions": 8239,
+      "on_time_reached": 1531,
+      "quota_censored": 2361,
+      "quota_reached": 5878,
+      "rolling_samples": 1040241,
+      "timing_unknown": 0
+    },
+    "calibration": {
+      "cancelled": 0,
+      "known_late": 1328,
+      "missions": 1646,
+      "on_time_reached": 318,
+      "quota_censored": 452,
+      "quota_reached": 1194,
+      "rolling_samples": 203274,
+      "timing_unknown": 0
+    },
+    "perturbed": {
+      "cancelled": 0,
+      "known_late": 1653,
+      "missions": 2057,
+      "on_time_reached": 404,
+      "quota_censored": 320,
+      "quota_reached": 1737,
+      "rolling_samples": 218878,
+      "timing_unknown": 0
+    },
+    "pressure": {
+      "cancelled": 0,
+      "known_late": 3544,
+      "missions": 4125,
+      "on_time_reached": 581,
+      "quota_censored": 1803,
+      "quota_reached": 2322,
+      "rolling_samples": 631248,
+      "timing_unknown": 0
+    },
+    "regular": {
+      "cancelled": 0,
+      "known_late": 1511,
+      "missions": 2057,
+      "on_time_reached": 546,
+      "quota_censored": 238,
+      "quota_reached": 1819,
+      "rolling_samples": 190115,
+      "timing_unknown": 0
+    },
+    "test": {
+      "cancelled": 0,
+      "known_late": 1354,
+      "missions": 1644,
+      "on_time_reached": 290,
+      "quota_censored": 459,
+      "quota_reached": 1185,
+      "rolling_samples": 210287,
+      "timing_unknown": 0
+    },
+    "training": {
+      "cancelled": 0,
+      "known_late": 4026,
+      "missions": 4949,
+      "on_time_reached": 923,
+      "quota_censored": 1450,
+      "quota_reached": 3499,
+      "rolling_samples": 626680,
+      "timing_unknown": 0
+    }
+  },
+  "limitations": [
+    "Synthetic data; no predictive quality evaluated",
+    "Snapshots are dependent within missions and paired seed groups",
+    "Completion-only duration means do not represent censored missions"
+  ],
+  "paired_groups": 30,
+  "passed": true,
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "split_run_counts": {
+    "calibration": 18,
+    "test": 18,
+    "training": 54
+  },
+  "test_used_for_tuning": false,
+  "verified_runs": 90
+}

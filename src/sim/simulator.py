@@ -6,10 +6,12 @@ from typing import List, Dict, Tuple
 from .config import SimConfig
 from .models import Convoy, Depot, ConvoyState
 
-from datetime import datetime
+from datetime import datetime, timezone
+from uuid import uuid4
 from pathlib import Path
 
 import pandas as pd
+
 
 @dataclass
 class SimState:
@@ -26,7 +28,9 @@ class SimState:
     def __post_init__(self) -> None:
         # Inizializza il deposito se non è stato passato
         if self.depot is None:
-            self.depot = Depot(id=1, capacity=self.config.depot_capacity, name="Main Depot")
+            self.depot = Depot(
+                id=1, capacity=self.config.depot_capacity, name="Main Depot"
+            )
 
         # Inizializza i convogli se la lista è vuota
         if not self.convoys:
@@ -36,26 +40,24 @@ class SimState:
     def step(self) -> List[Dict[str, object]]:
         """Esegue un singolo passo di simulazione.
 
-        Ritorna una lista di 'eventi' (dizionari) che descrivono cosa è successo nel passo.
+        Ritorna una lista di 'eventi' (dizionari) che descrivono cosa è
+        successo nel passo.
         In questa fase consideriamo solo il completamento dei convogli.
         """
         events: List[Dict[str, object]] = []
 
         # Avanza il tempo
-        self.current_minute += self.config.timestep_minutes
-
-        # Calcoliamo di quanto avanza il 'progress' a ogni passo
-        if self.config.total_minutes > 0:
-            progress_increment = self.config.timestep_minutes / self.config.total_minutes 
-        else:
-            progress_increment = 1.0
+        self.current_minute = min(
+            self.config.total_minutes,
+            self.current_minute + self.config.timestep_minutes,
+        )
 
         for convoy in self.convoys:
             if convoy.state == ConvoyState.COMPLETED:
                 continue
-            
+
             old_progress = convoy.progress
-            convoy.progress = min(1.0, convoy.progress + progress_increment)
+            convoy.progress = min(1.0, self.current_minute / self.config.total_minutes)
 
             # Se il convoglio ha appena completato la missione, registriamo un evento
             if old_progress < 1.0 and convoy.progress >= 1.0:
@@ -72,7 +74,9 @@ class SimState:
         return events
 
 
-def run_simulation(config: SimConfig, save_to_csv: bool = True) -> Tuple[List[Dict[str, object]], Dict[str, object]]:
+def run_simulation(
+    config: SimConfig, save_to_csv: bool = True
+) -> Tuple[List[Dict[str, object]], Dict[str, object]]:
     """Lancia una simulazione completa con la configurazione indicata.
 
     Ritorna una tupla (events, summary):
@@ -98,7 +102,9 @@ def run_simulation(config: SimConfig, save_to_csv: bool = True) -> Tuple[List[Di
     if config.timestep_minutes <= 0:
         raise ValueError("timestep_minutes deve essere > 0")
 
-    n_steps = config.total_minutes // config.timestep_minutes
+    n_steps = (
+        config.total_minutes + config.timestep_minutes - 1
+    ) // config.timestep_minutes
 
     for step_index in range(n_steps):
         step_events = state.step()
@@ -123,18 +129,18 @@ def run_simulation(config: SimConfig, save_to_csv: bool = True) -> Tuple[List[Di
     }
 
     if save_to_csv:
-            # Creiamo la cartella data/raw se non esiste
-            output_dir = Path("data") / "raw"
-            output_dir.mkdir(parents=True, exist_ok=True)
+        # Creiamo la cartella data/raw se non esiste
+        output_dir = Path("data") / "raw"
+        output_dir.mkdir(parents=True, exist_ok=True)
 
-            # Nome file con timestamp (es. sim_events_20250101_153000.csv)
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            csv_path = output_dir / f"sim_events_{timestamp}.csv"
+        # Nome file con timestamp (es. sim_events_20250101_153000.csv)
+        timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S_%f")
+        csv_path = output_dir / f"sim_events_{timestamp}_{uuid4().hex}.csv"
 
-            df = pd.DataFrame(all_events)
-            df.to_csv(csv_path, index=False)
+        df = pd.DataFrame(all_events)
+        df.to_csv(csv_path, index=False, mode="x")
 
-            # Aggiungiamo il percorso del file al summary
-            summary["events_csv_path"] = str(csv_path)
+        # Aggiungiamo il percorso del file al summary
+        summary["events_csv_path"] = str(csv_path)
 
     return all_events, summary

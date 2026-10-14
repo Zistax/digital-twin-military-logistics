@@ -1,0 +1,9 @@
+# Toolchain used for the foundation closeout; install runtime requirements too.
+pytest==9.1.1
+coverage==7.16.2
+black==26.10.1
+ruff==0.17.0
+fastapi==0.143.0
+pydantic==2.14.1
+httpx==0.28.1
+PyYAML==6.0.3

@@ -1,0 +1,20 @@
+{
+  "restored_utc": "2026-10-14T19:23:25.789778+00:00",
+  "simulation_id": "scenario-1004-perturbed",
+  "restored_files": [
+    "operational_events.jsonl"
+  ],
+  "all_eight_tables_and_trace_match_original": true,
+  "checksums_and_manifest_unchanged": true,
+  "checks": {
+    "cargo_events.jsonl": true,
+    "delivery_events.jsonl": true,
+    "labels.jsonl": true,
+    "observations.jsonl": true,
+    "operational_events.jsonl": true,
+    "planning_contexts.jsonl": true,
+    "rolling_observations.jsonl": true,
+    "rolling_targets.jsonl": true,
+    "trace": true
+  }
+}

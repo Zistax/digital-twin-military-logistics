@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict
-from datetime import datetime
+from datetime import datetime, timezone
 
 import csv
 
@@ -23,7 +23,7 @@ def log_predict_call(payload: Dict[str, Any], response: Dict[str, Any]) -> None:
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     csv_path = AUDIT_DIR / "predict_calls.csv"
 
-    timestamp_utc = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    timestamp_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     total_minutes = int(payload.get("total_minutes", 0))
     timestep_minutes = int(payload.get("timestep_minutes", 0))

@@ -1,0 +1,29 @@
+{
+  "reason": "Abandoned temporary copies of the reproducible archive; no archive writer active",
+  "removed": [
+    {
+      "name": ".Dataset_D03_in_preparazione.zip.cVM53e",
+      "bytes": 833093632
+    },
+    {
+      "name": ".Dataset_D03_in_preparazione.zip.OXluuG",
+      "bytes": 769654784
+    },
+    {
+      "name": ".Dataset_D03_in_preparazione.zip.LghyVA",
+      "bytes": 556007424
+    },
+    {
+      "name": ".Dataset_D03_in_preparazione.zip.3XpyK0",
+      "bytes": 207355904
+    },
+    {
+      "name": ".Dataset_D03_in_preparazione.zip.Kj5Xiu",
+      "bytes": 984875008
+    },
+    {
+      "name": ".Dataset_D03_in_preparazione.zip.vMgEly",
+      "bytes": 1195376640
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+Project: Digital Twin della Catena Logistica Militare
+Updated: 2025-11-07
+
+SUMMARY
+Gemello digitale per pianificare, prevedere e ottimizzare convogli, veicoli e depositi in scenari complessi (priorità, rischio, congestione, code con preemption, eventi esogeni). Include simulatore, predizione del rischio con output calibrati e spiegabili, policy RL ad azioni di alto livello e interfacce per utenti esterni (HITL).
+
+SCOPE & GOALS
+- Simulazione su mappa 100×100 km con waypoints e routing a costo (tempo+rischio+congestione).
+- Predizioni pre‑partenza e rolling, soglie per priorità, KPI e governance.
+- Ottimizzazione con RL e guardrail operativi per sicurezza e coerenza.
+
+DATA & CONTRACTS
+- Logging per sessione: **events** + **trace** (UTC, t_step, schema_version). 
+- Parquet **Silver/Gold** con validazione schema e quarantena; anti‑leakage sul Gold.
+- Label binaria `failure` + severità separata; consolidamento a fine missione (ETL 60’), backfill 24h.
+
+MODEL & EVALUATION
+- Champion/Challenger; calibrazione (isotonic/platt), spiegabilità globale/locale on‑demand.
+- Split per sessione (holdout 20% + k=5). Metriche: AUC, PR‑AUC, Brier/ECE, curve costo‑soglia.
+- Soglie operative (default): High 0.60 · Medium 0.70 · Low 0.80.
+
+RL POLICY
+- Azioni: go_to(waypoint), hold_k (k∈(1, 2, 3)), reroute, request_escort.
+- Guardrail: risk budget ≤ 1.25; max_reroute=4; max_hold_total=8; cooldown escort=5 step.
+- Curriculum di difficoltà + baseline (tempo, rischio, euristica mista); serving HITL.
+
+OPS & QUALITY
+- Config composabili (dev/staging/prod), seeds separati, determinismo dove possibile.
+- CI/CD con quality gates, scansioni sicurezza, observability, SLO p95<600 ms, uptime 99.5%.
+- Drift & retraining on‑demand (trigger: PSI>0.2 | AUC −5pp | Brier +0.02) e promozione champion/challenger.
+
+NEXT STEPS
+- Completare `data_contracts/` e validatore ingest.
+- Implementare pipeline Gold + anti‑leakage, API `/predict` e dashboard KPI.
+- Introdurre `/optimize` con HITL e comparativa Pareto vs baseline.

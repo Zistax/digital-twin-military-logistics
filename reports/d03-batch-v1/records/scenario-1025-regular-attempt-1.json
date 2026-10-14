@@ -1,0 +1,15 @@
+{
+  "attempt": 1,
+  "error": "Six-worker pool interrupted by the 8 GiB cgroup memory limit; bundle not accepted",
+  "error_type": "InterruptedWorker",
+  "group_id": "base-seed-1025",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "preserved_bundle": "bundles/scenario-1025-regular-attempt-1",
+  "profile": "regular",
+  "seed": 1025,
+  "simulation_id": "scenario-1025-regular",
+  "split": "training",
+  "valid": false,
+  "archived_bundle": "invalid-attempts-preserved.zip",
+  "archive_prefix": "bundles/scenario-1025-regular-attempt-1"
+}

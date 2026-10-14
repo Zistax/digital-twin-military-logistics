@@ -1,0 +1,320 @@
+{
+  "deadline_sources": {
+    "configured_allowance": 4,
+    "observable_estimate": 5
+  },
+  "diagnostics": {
+    "final_allocation_reasons": {
+      "stock": 1
+    },
+    "incident_counts": {
+      "inspection": 17,
+      "mechanical_failure": 1,
+      "vehicle_restored": 1
+    },
+    "local_backlog_units": 15,
+    "mission_allocation_wait_seconds": {
+      "empty_travel": 25323,
+      "stock": 428036
+    },
+    "mission_statuses": {
+      "en_route": 3,
+      "logistics_complete": 4,
+      "waiting": 2
+    },
+    "open_missions": [
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-2",
+        "required_units": 158,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-4",
+        "required_units": 128,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "unload_wait": 1
+        }
+      },
+      {
+        "missing_reservation_units": 0,
+        "mission_id": "request-6",
+        "required_units": 217,
+        "reserved_units": 217,
+        "status": "waiting",
+        "trips": {
+          "queued": 1
+        }
+      },
+      {
+        "missing_reservation_units": 25,
+        "mission_id": "request-7",
+        "required_units": 232,
+        "reserved_units": 207,
+        "status": "waiting",
+        "trips": {}
+      },
+      {
+        "missing_reservation_units": null,
+        "mission_id": "request-8",
+        "required_units": 147,
+        "reserved_units": 0,
+        "status": "en_route",
+        "trips": {
+          "completed": 1,
+          "unload_wait": 1
+        }
+      }
+    ],
+    "peak_sampled": {
+      "internal_queue": 4,
+      "local_backlog_units": 117,
+      "open_missions": 7
+    },
+    "recovery_statuses": {
+      "in_progress": 1
+    },
+    "supplies_by_status": {
+      "closed": 22,
+      "expected": 2,
+      "waiting": 4
+    },
+    "supply_wait_by_order": {
+      "reorder-1": {
+        "berth": 0,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-10": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-11": {
+        "berth": 3000,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-12": {
+        "berth": 4800,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-13": {
+        "berth": 7500,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-14": {
+        "berth": 20100,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-15": {
+        "berth": 22200,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-16": {
+        "berth": 24300,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-17": {
+        "berth": 0,
+        "opening": 12300,
+        "space": 0
+      },
+      "reorder-18": {
+        "berth": 27600,
+        "opening": 14400,
+        "space": 0
+      },
+      "reorder-19": {
+        "berth": 10500,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-2": {
+        "berth": 3300,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-20": {
+        "berth": 0,
+        "opening": 4200,
+        "space": 0
+      },
+      "reorder-21": {
+        "berth": 0,
+        "opening": 31200,
+        "space": 0
+      },
+      "reorder-22": {
+        "berth": 13800,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-23": {
+        "berth": 15900,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-24": {
+        "berth": 18900,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-25": {
+        "berth": 0,
+        "opening": 3600,
+        "space": 0
+      },
+      "reorder-26": {
+        "berth": 3300,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-27": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-28": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-3": {
+        "berth": 5700,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-4": {
+        "berth": 8700,
+        "opening": 54000,
+        "space": 0
+      },
+      "reorder-5": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-6": {
+        "berth": 0,
+        "opening": 50400,
+        "space": 0
+      },
+      "reorder-7": {
+        "berth": 1500,
+        "opening": 50400,
+        "space": 0
+      },
+      "reorder-8": {
+        "berth": 1800,
+        "opening": 0,
+        "space": 0
+      },
+      "reorder-9": {
+        "berth": 0,
+        "opening": 0,
+        "space": 0
+      }
+    },
+    "supply_wait_seconds": {
+      "berth": 192900,
+      "opening": 483300,
+      "space": 0
+    },
+    "terminal_blockers": {
+      "request-2": [
+        {
+          "depot": "central-b",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-7-0"
+        }
+      ],
+      "request-4": [
+        {
+          "depot": "local-c",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-6-0"
+        }
+      ],
+      "request-6": [
+        {
+          "depot": "local-a",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "auto-8-0"
+        }
+      ],
+      "request-7": [
+        {
+          "deficit": {
+            "food-large": 0,
+            "food-medium": 2,
+            "food-small": 3,
+            "medical-medium": 0,
+            "medical-small": 0,
+            "spares-medium": 0
+          },
+          "kind": "stock"
+        }
+      ],
+      "request-8": [
+        {
+          "depot": "local-c",
+          "kind": "handling_queue",
+          "reason": "opening",
+          "trip_id": "reinforcement:request-1:0"
+        },
+        {
+          "kind": "recovery",
+          "request_id": "request-1",
+          "status": "in_progress",
+          "waiting_reason": null
+        }
+      ]
+    },
+    "wait_seconds": {
+      "berth": 11135,
+      "opening": 169175,
+      "space": 0,
+      "stock": 0
+    }
+  },
+  "estimate_unavailable_reasons": {
+    "stock_without_usable_arrival_promise": 4
+  },
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 2,
+    "mean_delay_reached_minutes": 0.0,
+    "missions": 9,
+    "on_time_reached": 4,
+    "quota_censored": 5,
+    "quota_reached": 4,
+    "timing_unknown": 3
+  },
+  "profile": "perturbed",
+  "result_sha256": "98bc90a71e6106fb15657f6e26ddb59381bcd9c8f864cf5406578fbc08dbf75f",
+  "rolling_samples": 240,
+  "seed": 3,
+  "stop_reason": "time_limit",
+  "stopped_s": 172800,
+  "trace_rows": 48,
+  "trace_sha256": "b20d47393cc4df01c1c5bf53a6aded75e179ce06128f2901016de949364bb3bb",
+  "unexplained_open_missions": [],
+  "valid": true,
+  "wall_seconds": 3.348
+}

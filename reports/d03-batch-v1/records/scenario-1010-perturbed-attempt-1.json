@@ -1,0 +1,47 @@
+{
+  "attempt": 1,
+  "bundle": "bundles/scenario-1010-perturbed-attempt-1",
+  "creation_training_eligibility": {
+    "classification": 58,
+    "delay_regression": 46
+  },
+  "executor": "release-before-independent-read-v1",
+  "group_id": "base-seed-1010",
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 46,
+    "mean_delay_reached_minutes": 3273.5810344827587,
+    "missions": 58,
+    "on_time_reached": 12,
+    "quota_censored": 0,
+    "quota_reached": 58,
+    "timing_unknown": 0
+  },
+  "manifest_sha256": "8635c7046643070d3851b68af8726a01fcf4ef7fd7cb5c6c216ff57865917516",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "profile": "perturbed",
+  "rolling_training_eligibility": {
+    "classification": 1820,
+    "duration_regression": 4754
+  },
+  "rows": {
+    "cargo_events.jsonl": 337,
+    "delivery_events.jsonl": 337,
+    "labels.jsonl": 58,
+    "observations.jsonl": 58,
+    "operational_events.jsonl": 1833,
+    "planning_contexts.jsonl": 5039,
+    "rolling_observations.jsonl": 4981,
+    "rolling_targets.jsonl": 4981
+  },
+  "seed": 1010,
+  "simulation_id": "scenario-1010-perturbed",
+  "split": "calibration",
+  "stop_reason": "missions_drained",
+  "stopped_s": 1080000,
+  "trace": "traces/scenario-1010-perturbed-attempt-1.jsonl",
+  "trace_sha256": "b9f055b7ae69eacab93fc6c482f1742226ab0f2923a67bbe7efe55fcbedd0ac0",
+  "unexplained_open_missions": [],
+  "valid": true,
+  "wall_seconds": 216.5
+}

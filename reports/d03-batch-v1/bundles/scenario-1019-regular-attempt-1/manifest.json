@@ -1,0 +1,2720 @@
+{
+  "config": {
+    "extension_days": 7,
+    "generation_days": 7,
+    "profile": "regular",
+    "seed": 1019
+  },
+  "feature_version": "creation-v1",
+  "files": {
+    "cargo_events.jsonl": {
+      "rows": 320,
+      "sha256": "5be844728a9dbc74631fdd787789bad65500ae8772006ba4faf3a401cb3c255a"
+    },
+    "delivery_events.jsonl": {
+      "rows": 320,
+      "sha256": "6ca5b2ab3284016c9bc435af5cc260068cde49c01c8eb41a27e088c35da3911e"
+    },
+    "labels.jsonl": {
+      "rows": 69,
+      "sha256": "0201bdea5394281361e441d0efbbab5be3c10e2becf4d7c70500377f3a423a9e"
+    },
+    "observations.jsonl": {
+      "rows": 69,
+      "sha256": "87bd72e59db3bdea45724762d48cbc0883c56fefc54206c1296fd6c496a2e2ce"
+    },
+    "operational_events.jsonl": {
+      "rows": 1903,
+      "sha256": "838eb4d7233f43f6734778153c9fdd20edc7c2ae0ef12d6ef8dfa8817dba653c"
+    },
+    "planning_contexts.jsonl": {
+      "rows": 7577,
+      "sha256": "99ad95e6a23ef930b5c7668f3dcc2d896c4f28e2188108aaa970939ef9855d91"
+    },
+    "rolling_observations.jsonl": {
+      "rows": 7508,
+      "sha256": "66f94aa63761d8db10afdc85f85cc2a02e1dd33798668122fb13ba24237f0bf1"
+    },
+    "rolling_targets.jsonl": {
+      "rows": 7508,
+      "sha256": "9dc950b4e2a67ea35f79c6affb5440c229e4111c8c0849d2c15a871397ddf71f"
+    }
+  },
+  "group_id": "base-seed-1019",
+  "kpi": {
+    "cancelled": 0,
+    "known_late": 52,
+    "mean_delay_reached_minutes": 2784.267272727273,
+    "missions": 69,
+    "on_time_reached": 17,
+    "quota_censored": 14,
+    "quota_reached": 55,
+    "timing_unknown": 0
+  },
+  "label_cutoff_s": 1209600,
+  "rolling_feature_version": "rolling-v1",
+  "run_manifest": {
+    "catalog": [
+      {
+        "cold": true,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 120,
+        "item_id": "cold-large",
+        "kg": "20",
+        "m3": "0.10"
+      },
+      {
+        "cold": true,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 60,
+        "item_id": "cold-medium",
+        "kg": "10",
+        "m3": "0.05"
+      },
+      {
+        "cold": true,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 30,
+        "item_id": "cold-small",
+        "kg": "5",
+        "m3": "0.025"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 120,
+        "item_id": "electronics-large",
+        "kg": "25",
+        "m3": "0.25"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 60,
+        "item_id": "electronics-medium",
+        "kg": "10",
+        "m3": "0.10"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 30,
+        "item_id": "electronics-small",
+        "kg": "3",
+        "m3": "0.03"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 120,
+        "item_id": "food-large",
+        "kg": "20",
+        "m3": "0.08"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 60,
+        "item_id": "food-medium",
+        "kg": "10",
+        "m3": "0.04"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 30,
+        "item_id": "food-small",
+        "kg": "5",
+        "m3": "0.02"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 120,
+        "item_id": "medical-large",
+        "kg": "10",
+        "m3": "0.08"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 60,
+        "item_id": "medical-medium",
+        "kg": "5",
+        "m3": "0.04"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 30,
+        "item_id": "medical-small",
+        "kg": "2",
+        "m3": "0.02"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 120,
+        "item_id": "spares-large",
+        "kg": "50",
+        "m3": "0.12"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 60,
+        "item_id": "spares-medium",
+        "kg": "25",
+        "m3": "0.06"
+      },
+      {
+        "cold": false,
+        "cold_compatible": true,
+        "cold_tolerance_s": null,
+        "handling_s": 30,
+        "item_id": "spares-small",
+        "kg": "10",
+        "m3": "0.025"
+      }
+    ],
+    "categories": {
+      "cold-large": "cold",
+      "cold-medium": "cold",
+      "cold-small": "cold",
+      "electronics-large": "electronics",
+      "electronics-medium": "electronics",
+      "electronics-small": "electronics",
+      "food-large": "food",
+      "food-medium": "food",
+      "food-small": "food",
+      "medical-large": "medical",
+      "medical-medium": "medical",
+      "medical-small": "medical",
+      "spares-large": "spares",
+      "spares-medium": "spares",
+      "spares-small": "spares"
+    },
+    "configuration_sha256": "5200e6492310cb0cb819d1a32bbd43e17dd25f7ce8791f7805b774a36841d1ff",
+    "epoch_utc": "2026-10-05T00:00:00+00:00",
+    "incident_policy": {
+      "auto_approve": true,
+      "automatic": true,
+      "profile": "regular",
+      "seed": 1019,
+      "tolerance_s": 3600
+    },
+    "initial_commands": [
+      {
+        "arguments": [
+          "central-a",
+          {
+            "cold-large": 23,
+            "cold-medium": 45,
+            "cold-small": 88,
+            "electronics-large": 46,
+            "electronics-medium": 90,
+            "electronics-small": 178,
+            "food-large": 46,
+            "food-medium": 90,
+            "food-small": 178,
+            "medical-large": 46,
+            "medical-medium": 90,
+            "medical-small": 178,
+            "spares-large": 46,
+            "spares-medium": 90,
+            "spares-small": 178
+          }
+        ],
+        "at_s": 0,
+        "command_id": "initial:central-a",
+        "operation": "receive",
+        "options": {},
+        "result": {
+          "cold-large": 23,
+          "cold-medium": 45,
+          "cold-small": 88,
+          "electronics-large": 46,
+          "electronics-medium": 90,
+          "electronics-small": 178,
+          "food-large": 46,
+          "food-medium": 90,
+          "food-small": 178,
+          "medical-large": 46,
+          "medical-medium": 90,
+          "medical-small": 178,
+          "spares-large": 46,
+          "spares-medium": 90,
+          "spares-small": 178
+        }
+      },
+      {
+        "arguments": [
+          "central-a",
+          {
+            "cold-large": "6.00",
+            "cold-medium": "12.00",
+            "cold-small": "24.00",
+            "electronics-large": "12.25000000000000000000000000",
+            "electronics-medium": "24.50000000000000000000000000",
+            "electronics-small": "49.00000000000000000000000000",
+            "food-large": "12.25000000000000000000000000",
+            "food-medium": "24.50000000000000000000000000",
+            "food-small": "49.00000000000000000000000000",
+            "medical-large": "12.25000000000000000000000000",
+            "medical-medium": "24.50000000000000000000000000",
+            "medical-small": "49.00000000000000000000000000",
+            "spares-large": "12.25000000000000000000000000",
+            "spares-medium": "24.50000000000000000000000000",
+            "spares-small": "49.00000000000000000000000000"
+          },
+          14,
+          1019
+        ],
+        "at_s": 0,
+        "command_id": "local:central-a",
+        "operation": "schedule_local_days",
+        "options": {},
+        "result": [
+          "daily:central-a:2026-10-05",
+          "daily:central-a:2026-10-06",
+          "daily:central-a:2026-10-07",
+          "daily:central-a:2026-10-08",
+          "daily:central-a:2026-10-09",
+          "daily:central-a:2026-10-10",
+          "daily:central-a:2026-10-11",
+          "daily:central-a:2026-10-12",
+          "daily:central-a:2026-10-13",
+          "daily:central-a:2026-10-14",
+          "daily:central-a:2026-10-15",
+          "daily:central-a:2026-10-16",
+          "daily:central-a:2026-10-17",
+          "daily:central-a:2026-10-18"
+        ]
+      },
+      {
+        "arguments": [
+          "central-b",
+          {
+            "cold-large": 23,
+            "cold-medium": 45,
+            "cold-small": 88,
+            "electronics-large": 46,
+            "electronics-medium": 90,
+            "electronics-small": 178,
+            "food-large": 46,
+            "food-medium": 90,
+            "food-small": 178,
+            "medical-large": 46,
+            "medical-medium": 90,
+            "medical-small": 178,
+            "spares-large": 46,
+            "spares-medium": 90,
+            "spares-small": 178
+          }
+        ],
+        "at_s": 0,
+        "command_id": "initial:central-b",
+        "operation": "receive",
+        "options": {},
+        "result": {
+          "cold-large": 23,
+          "cold-medium": 45,
+          "cold-small": 88,
+          "electronics-large": 46,
+          "electronics-medium": 90,
+          "electronics-small": 178,
+          "food-large": 46,
+          "food-medium": 90,
+          "food-small": 178,
+          "medical-large": 46,
+          "medical-medium": 90,
+          "medical-small": 178,
+          "spares-large": 46,
+          "spares-medium": 90,
+          "spares-small": 178
+        }
+      },
+      {
+        "arguments": [
+          "central-b",
+          {
+            "cold-large": "6.00",
+            "cold-medium": "12.00",
+            "cold-small": "24.00",
+            "electronics-large": "12.25000000000000000000000000",
+            "electronics-medium": "24.50000000000000000000000000",
+            "electronics-small": "49.00000000000000000000000000",
+            "food-large": "12.25000000000000000000000000",
+            "food-medium": "24.50000000000000000000000000",
+            "food-small": "49.00000000000000000000000000",
+            "medical-large": "12.25000000000000000000000000",
+            "medical-medium": "24.50000000000000000000000000",
+            "medical-small": "49.00000000000000000000000000",
+            "spares-large": "12.25000000000000000000000000",
+            "spares-medium": "24.50000000000000000000000000",
+            "spares-small": "49.00000000000000000000000000"
+          },
+          14,
+          1019
+        ],
+        "at_s": 0,
+        "command_id": "local:central-b",
+        "operation": "schedule_local_days",
+        "options": {},
+        "result": [
+          "daily:central-b:2026-10-05",
+          "daily:central-b:2026-10-06",
+          "daily:central-b:2026-10-07",
+          "daily:central-b:2026-10-08",
+          "daily:central-b:2026-10-09",
+          "daily:central-b:2026-10-10",
+          "daily:central-b:2026-10-11",
+          "daily:central-b:2026-10-12",
+          "daily:central-b:2026-10-13",
+          "daily:central-b:2026-10-14",
+          "daily:central-b:2026-10-15",
+          "daily:central-b:2026-10-16",
+          "daily:central-b:2026-10-17",
+          "daily:central-b:2026-10-18"
+        ]
+      },
+      {
+        "arguments": [
+          "local-a",
+          {
+            "cold-large": 8,
+            "cold-medium": 15,
+            "cold-small": 30,
+            "electronics-large": 16,
+            "electronics-medium": 30,
+            "electronics-small": 60,
+            "food-large": 16,
+            "food-medium": 30,
+            "food-small": 60,
+            "medical-large": 16,
+            "medical-medium": 30,
+            "medical-small": 60,
+            "spares-large": 16,
+            "spares-medium": 30,
+            "spares-small": 60
+          }
+        ],
+        "at_s": 0,
+        "command_id": "initial:local-a",
+        "operation": "receive",
+        "options": {},
+        "result": {
+          "cold-large": 8,
+          "cold-medium": 15,
+          "cold-small": 30,
+          "electronics-large": 16,
+          "electronics-medium": 30,
+          "electronics-small": 60,
+          "food-large": 16,
+          "food-medium": 30,
+          "food-small": 60,
+          "medical-large": 16,
+          "medical-medium": 30,
+          "medical-small": 60,
+          "spares-large": 16,
+          "spares-medium": 30,
+          "spares-small": 60
+        }
+      },
+      {
+        "arguments": [
+          "local-a",
+          {
+            "cold-large": "6.00",
+            "cold-medium": "12.00",
+            "cold-small": "24.00",
+            "electronics-large": "12.25000000000000000000000000",
+            "electronics-medium": "24.50000000000000000000000000",
+            "electronics-small": "49.00000000000000000000000000",
+            "food-large": "12.25000000000000000000000000",
+            "food-medium": "24.50000000000000000000000000",
+            "food-small": "49.00000000000000000000000000",
+            "medical-large": "12.25000000000000000000000000",
+            "medical-medium": "24.50000000000000000000000000",
+            "medical-small": "49.00000000000000000000000000",
+            "spares-large": "12.25000000000000000000000000",
+            "spares-medium": "24.50000000000000000000000000",
+            "spares-small": "49.00000000000000000000000000"
+          },
+          14,
+          1019
+        ],
+        "at_s": 0,
+        "command_id": "local:local-a",
+        "operation": "schedule_local_days",
+        "options": {},
+        "result": [
+          "daily:local-a:2026-10-05",
+          "daily:local-a:2026-10-06",
+          "daily:local-a:2026-10-07",
+          "daily:local-a:2026-10-08",
+          "daily:local-a:2026-10-09",
+          "daily:local-a:2026-10-10",
+          "daily:local-a:2026-10-11",
+          "daily:local-a:2026-10-12",
+          "daily:local-a:2026-10-13",
+          "daily:local-a:2026-10-14",
+          "daily:local-a:2026-10-15",
+          "daily:local-a:2026-10-16",
+          "daily:local-a:2026-10-17",
+          "daily:local-a:2026-10-18"
+        ]
+      },
+      {
+        "arguments": [
+          "local-b",
+          {
+            "electronics-large": 16,
+            "electronics-medium": 31,
+            "electronics-small": 61,
+            "food-large": 16,
+            "food-medium": 31,
+            "food-small": 61,
+            "medical-large": 16,
+            "medical-medium": 31,
+            "medical-small": 61,
+            "spares-large": 16,
+            "spares-medium": 31,
+            "spares-small": 61
+          }
+        ],
+        "at_s": 0,
+        "command_id": "initial:local-b",
+        "operation": "receive",
+        "options": {},
+        "result": {
+          "electronics-large": 16,
+          "electronics-medium": 31,
+          "electronics-small": 61,
+          "food-large": 16,
+          "food-medium": 31,
+          "food-small": 61,
+          "medical-large": 16,
+          "medical-medium": 31,
+          "medical-small": 61,
+          "spares-large": 16,
+          "spares-medium": 31,
+          "spares-small": 61
+        }
+      },
+      {
+        "arguments": [
+          "local-b",
+          {
+            "cold-large": "0",
+            "cold-medium": "0",
+            "cold-small": "0",
+            "electronics-large": "12.50000000000000000000000000",
+            "electronics-medium": "25.00000000000000000000000000",
+            "electronics-small": "50.00000000000000000000000000",
+            "food-large": "12.50000000000000000000000000",
+            "food-medium": "25.00000000000000000000000000",
+            "food-small": "50.00000000000000000000000000",
+            "medical-large": "12.50000000000000000000000000",
+            "medical-medium": "25.00000000000000000000000000",
+            "medical-small": "50.00000000000000000000000000",
+            "spares-large": "12.50000000000000000000000000",
+            "spares-medium": "25.00000000000000000000000000",
+            "spares-small": "50.00000000000000000000000000"
+          },
+          14,
+          1019
+        ],
+        "at_s": 0,
+        "command_id": "local:local-b",
+        "operation": "schedule_local_days",
+        "options": {},
+        "result": [
+          "daily:local-b:2026-10-05",
+          "daily:local-b:2026-10-06",
+          "daily:local-b:2026-10-07",
+          "daily:local-b:2026-10-08",
+          "daily:local-b:2026-10-09",
+          "daily:local-b:2026-10-10",
+          "daily:local-b:2026-10-11",
+          "daily:local-b:2026-10-12",
+          "daily:local-b:2026-10-13",
+          "daily:local-b:2026-10-14",
+          "daily:local-b:2026-10-15",
+          "daily:local-b:2026-10-16",
+          "daily:local-b:2026-10-17",
+          "daily:local-b:2026-10-18"
+        ]
+      },
+      {
+        "arguments": [
+          "local-c",
+          {
+            "electronics-large": 16,
+            "electronics-medium": 31,
+            "electronics-small": 61,
+            "food-large": 16,
+            "food-medium": 31,
+            "food-small": 61,
+            "medical-large": 16,
+            "medical-medium": 31,
+            "medical-small": 61,
+            "spares-large": 16,
+            "spares-medium": 31,
+            "spares-small": 61
+          }
+        ],
+        "at_s": 0,
+        "command_id": "initial:local-c",
+        "operation": "receive",
+        "options": {},
+        "result": {
+          "electronics-large": 16,
+          "electronics-medium": 31,
+          "electronics-small": 61,
+          "food-large": 16,
+          "food-medium": 31,
+          "food-small": 61,
+          "medical-large": 16,
+          "medical-medium": 31,
+          "medical-small": 61,
+          "spares-large": 16,
+          "spares-medium": 31,
+          "spares-small": 61
+        }
+      },
+      {
+        "arguments": [
+          "local-c",
+          {
+            "cold-large": "0",
+            "cold-medium": "0",
+            "cold-small": "0",
+            "electronics-large": "12.50000000000000000000000000",
+            "electronics-medium": "25.00000000000000000000000000",
+            "electronics-small": "50.00000000000000000000000000",
+            "food-large": "12.50000000000000000000000000",
+            "food-medium": "25.00000000000000000000000000",
+            "food-small": "50.00000000000000000000000000",
+            "medical-large": "12.50000000000000000000000000",
+            "medical-medium": "25.00000000000000000000000000",
+            "medical-small": "50.00000000000000000000000000",
+            "spares-large": "12.50000000000000000000000000",
+            "spares-medium": "25.00000000000000000000000000",
+            "spares-small": "50.00000000000000000000000000"
+          },
+          14,
+          1019
+        ],
+        "at_s": 0,
+        "command_id": "local:local-c",
+        "operation": "schedule_local_days",
+        "options": {},
+        "result": [
+          "daily:local-c:2026-10-05",
+          "daily:local-c:2026-10-06",
+          "daily:local-c:2026-10-07",
+          "daily:local-c:2026-10-08",
+          "daily:local-c:2026-10-09",
+          "daily:local-c:2026-10-10",
+          "daily:local-c:2026-10-11",
+          "daily:local-c:2026-10-12",
+          "daily:local-c:2026-10-13",
+          "daily:local-c:2026-10-14",
+          "daily:local-c:2026-10-15",
+          "daily:local-c:2026-10-16",
+          "daily:local-c:2026-10-17",
+          "daily:local-c:2026-10-18"
+        ]
+      },
+      {
+        "arguments": [
+          {
+            "[\"central-a\", \"cold-large\"]": {
+              "daily_demand": "7.666666666666666666666666667",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"cold-medium\"]": {
+              "daily_demand": "14.91666666666666666666666667",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"cold-small\"]": {
+              "daily_demand": "29.29166666666666666666666667",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"electronics-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"electronics-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"electronics-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"food-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"food-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"food-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"medical-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"medical-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"medical-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"spares-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"spares-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-a\", \"spares-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"cold-large\"]": {
+              "daily_demand": "7.666666666666666666666666667",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"cold-medium\"]": {
+              "daily_demand": "14.91666666666666666666666667",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"cold-small\"]": {
+              "daily_demand": "29.29166666666666666666666667",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"electronics-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"electronics-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"electronics-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"food-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"food-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"food-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"medical-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"medical-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"medical-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"spares-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"spares-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"central-b\", \"spares-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 86400,
+              "target_days": "3",
+              "trigger_days": "1.5"
+            },
+            "[\"local-a\", \"cold-large\"]": {
+              "daily_demand": "7.666666666666666666666666667",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"cold-medium\"]": {
+              "daily_demand": "14.91666666666666666666666667",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"cold-small\"]": {
+              "daily_demand": "29.29166666666666666666666667",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"electronics-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"electronics-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"electronics-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"food-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"food-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"food-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"medical-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"medical-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"medical-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"spares-large\"]": {
+              "daily_demand": "15.20918367346938775510204082",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"spares-medium\"]": {
+              "daily_demand": "29.89795918367346938775510204",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-a\", \"spares-small\"]": {
+              "daily_demand": "59.30612244897959183673469388",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"electronics-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"electronics-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"electronics-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"food-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"food-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"food-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"medical-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"medical-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"medical-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"spares-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"spares-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-b\", \"spares-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"electronics-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"electronics-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"electronics-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"food-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"food-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"food-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"medical-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"medical-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"medical-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"spares-large\"]": {
+              "daily_demand": "15.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"spares-medium\"]": {
+              "daily_demand": "30.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            },
+            "[\"local-c\", \"spares-small\"]": {
+              "daily_demand": "60.50000000000000000000000000",
+              "lead_s": 43200,
+              "target_days": "1",
+              "trigger_days": "0.5"
+            }
+          }
+        ],
+        "at_s": 0,
+        "command_id": "reorder-config",
+        "operation": "configure_reorder",
+        "options": {},
+        "result": null
+      }
+    ],
+    "initial_stock": {
+      "central-a": {
+        "cold-large": 23,
+        "cold-medium": 45,
+        "cold-small": 88,
+        "electronics-large": 46,
+        "electronics-medium": 90,
+        "electronics-small": 178,
+        "food-large": 46,
+        "food-medium": 90,
+        "food-small": 178,
+        "medical-large": 46,
+        "medical-medium": 90,
+        "medical-small": 178,
+        "spares-large": 46,
+        "spares-medium": 90,
+        "spares-small": 178
+      },
+      "central-b": {
+        "cold-large": 23,
+        "cold-medium": 45,
+        "cold-small": 88,
+        "electronics-large": 46,
+        "electronics-medium": 90,
+        "electronics-small": 178,
+        "food-large": 46,
+        "food-medium": 90,
+        "food-small": 178,
+        "medical-large": 46,
+        "medical-medium": 90,
+        "medical-small": 178,
+        "spares-large": 46,
+        "spares-medium": 90,
+        "spares-small": 178
+      },
+      "local-a": {
+        "cold-large": 8,
+        "cold-medium": 15,
+        "cold-small": 30,
+        "electronics-large": 16,
+        "electronics-medium": 30,
+        "electronics-small": 60,
+        "food-large": 16,
+        "food-medium": 30,
+        "food-small": 60,
+        "medical-large": 16,
+        "medical-medium": 30,
+        "medical-small": 60,
+        "spares-large": 16,
+        "spares-medium": 30,
+        "spares-small": 60
+      },
+      "local-b": {
+        "electronics-large": 16,
+        "electronics-medium": 31,
+        "electronics-small": 61,
+        "food-large": 16,
+        "food-medium": 31,
+        "food-small": 61,
+        "medical-large": 16,
+        "medical-medium": 31,
+        "medical-small": 61,
+        "spares-large": 16,
+        "spares-medium": 31,
+        "spares-small": 61
+      },
+      "local-c": {
+        "electronics-large": 16,
+        "electronics-medium": 31,
+        "electronics-small": 61,
+        "food-large": 16,
+        "food-medium": 31,
+        "food-small": 61,
+        "medical-large": 16,
+        "medical-medium": 31,
+        "medical-small": 61,
+        "spares-large": 16,
+        "spares-medium": 31,
+        "spares-small": 61
+      }
+    },
+    "manifest_version": 1,
+    "metadata_usage": "configuration and replay only; excluded from model features",
+    "network": {
+      "conditions": [
+        {
+          "closed": false,
+          "first": "central-a",
+          "second": "central-b",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "central-a",
+          "second": "junction-15",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "central-a",
+          "second": "junction-19",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "central-b",
+          "second": "local-a",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-00",
+          "second": "junction-01",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-00",
+          "second": "junction-18",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-00",
+          "second": "local-c",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-01",
+          "second": "junction-02",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-01",
+          "second": "junction-19",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-02",
+          "second": "junction-03",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-02",
+          "second": "junction-19",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-03",
+          "second": "junction-04",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-03",
+          "second": "junction-07",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-03",
+          "second": "junction-12",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-04",
+          "second": "junction-05",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-05",
+          "second": "junction-06",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-05",
+          "second": "junction-07",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-05",
+          "second": "junction-11",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-05",
+          "second": "junction-12",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-06",
+          "second": "junction-07",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-06",
+          "second": "junction-09",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-07",
+          "second": "junction-08",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-07",
+          "second": "junction-10",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-07",
+          "second": "junction-17",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-08",
+          "second": "junction-09",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-08",
+          "second": "junction-10",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-09",
+          "second": "junction-10",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-09",
+          "second": "junction-17",
+          "traffic": 1.2099664890534536,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-10",
+          "second": "junction-11",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-11",
+          "second": "junction-12",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-12",
+          "second": "junction-13",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-13",
+          "second": "junction-14",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-14",
+          "second": "junction-15",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-14",
+          "second": "local-a",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-15",
+          "second": "junction-16",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-16",
+          "second": "junction-17",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-17",
+          "second": "junction-18",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "junction-18",
+          "second": "junction-19",
+          "traffic": 1.2307654628655318,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "local-a",
+          "second": "local-b",
+          "traffic": 1.1519280297967278,
+          "weather": 1.2395727862362005
+        },
+        {
+          "closed": false,
+          "first": "local-b",
+          "second": "local-c",
+          "traffic": 1.2126492503719717,
+          "weather": 1.2395727862362005
+        }
+      ],
+      "congestion_alpha": 0.15,
+      "nodes": [
+        {
+          "node_id": "central-a",
+          "x_km": 3.426220515431533,
+          "y_km": 21.418143139208368
+        },
+        {
+          "node_id": "central-b",
+          "x_km": 77.74314823766117,
+          "y_km": 44.655841298342715
+        },
+        {
+          "node_id": "junction-00",
+          "x_km": 28.673049255985195,
+          "y_km": 22.54283224123369
+        },
+        {
+          "node_id": "junction-01",
+          "x_km": 10.41270999245264,
+          "y_km": 65.27651201939092
+        },
+        {
+          "node_id": "junction-02",
+          "x_km": 40.89561555432669,
+          "y_km": 18.481719374220816
+        },
+        {
+          "node_id": "junction-03",
+          "x_km": 44.45898032815811,
+          "y_km": 80.95756357348833
+        },
+        {
+          "node_id": "junction-04",
+          "x_km": 65.341319831155,
+          "y_km": 47.38143387724087
+        },
+        {
+          "node_id": "junction-05",
+          "x_km": 83.581541568513,
+          "y_km": 49.41501480093587
+        },
+        {
+          "node_id": "junction-06",
+          "x_km": 60.2746017053345,
+          "y_km": 18.99392515852124
+        },
+        {
+          "node_id": "junction-07",
+          "x_km": 52.75623848778783,
+          "y_km": 39.894055880029164
+        },
+        {
+          "node_id": "junction-08",
+          "x_km": 49.701415128146664,
+          "y_km": 43.73895801710819
+        },
+        {
+          "node_id": "junction-09",
+          "x_km": 88.52029819362718,
+          "y_km": 10.196630395153717
+        },
+        {
+          "node_id": "junction-10",
+          "x_km": 29.184339851797315,
+          "y_km": 10.233027077136313
+        },
+        {
+          "node_id": "junction-11",
+          "x_km": 38.21573151407507,
+          "y_km": 82.82969504808761
+        },
+        {
+          "node_id": "junction-12",
+          "x_km": 50.69565457821752,
+          "y_km": 68.23366799858557
+        },
+        {
+          "node_id": "junction-13",
+          "x_km": 10.64702474421242,
+          "y_km": 74.86878655599625
+        },
+        {
+          "node_id": "junction-14",
+          "x_km": 17.619325086777938,
+          "y_km": 41.901248848427855
+        },
+        {
+          "node_id": "junction-15",
+          "x_km": 28.854861590462843,
+          "y_km": 46.49710149258395
+        },
+        {
+          "node_id": "junction-16",
+          "x_km": 44.04575392451069,
+          "y_km": 57.101841415353036
+        },
+        {
+          "node_id": "junction-17",
+          "x_km": 85.07368581481829,
+          "y_km": 50.11831815762085
+        },
+        {
+          "node_id": "junction-18",
+          "x_km": 12.364142810741674,
+          "y_km": 82.27592508918762
+        },
+        {
+          "node_id": "junction-19",
+          "x_km": 77.67868043493316,
+          "y_km": 14.958471148071684
+        },
+        {
+          "node_id": "local-a",
+          "x_km": 98.59464730279495,
+          "y_km": 99.23194175757547
+        },
+        {
+          "node_id": "local-b",
+          "x_km": 22.817414888998634,
+          "y_km": 79.17083341960783
+        },
+        {
+          "node_id": "local-c",
+          "x_km": 29.474886356526053,
+          "y_km": 37.636526217268916
+        }
+      ],
+      "roads": [
+        {
+          "capacity": 10,
+          "first": "central-a",
+          "second": "central-b",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "central-a",
+          "second": "junction-15",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "central-a",
+          "second": "junction-19",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "central-b",
+          "second": "local-a",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-00",
+          "second": "junction-01",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-00",
+          "second": "junction-18",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-00",
+          "second": "local-c",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-01",
+          "second": "junction-02",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-01",
+          "second": "junction-19",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-02",
+          "second": "junction-03",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-02",
+          "second": "junction-19",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-03",
+          "second": "junction-04",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-03",
+          "second": "junction-07",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-03",
+          "second": "junction-12",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-04",
+          "second": "junction-05",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-05",
+          "second": "junction-06",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-05",
+          "second": "junction-07",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-05",
+          "second": "junction-11",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-05",
+          "second": "junction-12",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-06",
+          "second": "junction-07",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-06",
+          "second": "junction-09",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-07",
+          "second": "junction-08",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-07",
+          "second": "junction-10",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-07",
+          "second": "junction-17",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-08",
+          "second": "junction-09",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-08",
+          "second": "junction-10",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-09",
+          "second": "junction-10",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-09",
+          "second": "junction-17",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-10",
+          "second": "junction-11",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-11",
+          "second": "junction-12",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-12",
+          "second": "junction-13",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-13",
+          "second": "junction-14",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "junction-14",
+          "second": "junction-15",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-14",
+          "second": "local-a",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-15",
+          "second": "junction-16",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "junction-16",
+          "second": "junction-17",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-17",
+          "second": "junction-18",
+          "speed_kph": 70
+        },
+        {
+          "capacity": 10,
+          "first": "junction-18",
+          "second": "junction-19",
+          "speed_kph": 50
+        },
+        {
+          "capacity": 10,
+          "first": "local-a",
+          "second": "local-b",
+          "speed_kph": 30
+        },
+        {
+          "capacity": 10,
+          "first": "local-b",
+          "second": "local-c",
+          "speed_kph": 30
+        }
+      ]
+    },
+    "operations": {
+      "central-a": {
+        "berths": 3,
+        "calendar": {
+          "timezone_name": "Europe/Rome",
+          "windows": [
+            [
+              0,
+              21600,
+              79200
+            ],
+            [
+              1,
+              21600,
+              79200
+            ],
+            [
+              2,
+              21600,
+              79200
+            ],
+            [
+              3,
+              21600,
+              79200
+            ],
+            [
+              4,
+              21600,
+              79200
+            ],
+            [
+              5,
+              21600,
+              79200
+            ],
+            [
+              6,
+              21600,
+              79200
+            ]
+          ]
+        },
+        "quarantine_cold_m3": "5",
+        "quarantine_m3": "20"
+      },
+      "central-b": {
+        "berths": 3,
+        "calendar": {
+          "timezone_name": "Europe/Rome",
+          "windows": [
+            [
+              0,
+              21600,
+              79200
+            ],
+            [
+              1,
+              21600,
+              79200
+            ],
+            [
+              2,
+              21600,
+              79200
+            ],
+            [
+              3,
+              21600,
+              79200
+            ],
+            [
+              4,
+              21600,
+              79200
+            ],
+            [
+              5,
+              21600,
+              79200
+            ],
+            [
+              6,
+              21600,
+              79200
+            ]
+          ]
+        },
+        "quarantine_cold_m3": "5",
+        "quarantine_m3": "20"
+      },
+      "local-a": {
+        "berths": 1,
+        "calendar": {
+          "timezone_name": "Europe/Rome",
+          "windows": [
+            [
+              0,
+              28800,
+              64800
+            ],
+            [
+              1,
+              28800,
+              64800
+            ],
+            [
+              2,
+              28800,
+              64800
+            ],
+            [
+              3,
+              28800,
+              64800
+            ],
+            [
+              4,
+              28800,
+              64800
+            ],
+            [
+              5,
+              28800,
+              64800
+            ]
+          ]
+        },
+        "quarantine_cold_m3": "2",
+        "quarantine_m3": "5"
+      },
+      "local-b": {
+        "berths": 1,
+        "calendar": {
+          "timezone_name": "Europe/Rome",
+          "windows": [
+            [
+              0,
+              28800,
+              61200
+            ],
+            [
+              1,
+              28800,
+              61200
+            ],
+            [
+              2,
+              28800,
+              61200
+            ],
+            [
+              3,
+              28800,
+              61200
+            ],
+            [
+              4,
+              28800,
+              61200
+            ]
+          ]
+        },
+        "quarantine_cold_m3": "0",
+        "quarantine_m3": "5"
+      },
+      "local-c": {
+        "berths": 1,
+        "calendar": {
+          "timezone_name": "Europe/Rome",
+          "windows": [
+            [
+              0,
+              28800,
+              61200
+            ],
+            [
+              1,
+              28800,
+              61200
+            ],
+            [
+              2,
+              28800,
+              61200
+            ],
+            [
+              3,
+              28800,
+              61200
+            ],
+            [
+              4,
+              28800,
+              61200
+            ]
+          ]
+        },
+        "quarantine_cold_m3": "0",
+        "quarantine_m3": "5"
+      }
+    },
+    "python": "3.12.14",
+    "reorder_rules": [
+      {
+        "daily_demand": "7.666666666666666666666666667",
+        "depot": "central-a",
+        "item": "cold-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "14.91666666666666666666666667",
+        "depot": "central-a",
+        "item": "cold-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.29166666666666666666666667",
+        "depot": "central-a",
+        "item": "cold-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-a",
+        "item": "electronics-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-a",
+        "item": "electronics-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-a",
+        "item": "electronics-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-a",
+        "item": "food-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-a",
+        "item": "food-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-a",
+        "item": "food-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-a",
+        "item": "medical-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-a",
+        "item": "medical-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-a",
+        "item": "medical-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-a",
+        "item": "spares-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-a",
+        "item": "spares-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-a",
+        "item": "spares-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "7.666666666666666666666666667",
+        "depot": "central-b",
+        "item": "cold-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "14.91666666666666666666666667",
+        "depot": "central-b",
+        "item": "cold-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.29166666666666666666666667",
+        "depot": "central-b",
+        "item": "cold-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-b",
+        "item": "electronics-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-b",
+        "item": "electronics-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-b",
+        "item": "electronics-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-b",
+        "item": "food-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-b",
+        "item": "food-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-b",
+        "item": "food-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-b",
+        "item": "medical-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-b",
+        "item": "medical-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-b",
+        "item": "medical-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "central-b",
+        "item": "spares-large",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "central-b",
+        "item": "spares-medium",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "central-b",
+        "item": "spares-small",
+        "lead_s": 86400,
+        "target_days": "3",
+        "trigger_days": "1.5"
+      },
+      {
+        "daily_demand": "7.666666666666666666666666667",
+        "depot": "local-a",
+        "item": "cold-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "14.91666666666666666666666667",
+        "depot": "local-a",
+        "item": "cold-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "29.29166666666666666666666667",
+        "depot": "local-a",
+        "item": "cold-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "local-a",
+        "item": "electronics-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "local-a",
+        "item": "electronics-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "local-a",
+        "item": "electronics-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "local-a",
+        "item": "food-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "local-a",
+        "item": "food-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "local-a",
+        "item": "food-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "local-a",
+        "item": "medical-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "local-a",
+        "item": "medical-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "local-a",
+        "item": "medical-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.20918367346938775510204082",
+        "depot": "local-a",
+        "item": "spares-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "29.89795918367346938775510204",
+        "depot": "local-a",
+        "item": "spares-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "59.30612244897959183673469388",
+        "depot": "local-a",
+        "item": "spares-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "electronics-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "electronics-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "electronics-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "food-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "food-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "food-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "medical-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "medical-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "medical-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "spares-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "spares-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-b",
+        "item": "spares-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "electronics-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "electronics-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "electronics-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "food-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "food-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "food-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "medical-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "medical-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "medical-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "15.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "spares-large",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "30.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "spares-medium",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      },
+      {
+        "daily_demand": "60.50000000000000000000000000",
+        "depot": "local-c",
+        "item": "spares-small",
+        "lead_s": 43200,
+        "target_days": "1",
+        "trigger_days": "0.5"
+      }
+    ],
+    "runner": {
+      "completion_check_s": 3600,
+      "observation_interval_s": 3600,
+      "unavailable_allowance_s": 86400
+    },
+    "scenario": {
+      "extension_days": 7,
+      "generation_days": 7,
+      "profile": "regular",
+      "seed": 1019
+    },
+    "simulation_id": "scenario-1019-regular",
+    "source_sha256": {
+      "__init__.py": "9588c86df5505b0668b5bb57d8e29410ed82fdea6c734d2184614e0a7b1bfb80",
+      "batch.py": "fb50b3476189f2eb65448164b742fae23eea9a36781e62c4c117fc7bf50b82c5",
+      "bundles.py": "1d444fcc1511f95ba39673da7165aea16bf1c2c32ad424f4c493ddf4990e0fa0",
+      "calendars.py": "84afda75b2a089cd44d6f1f2b6f37a13f3e557f45b159dc4173c5325295aa80d",
+      "cargo_ledger.py": "559eed34996098072c7870950e2b7607861459c07ef4d51361d3c10ee4a438f8",
+      "context.py": "645b526db55b4e19d805f1398355ade426701d5897b458f69e99b1875c1647c5",
+      "core.py": "2b424071a118bac312aa0e02295ea5e6bb8203e80f4b7bb175b6f2457637c0fb",
+      "dataset.py": "35717cece531c4771ae2060f0c0171869606a04713f7e651d5d07db37bb1da79",
+      "delivery_ledger.py": "3b23c108b8330667ae1d00ad19f6d799834b638c2ee1c0fd2065f2199b012a3a",
+      "demo.py": "cc530e228011094b54f056e95ae172650f0ebf1d574673b2a4783266f87c0e27",
+      "environment.py": "aa8ceb2a1fb622f65cf10fd1810f8d3fb8042b3663f24c926bcd31266e51f326",
+      "estimates.py": "e59c5f20cb7fb9edbf716ee37dea7cd17f8a43c5e70509e7e2c04e6e9e5f2ce8",
+      "experiments.py": "124916ec9168b105dd23d11d108d28a93501461a3373a6a5577cf0bf1c00c3d0",
+      "imports.py": "acbbc1f0c0a96e3d390a72c1fc8c414c6fc9e42d379cc3267693a5d53eaf3dbe",
+      "incidents.py": "5843c59e14cc5e1522cc426b42e222128540540d659f6d761a5dec656b425874",
+      "journal.py": "773c0ebc77a42699723b888fc437da355d591118466fbe9ee8befa836fd0ba21",
+      "operations.py": "502d5388f2934a4d94c6cf7f54901bbd2dece5827dc1e11c42a6c3f2d0730537",
+      "operations_demo.py": "793522174a18aa7f3b304ec1367b70a873ba6f91fbf506fd7792dca7c62fcfc9",
+      "pilot.py": "8741aa3c619e29614c18cb10748e055a38d6d156c1f221a6eed30fee206ce64e",
+      "pilot_checks.py": "62980579224ee971b473e3649400783ae1e98121b8305b0c13526614f955adf0",
+      "pilot_gate.py": "599f5c685e2ccb968a49a5cb918f5d999c0c1fe31e32924c31de62b39d559aca",
+      "provenance.py": "4b63f9224b1f0f3418fc983ecf169f1b7575d2a9c48dd71b3cf35e93ecbe8f32",
+      "recovery.py": "d7038717325cd9ad7fd99440567cf7a0165cf160f9b727b534db3ad561ace71f",
+      "recovery_demo.py": "4abce2b1d8e80b92051c919da33d2e300a2a0234f47aa8b61a061ad32343d36c",
+      "roads.py": "1824f9108d544456e04c664e430d852626b1363098daa2220539f5e5a52158a0",
+      "rolling.py": "36ab4ebea62502115b6535acf5421de102002b0725208867f2891085ca02b303",
+      "scenarios.py": "0d4bff13765a3d9dd333630e4b9dfb52a941b41dfccc5b68ddcc416e833a12a7",
+      "supply.py": "4ef0e6fb3f362aba1159793fc41223d1bf721bb15a0689fbb3eb96d94d310b1a",
+      "supply_demo.py": "36a1050a6aad3cdff8a9a14de2a0ecdfc3fdb737b0656f06b112c20cb886ca8e",
+      "table_import.py": "8f858bbf9478e21d10e7be2d0fcbd2b4ea3c8e5777a01f99fb0ec0191b0cb532",
+      "training_masks.py": "4f516b3e55df2ad99c9e043a0cdadf2cee2668b836b43959d5f073bec2328494",
+      "transport.py": "c6db304d0d76e57aaf45cacd1629d81a68b088c9879ca2f50043e96f6f91c5cc",
+      "transport_demo.py": "8aedab0439c4bf59ba45638c5d32b735237eeb978648bb18900cf7a727f325d8",
+      "warehouse.py": "9111d41067b86d14ccc00e4211018e5be32f000d80daa8a22b0a128f3c1f6bc5",
+      "warehouse_demo.py": "c2647e785514ac8b0394df9fe4998f6a80baeaf9c51e4787be09816bf1bc19df"
+    },
+    "stores": [
+      {
+        "cold_m3": "200",
+        "depot_id": "central-a",
+        "ordinary_m3": "1000"
+      },
+      {
+        "cold_m3": "150",
+        "depot_id": "central-b",
+        "ordinary_m3": "800"
+      },
+      {
+        "cold_m3": "50",
+        "depot_id": "local-a",
+        "ordinary_m3": "200"
+      },
+      {
+        "cold_m3": "0",
+        "depot_id": "local-b",
+        "ordinary_m3": "150"
+      },
+      {
+        "cold_m3": "0",
+        "depot_id": "local-c",
+        "ordinary_m3": "100"
+      }
+    ],
+    "tick_s": 300,
+    "vehicles": [
+      {
+        "cold": true,
+        "depot_id": "central-a",
+        "max_kg": "5000",
+        "max_m3": "30",
+        "vehicle_id": "cold-0"
+      },
+      {
+        "cold": true,
+        "depot_id": "central-b",
+        "max_kg": "5000",
+        "max_m3": "30",
+        "vehicle_id": "cold-1"
+      },
+      {
+        "cold": false,
+        "depot_id": "central-a",
+        "max_kg": "8000",
+        "max_m3": "40",
+        "vehicle_id": "truck-0"
+      },
+      {
+        "cold": false,
+        "depot_id": "central-b",
+        "max_kg": "8000",
+        "max_m3": "40",
+        "vehicle_id": "truck-1"
+      },
+      {
+        "cold": false,
+        "depot_id": "local-a",
+        "max_kg": "8000",
+        "max_m3": "40",
+        "vehicle_id": "truck-2"
+      },
+      {
+        "cold": false,
+        "depot_id": "local-c",
+        "max_kg": "8000",
+        "max_m3": "40",
+        "vehicle_id": "truck-3"
+      },
+      {
+        "cold": false,
+        "depot_id": "central-a",
+        "max_kg": "1000",
+        "max_m3": "8",
+        "vehicle_id": "van-0"
+      },
+      {
+        "cold": false,
+        "depot_id": "central-b",
+        "max_kg": "1000",
+        "max_m3": "8",
+        "vehicle_id": "van-1"
+      },
+      {
+        "cold": false,
+        "depot_id": "local-a",
+        "max_kg": "1000",
+        "max_m3": "8",
+        "vehicle_id": "van-2"
+      },
+      {
+        "cold": false,
+        "depot_id": "local-b",
+        "max_kg": "1000",
+        "max_m3": "8",
+        "vehicle_id": "van-3"
+      }
+    ],
+    "versions": {
+      "bundle": 4,
+      "creation": "creation-v1",
+      "rolling": "rolling-v1"
+    }
+  },
+  "schema_version": 4
+}

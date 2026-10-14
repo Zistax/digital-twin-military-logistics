@@ -16,24 +16,36 @@ app = FastAPI(
     version="0.1.0",
 )
 
+
 @app.get("/health")
 def health_check() -> dict:
     """Endpoint di health-check semplice."""
     return {"status": "ok"}
+
+
 class PredictRequest(BaseModel):
     """Schema della richiesta per /predict (rischio convoglio)."""
 
     schema_version: str = Field(
         "1.0",
-        description="Versione dello schema di richiesta. Permette di evolvere l'API in futuro.",
+        description=(
+            "Versione dello schema di richiesta. Permette di "
+            "evolvere l'API in futuro."
+        ),
     )
-    total_minutes: int = Field(120, gt=0, description="Durata totale simulazione (minuti)")
+    total_minutes: int = Field(
+        120, gt=0, description="Durata totale simulazione (minuti)"
+    )
     timestep_minutes: int = Field(10, gt=0, description="Durata di ogni passo (minuti)")
     n_convoys: int = Field(5, gt=0, description="Numero di convogli da valutare")
+
+
 class ConvoyRisk(BaseModel):
     convoy_id: int
     risk_proba: float
     is_high_risk: bool
+
+
 class PredictResponse(BaseModel):
     """Schema della risposta per /predict."""
 
@@ -45,6 +57,7 @@ class PredictResponse(BaseModel):
     risk_threshold_used: float
     results: list[ConvoyRisk]
 
+
 class SimulateRequest(BaseModel):
     """Parametri per eseguire una simulazione singola."""
 
@@ -52,7 +65,9 @@ class SimulateRequest(BaseModel):
         "1.0",
         description="Versione dello schema di richiesta per /simulate.",
     )
-    total_minutes: int = Field(120, gt=0, description="Durata totale simulazione (minuti)")
+    total_minutes: int = Field(
+        120, gt=0, description="Durata totale simulazione (minuti)"
+    )
     timestep_minutes: int = Field(10, gt=0, description="Durata di ogni passo (minuti)")
     n_convoys: int = Field(5, gt=0, description="Numero di convogli simulati")
     depot_capacity: int = Field(2, gt=0, description="Capacità del deposito")
@@ -82,6 +97,7 @@ class SimulateResponse(BaseModel):
     final_minute: int
     events_csv_path: str | None = None
     kpi: SimulationKPI
+
 
 @app.post("/predict_risk", response_model=PredictResponse, tags=["risk"])
 @app.post("/predict", response_model=PredictResponse, tags=["risk"])
@@ -122,12 +138,13 @@ def predict_risk(request: PredictRequest) -> PredictResponse:
 
     # Audit di base: logghiamo la chiamata (senza PII)
     try:
-        log_predict_call(request.dict(), response.dict())
+        log_predict_call(request.model_dump(), response.model_dump())
     except Exception as exc:  # noqa: BLE001
         # Non vogliamo che un problema di logging blocchi l'API
         print(f"[WARN] Impossibile loggare la chiamata /predict: {exc}")
 
     return response
+
 
 @app.post("/simulate", response_model=SimulateResponse, tags=["simulation"])
 def simulate(request: SimulateRequest) -> SimulateResponse:
@@ -154,7 +171,8 @@ def simulate(request: SimulateRequest) -> SimulateResponse:
     if events_csv_path:
         df_events = load_events_csv(events_csv_path)
     else:
-        # Se per qualche motivo il path non c'è, costruiamo un DataFrame dagli eventi in memoria
+        # Se per qualche motivo il path non c'è, costruiamo un DataFrame dagli eventi in
+        # memoria
         import pandas as pd
 
         df_events = pd.DataFrame(events)
@@ -167,7 +185,9 @@ def simulate(request: SimulateRequest) -> SimulateResponse:
             kpi_dict.get("n_completed_convoys", summary.get("n_completed_convoys", 0))
         ),
         n_not_completed_convoys=int(
-            kpi_dict.get("n_not_completed_convoys", summary.get("n_not_completed_convoys", 0))
+            kpi_dict.get(
+                "n_not_completed_convoys", summary.get("n_not_completed_convoys", 0)
+            )
         ),
         avg_completion_minute=kpi_dict.get("avg_completion_minute"),
         min_completion_minute=kpi_dict.get("min_completion_minute"),

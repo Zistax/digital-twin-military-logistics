@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-13",
+  "closed": [
+    "F01",
+    "F02",
+    "F03",
+    "D01"
+  ],
+  "roadmap_position": "D02, 11/18",
+  "next": "D03",
+  "tests_passed": 254,
+  "core_coverage": 91.9674039580908,
+  "whole_src_coverage": 90.65871012164334,
+  "native_v4_valid_runs": 3,
+  "legacy_v3_verified_bundles": 9,
+  "source_provenance_matches": true,
+  "files_sha256": {
+    "reports/foundation-quality-verified/quality.json": "05e6caa6ba80d85cc016364555c73c7b6976ba330cf9c9f5a263d1a6e47e7d76",
+    "reports/foundation-quality-verified/coverage.json": "803e80d57a8e57b4346160e986300ab0e2f90e198181e10c92ce3a0b8cf01c4b",
+    "reports/foundation-native-v4-final/pilot.json": "ab5b8d0e105dc1f37beec7f7c7dc344e72b5e25dff8ea221530cbdb3294b73df",
+    "docs/decisioni-nucleo-v1.md": "79e9ee7442370c02e215b83ab44058a289c7eaff05ac1f55a7ac91528c7c4d43",
+    "docs/stato-roadmap.md": "fa11165aba25100413a1ae5dba1a12c117dff01543d8e536d951eb8e1fe571aa",
+    "reports/foundation-closeout-20261013/Chiusura_Fondamenta.md": "12c1c26a0f426d26275a727118ba4e5ff74f5c899226f7883e2e39c295c8ab9c"
+  }
+}

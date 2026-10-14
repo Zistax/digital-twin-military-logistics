@@ -1,0 +1,61 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "versions": {
+    "pytest": "9.1.1",
+    "coverage": "7.16.2",
+    "black": "26.10.1",
+    "ruff": "0.17.0"
+  },
+  "checks": [
+    {
+      "command": [
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "conftest.py",
+        "scripts/check_quality.py"
+      ],
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "black",
+        "--check",
+        "src",
+        "tests",
+        "conftest.py",
+        "scripts/check_quality.py"
+      ],
+      "exit_code": 0,
+      "output": "All done! \u2728 \ud83c\udf70 \u2728\n96 files would be left unchanged.\n"
+    },
+    {
+      "command": [
+        "coverage",
+        "run",
+        "--source=/workspace/scratch/1dd3faccdc1f/review-repo/src",
+        "-m",
+        "pytest",
+        "/workspace/scratch/1dd3faccdc1f/review-repo/tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "output": "........................................................................ [ 27%]\n............................................................ [ 49%]\n.................................................................... [ 75%]\n..................................................................       [100%]\n=============================== warnings summary ===============================\n../../workspace/scratch/1dd3faccdc1f/quality-deps/fastapi/testclient.py:1\n  /workspace/scratch/1dd3faccdc1f/quality-deps/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n266 passed, 1 warning, 16 subtests passed in 77.86s (0:01:17)\n"
+    },
+    {
+      "command": [
+        "coverage",
+        "json",
+        "-o",
+        "/workspace/scratch/1dd3faccdc1f/review-repo/reports/d03-quality-preflight/coverage.json"
+      ],
+      "exit_code": 0,
+      "output": "Wrote JSON report to /workspace/scratch/1dd3faccdc1f/review-repo/reports/d03-quality-preflight/coverage.json\n"
+    }
+  ],
+  "whole_src_coverage": 90.53669222343922,
+  "core_coverage": 91.78325560737287,
+  "passed": true
+}

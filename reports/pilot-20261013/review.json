@@ -1,0 +1,17 @@
+{
+  "base_seeds": [
+    0
+  ],
+  "open_gates": [
+    "complete D01 traces",
+    "observable deadline estimator",
+    "F02/F03",
+    "additional base seeds"
+  ],
+  "physical_parameters_changed": false,
+  "ready_for_D03": false,
+  "reproducible_regular": true,
+  "stage": "D02",
+  "status": "exploratory_pilot_completed_review_open",
+  "valid_runs": 3
+}

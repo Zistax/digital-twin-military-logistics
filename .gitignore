@@ -9,3 +9,13 @@ __pycache__/
 # File temporanei editor
 .vscode/
 *.log
+
+# Output locali e dataset voluminosi (metadati e rapporti sono versionati)
+.coverage*
+.pytest_cache/
+.ruff_cache/
+reports/**/*.jsonl
+reports/**/*.zip
+reports/**/*.damaged
+reports/**/.*
+data/d03/*.zip
