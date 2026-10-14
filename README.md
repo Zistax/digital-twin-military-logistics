@@ -12,6 +12,10 @@
 - [Contratti e decisioni](docs/decisioni-nucleo-v1.md)
 - [Dataset: distribuzione e riproduzione](data/d03/README.md)
 
+I dati completi sono nel [ramo d03-dataset-v1](https://github.com/Zistax/digital-twin-military-logistics/tree/d03-dataset-v1),
+con parti verificate e script di ricomposizione. Log, cache e diagnostica sono
+versionati nello [snapshot locale](reports/runtime-snapshot-20261014/README.md).
+
 Qualità verificata: 268 test e 16 sotto-test; copertura del nucleo 91,78%.
 Per ripetere i controlli, installare le dipendenze runtime e
 `requirements-quality.txt`, quindi eseguire:

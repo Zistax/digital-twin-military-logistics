@@ -15,7 +15,10 @@ def restore(directory, output=None):
         with temporary.open("xb") as target:
             for part in manifest["parts"]:
                 data = (directory / part["name"]).read_bytes()
-                if len(data) != part["bytes"] or sha256(data).hexdigest() != part["sha256"]:
+                if (
+                    len(data) != part["bytes"]
+                    or sha256(data).hexdigest() != part["sha256"]
+                ):
                     raise ValueError("diagnostic chunk checksum mismatch")
                 target.write(data)
                 checksum.update(data)
