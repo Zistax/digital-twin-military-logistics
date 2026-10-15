@@ -1,0 +1,2366 @@
+{
+  "artifacts": {
+    "test-predictions.jsonl.gz": "204132e05cc584db1b25545e06d0f5998212ffaa9e548a578850102671f1e7c7"
+  },
+  "availability": {
+    "initial": {
+      "duration": 0.4166666666666667,
+      "probability": 0.9908759124087592
+    },
+    "post": {
+      "duration": 0.3612759643916914,
+      "missions": 1348,
+      "probability": 0.0,
+      "snapshots": 7958,
+      "statuses": {
+        "abstain": 5102,
+        "available_conditional_duration": 2856
+      }
+    },
+    "pre": {
+      "duration": 0.4166666666666667,
+      "missions": 1644,
+      "probability": 0.9907745336577455,
+      "snapshots": 8577,
+      "statuses": {
+        "abstain": 85,
+        "available_conditional_duration": 3703,
+        "probability_only": 4789
+      }
+    }
+  },
+  "candidate_sha256": {
+    "reports/m01-v1/initial_predictor.joblib": "152be46560c1d3c5236b48cc1385badce1ad9e78c86057f702a236eac93d63c6",
+    "reports/m02-v1/rolling_predictor.joblib": "963a2f5d612a224e91f2f08d498036ed68cd9d9210401aac9a5d0e9cac20801f"
+  },
+  "censored_initial": 459,
+  "channels_with_policy": {
+    "initial_classification": {
+      "baseline_brier": 0.14370864454529897,
+      "brier": 0.07364111424324393,
+      "class_missions": {
+        "False": 283,
+        "True": 1346
+      },
+      "ece": 0.025226884477678277,
+      "groups": 6,
+      "metric_95": [
+        0.06767506604978828,
+        0.08086035305070612
+      ],
+      "missions": 1629,
+      "paired_difference_95": [
+        -0.07928410432112308,
+        -0.06058696972951419
+      ],
+      "pr_auc": 0.9851005161831463,
+      "roc_auc": 0.9340579862332575,
+      "snapshots": 1629
+    },
+    "initial_duration": {
+      "baseline_mae_minutes": 2829.560281124498,
+      "coverage": 0.9975903614457832,
+      "coverage_95": [
+        0.9926289926289926,
+        1.0
+      ],
+      "error_over_1_day": 0.46987951807228917,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1914.011835377629,
+      "metric_95": [
+        1759.4155423244222,
+        2110.651659379202
+      ],
+      "missions": 415,
+      "paired_difference_95": [
+        -1078.7277174423402,
+        -756.6276115282047
+      ],
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.32356562673512657,
+      "snapshots": 415,
+      "width_minutes": 13576.494715634195,
+      "width_minutes_95": [
+        13270.26814704068,
+        13876.717821051448
+      ]
+    },
+    "post_duration": {
+      "baseline_mae_minutes": 1484.1304957903683,
+      "coverage": 0.9991657977059437,
+      "coverage_95": [
+        0.9981145580493997,
+        1.0
+      ],
+      "error_over_1_day": 0.19928165913567375,
+      "group_simultaneous_coverage": 0.6666666666666666,
+      "groups": 6,
+      "mae_minutes": 964.4996164777825,
+      "metric_95": [
+        879.1846304819435,
+        1056.2603818186458
+      ],
+      "missions": 411,
+      "paired_difference_95": [
+        -634.8798426724823,
+        -408.73486779347303
+      ],
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": false
+      },
+      "relative_mae_improvement": 0.3501247907690612,
+      "snapshots": 2452,
+      "width_minutes": 10530.199207770976,
+      "width_minutes_95": [
+        10402.096119424281,
+        10650.835355490712
+      ]
+    },
+    "pre_duration": {
+      "baseline_mae_minutes": 2829.2707228915665,
+      "coverage": 0.9975903614457832,
+      "coverage_95": [
+        0.9926289926289926,
+        1.0
+      ],
+      "error_over_1_day": 0.46442340791738385,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1870.3268760278934,
+      "metric_95": [
+        1709.0892292905505,
+        2077.6630584669233
+      ],
+      "missions": 415,
+      "paired_difference_95": [
+        -1119.4376491888136,
+        -839.0331578920279
+      ],
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.33893675819174174,
+      "snapshots": 2219,
+      "width_minutes": 13371.690311884748,
+      "width_minutes_95": [
+        13081.53374432774,
+        13664.652800152448
+      ]
+    },
+    "rolling_classification": {
+      "baseline_brier": 0.1437086445452998,
+      "brier": 0.05805664918451503,
+      "class_missions": {
+        "False": 283,
+        "True": 1346
+      },
+      "ece": 0.016484084461591653,
+      "groups": 6,
+      "metric_95": [
+        0.05276147408018823,
+        0.06499229024422348
+      ],
+      "missions": 1629,
+      "paired_difference_95": [
+        -0.09407633345490411,
+        -0.07686642853821025
+      ],
+      "pr_auc": 0.9914749230425995,
+      "roc_auc": 0.9609559728502085,
+      "snapshots": 8492
+    }
+  },
+  "evaluated_utc": "2026-10-15T09:12:09.686479+00:00",
+  "freeze_sha256": "a99655370bc0bca81d40754a16e4e573e364c47d52758339c13ea6ea0fe0d299",
+  "initial_missions": 1644,
+  "native_rolling": 210287,
+  "operational_initial_reference": {
+    "classification": {
+      "brier": 0.1096340758987524,
+      "class_missions": {
+        "False": 290,
+        "True": 1354
+      },
+      "ece": 0.010565326655666462,
+      "groups": 6,
+      "missions": 1644,
+      "pr_auc": 0.9098972925356605,
+      "roc_auc": 0.7544224010594407,
+      "snapshots": 1644
+    },
+    "duration_common_subset": {
+      "candidate_raw_diagnostic": {
+        "error_over_1_day": 0.4883720930232558,
+        "groups": 6,
+        "mae_minutes": 2141.669770767766,
+        "missions": 129,
+        "snapshots": 129
+      },
+      "fraction_of_completed_late": 0.1441340782122905,
+      "operational": {
+        "error_over_1_day": 0.4883720930232558,
+        "groups": 6,
+        "mae_minutes": 3046.159173126615,
+        "missions": 129,
+        "snapshots": 129
+      }
+    }
+  },
+  "policy": {
+    "bootstrap_repetitions": 1000,
+    "bootstrap_seed": 1503,
+    "classification_ece_max": 0.05,
+    "duration_availability_min": 0.5,
+    "duration_improvement_min": 0.1,
+    "duration_mae_max_minutes": 1440.0,
+    "interval_coverage_min": 0.8,
+    "interval_group_coverage_min": 0.8,
+    "interval_width_max_minutes": 2880.0,
+    "probability_availability_min": 0.95,
+    "segment_class_min": 20,
+    "segment_completed_min": 30,
+    "segment_groups_min": 5,
+    "segment_missions_min": 100
+  },
+  "promotion": {
+    "checks": {
+      "frequency_validated_at_30_minutes": false,
+      "initial_classification|brier_beats_prevalence": true,
+      "initial_classification|cold=0|brier_beats_prevalence": true,
+      "initial_classification|cold=0|ece": true,
+      "initial_classification|cold=0|sufficient": true,
+      "initial_classification|cold=1|brier_beats_prevalence": true,
+      "initial_classification|cold=1|ece": false,
+      "initial_classification|cold=1|sufficient": true,
+      "initial_classification|ece": true,
+      "initial_classification|paired_improvement_ci": true,
+      "initial_classification|profile=perturbed|brier_beats_prevalence": true,
+      "initial_classification|profile=perturbed|ece": false,
+      "initial_classification|profile=perturbed|sufficient": true,
+      "initial_classification|profile=pressure|brier_beats_prevalence": true,
+      "initial_classification|profile=pressure|ece": true,
+      "initial_classification|profile=pressure|sufficient": true,
+      "initial_classification|profile=regular|brier_beats_prevalence": true,
+      "initial_classification|profile=regular|ece": true,
+      "initial_classification|profile=regular|sufficient": true,
+      "initial_classification|sufficient": true,
+      "initial_classification|urgent=0|brier_beats_prevalence": true,
+      "initial_classification|urgent=0|ece": true,
+      "initial_classification|urgent=0|sufficient": true,
+      "initial_classification|urgent=1|brier_beats_prevalence": true,
+      "initial_classification|urgent=1|ece": false,
+      "initial_classification|urgent=1|sufficient": true,
+      "initial_duration|cold=0|duration_improvement": true,
+      "initial_duration|cold=0|duration_mae": false,
+      "initial_duration|cold=0|interval_coverage": true,
+      "initial_duration|cold=0|interval_group_coverage": true,
+      "initial_duration|cold=0|interval_width": false,
+      "initial_duration|cold=0|sufficient": true,
+      "initial_duration|cold=1|duration_improvement": true,
+      "initial_duration|cold=1|duration_mae": false,
+      "initial_duration|cold=1|interval_coverage": true,
+      "initial_duration|cold=1|interval_group_coverage": true,
+      "initial_duration|cold=1|interval_width": false,
+      "initial_duration|cold=1|sufficient": true,
+      "initial_duration|duration_improvement": true,
+      "initial_duration|duration_mae": false,
+      "initial_duration|interval_coverage": true,
+      "initial_duration|interval_group_coverage": true,
+      "initial_duration|interval_width": false,
+      "initial_duration|paired_improvement_ci": true,
+      "initial_duration|profile=perturbed|duration_improvement": true,
+      "initial_duration|profile=perturbed|duration_mae": false,
+      "initial_duration|profile=perturbed|interval_coverage": true,
+      "initial_duration|profile=perturbed|interval_group_coverage": true,
+      "initial_duration|profile=perturbed|interval_width": false,
+      "initial_duration|profile=perturbed|sufficient": true,
+      "initial_duration|profile=pressure|duration_improvement": true,
+      "initial_duration|profile=pressure|duration_mae": false,
+      "initial_duration|profile=pressure|interval_coverage": true,
+      "initial_duration|profile=pressure|interval_group_coverage": true,
+      "initial_duration|profile=pressure|interval_width": false,
+      "initial_duration|profile=pressure|sufficient": true,
+      "initial_duration|profile=regular|duration_improvement": true,
+      "initial_duration|profile=regular|duration_mae": false,
+      "initial_duration|profile=regular|interval_coverage": true,
+      "initial_duration|profile=regular|interval_group_coverage": true,
+      "initial_duration|profile=regular|interval_width": false,
+      "initial_duration|profile=regular|sufficient": true,
+      "initial_duration|sufficient": true,
+      "initial_duration|urgent=0|duration_improvement": true,
+      "initial_duration|urgent=0|duration_mae": false,
+      "initial_duration|urgent=0|interval_coverage": true,
+      "initial_duration|urgent=0|interval_group_coverage": true,
+      "initial_duration|urgent=0|interval_width": false,
+      "initial_duration|urgent=0|sufficient": true,
+      "initial_duration|urgent=1|duration_improvement": true,
+      "initial_duration|urgent=1|duration_mae": true,
+      "initial_duration|urgent=1|interval_coverage": true,
+      "initial_duration|urgent=1|interval_group_coverage": true,
+      "initial_duration|urgent=1|interval_width": false,
+      "initial_duration|urgent=1|sufficient": true,
+      "initial|duration_availability": false,
+      "initial|probability_availability": true,
+      "integrity": true,
+      "post_duration|cold=0|duration_improvement": true,
+      "post_duration|cold=0|duration_mae": true,
+      "post_duration|cold=0|interval_coverage": true,
+      "post_duration|cold=0|interval_group_coverage": false,
+      "post_duration|cold=0|interval_width": false,
+      "post_duration|cold=0|sufficient": true,
+      "post_duration|cold=1|duration_improvement": true,
+      "post_duration|cold=1|duration_mae": true,
+      "post_duration|cold=1|interval_coverage": true,
+      "post_duration|cold=1|interval_group_coverage": true,
+      "post_duration|cold=1|interval_width": false,
+      "post_duration|cold=1|sufficient": true,
+      "post_duration|duration_improvement": true,
+      "post_duration|duration_mae": true,
+      "post_duration|interval_coverage": true,
+      "post_duration|interval_group_coverage": false,
+      "post_duration|interval_width": false,
+      "post_duration|paired_improvement_ci": true,
+      "post_duration|profile=perturbed|duration_improvement": true,
+      "post_duration|profile=perturbed|duration_mae": true,
+      "post_duration|profile=perturbed|interval_coverage": true,
+      "post_duration|profile=perturbed|interval_group_coverage": true,
+      "post_duration|profile=perturbed|interval_width": false,
+      "post_duration|profile=perturbed|sufficient": true,
+      "post_duration|profile=pressure|duration_improvement": true,
+      "post_duration|profile=pressure|duration_mae": true,
+      "post_duration|profile=pressure|interval_coverage": true,
+      "post_duration|profile=pressure|interval_group_coverage": false,
+      "post_duration|profile=pressure|interval_width": false,
+      "post_duration|profile=pressure|sufficient": true,
+      "post_duration|profile=regular|duration_improvement": true,
+      "post_duration|profile=regular|duration_mae": true,
+      "post_duration|profile=regular|interval_coverage": true,
+      "post_duration|profile=regular|interval_group_coverage": true,
+      "post_duration|profile=regular|interval_width": false,
+      "post_duration|profile=regular|sufficient": true,
+      "post_duration|sufficient": true,
+      "post_duration|urgent=0|duration_improvement": true,
+      "post_duration|urgent=0|duration_mae": true,
+      "post_duration|urgent=0|interval_coverage": true,
+      "post_duration|urgent=0|interval_group_coverage": false,
+      "post_duration|urgent=0|interval_width": false,
+      "post_duration|urgent=0|sufficient": true,
+      "post_duration|urgent=1|duration_improvement": true,
+      "post_duration|urgent=1|duration_mae": true,
+      "post_duration|urgent=1|interval_coverage": true,
+      "post_duration|urgent=1|interval_group_coverage": true,
+      "post_duration|urgent=1|interval_width": false,
+      "post_duration|urgent=1|sufficient": true,
+      "post|duration_availability": false,
+      "pre_duration|cold=0|duration_improvement": true,
+      "pre_duration|cold=0|duration_mae": false,
+      "pre_duration|cold=0|interval_coverage": true,
+      "pre_duration|cold=0|interval_group_coverage": true,
+      "pre_duration|cold=0|interval_width": false,
+      "pre_duration|cold=0|sufficient": true,
+      "pre_duration|cold=1|duration_improvement": true,
+      "pre_duration|cold=1|duration_mae": false,
+      "pre_duration|cold=1|interval_coverage": true,
+      "pre_duration|cold=1|interval_group_coverage": true,
+      "pre_duration|cold=1|interval_width": false,
+      "pre_duration|cold=1|sufficient": true,
+      "pre_duration|duration_improvement": true,
+      "pre_duration|duration_mae": false,
+      "pre_duration|interval_coverage": true,
+      "pre_duration|interval_group_coverage": true,
+      "pre_duration|interval_width": false,
+      "pre_duration|paired_improvement_ci": true,
+      "pre_duration|profile=perturbed|duration_improvement": true,
+      "pre_duration|profile=perturbed|duration_mae": false,
+      "pre_duration|profile=perturbed|interval_coverage": true,
+      "pre_duration|profile=perturbed|interval_group_coverage": true,
+      "pre_duration|profile=perturbed|interval_width": false,
+      "pre_duration|profile=perturbed|sufficient": true,
+      "pre_duration|profile=pressure|duration_improvement": true,
+      "pre_duration|profile=pressure|duration_mae": false,
+      "pre_duration|profile=pressure|interval_coverage": true,
+      "pre_duration|profile=pressure|interval_group_coverage": true,
+      "pre_duration|profile=pressure|interval_width": false,
+      "pre_duration|profile=pressure|sufficient": true,
+      "pre_duration|profile=regular|duration_improvement": true,
+      "pre_duration|profile=regular|duration_mae": false,
+      "pre_duration|profile=regular|interval_coverage": true,
+      "pre_duration|profile=regular|interval_group_coverage": true,
+      "pre_duration|profile=regular|interval_width": false,
+      "pre_duration|profile=regular|sufficient": true,
+      "pre_duration|sufficient": true,
+      "pre_duration|urgent=0|duration_improvement": true,
+      "pre_duration|urgent=0|duration_mae": false,
+      "pre_duration|urgent=0|interval_coverage": true,
+      "pre_duration|urgent=0|interval_group_coverage": true,
+      "pre_duration|urgent=0|interval_width": false,
+      "pre_duration|urgent=0|sufficient": true,
+      "pre_duration|urgent=1|duration_improvement": true,
+      "pre_duration|urgent=1|duration_mae": true,
+      "pre_duration|urgent=1|interval_coverage": true,
+      "pre_duration|urgent=1|interval_group_coverage": true,
+      "pre_duration|urgent=1|interval_width": false,
+      "pre_duration|urgent=1|sufficient": true,
+      "pre|duration_availability": false,
+      "pre|probability_availability": true,
+      "quality": true,
+      "rolling_classification|brier_beats_prevalence": true,
+      "rolling_classification|cold=0|brier_beats_prevalence": true,
+      "rolling_classification|cold=0|ece": true,
+      "rolling_classification|cold=0|sufficient": true,
+      "rolling_classification|cold=1|brier_beats_prevalence": true,
+      "rolling_classification|cold=1|ece": true,
+      "rolling_classification|cold=1|sufficient": true,
+      "rolling_classification|ece": true,
+      "rolling_classification|paired_improvement_ci": true,
+      "rolling_classification|profile=perturbed|brier_beats_prevalence": true,
+      "rolling_classification|profile=perturbed|ece": true,
+      "rolling_classification|profile=perturbed|sufficient": true,
+      "rolling_classification|profile=pressure|brier_beats_prevalence": true,
+      "rolling_classification|profile=pressure|ece": true,
+      "rolling_classification|profile=pressure|sufficient": true,
+      "rolling_classification|profile=regular|brier_beats_prevalence": true,
+      "rolling_classification|profile=regular|ece": true,
+      "rolling_classification|profile=regular|sufficient": true,
+      "rolling_classification|sufficient": true,
+      "rolling_classification|urgent=0|brier_beats_prevalence": true,
+      "rolling_classification|urgent=0|ece": true,
+      "rolling_classification|urgent=0|sufficient": true,
+      "rolling_classification|urgent=1|brier_beats_prevalence": true,
+      "rolling_classification|urgent=1|ece": true,
+      "rolling_classification|urgent=1|sufficient": true
+    },
+    "eligible": false,
+    "failed": [
+      "frequency_validated_at_30_minutes",
+      "initial_duration|duration_mae",
+      "initial_duration|interval_width",
+      "pre_duration|duration_mae",
+      "pre_duration|interval_width",
+      "post_duration|interval_width",
+      "post_duration|interval_group_coverage",
+      "initial_classification|profile=perturbed|ece",
+      "initial_classification|urgent=1|ece",
+      "initial_classification|cold=1|ece",
+      "initial_duration|profile=regular|duration_mae",
+      "initial_duration|profile=regular|interval_width",
+      "initial_duration|profile=pressure|duration_mae",
+      "initial_duration|profile=pressure|interval_width",
+      "initial_duration|profile=perturbed|duration_mae",
+      "initial_duration|profile=perturbed|interval_width",
+      "initial_duration|urgent=0|duration_mae",
+      "initial_duration|urgent=0|interval_width",
+      "initial_duration|urgent=1|interval_width",
+      "initial_duration|cold=0|duration_mae",
+      "initial_duration|cold=0|interval_width",
+      "initial_duration|cold=1|duration_mae",
+      "initial_duration|cold=1|interval_width",
+      "pre_duration|profile=regular|duration_mae",
+      "pre_duration|profile=regular|interval_width",
+      "pre_duration|profile=pressure|duration_mae",
+      "pre_duration|profile=pressure|interval_width",
+      "pre_duration|profile=perturbed|duration_mae",
+      "pre_duration|profile=perturbed|interval_width",
+      "pre_duration|urgent=0|duration_mae",
+      "pre_duration|urgent=0|interval_width",
+      "pre_duration|urgent=1|interval_width",
+      "pre_duration|cold=0|duration_mae",
+      "pre_duration|cold=0|interval_width",
+      "pre_duration|cold=1|duration_mae",
+      "pre_duration|cold=1|interval_width",
+      "post_duration|profile=regular|interval_width",
+      "post_duration|profile=pressure|interval_width",
+      "post_duration|profile=pressure|interval_group_coverage",
+      "post_duration|profile=perturbed|interval_width",
+      "post_duration|urgent=0|interval_width",
+      "post_duration|urgent=0|interval_group_coverage",
+      "post_duration|urgent=1|interval_width",
+      "post_duration|cold=0|interval_width",
+      "post_duration|cold=0|interval_group_coverage",
+      "post_duration|cold=1|interval_width",
+      "initial|duration_availability",
+      "pre|duration_availability",
+      "post|duration_availability"
+    ],
+    "manual_approval_required": true,
+    "promoted": false
+  },
+  "provenance": [
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 354,
+          "sha256": "90cb616cf3253b99c9ee5a8e743f9937482505b3ff5b5a873b716bbaf888bf83"
+        },
+        "delivery_events.jsonl": {
+          "rows": 338,
+          "sha256": "c0ab4f3f3da102b06ba8e9901f9eb57b07731ea74abbe7aa2109d9f285ae97c1"
+        },
+        "labels.jsonl": {
+          "rows": 72,
+          "sha256": "fbc9fc793be6ae1778aecd386d1f0d9bb05ed6cb56e2ddee6ccb2210208cafcc"
+        },
+        "observations.jsonl": {
+          "rows": 72,
+          "sha256": "1c0e538b220a9d408873a7648abbafdc4d2362054cfd445c665ec7acd49f3f66"
+        },
+        "operational_events.jsonl": {
+          "rows": 1985,
+          "sha256": "3ad22f7eba5de4eedef826cb5feedf97a27b9d98a3bc3ee2e78f0053c7164941"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7906,
+          "sha256": "a01d52357e719538a0e88f3688095b97c9b3dda2c35a1a6ab7608c661812405a"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7834,
+          "sha256": "ad9b5278fdf5bfd60afb5317801206d6d5fd1256bfa715674e4ac1231aeab775"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7834,
+          "sha256": "f788e9a4b96bef1c03339188e5aa2225cb4c95258c07e3e168e872592f735145"
+        }
+      },
+      "group": "base-seed-1028",
+      "manifest_sha256": "58ea36f57e39be5f31c5082e029fe2b85dfa63b700496d39a128424e3b5acc98",
+      "native_rolling": 7834,
+      "sampled_rolling": 735,
+      "simulation_id": "scenario-1028-perturbed"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 393,
+          "sha256": "3fca66c27c272b025af89d2ea41c2c6c6e790390e87503de9ea74a1422e21104"
+        },
+        "delivery_events.jsonl": {
+          "rows": 354,
+          "sha256": "625bb9b8a52e7f8939ff280149422d24d63390a3243771fcb229a7ad9c4b959b"
+        },
+        "labels.jsonl": {
+          "rows": 130,
+          "sha256": "f906346a8685e2194a862f0dbd9d7262d2724141172eea11768b1262bb25e53d"
+        },
+        "observations.jsonl": {
+          "rows": 130,
+          "sha256": "8f8dc7c28030a55a4e2de3728c6b2f25b7562e46551f551b2c8f77946fc04c6c"
+        },
+        "operational_events.jsonl": {
+          "rows": 2149,
+          "sha256": "e4bba0dd182ca6591e1ce11be3782011614fb36cd54f53e94e5217f7bf6f3cd9"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 22193,
+          "sha256": "24239a7a83c35fedde5b6bfc2a6659e83b0170a30763cfd970abf6fb91adc546"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 22063,
+          "sha256": "6de4ec4faa74f21f51485e6bcc6a1d214a771b33dbab3d2fcb576fb26034816c"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 22063,
+          "sha256": "4d02873da4a8f3d67274627b23d72fb8cbc939ed0f09af920ad21c1abc1e60ad"
+        }
+      },
+      "group": "base-seed-1028",
+      "manifest_sha256": "41628753364c99d3a0ed8683605a6512752f9417fc215c0060a6f00ae18a1b4e",
+      "native_rolling": 22063,
+      "sampled_rolling": 1315,
+      "simulation_id": "scenario-1028-pressure"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 341,
+          "sha256": "a61c2456dc3e05e90d0a9459596ee426994e163c8e40c25337c6fe0d5dfcadb2"
+        },
+        "delivery_events.jsonl": {
+          "rows": 329,
+          "sha256": "d4035990de2dd643c6a1f08c56fb1d000c1f7574ca032cafb95164c76bca6908"
+        },
+        "labels.jsonl": {
+          "rows": 72,
+          "sha256": "2d2bc4254ffe95fd96616d4d724ead641a4436a0ef4c4dda1d500554da79a5ff"
+        },
+        "observations.jsonl": {
+          "rows": 72,
+          "sha256": "336ab45f1ba535c836d1b01c89f9fd3390e89805558db5ce06a35b83e83845e9"
+        },
+        "operational_events.jsonl": {
+          "rows": 1826,
+          "sha256": "1fb812f8a5f6340e5878b30f6efa02dcc75e6a35815a50a39abf06de35b34140"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7787,
+          "sha256": "acc11d4e7a391fc6ea2ba1d0e67de6f0d639e6c9d781c960f7a6d00fe516862d"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7715,
+          "sha256": "b8a5d44a4256fc9272a45e6e907e2b73601df454205b757aa2b89d234aae5a62"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7715,
+          "sha256": "03bb755fbabd291329f26bdd54eb31a929876ff8bc250992a0709f7978ef8b5e"
+        }
+      },
+      "group": "base-seed-1028",
+      "manifest_sha256": "775eb93446674cf187710fce706ab8df96f5503d63ac22b90ec73a06cc307b86",
+      "native_rolling": 7715,
+      "sampled_rolling": 715,
+      "simulation_id": "scenario-1028-regular"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 349,
+          "sha256": "d35463028b99fa57db179aad55e735459db0e9851e628ee370d00ca2f7e32db3"
+        },
+        "delivery_events.jsonl": {
+          "rows": 348,
+          "sha256": "2f677d92abff20ccbfc1edc81e59936bb88144b1e990c510502bd1cd4d864dd1"
+        },
+        "labels.jsonl": {
+          "rows": 73,
+          "sha256": "f45df5079503a5ab8a8d1800f094df0cbe0bc84e0d788e8b24b20eb425ec700c"
+        },
+        "observations.jsonl": {
+          "rows": 73,
+          "sha256": "be82db1c94035da1d2bc26895d6dc4ab35774b72f565074f9d2ec38d7f9d8909"
+        },
+        "operational_events.jsonl": {
+          "rows": 1954,
+          "sha256": "6d3ff3e463677568d94898611f19e4f055241bd0d7ca4db5da186a1ffc8f2914"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 8020,
+          "sha256": "35b18e093f7dc48006e84263c60180bcd55c7ea7b72b48d883a7a9c91797b6cf"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7947,
+          "sha256": "a90075e5d88528ee3eca2945fb962b66fe9c0323e81bbceb210229108e846699"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7947,
+          "sha256": "c56ae0fd034beab7c21b1cc3bd060ac9aee71a8cf60530c91ef594631201a211"
+        }
+      },
+      "group": "base-seed-1021",
+      "manifest_sha256": "2fe4646435d94444a7fa7cbee45208744a69fdd915944b7b01cb94018c775b4e",
+      "native_rolling": 7947,
+      "sampled_rolling": 754,
+      "simulation_id": "scenario-1021-perturbed"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 391,
+          "sha256": "daaa6f7b4433236ec7fee4e016e5ba616c9a09f34b6f389eec2a2f2aa5e44edb"
+        },
+        "delivery_events.jsonl": {
+          "rows": 382,
+          "sha256": "8ab4ed85996f40dea646e734bc275fe1a9e742303f89b52b16346a5e72421bbd"
+        },
+        "labels.jsonl": {
+          "rows": 130,
+          "sha256": "bb2259cc008375b5234f294fce00be6e0ef6d2c8a6679b8ae1ddf02ef4e684a2"
+        },
+        "observations.jsonl": {
+          "rows": 130,
+          "sha256": "c1ba05420cd33f91621ad7b95590c67466cc2d627e22f53d37a0405f0ebe3056"
+        },
+        "operational_events.jsonl": {
+          "rows": 2209,
+          "sha256": "ee30a4336666ece95a99aa1ccbae795f58ca2b4971c04185eb5ee0af1a7625c9"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 20453,
+          "sha256": "1a72d55af494393bcdd5b5a4d77611cdf279a04c9841c926b5e05d2f5aef6dcd"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 20323,
+          "sha256": "2d4eaff80f33bddf8492413002f051f6054400104462def84a766d260c600930"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 20323,
+          "sha256": "2efb378dd37540cd0e6f24e20d5c6e3ead2f997b20946c9705cb1867e98cf9d5"
+        }
+      },
+      "group": "base-seed-1021",
+      "manifest_sha256": "0fd0ca1ee6bd164b5171cc164a9b7f7a2280b1a81a9f605c7b0b04db11c07573",
+      "native_rolling": 20323,
+      "sampled_rolling": 1287,
+      "simulation_id": "scenario-1021-pressure"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 341,
+          "sha256": "937368914298d1b8f1e36af82854e47dae71f090e2524a50a428e35957e0bf49"
+        },
+        "delivery_events.jsonl": {
+          "rows": 341,
+          "sha256": "c3f6f0f26a0f0dcf89573410919959aa07ca024825b953547fceaabe0b1406cc"
+        },
+        "labels.jsonl": {
+          "rows": 73,
+          "sha256": "74a90b24f55b9d67c420da5438acacf4f80c8f96075e2e2ea944cc1b471b97de"
+        },
+        "observations.jsonl": {
+          "rows": 73,
+          "sha256": "7353bd15edf6279673bf4da583ce79ed5e4fc4428b29aec569b02ae3928e6886"
+        },
+        "operational_events.jsonl": {
+          "rows": 1798,
+          "sha256": "3b7740ce4b833c282e8d1d802fbb053245d72bb3e71ab643ed2cc95c7e4ffc54"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7877,
+          "sha256": "c98ead2829b4ae5612ac380eefcfe1467bd4ca27e6d4bd52ebc538a8f0325b0b"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7804,
+          "sha256": "9b28e3d582b004a21619cabd63ce42ff16370bc26046aa1b2accb1789ab4d9d5"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7804,
+          "sha256": "13ce5c161066a6681eda58a7ecc929880792cbbe644b259f424fe86f690e005c"
+        }
+      },
+      "group": "base-seed-1021",
+      "manifest_sha256": "f089d0456e37ce648908b03ecfacc54acdebc0a5eb5eb9ebdb3e51be3e1a22c2",
+      "native_rolling": 7804,
+      "sampled_rolling": 749,
+      "simulation_id": "scenario-1021-regular"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 368,
+          "sha256": "55aba2c146152d135dd5c79cd7a4363faf86911b41935aed96d759975c6b98b1"
+        },
+        "delivery_events.jsonl": {
+          "rows": 353,
+          "sha256": "20c2caa58e01da82ffcc86bc35191a1d708399ab516601d8ff4621f32b0a9b15"
+        },
+        "labels.jsonl": {
+          "rows": 73,
+          "sha256": "92c62d6c82922efa7a8c0840df61e25671f672382debaaff1abbf4e25bcedf93"
+        },
+        "observations.jsonl": {
+          "rows": 73,
+          "sha256": "c202648fa70b938df59d7ab25929f0eb245cc2ade876a2de5053ea6b3ec03047"
+        },
+        "operational_events.jsonl": {
+          "rows": 2043,
+          "sha256": "f4ef8f38a7ace3873ddcb430113e302a65141ac3c4a85e9245849725a2115be4"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7851,
+          "sha256": "dd621514cfb87f5a5266a9bbe91d7df6713fa70bf8be104301dab352da2471f8"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7778,
+          "sha256": "e837ee7768f9dc745bb5ac95890c34c8a79fc2f4e2829883493628ba8f89f5a7"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7778,
+          "sha256": "28bbb6a33c8e14b33396e5ebb7cfaa721d15aed9ae9098d436b1d82e08d62eb6"
+        }
+      },
+      "group": "base-seed-1024",
+      "manifest_sha256": "7473f096e4dd2888fab6663bc2e1ad17c9390e63637e91967270273ef8027b3c",
+      "native_rolling": 7778,
+      "sampled_rolling": 725,
+      "simulation_id": "scenario-1024-perturbed"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 456,
+          "sha256": "7d4807f43a60b48eb66662fde15216e246ee312ccdae0d8101b5d0effab887e2"
+        },
+        "delivery_events.jsonl": {
+          "rows": 438,
+          "sha256": "2ef31fedaf5d159920ff7e0e2cddbf9959638600c5815a891cafc793f7f8748c"
+        },
+        "labels.jsonl": {
+          "rows": 137,
+          "sha256": "3d7b156ada5fe8c6c97ca38b2752d8109b24aa2816ae132c9d73f2266df8a896"
+        },
+        "observations.jsonl": {
+          "rows": 137,
+          "sha256": "1fbc3a792b4398fa122976b1a25b11b033b650a910a78dad95065f6c8bd68576"
+        },
+        "operational_events.jsonl": {
+          "rows": 2352,
+          "sha256": "33c5c7fde9c346f686d10a2ffd57480d980b11e0c9d3e0dda205355241002475"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 19455,
+          "sha256": "d936e3a10a52d5e59d08710e3531ea49010f0cc354a50710ac18a4a6a2bbffe5"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 19318,
+          "sha256": "f1a0f9395254b5d30b791adab2ec835f185ef4029c48a99c7f3d2b070c1a84c9"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 19318,
+          "sha256": "2f215753a6a529e074fc71dd1388d53ec3f95298d22744cfbbd9713a6bcdf6f8"
+        }
+      },
+      "group": "base-seed-1024",
+      "manifest_sha256": "19c7f0eadeb86a11d8c5b3a56e181fb97ac09bb08b013f6982058953f06baa6a",
+      "native_rolling": 19318,
+      "sampled_rolling": 1380,
+      "simulation_id": "scenario-1024-pressure"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 380,
+          "sha256": "dc9f7e2a62f1a58881eb7d1ebc49d890363ec5072d00c590f0f4ddd84fcc44b0"
+        },
+        "delivery_events.jsonl": {
+          "rows": 364,
+          "sha256": "3ecf4cda2ccc6e680cfef54d5bf9efd50dc96db6e655fb4cad2f0ca222a4c985"
+        },
+        "labels.jsonl": {
+          "rows": 73,
+          "sha256": "dc28f0e47e0cf4c6205907e4cfc0e533169d1ba4fa8ae6ed52ab197888ed0376"
+        },
+        "observations.jsonl": {
+          "rows": 73,
+          "sha256": "585e3c5d1765f139003d8e9bf68504d49b4a8ea519cd6805d2b66a9cd2bb5a54"
+        },
+        "operational_events.jsonl": {
+          "rows": 1919,
+          "sha256": "5ef07c336bf318c2f957c54cce23f81831cc63b4b92baba996e714b3c1c43010"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 6754,
+          "sha256": "cc566ebfdf502d8a44e57512b4da5786d62e84a53d8c11792e05b25daf2e93a5"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 6681,
+          "sha256": "63e183847b9a37e934815ed1156c6b8c67ffdb5540312d6ba9358f916bfaf94b"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 6681,
+          "sha256": "e553ee4b35e42e8cb040257cc50e61cbd2d98f2a6233445ce86c94b65915d456"
+        }
+      },
+      "group": "base-seed-1024",
+      "manifest_sha256": "2128f7eed700bf858116757a6b53cb700049f12be77c6236f49769aedd781d4a",
+      "native_rolling": 6681,
+      "sampled_rolling": 726,
+      "simulation_id": "scenario-1024-regular"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 341,
+          "sha256": "d77033f190cc19043b80066d466458a715c8e7bfdaaf6e156db2455b5bab30aa"
+        },
+        "delivery_events.jsonl": {
+          "rows": 323,
+          "sha256": "5b253a5a89c576e9a1bff06806079bb100f48580e5578282c411c452daa3b65a"
+        },
+        "labels.jsonl": {
+          "rows": 72,
+          "sha256": "5fe9a59919afee73e75e7a19212ca5592de0782ab16d8c8717cba3dcd1ad0483"
+        },
+        "observations.jsonl": {
+          "rows": 72,
+          "sha256": "6ef551f9d95dd6c322f5c7b9e65c203f702d8146471cdbb9ce870c87bd68bb44"
+        },
+        "operational_events.jsonl": {
+          "rows": 1988,
+          "sha256": "a139ac3441ed0b6dfec0bc367bd86af7949131839b60b75ab96d1a0b446e57a3"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7845,
+          "sha256": "fcf7168f04853bfebef9f85b705b83850f3e84ae33c7770c078ee57b2ca71b9e"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7773,
+          "sha256": "9049a3c82c084bd9d8899ffecc8fdec20f67d9b1f03e66632e2b25843d3d919b"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7773,
+          "sha256": "0216c8f69235e4517e7cbef58aab31340be642f280dfe833c49cd4c98214690a"
+        }
+      },
+      "group": "base-seed-1002",
+      "manifest_sha256": "272c46d931df7867846eeca01e8a8df4b74ede25eb167c83631b8d341645651d",
+      "native_rolling": 7773,
+      "sampled_rolling": 743,
+      "simulation_id": "scenario-1002-perturbed"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 395,
+          "sha256": "7a909939940f5b5ad6a3a0df9da48093974e1c57f0f6c9379720386551479035"
+        },
+        "delivery_events.jsonl": {
+          "rows": 398,
+          "sha256": "18b9b4da529e1c5d1fc61cc2c590896b8a8b7b862e84a168fa37f46ad748bd76"
+        },
+        "labels.jsonl": {
+          "rows": 135,
+          "sha256": "26d0e7d76742687f56edf3568ef3a5df905339abebf65b6b5287c43896217a8b"
+        },
+        "observations.jsonl": {
+          "rows": 135,
+          "sha256": "cfd38cb357bc82951cecfc82fdbaec3c7b0d0040e1e9fbbbfdcf906461ddb974"
+        },
+        "operational_events.jsonl": {
+          "rows": 2273,
+          "sha256": "a179342e581aa2d5b5e317a6a7d4c87a1844f4951e9ac075047dc7e90cebedf7"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 21137,
+          "sha256": "cb6fa9a704de75918a2f88e7a45d91d2e78cb1c072b6dfce83c1b85740f5d47a"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 21002,
+          "sha256": "3e563d2648dee88583c4ed7f0d265d9295c456a3d811b3daf15c62b35345e701"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 21002,
+          "sha256": "1fb21a8451b29259b6ef92704df0a8a9b4948a47e7da292d98f10479d7aea2e6"
+        }
+      },
+      "group": "base-seed-1002",
+      "manifest_sha256": "d268107f27b73067d122b60d29403c67cb0423f3be9f8df6b51c950e49c91b6c",
+      "native_rolling": 21002,
+      "sampled_rolling": 1363,
+      "simulation_id": "scenario-1002-pressure"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 352,
+          "sha256": "80220968131d19044793b1c341d972a60aa967fc97edda080342bd6ccc7d1496"
+        },
+        "delivery_events.jsonl": {
+          "rows": 356,
+          "sha256": "6a696d374a21934deccd55f4a2dd5d3cdb8f02e9f758f87862a4e04f3d08b7aa"
+        },
+        "labels.jsonl": {
+          "rows": 72,
+          "sha256": "9caeba61550279719a6014d90cfab86e139f25ce210726e506e6d96b91b45a9f"
+        },
+        "observations.jsonl": {
+          "rows": 72,
+          "sha256": "e8a38bc6e1ef34f485927c2c5eb72292cd53961005e405e795fdcd3e01ac3ba5"
+        },
+        "operational_events.jsonl": {
+          "rows": 1892,
+          "sha256": "d20aaefdd3c8b27eb24a3dd4f62c6dca6e5d052a9826ff06b1ddd30f96a1a2fd"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7359,
+          "sha256": "99a2aac67b1a8bddc0b5523167663fd5ee0b7c093f59760063792f6ffe21692b"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7287,
+          "sha256": "8f7ff16d06014345c860034d24700cb32f07e50a36b25fdeb4c1b8ff549e2019"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7287,
+          "sha256": "3af0ffbd2c55cf9a0ccd436ab9c1d6bd316553a996f9ab0a21e6a196bafd56dc"
+        }
+      },
+      "group": "base-seed-1002",
+      "manifest_sha256": "9200b667655d8d2ffb4038eb4199433996b145efb8af9e743642dd398917a026",
+      "native_rolling": 7287,
+      "sampled_rolling": 716,
+      "simulation_id": "scenario-1002-regular"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 328,
+          "sha256": "009dbef3d1606849ce1bcfa0a38631d15da32df2532469cd01ad057162643bbd"
+        },
+        "delivery_events.jsonl": {
+          "rows": 323,
+          "sha256": "affca8ce3b56b5f89e3120a400aa8b0fc559753e971cb021edc50a188ea139b0"
+        },
+        "labels.jsonl": {
+          "rows": 70,
+          "sha256": "d10fd22c811feee16fa8adc680b2259423d21789d2cf5af79668059dec2e6eea"
+        },
+        "observations.jsonl": {
+          "rows": 70,
+          "sha256": "6c088016d76c5beb85bea2c5c90ab5d77a29aaf09f3b00f5a6bb035c21396cae"
+        },
+        "operational_events.jsonl": {
+          "rows": 2033,
+          "sha256": "c6845b563fe1b628ad397884b97953b9ff7901756afb55440355bdbb688a3a73"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 8104,
+          "sha256": "fddd229bf7fcb0983e347426cb4f1244fe5baf0c3ed0c392a0110467dfc59455"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 8034,
+          "sha256": "2d3934fa611c3c0c7d5b875d0f01fb4f82e643e5e1d9c650f14c0301f59fb24c"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 8034,
+          "sha256": "49cfe89f1068ff26b599ea0ed4d363fc87ddedd4411387b0153d30b92ef944b2"
+        }
+      },
+      "group": "base-seed-1016",
+      "manifest_sha256": "e97f4ffdddd6b80a171129f0a2c4ea4fccd923d6fb88648f15131fb3c493feb5",
+      "native_rolling": 8034,
+      "sampled_rolling": 728,
+      "simulation_id": "scenario-1016-perturbed"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 468,
+          "sha256": "bf6db57ff2da3ef8aa151209b59646e533c4b96c5a01a751f82d9fe61c1c7f11"
+        },
+        "delivery_events.jsonl": {
+          "rows": 424,
+          "sha256": "17cd78298c4bd7afcc1af13626383b20f7db6a3ce7ea770c3beb79d006c6244b"
+        },
+        "labels.jsonl": {
+          "rows": 135,
+          "sha256": "694299553d109d59cb5f7ad0600d0ad32ba838d575952ed9b52f8dc263b43114"
+        },
+        "observations.jsonl": {
+          "rows": 135,
+          "sha256": "e6fb01ea7c2b1fe3b73d327c725c9f5bfc077784991f6d5c9ac1de37e5a0b2c4"
+        },
+        "operational_events.jsonl": {
+          "rows": 2373,
+          "sha256": "0d93e6423aa87620a7fa3a2ad44c792f9ec9e143daae8e0a30bb5d470a8d7a22"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 19998,
+          "sha256": "d91d919e3fd85bde478aa66b33f8294b6e1d879b32cd3f5595d5ce847af6b9f0"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 19863,
+          "sha256": "5a4d92f61b8eed9073e34ac4714f1b859ff56d24fe7c19bfca155fbe7bf9f670"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 19863,
+          "sha256": "4e678af2e371af3b09177943d0926af33095c660484dae723e87c662d16eb73e"
+        }
+      },
+      "group": "base-seed-1016",
+      "manifest_sha256": "0b97a0aa2505e36ad36bc02a2e82db6f6bed584a1907d76062dd0fbd0dcb4e46",
+      "native_rolling": 19863,
+      "sampled_rolling": 1349,
+      "simulation_id": "scenario-1016-pressure"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 350,
+          "sha256": "840f81fc66cd576adfe8e45e995413d161962eef01dd1b3f349791daa75d477d"
+        },
+        "delivery_events.jsonl": {
+          "rows": 338,
+          "sha256": "978e00f9845df37c4be372a89fdc33d8128552f9d9449f09dd66bd6e4cf07e52"
+        },
+        "labels.jsonl": {
+          "rows": 70,
+          "sha256": "d4dfb8e78dd5750346669150c87432d33f326fcbbf7828868bafb3258ae679dc"
+        },
+        "observations.jsonl": {
+          "rows": 70,
+          "sha256": "cf4f275428ce66a29d0d4e59aa0483eb9f78971cac102d145e9cff5e38c4a6fc"
+        },
+        "operational_events.jsonl": {
+          "rows": 1877,
+          "sha256": "aea8e01c000676c16ca8f59ff169cac03e9614e6256f273db37a98e120d43986"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 7383,
+          "sha256": "7ae1474bb69f4c32a19e122cbcc5e7097706f983722ae23215a750c5558bce76"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 7313,
+          "sha256": "529630f3e96a143c2cf751868d7150d8d8e5215ae6d190f01fb95ea970e60e63"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 7313,
+          "sha256": "9c78c7b47af4bf52e63e3fc9daaa9d22fe80eb86aa636b08c99220c72050034e"
+        }
+      },
+      "group": "base-seed-1016",
+      "manifest_sha256": "cb38ae40e6f1c98235893a96e89bf792e4053f2057a004cb941f03e23acac3ab",
+      "native_rolling": 7313,
+      "sampled_rolling": 694,
+      "simulation_id": "scenario-1016-regular"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 304,
+          "sha256": "a9eee9170f017a6d629b8c71d09d160c62fa24373580857eeae37d5f2bb90de7"
+        },
+        "delivery_events.jsonl": {
+          "rows": 291,
+          "sha256": "e09390a19f446d84d0a3f670bf9c917c2252a04782415dc514cbe6cca976241d"
+        },
+        "labels.jsonl": {
+          "rows": 65,
+          "sha256": "aab012ad83479d7084c8fb2a9bb6f9d24f733d8e1571c3c08a4f77b547d9a877"
+        },
+        "observations.jsonl": {
+          "rows": 65,
+          "sha256": "19ff1d9e978128ff92f19a1b60fec30e8b22d381cccca9a99335373048b2bc7e"
+        },
+        "operational_events.jsonl": {
+          "rows": 1947,
+          "sha256": "274fef78739a31403803c4c208545afb048f751f89f3b89fc570965dc5c54b43"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 6333,
+          "sha256": "10a84196e26e8a5989ae1c9ff77a0e51a2e6f4c2767b3ec2a51a6585e13146cc"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 6268,
+          "sha256": "ee17dfacae8ff5e42405bdc9c86a9a843f263e97edb4cd1a666bb1f8bfd375d3"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 6268,
+          "sha256": "078a25c62034efc3f04b298c5e011e4edcbad97bcda5fe70feb2795734ad4d6e"
+        }
+      },
+      "group": "base-seed-1011",
+      "manifest_sha256": "2fb63f22a1ba9d756b5261f8b2013b338ac22d0a688bfa275424065489d212fb",
+      "native_rolling": 6268,
+      "sampled_rolling": 658,
+      "simulation_id": "scenario-1011-perturbed"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 399,
+          "sha256": "b4dcb1dea93bc6bbed431a7a82d4afac2943cbab462f1901d51cebd63fb614d8"
+        },
+        "delivery_events.jsonl": {
+          "rows": 346,
+          "sha256": "f7dc34dbebb93b79cc4d7d44a14752ce94755645aa65b0553b8942e6b4e4e5e8"
+        },
+        "labels.jsonl": {
+          "rows": 127,
+          "sha256": "8566fa0cc7ff51844637c30b3af323ce3b787282be28e34a380368c9d91e826c"
+        },
+        "observations.jsonl": {
+          "rows": 127,
+          "sha256": "5c97581cb0a8502f5500e044c6fed59445f4aed5ebac01998e66c0b97a57671e"
+        },
+        "operational_events.jsonl": {
+          "rows": 2223,
+          "sha256": "a34f5264dc63f26b07c7c6eec53c0c1014ff0d3ddd4b8b0c8f5daebbf15ca05b"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 19392,
+          "sha256": "30a23f5bfe0334a1162fe87ad24583da9d892e9dbd439ec31b9df6337893162e"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 19265,
+          "sha256": "2ffef18a22c82e692f4ac0b7c62cbc103586c890eec74de688f651bcd4ff85c2"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 19265,
+          "sha256": "702e49699dff2511fcb2dd2af406610b16d6cf067e27d5fc3618a4f1a9c96554"
+        }
+      },
+      "group": "base-seed-1011",
+      "manifest_sha256": "054847546e975bb97266608c19504e6e5c7e204dbad23b40acd081741ba50267",
+      "native_rolling": 19265,
+      "sampled_rolling": 1258,
+      "simulation_id": "scenario-1011-pressure"
+    },
+    {
+      "files": {
+        "cargo_events.jsonl": {
+          "rows": 311,
+          "sha256": "4ca0931923ce57d15b71a1206e01f42d9a63bceb8d9776ea0bea5e9f2898539c"
+        },
+        "delivery_events.jsonl": {
+          "rows": 300,
+          "sha256": "733f6e5f8f647c0033fb29acba940897e56ce4d846c72b59424c98ff4bcb8eb3"
+        },
+        "labels.jsonl": {
+          "rows": 65,
+          "sha256": "763f83831790df4751e8a58d24098585db0d9af1f0d47734241f3326ba8106c7"
+        },
+        "observations.jsonl": {
+          "rows": 65,
+          "sha256": "e20ac66961ddcfeb681d889ecf820ccee4bed5626fcc1d82bb6db627cef503c2"
+        },
+        "operational_events.jsonl": {
+          "rows": 1842,
+          "sha256": "ea6df72bf179e243e4936dacc80f827297c7714e8856f06cc4ad43f21ec7905c"
+        },
+        "planning_contexts.jsonl": {
+          "rows": 6084,
+          "sha256": "609fca5e703dddb11ea57310ec24acd2eb1cb1056396b1f24138cee8235c7e63"
+        },
+        "rolling_observations.jsonl": {
+          "rows": 6019,
+          "sha256": "1075755fea9a8dc359c1746257febfedc3cc45048fd3acc9a79811a104f147f3"
+        },
+        "rolling_targets.jsonl": {
+          "rows": 6019,
+          "sha256": "765191b541464ea62c6f7e7d7bc9cc27e459d4f487554bd6b6e69e9abcb56f86"
+        }
+      },
+      "group": "base-seed-1011",
+      "manifest_sha256": "1eff419c41458f32e787524d2b2b2fbce38ec2d864147b7db69a6ea4a5367b45",
+      "native_rolling": 6019,
+      "sampled_rolling": 640,
+      "simulation_id": "scenario-1011-regular"
+    }
+  ],
+  "raw_diagnostic_only": {
+    "initial_classification": {
+      "baseline_brier": 0.14538448672972,
+      "brier": 0.07400875526463926,
+      "class_missions": {
+        "False": 290,
+        "True": 1354
+      },
+      "ece": 0.02585742836153878,
+      "groups": 6,
+      "metric_95": [
+        0.06783672077237729,
+        0.08123340746845184
+      ],
+      "missions": 1644,
+      "paired_difference_95": [
+        -0.08142482671812104,
+        -0.0612056835360724
+      ],
+      "pr_auc": 0.9849647021892445,
+      "roc_auc": 0.9345527937655987,
+      "snapshots": 1644
+    },
+    "initial_duration": {
+      "baseline_mae_minutes": 3019.0558659217877,
+      "error_over_1_day": 0.5307262569832403,
+      "groups": 6,
+      "mae_minutes": 2116.353166052628,
+      "metric_95": [
+        1978.514444132468,
+        2283.1536776155003
+      ],
+      "missions": 895,
+      "paired_difference_95": [
+        -1138.8492818926102,
+        -700.6137099099279
+      ],
+      "relative_mae_improvement": 0.29900165480824714,
+      "snapshots": 895
+    },
+    "post_duration": {
+      "baseline_mae_minutes": 1820.9246017462108,
+      "error_over_1_day": 0.2627095720177835,
+      "groups": 6,
+      "mae_minutes": 1131.7813493582141,
+      "metric_95": [
+        1081.3678045571132,
+        1193.553830638674
+      ],
+      "missions": 889,
+      "paired_difference_95": [
+        -807.3215228823813,
+        -572.6216196079115
+      ],
+      "relative_mae_improvement": 0.3784578733941699,
+      "snapshots": 5538
+    },
+    "pre_duration": {
+      "baseline_mae_minutes": 3019.093668528864,
+      "error_over_1_day": 0.5380978983772279,
+      "groups": 6,
+      "mae_minutes": 2083.50959588588,
+      "metric_95": [
+        1943.3547452386383,
+        2255.183554674777
+      ],
+      "missions": 895,
+      "paired_difference_95": [
+        -1149.399573511926,
+        -732.2874092722252
+      ],
+      "relative_mae_improvement": 0.3098890512724214,
+      "snapshots": 4663
+    },
+    "rolling_classification": {
+      "baseline_brier": 0.1453844867297207,
+      "brier": 0.05825012676643062,
+      "class_missions": {
+        "False": 290,
+        "True": 1354
+      },
+      "ece": 0.016206296971745658,
+      "groups": 6,
+      "metric_95": [
+        0.05257158556273264,
+        0.06541250767111932
+      ],
+      "missions": 1644,
+      "paired_difference_95": [
+        -0.09644032598263581,
+        -0.07748636821655429
+      ],
+      "pr_auc": 0.9913959138099222,
+      "roc_auc": 0.9612336305986662,
+      "snapshots": 8577
+    }
+  },
+  "sampled_rolling": 16535,
+  "segments": {
+    "initial_classification|cold=0": {
+      "baseline_brier": 0.14953946172322397,
+      "brier": 0.07509283422726708,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 248,
+        "True": 1107
+      },
+      "ece": 0.02824881276026793,
+      "groups": 6,
+      "missions": 1355,
+      "pr_auc": 0.9846205263681775,
+      "required": true,
+      "roc_auc": 0.9357078853046595,
+      "snapshots": 1355,
+      "sufficient": true
+    },
+    "initial_classification|cold=1": {
+      "baseline_brier": 0.1148737639756332,
+      "brier": 0.0664619880448813,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 35,
+        "True": 239
+      },
+      "ece": 0.05211572843179889,
+      "groups": 6,
+      "missions": 274,
+      "pr_auc": 0.9870568905794679,
+      "required": true,
+      "roc_auc": 0.9196652719665273,
+      "snapshots": 274,
+      "sufficient": true
+    },
+    "initial_classification|phase=creation": {
+      "baseline_brier": 0.14370864454529897,
+      "brier": 0.07364111424324393,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 283,
+        "True": 1346
+      },
+      "ece": 0.025226884477678277,
+      "groups": 6,
+      "missions": 1629,
+      "pr_auc": 0.9851005161831463,
+      "required": false,
+      "roc_auc": 0.9340579862332575,
+      "snapshots": 1629,
+      "sufficient": true
+    },
+    "initial_classification|profile=perturbed": {
+      "baseline_brier": 0.1494592263659398,
+      "brier": 0.07785262309034115,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 77,
+        "True": 344
+      },
+      "ece": 0.0539445990881089,
+      "groups": 6,
+      "missions": 421,
+      "pr_auc": 0.9864193529304199,
+      "required": true,
+      "roc_auc": 0.9401238296587133,
+      "snapshots": 421,
+      "sufficient": true
+    },
+    "initial_classification|profile=pressure": {
+      "baseline_brier": 0.12628624561493154,
+      "brier": 0.06517262567341965,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 115,
+        "True": 673
+      },
+      "ece": 0.033894622789385556,
+      "groups": 6,
+      "missions": 788,
+      "pr_auc": 0.9879291431665911,
+      "required": true,
+      "roc_auc": 0.9355772336714259,
+      "snapshots": 788,
+      "sufficient": true
+    },
+    "initial_classification|profile=regular": {
+      "baseline_brier": 0.17063210980872687,
+      "brier": 0.0853080755965621,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 91,
+        "True": 329
+      },
+      "ece": 0.03252920321080986,
+      "groups": 6,
+      "missions": 420,
+      "pr_auc": 0.9782790390150301,
+      "required": true,
+      "roc_auc": 0.9264838504960086,
+      "snapshots": 420,
+      "sufficient": true
+    },
+    "initial_classification|urgent=0": {
+      "baseline_brier": 0.11676765022088131,
+      "brier": 0.06104834988242022,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 176,
+        "True": 1170
+      },
+      "ece": 0.024640261746086096,
+      "groups": 6,
+      "missions": 1346,
+      "pr_auc": 0.9905670690195151,
+      "required": true,
+      "roc_auc": 0.9415549728049729,
+      "snapshots": 1346,
+      "sufficient": true
+    },
+    "initial_classification|urgent=1": {
+      "baseline_brier": 0.2718449638409391,
+      "brier": 0.13353461540815112,
+      "channel": "initial_classification",
+      "class_missions": {
+        "False": 107,
+        "True": 176
+      },
+      "ece": 0.06594026016586069,
+      "groups": 6,
+      "missions": 283,
+      "pr_auc": 0.9027259052852972,
+      "required": true,
+      "roc_auc": 0.8692916312659303,
+      "snapshots": 283,
+      "sufficient": true
+    },
+    "initial_duration|cold=0": {
+      "baseline_mae_minutes": 2499.0862860892394,
+      "channel": "initial_duration",
+      "coverage": 0.9960629921259843,
+      "error_over_1_day": 0.3937007874015748,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1616.8414803011462,
+      "missions": 254,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.3530269485687495,
+      "required": true,
+      "snapshots": 254,
+      "sufficient": true,
+      "width_minutes": 12560.637578539958
+    },
+    "initial_duration|cold=1": {
+      "baseline_mae_minutes": 3350.9291925465836,
+      "channel": "initial_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.5900621118012422,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 2382.8396005293475,
+      "missions": 161,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.28890183480168474,
+      "required": true,
+      "snapshots": 161,
+      "sufficient": true,
+      "width_minutes": 15179.151317012682
+    },
+    "initial_duration|phase=creation": {
+      "baseline_mae_minutes": 2829.560281124498,
+      "channel": "initial_duration",
+      "coverage": 0.9975903614457832,
+      "error_over_1_day": 0.46987951807228917,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1914.011835377629,
+      "missions": 415,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.32356562673512657,
+      "required": false,
+      "snapshots": 415,
+      "sufficient": true,
+      "width_minutes": 13576.494715634195
+    },
+    "initial_duration|profile=perturbed": {
+      "baseline_mae_minutes": 2431.641176470588,
+      "channel": "initial_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.40336134453781514,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1491.5042949880983,
+      "missions": 119,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.3866264852641844,
+      "required": true,
+      "snapshots": 119,
+      "sufficient": true,
+      "width_minutes": 13514.01061915461
+    },
+    "initial_duration|profile=pressure": {
+      "baseline_mae_minutes": 3178.752165725047,
+      "channel": "initial_duration",
+      "coverage": 0.9943502824858758,
+      "error_over_1_day": 0.4971751412429379,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 2306.088626834147,
+      "missions": 177,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.2745302223622246,
+      "required": true,
+      "snapshots": 177,
+      "sufficient": true,
+      "width_minutes": 13434.444633729054
+    },
+    "initial_duration|profile=regular": {
+      "baseline_mae_minutes": 2708.0931372549016,
+      "channel": "initial_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.4957983193277311,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1753.3463330125078,
+      "missions": 119,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.3525531641094837,
+      "required": true,
+      "snapshots": 119,
+      "sufficient": true,
+      "width_minutes": 13850.263387720592
+    },
+    "initial_duration|urgent=0": {
+      "baseline_mae_minutes": 3346.4366531165306,
+      "channel": "initial_duration",
+      "coverage": 0.9959349593495935,
+      "error_over_1_day": 0.5813008130081301,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 2445.6289626251,
+      "missions": 246,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.269184145366239,
+      "required": true,
+      "snapshots": 246,
+      "sufficient": true,
+      "width_minutes": 14413.288898135066
+    },
+    "initial_duration|urgent=1": {
+      "baseline_mae_minutes": 2077.184023668639,
+      "channel": "initial_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.3076923076923077,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1140.178620567701,
+      "missions": 169,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.4510940737191097,
+      "required": true,
+      "snapshots": 169,
+      "sufficient": true,
+      "width_minutes": 12358.439278384409
+    },
+    "post_duration|cold=0": {
+      "baseline_mae_minutes": 1174.083619771983,
+      "channel": "post_duration",
+      "coverage": 0.998639455782313,
+      "error_over_1_day": 0.15290532879818597,
+      "group_simultaneous_coverage": 0.6666666666666666,
+      "groups": 6,
+      "mae_minutes": 828.89134787632,
+      "missions": 252,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": false
+      },
+      "relative_mae_improvement": 0.2940099547276729,
+      "required": true,
+      "snapshots": 1411,
+      "sufficient": true,
+      "width_minutes": 10125.282515831595
+    },
+    "post_duration|cold=1": {
+      "baseline_mae_minutes": 1975.5255445742243,
+      "channel": "post_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.2727837675950884,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1179.4259289782135,
+      "missions": 159,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.4029811802649155,
+      "required": true,
+      "snapshots": 1041,
+      "sufficient": true,
+      "width_minutes": 11171.953964806986
+    },
+    "post_duration|phase=en_route": {
+      "baseline_mae_minutes": 914.1924412003244,
+      "channel": "post_duration",
+      "coverage": 0.9995133819951338,
+      "error_over_1_day": 0.05462287104622872,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 486.039564892124,
+      "missions": 411,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": false
+      },
+      "relative_mae_improvement": 0.46833998730731186,
+      "required": false,
+      "snapshots": 1055,
+      "sufficient": true,
+      "width_minutes": 9553.54300485129
+    },
+    "post_duration|phase=loading": {
+      "baseline_mae_minutes": 704.7343691148775,
+      "channel": "post_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.05084745762711865,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 422.83306182768354,
+      "missions": 295,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.4000107269370904,
+      "required": false,
+      "snapshots": 374,
+      "sufficient": true,
+      "width_minutes": 9742.370309435355
+    },
+    "post_duration|phase=recovery_wait": {
+      "baseline_mae_minutes": 825.0775641025641,
+      "channel": "post_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.15384615384615385,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 790.9041497314844,
+      "missions": 26,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.041418426409703835,
+      "required": false,
+      "snapshots": 31,
+      "sufficient": false,
+      "width_minutes": 10061.276818096716
+    },
+    "post_duration|phase=waiting": {
+      "baseline_mae_minutes": 2288.8275659472424,
+      "channel": "post_duration",
+      "coverage": 0.9992805755395686,
+      "error_over_1_day": 0.4149880095923262,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1614.7671085503446,
+      "missions": 278,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.29450032297122153,
+      "required": false,
+      "snapshots": 992,
+      "sufficient": true,
+      "width_minutes": 12099.806614622132
+    },
+    "post_duration|profile=perturbed": {
+      "baseline_mae_minutes": 1239.8058834409467,
+      "channel": "post_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.18131557707828894,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 810.9736550925652,
+      "missions": 118,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.34588658924428084,
+      "required": true,
+      "snapshots": 709,
+      "sufficient": true,
+      "width_minutes": 10469.032508874912
+    },
+    "post_duration|profile=pressure": {
+      "baseline_mae_minutes": 1677.1709233560093,
+      "channel": "post_duration",
+      "coverage": 0.9980408163265307,
+      "error_over_1_day": 0.22113605442176873,
+      "group_simultaneous_coverage": 0.6666666666666666,
+      "groups": 6,
+      "mae_minutes": 1122.7690087649664,
+      "missions": 175,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": false
+      },
+      "relative_mae_improvement": 0.33055779042584876,
+      "required": true,
+      "snapshots": 1051,
+      "sufficient": true,
+      "width_minutes": 10495.954155017344
+    },
+    "post_duration|profile=regular": {
+      "baseline_mae_minutes": 1442.1663384449828,
+      "channel": "post_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.18483656174334143,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 883.3040215048871,
+      "missions": 118,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.3875158517031325,
+      "required": true,
+      "snapshots": 692,
+      "sufficient": true,
+      "width_minutes": 10642.153061174553
+    },
+    "post_duration|urgent=0": {
+      "baseline_mae_minutes": 1859.2032324123068,
+      "channel": "post_duration",
+      "coverage": 0.998589065255732,
+      "error_over_1_day": 0.26894473838918287,
+      "group_simultaneous_coverage": 0.6666666666666666,
+      "groups": 6,
+      "mae_minutes": 1197.6608631499266,
+      "missions": 243,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": false
+      },
+      "relative_mae_improvement": 0.35582036311545795,
+      "required": true,
+      "snapshots": 1457,
+      "sufficient": true,
+      "width_minutes": 10840.875022987588
+    },
+    "post_duration|urgent=1": {
+      "baseline_mae_minutes": 941.6145731764931,
+      "channel": "post_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.09851899092970522,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 627.2485275412877,
+      "missions": 168,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.33385851768914976,
+      "required": true,
+      "snapshots": 995,
+      "sufficient": true,
+      "width_minutes": 10080.828832189814
+    },
+    "pre_duration|cold=0": {
+      "baseline_mae_minutes": 2498.516732283465,
+      "channel": "pre_duration",
+      "coverage": 0.9960629921259843,
+      "error_over_1_day": 0.38516122984626927,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1557.8371998692166,
+      "missions": 254,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.376495190230139,
+      "required": true,
+      "snapshots": 1408,
+      "sufficient": true,
+      "width_minutes": 12439.194675728095
+    },
+    "pre_duration|cold=1": {
+      "baseline_mae_minutes": 3351.081366459628,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.5894705708370305,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 2363.323011085682,
+      "missions": 161,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.29475809368887373,
+      "required": true,
+      "snapshots": 811,
+      "sufficient": true,
+      "width_minutes": 14842.832495634997
+    },
+    "pre_duration|phase=en_route": {
+      "baseline_mae_minutes": 2728.9573611111105,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.29166666666666663,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1298.4201230823196,
+      "missions": 120,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.5242065187293141,
+      "required": false,
+      "snapshots": 302,
+      "sufficient": true,
+      "width_minutes": 11546.029472038495
+    },
+    "pre_duration|phase=loading": {
+      "baseline_mae_minutes": 2724.5158854166666,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.28515625,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1248.924843021117,
+      "missions": 128,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.5415975184045895,
+      "required": false,
+      "snapshots": 159,
+      "sufficient": true,
+      "width_minutes": 11310.256114521526
+    },
+    "pre_duration|phase=recovery_wait": {
+      "baseline_mae_minutes": 2647.5888888888894,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.6666666666666666,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 3,
+      "mae_minutes": 1524.638631186088,
+      "missions": 3,
+      "per_group_coverage": {
+        "base-seed-1011": true,
+        "base-seed-1021": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.4241407200398354,
+      "required": false,
+      "snapshots": 4,
+      "sufficient": false,
+      "width_minutes": 12074.013025166016
+    },
+    "pre_duration|phase=waiting": {
+      "baseline_mae_minutes": 2815.9158024691355,
+      "channel": "pre_duration",
+      "coverage": 0.9975308641975309,
+      "error_over_1_day": 0.5027160493827161,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 1979.0016856209577,
+      "missions": 405,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.2972085018004905,
+      "required": false,
+      "snapshots": 1754,
+      "sufficient": true,
+      "width_minutes": 13644.739658819104
+    },
+    "pre_duration|profile=perturbed": {
+      "baseline_mae_minutes": 2431.2392156862747,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.41015406162464996,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1468.0656203345247,
+      "missions": 119,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.3961657039494041,
+      "required": true,
+      "snapshots": 632,
+      "sufficient": true,
+      "width_minutes": 13375.354149449031
+    },
+    "pre_duration|profile=pressure": {
+      "baseline_mae_minutes": 3178.534651600754,
+      "channel": "pre_duration",
+      "coverage": 0.9943502824858758,
+      "error_over_1_day": 0.4910075329566855,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 2272.7900881068313,
+      "missions": 177,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.2849566428472873,
+      "required": true,
+      "snapshots": 959,
+      "sufficient": true,
+      "width_minutes": 13166.904349493876
+    },
+    "pre_duration|profile=regular": {
+      "baseline_mae_minutes": 2707.8088235294117,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.4791516606642656,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1673.966379301329,
+      "missions": 119,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.3818003823772729,
+      "required": true,
+      "snapshots": 628,
+      "sufficient": true,
+      "width_minutes": 13672.624082246388
+    },
+    "pre_duration|urgent=0": {
+      "baseline_mae_minutes": 3346.4271680216802,
+      "channel": "pre_duration",
+      "coverage": 0.9959349593495935,
+      "error_over_1_day": 0.605937862950058,
+      "group_simultaneous_coverage": 0.8333333333333334,
+      "groups": 6,
+      "mae_minutes": 2429.6827353680133,
+      "missions": 246,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": false,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.27394722389718773,
+      "required": true,
+      "snapshots": 1305,
+      "sufficient": true,
+      "width_minutes": 14241.884585818143
+    },
+    "pre_duration|urgent=1": {
+      "baseline_mae_minutes": 2076.486785009862,
+      "channel": "pre_duration",
+      "coverage": 1.0,
+      "error_over_1_day": 0.2584319526627219,
+      "group_simultaneous_coverage": 1.0,
+      "groups": 6,
+      "mae_minutes": 1056.116571899672,
+      "missions": 169,
+      "per_group_coverage": {
+        "base-seed-1002": true,
+        "base-seed-1011": true,
+        "base-seed-1016": true,
+        "base-seed-1021": true,
+        "base-seed-1024": true,
+        "base-seed-1028": true
+      },
+      "relative_mae_improvement": 0.49139258697730837,
+      "required": true,
+      "snapshots": 914,
+      "sufficient": true,
+      "width_minutes": 12105.016990064541
+    },
+    "rolling_classification|cold=0": {
+      "baseline_brier": 0.14953946172322422,
+      "brier": 0.06140578667746068,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 248,
+        "True": 1107
+      },
+      "ece": 0.01882891387117596,
+      "groups": 6,
+      "missions": 1355,
+      "pr_auc": 0.9904547705000972,
+      "required": true,
+      "roc_auc": 0.9589372899579063,
+      "snapshots": 7076,
+      "sufficient": true
+    },
+    "rolling_classification|cold=1": {
+      "baseline_brier": 0.11487376397563719,
+      "brier": 0.04149430866283128,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 35,
+        "True": 239
+      },
+      "ece": 0.019835080916724254,
+      "groups": 6,
+      "missions": 274,
+      "pr_auc": 0.99564799236186,
+      "required": true,
+      "roc_auc": 0.9716041409988989,
+      "snapshots": 1416,
+      "sufficient": true
+    },
+    "rolling_classification|phase=en_route": {
+      "baseline_brier": 0.4205215619304848,
+      "brier": 0.1404309802425749,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 283,
+        "True": 177
+      },
+      "ece": 0.04365664594319345,
+      "groups": 6,
+      "missions": 460,
+      "pr_auc": 0.8141286447963749,
+      "required": false,
+      "roc_auc": 0.8753348184082745,
+      "snapshots": 1138,
+      "sufficient": true
+    },
+    "rolling_classification|phase=loading": {
+      "baseline_brier": 0.39689054509960375,
+      "brier": 0.15802689878062612,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 257,
+        "True": 188
+      },
+      "ece": 0.09235295934739729,
+      "groups": 6,
+      "missions": 445,
+      "pr_auc": 0.8286870987500551,
+      "required": false,
+      "roc_auc": 0.8616900543643238,
+      "snapshots": 576,
+      "sufficient": true
+    },
+    "rolling_classification|phase=recovery_wait": {
+      "baseline_brier": 0.13928234217890398,
+      "brier": 0.2174671537536125,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 1,
+        "True": 5
+      },
+      "ece": 0.4018125014765475,
+      "groups": 5,
+      "missions": 6,
+      "pr_auc": 0.8730952380952379,
+      "required": false,
+      "roc_auc": 0.4,
+      "snapshots": 7,
+      "sufficient": false
+    },
+    "rolling_classification|phase=waiting": {
+      "baseline_brier": 0.12070620320411253,
+      "brier": 0.06600838331688352,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 212,
+        "True": 1335
+      },
+      "ece": 0.016369222741957998,
+      "groups": 6,
+      "missions": 1547,
+      "pr_auc": 0.9887406570494086,
+      "required": false,
+      "roc_auc": 0.9335124883204167,
+      "snapshots": 6771,
+      "sufficient": true
+    },
+    "rolling_classification|profile=perturbed": {
+      "baseline_brier": 0.14945922636594006,
+      "brier": 0.06317072231588051,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 77,
+        "True": 344
+      },
+      "ece": 0.029056665848910923,
+      "groups": 6,
+      "missions": 421,
+      "pr_auc": 0.990870855973994,
+      "required": true,
+      "roc_auc": 0.9598408640078123,
+      "snapshots": 2213,
+      "sufficient": true
+    },
+    "rolling_classification|profile=pressure": {
+      "baseline_brier": 0.1262862456149343,
+      "brier": 0.049869335756257745,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 115,
+        "True": 673
+      },
+      "ece": 0.019023385430594803,
+      "groups": 6,
+      "missions": 788,
+      "pr_auc": 0.9937860121359032,
+      "required": true,
+      "roc_auc": 0.9652432311555467,
+      "snapshots": 4061,
+      "sufficient": true
+    },
+    "rolling_classification|profile=regular": {
+      "baseline_brier": 0.1706321098087248,
+      "brier": 0.06829135916823381,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 91,
+        "True": 329
+      },
+      "ece": 0.01888196536684038,
+      "groups": 6,
+      "missions": 420,
+      "pr_auc": 0.9868121827432047,
+      "required": true,
+      "roc_auc": 0.9542900939393059,
+      "snapshots": 2218,
+      "sufficient": true
+    },
+    "rolling_classification|urgent=0": {
+      "baseline_brier": 0.1167676502208851,
+      "brier": 0.050169084781197026,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 176,
+        "True": 1170
+      },
+      "ece": 0.016422826197731038,
+      "groups": 6,
+      "missions": 1346,
+      "pr_auc": 0.9943297804468039,
+      "required": true,
+      "roc_auc": 0.9635017054498063,
+      "snapshots": 6920,
+      "sufficient": true
+    },
+    "rolling_classification|urgent=1": {
+      "baseline_brier": 0.27184496384092594,
+      "brier": 0.09557135479181557,
+      "channel": "rolling_classification",
+      "class_missions": {
+        "False": 107,
+        "True": 176
+      },
+      "ece": 0.028966885588878073,
+      "groups": 6,
+      "missions": 283,
+      "pr_auc": 0.9539781502030793,
+      "required": true,
+      "roc_auc": 0.9333404617953829,
+      "snapshots": 1572,
+      "sufficient": true
+    }
+  },
+  "test_consumed": true,
+  "test_groups": [
+    "base-seed-1002",
+    "base-seed-1011",
+    "base-seed-1016",
+    "base-seed-1021",
+    "base-seed-1024",
+    "base-seed-1028"
+  ],
+  "test_runs": 18
+}

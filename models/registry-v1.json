@@ -1,0 +1,66 @@
+{
+  "active": null,
+  "history": [
+    {
+      "at_utc": "2026-10-15T09:12:09.709869+00:00",
+      "event": "candidate_registered",
+      "version": "m01-v1"
+    },
+    {
+      "at_utc": "2026-10-15T09:12:09.716145+00:00",
+      "event": "candidate_registered",
+      "version": "m02-v1"
+    }
+  ],
+  "registry_version": 1,
+  "versions": {
+    "m01-v1": {
+      "artifact": {
+        "path": "reports/m01-v1/initial_predictor.joblib",
+        "sha256": "152be46560c1d3c5236b48cc1385badce1ad9e78c86057f702a236eac93d63c6"
+      },
+      "dependencies": [],
+      "eligibility_scope": "complete_initial_and_rolling_pipeline",
+      "evaluation": {
+        "path": "reports/m03-v1/report.json",
+        "sha256": "ff3db45a89f7828748f11f9587003c835bee9754cc2910267c6f245ac7f1533c"
+      },
+      "references": {
+        "freeze": {
+          "path": "reports/m03-v1/freeze.json",
+          "sha256": "a99655370bc0bca81d40754a16e4e573e364c47d52758339c13ea6ea0fe0d299"
+        },
+        "protocol": {
+          "path": "docs/protocollo-m03-v1.md",
+          "sha256": "018cbe71df337c5acbecdbd18e9931c2922ddc45c4c3d39b9ae0255eb1e4ec3a"
+        }
+      },
+      "status": "evaluated_not_eligible"
+    },
+    "m02-v1": {
+      "artifact": {
+        "path": "reports/m02-v1/rolling_predictor.joblib",
+        "sha256": "963a2f5d612a224e91f2f08d498036ed68cd9d9210401aac9a5d0e9cac20801f"
+      },
+      "dependencies": [
+        "m01-v1"
+      ],
+      "eligibility_scope": "complete_initial_and_rolling_pipeline",
+      "evaluation": {
+        "path": "reports/m03-v1/report.json",
+        "sha256": "ff3db45a89f7828748f11f9587003c835bee9754cc2910267c6f245ac7f1533c"
+      },
+      "references": {
+        "freeze": {
+          "path": "reports/m03-v1/freeze.json",
+          "sha256": "a99655370bc0bca81d40754a16e4e573e364c47d52758339c13ea6ea0fe0d299"
+        },
+        "protocol": {
+          "path": "docs/protocollo-m03-v1.md",
+          "sha256": "018cbe71df337c5acbecdbd18e9931c2922ddc45c4c3d39b9ae0255eb1e4ec3a"
+        }
+      },
+      "status": "evaluated_not_eligible"
+    }
+  }
+}

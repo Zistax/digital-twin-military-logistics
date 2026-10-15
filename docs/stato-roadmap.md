@@ -1,8 +1,8 @@
 # Stato della roadmap — 15 ottobre 2026
 
-**Voci F01–M02 completate nei rispettivi perimetri documentati.** M02 è
-la quattordicesima voce su 18. La posizione non equivale a una percentuale del lavoro:
-test indipendente, UI, packaging e pubblicazione restano da realizzare.
+**Voci F01–M03 completate nei rispettivi perimetri documentati.** M03 è
+la quindicesima voce su 18. La posizione non equivale a una percentuale del lavoro:
+UI, packaging e pubblicazione restano da realizzare; il candidato non è promosso.
 
 Sono stati prodotti sei incrementi operativi e avviato il generatore scenari: missioni; scorte/carico;
 calendari/scarico; trasporto; forniture/riordino; guasti/recuperi.
@@ -26,7 +26,7 @@ completa del prodotto.
 | **D03** | **Lotto da 90 simulazioni e split** | **Completato**: 90 run nativi verificati anche nell’audit finale, 30 gruppi indivisibili, split 54/18/18; 8239 missioni e 1040241 snapshot rolling; rapporto e catalogo prodotti |
 | **M01** | **Baseline e previsione iniziale** | **Completato**: confronti training per gruppi, calibrazione separata, pipeline persistita e astensione; ritardo condizionato con limiti espliciti; test finale riservato a M03 |
 | **M02** | **Previsioni aggiornate e incertezza** | **Completato nel perimetro documentato**: pesi per missione, rolling/residuo, intervalli per gruppi, astensione e servizio a 30 minuti/eventi/scadenza; limiti su censura, ampiezza e frequenza visibili |
-| M03 | Test indipendente e registro modelli | Da implementare/verificare |
+| **M03** | **Test indipendente e registro modelli** | **Completato**: test consumato su sei gruppi, confronto e gate documentati, registro verificato, promozione manuale/rollback; candidati non ammessi e nessun attivo |
 | U01 | API e quattro viste | Nuovo nucleo non ancora collegato; UI e flussi di approvazione da integrare |
 | R01 | Pacchetto locale completo | Demo CLI disponibili; packaging end-to-end del prodotto ancora da fare |
 | R02 | Demo online limitata | Da implementare, verificare e pubblicare |
@@ -47,8 +47,9 @@ L’audit finale è passato su tutti i bundle.
 
 **M01 (13ª su 18) è completata**: [rapporto e riproduzione](../reports/m01-v1/Chiusura_M01.md).
 **M02 (14ª su 18) è completata**: [rapporto e riproduzione](../reports/m02-v1/Chiusura_M02.md).
-La prossima voce è **M03 (15ª su 18): test indipendente e registro modelli**.
-Il test finale resta intatto; modelli M01/M02 non promossi. Il ritardo condizionato
+**M03 (15ª su 18) è completata**: [rapporto indipendente e registro](../reports/m03-v1/Chiusura_M03.md).
+La prossima voce è **U01 (16ª su 18): API e quattro viste**.
+Il test finale D03 è stato consumato in M03; modelli M01/M02 non promossi. Il ritardo condizionato
 resta soggetto a censura ed errori elevati, esplicitati nel rapporto.
 
 [Protocollo D03](protocollo-d03-v1.md) e [ripresa operativa](esecuzione-d03-risorse.md).
