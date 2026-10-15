@@ -127,11 +127,37 @@ class Session:
         if self.forecast:
             self.forecast.flush(self.w, events)
 
+    def resource_signature(self):
+        # Public operational facts only: never latent damage or sampled due times.
+        w = self.w
+        return json.dumps(
+            {
+                "positions": w._positions,
+                "assignments": w._busy,
+                "stock": w._stock,
+                "roads": [
+                    {"edge": edge, **row}
+                    for edge, row in sorted(w._network.conditions.items())
+                ],
+                "incidents": w.observed_incidents(),
+                "supplies": w.observed_supplies(),
+            },
+            sort_keys=True,
+        )
+
     def step(self, target):
-        if self.forecast:
-            self.forecast.advance_to(self.w, target)
-        else:
+        if not self.forecast:
             self.w.advance(f"ui:step:{len(self.w._commands)}", target)
+            return
+        # Flush after each observable batch. The frozen service retains exact
+        # deadline/periodic boundaries within each tick; resource changes also
+        # trigger a forecast even when mission quantities/phase stay unchanged.
+        self.forecast.advance_to(self.w, self.w._clock)
+        while self.w._clock < target:
+            before = self.resource_signature()
+            self.forecast.advance_to(self.w, min(target, self.w._clock + self.w.tick_s))
+            if self.resource_signature() != before:
+                self.flush(["observed_resources_changed"])
 
     def admit(self, request, deadline=None):
         w = self.w

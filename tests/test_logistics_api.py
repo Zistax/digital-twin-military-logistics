@@ -256,3 +256,28 @@ def test_missing_evidence_invariant_stop_and_cache(monkeypatch, tmp_path):
     with pytest.raises(HTTPException):
         store.command(v["session_id"], "advance", body)
     assert deepcopy(store.read(v["session_id"])) == store.read(v["session_id"])
+
+
+def test_resource_events_trigger_forecast_without_latent_leakage():
+    from src.logistics.forecast_session import ForecastSession
+    from tests.test_forecast_session import RecordingModel
+
+    session = prepared()
+    session.forecast = ForecastSession(RecordingModel(), "0" * 64)
+    session.forecast.register(
+        {
+            "simulation_id": "run",
+            "mission_id": "m",
+            "observed_s": 0,
+            "features": {"deadline_s": 2500},
+        }
+    )
+    before = session.resource_signature()
+    session.w.damage_cargo("hidden", 1000, "auto-1-0", "a", 1)
+    assert session.resource_signature() == before
+    session.step(1800)
+    assert any(
+        "observed_resources_changed" in r.get("trigger_reasons", [])
+        for r in session.forecast.records
+    )
+    assert session.forecast.records[-1]["observed_s"] == 1800
