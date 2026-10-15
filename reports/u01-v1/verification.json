@@ -1,0 +1,24 @@
+{
+  "block": "U01",
+  "position": 16,
+  "total": 18,
+  "passed": true,
+  "tests_passed": 348,
+  "subtests_passed": 16,
+  "core_coverage": 93.01191765980498,
+  "targeted_tests_passed": 19,
+  "dashboard_verification": "Streamlit AppTest with real FastAPI TestClient: four tabs, mission, advance, refresh, delete",
+  "frozen_m03_unchanged": true,
+  "active_model": null,
+  "sha256": {
+    "requirements-quality.txt": "7ab8614332e6eeb1b41c6e240fea6897567bb6296919a1141186204792510f68",
+    "src/api/app.py": "362290e8d6088fa013cb1d9e26a0905da5c2140cffbe1b8261fc67750efb0987",
+    "src/api/logistics.py": "1aa6ef7426e2f75e6d6a59f258fe9fb44138e6ddeb0ca90c9dab144bfe15fe19",
+    "src/ui/dashboard.py": "edd9e58992fdafb590e857e11f410f5f7d431f8a2c8599f714ce0080b43fb624",
+    "tests/test_logistics_api.py": "5bc57edd2e308d173b54aa2881bab7cdac46241d9ba426b03b9c30cd21988c22",
+    "tests/test_logistics_dashboard.py": "530063b2b65bb042cb922167182fbb77b0df8965237fbcebb17b9f7ae9c259c1",
+    "docs/api-ui-u01.md": "542445438d85afee9bc592b2f4a2951639ed517ba4ef879c74195cabc093d03b"
+  },
+  "scope": "local in-memory single-worker API/UI; no public deployment",
+  "next": "R01: pacchetto locale completo"
+}

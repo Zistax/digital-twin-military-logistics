@@ -2,15 +2,18 @@
 
 ## Stato del nuovo nucleo — 15 ottobre 2026
 
-**M03 completata, quindicesima voce su 18.** Simulatore operativo, contratti v4,
+**U01 completata, sedicesima voce su 18.** Simulatore operativo, contratti v4,
 90 simulazioni native verificate, 30 gruppi seed e split 54/18/18.
 8239 missioni e 1040241 snapshot rolling. Baseline e previsione iniziale M01
 confrontate sul training; calibrazione separata e astensione implementate.
 Rolling, residuo, intervalli e servizio di aggiornamento M02 implementati;
 intervalli molto larghi e censura esplicitati nel rapporto.
 Test finale e registro M03 completati: candidato non ammesso alla promozione,
-nessun modello attivo. Prossima voce: **U01 — API e quattro viste**.
+nessun modello attivo. API native e quattro viste locali collegate e verificate.
+Prossima voce: **R01 — pacchetto locale completo**.
 
+- [Avvio API e quattro viste native](docs/api-ui-u01.md)
+- [Chiusura U01 e validazione](reports/u01-v1/Chiusura_U01.md)
 - [Roadmap completa](docs/stato-roadmap.md)
 - [Specifica unificata](docs/Specifica_Unificata_Logistica_Predittiva_v1.md)
 - [Chiusura M03: test, gate e registro](reports/m03-v1/Chiusura_M03.md)
@@ -27,7 +30,7 @@ I dati completi sono nel [ramo d03-dataset-v1](https://github.com/Zistax/digital
 con parti verificate e script di ricomposizione. Log, cache e diagnostica sono
 versionati nello [snapshot locale](reports/runtime-snapshot-20261014/README.md).
 
-Qualità verificata: 329 test e 16 sotto-test; copertura del nucleo 92.70%.
+Qualità verificata: 348 test e 16 sotto-test; copertura del nucleo 93.01%.
 Per ripetere i controlli, installare le dipendenze runtime e
 `requirements-quality.txt`, quindi eseguire:
 
@@ -35,8 +38,8 @@ Per ripetere i controlli, installare le dipendenze runtime e
 python scripts/check_quality.py --report reports/quality-nuova-verifica
 ```
 
-Le sezioni seguenti descrivono il prototipo storico. La nuova API/UI
-resta nella fase U01 della roadmap.
+La dashboard attuale usa `/v1`: [avvio e limiti locali](docs/api-ui-u01.md).
+Le sezioni seguenti documentano il prototipo storico ancora compatibile.
 
 ---
 
@@ -70,33 +73,11 @@ Il progetto espone un'API REST locale (FastAPI) per stimare il rischio dei convo
 - Documentazione interattiva (Swagger UI):
   - `http://127.0.0.1:8000/docs`
 
-## UI Web (Streamlit) – Rischio Convoglio
+## UI Web nativa (Streamlit)
 
-Per avviare una semplice interfaccia web che permette di inserire i parametri di scenario
-e vedere la probabilità di rischio per ciascun convoglio:
-
-1. Attiva l'ambiente virtuale:
-
-   ```bash
-   .venv\Scripts\activate.bat
-   ```
-
-   (oppure, in PowerShell: `.venv\Scripts\Activate.ps1`)
-
-2. Avvia Streamlit dalla root del progetto:
-
-   ```bash
-   streamlit run src/ui/dashboard.py
-   ```
-
-3. Apri il browser all'indirizzo: <http://localhost:8501>
-
-La pagina permette di:
-
-- impostare `total_minutes`, `timestep_minutes`, `n_convoys`,
-- calcolare le probabilità di rischio usando il modello `models/risk_model.pkl`,
-- vedere una tabella ordinata per rischio e un grafico a barre,
-- evidenziare i convogli con rischio maggiore di una soglia (es. 0.5).
+La dashboard ora usa le quattro viste U01 del nucleo logistico. Seguire la
+[guida attuale](docs/api-ui-u01.md). Il vecchio rischio convoglio resta
+accessibile attraverso gli endpoint storici.
 
 ### Soglia di rischio predefinita
 
@@ -105,7 +86,7 @@ Il sistema utilizza una **soglia di rischio predefinita**:
 - `RISK_THRESHOLD_DEFAULT` (definita in `src/ml/risk_threshold.py`)
 
 Questa soglia è stata scelta analizzando precision, recall e F1 nel notebook
-`notebooks/evaluate_risk_model.ipynb`. Tutti i componenti (CLI, API, UI)
+`notebooks/evaluate_risk_model.ipynb`. I componenti storici CLI/API
 usano questa soglia per decidere se un convoglio è considerato "ad alto rischio".
 
 ## Configurazione & riproducibilità
@@ -152,8 +133,8 @@ La documentazione interattiva è disponibile su <http://127.0.0.1:8000/docs>.
   streamlit run src/ui/dashboard.py
   ```
 
-- La UI chiama l'endpoint `POST /predict` dell'API, utilizzando come URL base
-  il valore configurabile nella sidebar (default `http://127.0.0.1:8000`).
+- La UI nativa usa `/v1/sessions` e gli altri endpoint `/v1`, con URL base
+  configurabile nella sidebar (default `http://127.0.0.1:8000`).
 
 Per usare correttamente la UI è necessario che il server FastAPI sia in esecuzione.
 

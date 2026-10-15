@@ -1,0 +1,1038 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Digital Twin Logistico – API nativa e prototipo storico",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/v1/catalog": {
+      "get": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Catalog",
+        "operationId": "catalog_v1_catalog_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/model-quality": {
+      "get": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Model Quality",
+        "operationId": "model_quality_v1_model_quality_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions": {
+      "post": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Create Session",
+        "operationId": "create_session_v1_sessions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSession"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{sid}": {
+      "get": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Read Session",
+        "operationId": "read_session_v1_sessions__sid__get",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Delete Session",
+        "operationId": "delete_session_v1_sessions__sid__delete",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{sid}/advance": {
+      "post": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Advance Session",
+        "operationId": "advance_session_v1_sessions__sid__advance_post",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Advance"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{sid}/missions": {
+      "post": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Create Mission",
+        "operationId": "create_mission_v1_sessions__sid__missions_post",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewMission"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{sid}/decisions": {
+      "post": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Decide",
+        "operationId": "decide_v1_sessions__sid__decisions_post",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{sid}/cancellations": {
+      "post": {
+        "tags": [
+          "Logistica nativa"
+        ],
+        "summary": "Cancel",
+        "operationId": "cancel_v1_sessions__sid__cancellations_post",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cancel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Endpoint di health-check semplice.",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Check Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict": {
+      "post": {
+        "tags": [
+          "risk"
+        ],
+        "summary": "Predict Risk",
+        "description": "Calcola la probabilità di rischio per ogni convoglio.",
+        "operationId": "predict_risk_predict_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PredictRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict_risk": {
+      "post": {
+        "tags": [
+          "risk"
+        ],
+        "summary": "Predict Risk",
+        "description": "Calcola la probabilità di rischio per ogni convoglio.",
+        "operationId": "predict_risk_predict_risk_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PredictRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/simulate": {
+      "post": {
+        "tags": [
+          "simulation"
+        ],
+        "summary": "Simulate",
+        "description": "Esegue una simulazione singola e restituisce un riassunto.\n\nUsa run_simulation(...) per generare gli eventi e calcola alcuni KPI base.",
+        "operationId": "simulate_simulate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimulateResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Advance": {
+        "properties": {
+          "command_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "title": "Command Id"
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Expected Revision"
+          },
+          "target_s": {
+            "type": "integer",
+            "maximum": 172800.0,
+            "minimum": 0.0,
+            "title": "Target S"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "command_id",
+          "expected_revision",
+          "target_s"
+        ],
+        "title": "Advance"
+      },
+      "Cancel": {
+        "properties": {
+          "command_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "title": "Command Id"
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Expected Revision"
+          },
+          "mission_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Mission Id"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "command_id",
+          "expected_revision",
+          "mission_id",
+          "reason"
+        ],
+        "title": "Cancel"
+      },
+      "ConvoyRisk": {
+        "properties": {
+          "convoy_id": {
+            "type": "integer",
+            "title": "Convoy Id"
+          },
+          "risk_proba": {
+            "type": "number",
+            "title": "Risk Proba"
+          },
+          "is_high_risk": {
+            "type": "boolean",
+            "title": "Is High Risk"
+          }
+        },
+        "type": "object",
+        "required": [
+          "convoy_id",
+          "risk_proba",
+          "is_high_risk"
+        ],
+        "title": "ConvoyRisk"
+      },
+      "Decision": {
+        "properties": {
+          "command_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "title": "Command Id"
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Expected Revision"
+          },
+          "request_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Request Id"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "defer",
+              "reject"
+            ],
+            "title": "Decision"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "command_id",
+          "expected_revision",
+          "request_id",
+          "decision"
+        ],
+        "title": "Decision"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "NewMission": {
+        "properties": {
+          "command_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$",
+            "title": "Command Id"
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Expected Revision"
+          },
+          "origin_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Origin Id"
+          },
+          "destination_id": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Destination Id"
+          },
+          "quantities": {
+            "additionalProperties": {
+              "type": "integer",
+              "maximum": 1000.0,
+              "exclusiveMinimum": 0.0
+            },
+            "type": "object",
+            "maxProperties": 15,
+            "minProperties": 1,
+            "title": "Quantities"
+          },
+          "deadline_s": {
+            "type": "integer",
+            "maximum": 259200.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Deadline S"
+          },
+          "urgent": {
+            "type": "boolean",
+            "title": "Urgent",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "command_id",
+          "expected_revision",
+          "origin_id",
+          "destination_id",
+          "quantities",
+          "deadline_s"
+        ],
+        "title": "NewMission"
+      },
+      "NewSession": {
+        "properties": {
+          "seed": {
+            "type": "integer",
+            "maximum": 3.0,
+            "minimum": 0.0,
+            "title": "Seed",
+            "default": 0
+          },
+          "profile": {
+            "type": "string",
+            "enum": [
+              "regular",
+              "pressure",
+              "perturbed"
+            ],
+            "title": "Profile",
+            "default": "regular"
+          },
+          "forecast_mode": {
+            "type": "string",
+            "enum": [
+              "off",
+              "experimental",
+              "approved"
+            ],
+            "title": "Forecast Mode",
+            "default": "off"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "NewSession"
+      },
+      "PredictRequest": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version",
+            "description": "Versione dello schema di richiesta. Permette di evolvere l'API in futuro.",
+            "default": "1.0"
+          },
+          "total_minutes": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Total Minutes",
+            "description": "Durata totale simulazione (minuti)",
+            "default": 120
+          },
+          "timestep_minutes": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Timestep Minutes",
+            "description": "Durata di ogni passo (minuti)",
+            "default": 10
+          },
+          "n_convoys": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "N Convoys",
+            "description": "Numero di convogli da valutare",
+            "default": 5
+          }
+        },
+        "type": "object",
+        "title": "PredictRequest",
+        "description": "Schema della richiesta per /predict (rischio convoglio)."
+      },
+      "PredictResponse": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "model_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Version"
+          },
+          "total_minutes": {
+            "type": "integer",
+            "title": "Total Minutes"
+          },
+          "timestep_minutes": {
+            "type": "integer",
+            "title": "Timestep Minutes"
+          },
+          "n_convoys": {
+            "type": "integer",
+            "title": "N Convoys"
+          },
+          "risk_threshold_used": {
+            "type": "number",
+            "title": "Risk Threshold Used"
+          },
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/ConvoyRisk"
+            },
+            "type": "array",
+            "title": "Results"
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "total_minutes",
+          "timestep_minutes",
+          "n_convoys",
+          "risk_threshold_used",
+          "results"
+        ],
+        "title": "PredictResponse",
+        "description": "Schema della risposta per /predict."
+      },
+      "SimulateRequest": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version",
+            "description": "Versione dello schema di richiesta per /simulate.",
+            "default": "1.0"
+          },
+          "total_minutes": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Total Minutes",
+            "description": "Durata totale simulazione (minuti)",
+            "default": 120
+          },
+          "timestep_minutes": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Timestep Minutes",
+            "description": "Durata di ogni passo (minuti)",
+            "default": 10
+          },
+          "n_convoys": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "N Convoys",
+            "description": "Numero di convogli simulati",
+            "default": 5
+          },
+          "depot_capacity": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Depot Capacity",
+            "description": "Capacità del deposito",
+            "default": 2
+          },
+          "simulation_name": {
+            "type": "string",
+            "title": "Simulation Name",
+            "description": "Nome logico della simulazione",
+            "default": "api_run"
+          }
+        },
+        "type": "object",
+        "title": "SimulateRequest",
+        "description": "Parametri per eseguire una simulazione singola."
+      },
+      "SimulateResponse": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "simulation_name": {
+            "type": "string",
+            "title": "Simulation Name"
+          },
+          "total_minutes": {
+            "type": "integer",
+            "title": "Total Minutes"
+          },
+          "timestep_minutes": {
+            "type": "integer",
+            "title": "Timestep Minutes"
+          },
+          "n_convoys": {
+            "type": "integer",
+            "title": "N Convoys"
+          },
+          "depot_capacity": {
+            "type": "integer",
+            "title": "Depot Capacity"
+          },
+          "final_minute": {
+            "type": "integer",
+            "title": "Final Minute"
+          },
+          "events_csv_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Events Csv Path"
+          },
+          "kpi": {
+            "$ref": "#/components/schemas/SimulationKPI"
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "simulation_name",
+          "total_minutes",
+          "timestep_minutes",
+          "n_convoys",
+          "depot_capacity",
+          "final_minute",
+          "kpi"
+        ],
+        "title": "SimulateResponse",
+        "description": "Risposta di /simulate."
+      },
+      "SimulationKPI": {
+        "properties": {
+          "n_convoys": {
+            "type": "integer",
+            "title": "N Convoys"
+          },
+          "n_completed_convoys": {
+            "type": "integer",
+            "title": "N Completed Convoys"
+          },
+          "n_not_completed_convoys": {
+            "type": "integer",
+            "title": "N Not Completed Convoys"
+          },
+          "avg_completion_minute": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Completion Minute"
+          },
+          "min_completion_minute": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min Completion Minute"
+          },
+          "max_completion_minute": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Completion Minute"
+          }
+        },
+        "type": "object",
+        "required": [
+          "n_convoys",
+          "n_completed_convoys",
+          "n_not_completed_convoys"
+        ],
+        "title": "SimulationKPI",
+        "description": "KPI riassuntivi della simulazione."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
