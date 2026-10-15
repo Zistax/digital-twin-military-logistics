@@ -50,6 +50,7 @@ def files_to_freeze(repo):
 
 
 def freeze(repo, out):
+    out = Path(out).resolve()
     if (out / "freeze.json").exists():
         raise ValueError("protocol already frozen; do not refit baselines")
     creations, _ = ip.load_creation(repo / "reports/d03-batch-v1")
@@ -290,6 +291,7 @@ def score_channel(rows, point, baseline, classification, intervals=None):
 
 
 def evaluate(repo, out, archives):
+    out = Path(out).resolve()
     frozen = json.loads((out / "freeze.json").read_text())
     if frozen["policy"] != ev.POLICY:
         raise ValueError("eligibility policy changed")

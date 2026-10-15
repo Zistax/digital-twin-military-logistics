@@ -102,7 +102,8 @@ def test_freeze_evaluation_and_registry_end_to_end_on_synthetic_fixture(
     monkeypatch.setattr(module.ip, "load_creation", lambda root: (ct + cc, []))
     out = tmp_path / "reports/m03-v1"
     out.mkdir()
-    module.freeze(tmp_path, out)
+    monkeypatch.chdir(tmp_path)
+    module.freeze(tmp_path, out.relative_to(tmp_path))
     with pytest.raises(ValueError, match="already frozen"):
         module.freeze(tmp_path, out)
     calls = []
@@ -112,7 +113,7 @@ def test_freeze_evaluation_and_registry_end_to_end_on_synthetic_fixture(
         return ce, te, [{"native_rolling": len(te), "group": f"t{i}"} for i in range(6)]
 
     monkeypatch.setattr(module, "load_test", load_test)
-    module.evaluate(tmp_path, out, tmp_path)
+    module.evaluate(tmp_path, out.relative_to(tmp_path), tmp_path)
     report = json.loads((out / "report.json").read_text())
     assert len(calls) == 1 and report["test_consumed"]
     assert len(report["channels_with_policy"]) == 5
