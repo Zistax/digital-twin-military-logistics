@@ -90,15 +90,15 @@ Il database usa `secure_delete`; questa è eliminazione logica dei record nel da
 
 Il fingerprint della release include codice simulatore/API e worker, artefatti `.joblib`, registro e lock runtime. Una release diversa rifiuta il riuso di sessioni vive: attendere la scadenza o revocare, arrestare, archiviare/eliminare il runtime con procedura amministrativa e poi aggiornare. Nessuna migrazione implicita dei journal. Deploy a replica singola con storage locale persistente; più repliche o database di rete non sono supportati.
 
-## Distribuzione predisposta, non eseguita
+## Container locale verificato, hosting non eseguito
 
-`deploy/Dockerfile` e `deploy/compose.yaml` preparano un servizio con utente non privilegiato, filesystem di sistema in sola lettura, volume runtime, limite 768 MiB/1 CPU/64 processi e healthcheck. Il binding predefinito è solo `127.0.0.1:8080`. Docker Desktop è installato sul computer di verifica ma il motore Linux non è attivo: build e avvio container non sono dichiarati verificati.
+`deploy/Dockerfile` e `deploy/compose.yaml` sono stati costruiti e provati su Docker Desktop/WSL2, Linux amd64, CPython 3.12.15. Utente non privilegiato, filesystem di sistema in sola lettura, volume runtime, limite 768 MiB/1 CPU/64 processi e healthcheck sono stati verificati sul container reale. Il binding predefinito è solo `127.0.0.1:8080`; `DEMO_PORT` permette di cambiare la porta locale. Vedere la [guida aggiornata del container](container-r02.md) e il [rapporto integrativo](../reports/r02-container-v1/Chiusura_Container.md). Il precedente ZIP R02 resta una fotografia della verifica Windows iniziale.
 
 ```sh
 docker compose -f deploy/compose.yaml up --build -d
 ```
 
-L'immagine base `python:3.12-slim` è un tag mobile: per una release ospitata andrà fissato il digest effettivamente costruito e verificato. Prima di un hosting reale servono: scelta e costo del provider, storage persistente, reverse proxy HTTPS con dominio corretto in `DEMO_PUBLIC_ORIGIN`, permessi/segreti, limiti del provider e misure prestazionali nella destinazione. L'app rifiuta un'origine HTTP pubblica; il solo HTTP consentito è loopback/test. Non esporre l'API locale completa U01 e non inoltrare la porta senza TLS.
+L'immagine base `python:3.12-slim` è ora fissata nel Dockerfile al digest verificato, indicato nel rapporto integrativo. Prima di un hosting reale servono: scelta e costo del provider, storage persistente, reverse proxy HTTPS con dominio corretto in `DEMO_PUBLIC_ORIGIN`, permessi/segreti, limiti del provider e misure prestazionali nella destinazione. L'app rifiuta un'origine HTTP pubblica; il solo HTTP consentito è loopback/test. Non esporre l'API locale completa U01 e non inoltrare la porta senza TLS.
 
 Obiettivi per la prova sul futuro hosting: letture di sessione p95 sotto 1 secondo in assenza di una mutazione in corso, creazione e mutazione sotto 20 secondi, 8 accessi concorrenti senza fuga di dati, test di riavvio e scadenza. Questi sono criteri di accettazione, non prestazioni pubbliche già misurate. Rimangono da verificare la capacità e l'overhead del provider e la protezione di rete; nessuna promessa di disponibilità o resistenza ad attacchi distribuiti.
 

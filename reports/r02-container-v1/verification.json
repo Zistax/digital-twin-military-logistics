@@ -1,0 +1,277 @@
+{
+  "passed": true,
+  "container_id": "f3de2e364c44fd042b332b676a7cab851a55ddb3143e3e2dbbe68232234c53d9",
+  "image_id": "sha256:5c89e8e62f1564ff70c358e70b067298539363b810d4aa4d5129eebca76464e9",
+  "base_digest": "sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1",
+  "platform": "linux/amd64",
+  "environment": {
+    "python": "3.12.15 (main, Oct  6 2026, 02:02:22) [GCC 14.2.0]",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "uid": 10001,
+    "admin_key_mode": "0o600",
+    "admin_key_uid": 10001,
+    "rootfs_write_rejected": true,
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "fastapi": "0.143.0",
+      "uvicorn": "0.54.0"
+    }
+  },
+  "validated_source_sha256": {
+    "LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "conf/ml/default.yml": "7b3cf042154b3168e7f74425b0be3e5cd3f2129176f6b015cf363e1837313f8f",
+    "conf/sim/default.yml": "56fdcdf30e0721d25371382dd3a5221b794d2375ed006f45f2ffc58daa4717f5",
+    "conf/terminology/default.yml": "7e513128a976de9e60027c64d4419c20e998bffb7b5dc1c3eb0a0974be38c55b",
+    "docs/protocollo-m03-v1.md": "018cbe71df337c5acbecdbd18e9931c2922ddc45c4c3d39b9ae0255eb1e4ec3a",
+    "models/registry-v1.json": "fc97c70c44af6c96937eb365a987a63b371663c5f9f286b8a48634598a6d5e80",
+    "models/risk_model.pkl": "a44fcab46e46f31a17b03e2ea864465bcfb30f00d11c482fd645aa75114698d8",
+    "models/risk_model.report.json": "544730aad5cc742faa3ff6b0f39d27836547ab6e1c2cae00fd272941651e8e1f",
+    "reports/m01-v1/Chiusura_M01.md": "79b5cc23496c7ff1fce70931dd25a676f1a6df7c25ba932b814e200a8f48133c",
+    "reports/m01-v1/example_observation.json": "c91b6f2f253d817164e104e722c6b874f87c8afd3da9dd382b0a7a1a56047fdc",
+    "reports/m01-v1/example_prediction.json": "adfd0f0ba3a68491cc4a281b880a920ddea0fd6c051d9f9106d31e4d13747c06",
+    "reports/m01-v1/initial_predictor.joblib": "152be46560c1d3c5236b48cc1385badce1ad9e78c86057f702a236eac93d63c6",
+    "reports/m01-v1/report.json": "20793c0c5b458ddb1eecce7722a0b2f3b6a5d5d9fbdafe7eae2fae52634cc9a0",
+    "reports/m01-v1/run-start.json": "93db1c409a879fd3ff8aa9d50cbcabc0517de481a189a361c23eae77bd0b5a25",
+    "reports/m02-v1/Chiusura_M02.md": "a9f792fab191f117269ac2bfca986ff32892ecdfbf5da9613356c28405b9b382",
+    "reports/m02-v1/Segmenti_M02.csv": "8a232c0b216afd0c1631b90df49dc9162747ec7795e420f7eff6d8b920b8c3a3",
+    "reports/m02-v1/example_inputs.json": "1157876f82d279719a50cbd8aa8e5e5d090e52fccd46923c72d872527c8fcf4d",
+    "reports/m02-v1/example_post_prediction.json": "f2da83043754dde74499f36714f2658ee6d7c2b6fef21686debc56f433f534b8",
+    "reports/m02-v1/example_pre_prediction.json": "35a92ecf6d737357e1c0902005c28e0945da91a3d3cce22233fe1091c2f1b091",
+    "reports/m02-v1/report.json": "a3daaf862ad8a23a9f6aa65ae00f8e410164e7c79fe7607080c8381cb027c4c6",
+    "reports/m02-v1/rolling_predictor.joblib": "963a2f5d612a224e91f2f08d498036ed68cd9d9210401aac9a5d0e9cac20801f",
+    "reports/m02-v1/run-start.json": "b39c033f653496c5b42f67aed9e1c9114d4c651a8c0a3d9f425cfd19ebb93e29",
+    "reports/m03-v1/Chiusura_M03.md": "caebae461d17f1cb348d50491b825bbecd8d3ca722da492a7ac02cf7c7169c69",
+    "reports/m03-v1/Gate_M03.csv": "f1c0da79635df616b7521d9457142b4c726d26ae481cc2f2ce721e53420dc355",
+    "reports/m03-v1/Segmenti_M03.csv": "63b420134ccd77c15be29c8a7e1f7ddfcbfa1a26df8b67860d4f51cf42e8ccc7",
+    "reports/m03-v1/attempt.json": "feb4f510dca58a4538dad926e6886adb5b8c3f8a815e9bb1c7907b36ffd04195",
+    "reports/m03-v1/baselines.joblib": "f03a1d58f10f5452b49a935b37ff1daf5e2d6b927f2b9c4ab4c37020d77ba5da",
+    "reports/m03-v1/freeze-publication.json": "1c540b470dab19380cdbea0d08f38ad8f3aa73f687cd0b77ec58b76dba6d2271",
+    "reports/m03-v1/freeze.json": "a99655370bc0bca81d40754a16e4e573e364c47d52758339c13ea6ea0fe0d299",
+    "reports/m03-v1/report.json": "ff3db45a89f7828748f11f9587003c835bee9754cc2910267c6f245ac7f1533c",
+    "reports/r01-v1/pilot-summary.json": "26a18fb512f02e4f1c0bb56bb1733bff74fd30bfbcc7fbc8f588d1482864a2da",
+    "requirements-local.txt": "79444b0e7f1738cfbec1dba19dfe07be64637f44f02715e435523dd8c8b6400a",
+    "scripts/run_demo.py": "52cdbd9bdafb5f03aea8cc1aad248442e1188d7ac75a2a6be72c2d4d047ea655",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/api/api_audit.py": "a26c9ead0974c7f04612add809fbffe20e2ec9690fc6ef69355fa7e4a5e379f2",
+    "src/api/app.py": "362290e8d6088fa013cb1d9e26a0905da5c2140cffbe1b8261fc67750efb0987",
+    "src/api/demo_app.py": "85cf86dd7aef21cd7794f3d2c3cb7c2dbec91b9391d8078c6a164365abdf7e22",
+    "src/api/demo_store.py": "568fde4909122c7ce26cac8519af98b78546d54e83888c2e53881c1bda4b3bb0",
+    "src/api/demo_worker.py": "63ac163e9952712e15600a5c9baaff2d2aab6d79390d5fc8ea8f8c8db369e9c6",
+    "src/api/logistics.py": "8172d49cf1ff078fd4d932683708015597251969222f2bd7ea17fc095474a8a5",
+    "src/api/model_compat.py": "85aa666b5b27a3b37c2a8e08a281604b5c07315788be788c966f66a7b39842f1",
+    "src/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/config/config_loader.py": "3e31db6d87bb882a539a7a1c4f094b9702e338d2b3c02f6ac3b70701c926226d",
+    "src/config/terminology_loader.py": "332bf2a2b5deb5d01270c92f4b771fbffda12e8c59b442bb06f09cc08044774c",
+    "src/logistics/__init__.py": "9588c86df5505b0668b5bb57d8e29410ed82fdea6c734d2184614e0a7b1bfb80",
+    "src/logistics/batch.py": "4e8feb5c93c4261f2b4e2e3551eeeb86e21d5d59009556c960ba90ac391e3886",
+    "src/logistics/bundles.py": "1d444fcc1511f95ba39673da7165aea16bf1c2c32ad424f4c493ddf4990e0fa0",
+    "src/logistics/calendars.py": "84afda75b2a089cd44d6f1f2b6f37a13f3e557f45b159dc4173c5325295aa80d",
+    "src/logistics/cargo_ledger.py": "559eed34996098072c7870950e2b7607861459c07ef4d51361d3c10ee4a438f8",
+    "src/logistics/context.py": "645b526db55b4e19d805f1398355ade426701d5897b458f69e99b1875c1647c5",
+    "src/logistics/core.py": "2b424071a118bac312aa0e02295ea5e6bb8203e80f4b7bb175b6f2457637c0fb",
+    "src/logistics/dataset.py": "35717cece531c4771ae2060f0c0171869606a04713f7e651d5d07db37bb1da79",
+    "src/logistics/delivery_ledger.py": "3b23c108b8330667ae1d00ad19f6d799834b638c2ee1c0fd2065f2199b012a3a",
+    "src/logistics/demo.py": "cc530e228011094b54f056e95ae172650f0ebf1d574673b2a4783266f87c0e27",
+    "src/logistics/environment.py": "aa8ceb2a1fb622f65cf10fd1810f8d3fb8042b3663f24c926bcd31266e51f326",
+    "src/logistics/estimates.py": "e59c5f20cb7fb9edbf716ee37dea7cd17f8a43c5e70509e7e2c04e6e9e5f2ce8",
+    "src/logistics/experiments.py": "124916ec9168b105dd23d11d108d28a93501461a3373a6a5577cf0bf1c00c3d0",
+    "src/logistics/final_evaluation.py": "8bebedb7942578fcc76eedb3997993e9ac21babfe410cd6ae92bc9b2c5705f6d",
+    "src/logistics/forecast_session.py": "f69cccf561303a3ee95bf2f90ebd3172b644a8079222d303ffea8cd2c6bdee5f",
+    "src/logistics/imports.py": "acbbc1f0c0a96e3d390a72c1fc8c414c6fc9e42d379cc3267693a5d53eaf3dbe",
+    "src/logistics/incidents.py": "5843c59e14cc5e1522cc426b42e222128540540d659f6d761a5dec656b425874",
+    "src/logistics/initial_prediction.py": "7574272eca627616929d8bdea93f191a902164976bcdec18244a84908f249350",
+    "src/logistics/journal.py": "773c0ebc77a42699723b888fc437da355d591118466fbe9ee8befa836fd0ba21",
+    "src/logistics/model_registry.py": "4d019b758c5629fac53a58362e1aae04e1d3b629c20fd3ec5b41cd98777fac5a",
+    "src/logistics/operations.py": "502d5388f2934a4d94c6cf7f54901bbd2dece5827dc1e11c42a6c3f2d0730537",
+    "src/logistics/operations_demo.py": "793522174a18aa7f3b304ec1367b70a873ba6f91fbf506fd7792dca7c62fcfc9",
+    "src/logistics/pilot.py": "8741aa3c619e29614c18cb10748e055a38d6d156c1f221a6eed30fee206ce64e",
+    "src/logistics/pilot_checks.py": "62980579224ee971b473e3649400783ae1e98121b8305b0c13526614f955adf0",
+    "src/logistics/pilot_gate.py": "599f5c685e2ccb968a49a5cb918f5d999c0c1fe31e32924c31de62b39d559aca",
+    "src/logistics/provenance.py": "4b63f9224b1f0f3418fc983ecf169f1b7575d2a9c48dd71b3cf35e93ecbe8f32",
+    "src/logistics/recovery.py": "d7038717325cd9ad7fd99440567cf7a0165cf160f9b727b534db3ad561ace71f",
+    "src/logistics/recovery_demo.py": "4abce2b1d8e80b92051c919da33d2e300a2a0234f47aa8b61a061ad32343d36c",
+    "src/logistics/roads.py": "1824f9108d544456e04c664e430d852626b1363098daa2220539f5e5a52158a0",
+    "src/logistics/rolling.py": "36ab4ebea62502115b6535acf5421de102002b0725208867f2891085ca02b303",
+    "src/logistics/rolling_prediction.py": "f37c431b271bbd89eeb63ce163ad0120fcbf3e1b9f721f1bf30dcb683e5c5c4e",
+    "src/logistics/scenarios.py": "0d4bff13765a3d9dd333630e4b9dfb52a941b41dfccc5b68ddcc416e833a12a7",
+    "src/logistics/supply.py": "4ef0e6fb3f362aba1159793fc41223d1bf721bb15a0689fbb3eb96d94d310b1a",
+    "src/logistics/supply_demo.py": "36a1050a6aad3cdff8a9a14de2a0ecdfc3fdb737b0656f06b112c20cb886ca8e",
+    "src/logistics/table_import.py": "8f858bbf9478e21d10e7be2d0fcbd2b4ea3c8e5777a01f99fb0ec0191b0cb532",
+    "src/logistics/training_masks.py": "4f516b3e55df2ad99c9e043a0cdadf2cee2668b836b43959d5f073bec2328494",
+    "src/logistics/transport.py": "c6db304d0d76e57aaf45cacd1629d81a68b088c9879ca2f50043e96f6f91c5cc",
+    "src/logistics/transport_demo.py": "8aedab0439c4bf59ba45638c5d32b735237eeb978648bb18900cf7a727f325d8",
+    "src/logistics/warehouse.py": "9111d41067b86d14ccc00e4211018e5be32f000d80daa8a22b0a128f3c1f6bc5",
+    "src/logistics/warehouse_demo.py": "c2647e785514ac8b0394df9fe4998f6a80baeaf9c51e4787be09816bf1bc19df",
+    "src/ml/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ml/dataset.py": "e8c72a626cc64859e5934a4d031bee2b10f227874e82a9f0707745135ed0a2c8",
+    "src/ml/model_info.py": "1581804e33ae2a391f7bcb10851b1540ae4def5dd751b98916f7ccdf840d573e",
+    "src/ml/predict.py": "afc35281a188cf21fd5cd9ffe012e03d1403961b5ba957696bdce60962dede72",
+    "src/ml/predict_cli.py": "218444811b27dcfef20d8a6657eef3e2db9c881882fe2fe54033c60ff498bc87",
+    "src/ml/risk_threshold.py": "8fa21efdbb3538ea3f273b4e97e97c38a1062ecec15788baa47f2d87c2601ed7",
+    "src/ml/train_risk_model.py": "5070f77ae1ec5c5b6712d9e2d5b898b0462c4740ee7936ca1ee647dcd60dce32",
+    "src/sim/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/sim/analyze_last_run.py": "e93b9759f5d6fdc547007fdce3a39b816c26be44096b2c8d8aa0470c01c7b2d4",
+    "src/sim/config.py": "9494f7456544a982760b9efe4548aa2d4b9a12ac4cf47541a63506cf31f1f67e",
+    "src/sim/main_sim.py": "be2115353c912aa7004e01048ada5ede24ae12fc5c587da8dae55893d1db01e6",
+    "src/sim/metrics.py": "554ce7b571903c9bc36a8275cee0020fe44bdd42b087c2a668aab3e766cda62a",
+    "src/sim/models.py": "6fd4546e41e795ca43144aba3c961fa0386f96d9ed0db47fc47d23ee275133cc",
+    "src/sim/simulator.py": "53a5339533f09b922e9b0c84ed3b9b08fe71d00af6a3cc2bfec73e9464cd2fa7",
+    "src/ui/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/ui/dashboard.py": "79ac45a80d8e83dd358db7b3a8f211be5dbcb21b967c562d0375cee77ef6b457",
+    "src/ui/demo/demo.css": "efbb651e284351509531fa3b9e1aeff6694b5bbad13c6827eb49b6b155f29771",
+    "src/ui/demo/demo.js": "6a6b77da047944b05aef97fe3829b34e65bdee115d18eb5323fdfdb761cfb904",
+    "src/ui/demo/index.html": "9e5a902da53949823179be830fa59515bf51c44d1d5069471498869adffe1400",
+    "deploy/Dockerfile": "61f3f4707d42e82cf99906fe8102151cb4a17e221b596c8c8aef4040bd2afc81",
+    "deploy/compose.yaml": "29579dee5cee4569f5049048f382bc5cb3758b01997ede59729f295b9db81824"
+  },
+  "checker_sha256": "c56e1f10158880bbca6524bfbe57202d20d9086d17fe3408e37bf796b7bba607",
+  "pip_check": "No broken requirements found.",
+  "loopback_port": 18080,
+  "read_only_rootfs": true,
+  "memory_limit_bytes": 805306368,
+  "cpu_limit": 1,
+  "pids_limit": 64,
+  "capabilities_dropped": [
+    "ALL"
+  ],
+  "no_new_privileges": true,
+  "healthy": true,
+  "container_recreated": true,
+  "persistent_volume_verified": true,
+  "durable_retry": true,
+  "ownership_verified": true,
+  "timeout_fault_injection": {
+    "status": 503,
+    "detail": "simulation time budget exceeded; state unchanged",
+    "workers_before": 0,
+    "workers_after": 0
+  },
+  "expired_test_lease_purged": true,
+  "final_table_counts": {
+    "leases": 0,
+    "sessions": 0,
+    "commands": 0
+  },
+  "latencies": [
+    {
+      "path": "/health",
+      "seconds": 0.022
+    },
+    {
+      "path": "/public/examples",
+      "seconds": 0.008
+    },
+    {
+      "path": "/v1/sessions",
+      "seconds": 0.006
+    },
+    {
+      "path": "/demo/access",
+      "seconds": 0.002
+    },
+    {
+      "path": "/demo/access",
+      "seconds": 0.01
+    },
+    {
+      "path": "/demo/access",
+      "seconds": 0.01
+    },
+    {
+      "path": "/v1/sessions",
+      "seconds": 2.211
+    },
+    {
+      "path": "/v1/sessions",
+      "seconds": 0.862
+    },
+    {
+      "path": "/admin/status",
+      "seconds": 0.009
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca",
+      "seconds": 0.007
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca",
+      "seconds": 0.007
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca/missions",
+      "seconds": 2.1
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca/advance",
+      "seconds": 2.08
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca/advance",
+      "seconds": 0.009
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca/advance",
+      "seconds": 0.01
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca",
+      "seconds": 0.012
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca",
+      "seconds": 0.014
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca/missions",
+      "seconds": 0.011
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca/missions",
+      "seconds": 0.008
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca",
+      "seconds": 0.009
+    },
+    {
+      "path": "/demo/access",
+      "seconds": 0.013
+    },
+    {
+      "path": "/v1/sessions/5dd5609796b30284dd230b4dc29bb7ca",
+      "seconds": 0.007
+    },
+    {
+      "path": "/v1/sessions/27b216d31b7cd077a994a62546092888",
+      "seconds": 0.009
+    },
+    {
+      "path": "/v1/sessions/27b216d31b7cd077a994a62546092888",
+      "seconds": 0.009
+    }
+  ],
+  "active_model": null,
+  "public_deployment_verified": false,
+  "hosting_created": false,
+  "source_base_commit": "f83ab9ae7e6b0e3854452f163c8972e1877494ca",
+  "runtime_source_unchanged_vs_r02": true,
+  "unchanged_runtime_files": [
+    "src/api/demo_app.py",
+    "src/api/demo_store.py",
+    "src/api/demo_worker.py",
+    "src/ui/demo/index.html",
+    "src/ui/demo/demo.js",
+    "src/ui/demo/demo.css",
+    "src/logistics/batch.py",
+    "scripts/run_demo.py"
+  ],
+  "frozen_files_present_verified": 18,
+  "separate_frozen_payloads_not_downloaded": [
+    "reports/m02-v1/data/sampled.jsonl.gz"
+  ],
+  "previous_r02_zip_sha256": "1c90db8c9ab2dc96d6c9dd6e5a94069f3059d61fe975f15625b19cbed5ed2af1",
+  "new_package_guard_tests": 4
+}

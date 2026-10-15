@@ -11,7 +11,7 @@ Decisioni del 15 ottobre 2026, limitate alla demo sintetica. La richiesta del pr
 | P18: amministratore | Chiave casuale separata, bearer; controlli stato/pulizia remoti; strumenti completi locali preesistenti | Nessuna interfaccia remota di training/configurazione/promozione |
 | P18: visitatori | Token casuale effimero, un proprietario per sessione, revoca con cascata, 404 per ID appartenenti ad altri | Non è un sistema di account o multi-tenancy aziendale |
 | P18: limiti e retention | Quote numeriche, 30 minuti fissi, pulizia periodica/ripartenza, budget CPU wall-clock e SQLite | La scadenza rende l'accesso inutilizzabile subito; eliminazione fisica forense e policy backup del futuro provider non sono verificate |
-| P18: hosting/costi | Pacchetto ZIP offline e configurazioni container predisposte; nessun account né spesa | Provider, dominio, HTTPS, costo, digest immagine e prova container da completare prima della pubblicazione |
+| P18: hosting/costi | Pacchetto ZIP offline; container locale Linux amd64 costruito e verificato con base fissata per digest; nessun account né spesa | Provider, dominio, HTTPS, costo e prove nella destinazione da completare prima della pubblicazione |
 | P18: prestazioni | Timeout massimo di 20 s e misure HTTP locali incluse nel rapporto | Gli obiettivi p95 sul futuro hosting sono criteri da provare, non risultati ottenuti |
 
 Queste decisioni chiudono il perimetro tecnico **offline** scelto per questa consegna. Non dichiarano il completamento della pubblicazione online della roadmap, la validità predittiva dei modelli o un servizio pronto per utilizzo operativo reale.

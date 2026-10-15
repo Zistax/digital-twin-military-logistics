@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 WORKDIR /app
 COPY requirements-local.txt ./
@@ -6,7 +6,8 @@ RUN pip install --no-cache-dir -r requirements-local.txt && pip check \
     && groupadd --gid 10001 demo && useradd --uid 10001 --gid demo --no-create-home demo
 COPY src ./src
 COPY conf ./conf
-COPY docs ./docs
+COPY docs/protocollo-m03-v1.md ./docs/protocollo-m03-v1.md
+COPY LICENSE ./LICENSE
 COPY models ./models
 COPY reports/m03-v1 ./reports/m03-v1
 COPY reports/m02-v1 ./reports/m02-v1

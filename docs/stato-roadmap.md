@@ -4,6 +4,8 @@
 la diciassettesima voce su 18. La posizione non equivale a una percentuale del lavoro:
 R02 è ora implementata e verificata offline; hosting e pubblicazione restano
 sospesi per richiesta del proprietario. Il candidato non è promosso.
+Anche il container locale Linux amd64 è ora costruito e verificato:
+[rapporto integrativo](../reports/r02-container-v1/Chiusura_Container.md).
 
 Sono stati prodotti sei incrementi operativi e avviato il generatore scenari: missioni; scorte/carico;
 calendari/scarico; trasporto; forniture/riordino; guasti/recuperi.
@@ -30,7 +32,7 @@ completa del prodotto.
 | **M03** | **Test indipendente e registro modelli** | **Completato**: test consumato su sei gruppi, confronto e gate documentati, registro verificato, promozione manuale/rollback; candidati non ammessi e nessun attivo |
 | **U01** | **API e quattro viste** | **Completato nel perimetro locale**: sessioni/API native, quattro schede Streamlit, missioni/approvazioni, separazione del futuro e scelta sperimentale esplicita verificati |
 | **R01** | **Pacchetto locale completo** | **Completato nel perimetro Python 3.12/Linux verificato**: lock, setup/doctor/smoke, launcher API/UI, ZIP deterministico con manifest e verifica da copia estratta |
-| **R02** | **Demo limitata** | **Implementata e verificata offline**: accessi, isolamento, journal persistente, quote, timeout e quattro viste; pacchetto ZIP disponibile. Container e hosting non verificati, pubblicazione sospesa |
+| **R02** | **Demo limitata** | **Implementata e verificata offline**: accessi, isolamento, journal persistente, quote, timeout e quattro viste; container locale Linux amd64 verificato e nuova consegna ZIP disponibile. Hosting non verificato, pubblicazione sospesa |
 
 ## Prossimo lavoro
 

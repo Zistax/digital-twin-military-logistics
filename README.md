@@ -13,7 +13,10 @@ nessun modello attivo. API native e quattro viste locali collegate e verificate.
 Pacchetto locale, installazione bloccata e verifica end-to-end disponibili.
 R02 aggiunge accessi temporanei, isolamento e persistenza SQLite. Hosting e
 pubblicazione restano sospesi per richiesta del proprietario.
+Anche il container locale Linux amd64 è stato costruito e verificato.
 
+- [Container R02: avvio e verifica locale](docs/container-r02.md)
+- [Verifica del container R02](reports/r02-container-v1/Chiusura_Container.md)
 - [Demo R02: avvio offline e limiti](docs/demo-r02.md)
 - [Chiusura R02 nel perimetro offline](reports/r02-v1/Chiusura_R02.md)
 - [Installazione del pacchetto locale R01](docs/pacchetto-locale-r01.md)

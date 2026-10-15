@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "byte_identical_rebuild": true,
+  "python_packaging_runtime": "3.12.14 Windows",
+  "files_verified": 279,
+  "credentials_or_runtime_included": false,
+  "sha256": "22ff0cb984df54ed4aac7172286f104fd2061c0995ed7001bab583530df49aec"
+}

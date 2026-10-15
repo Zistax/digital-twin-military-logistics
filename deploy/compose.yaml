@@ -4,11 +4,11 @@ services:
       context: ..
       dockerfile: deploy/Dockerfile
     ports:
-      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:${DEMO_PORT:-8080}:8080"
     volumes:
       - demo-runtime:/app/runtime
     environment:
-      DEMO_PUBLIC_ORIGIN: "http://127.0.0.1:8080"
+      DEMO_PUBLIC_ORIGIN: "http://127.0.0.1:${DEMO_PORT:-8080}"
     mem_limit: 768m
     cpus: 1.0
     pids_limit: 64
