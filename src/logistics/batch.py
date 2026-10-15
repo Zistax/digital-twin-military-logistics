@@ -174,7 +174,7 @@ def execute_run(payload):
             json.dumps(value, sort_keys=True, allow_nan=False) + "\n"
             for value in result["operational_trace"]
         )
-        trace_path.write_text(trace)
+        trace_path.write_bytes(trace.encode("utf-8"))
         unexplained = [
             mid
             for mid, reasons in result["diagnostics"]["terminal_blockers"].items()

@@ -1,6 +1,9 @@
 # Ambiente virtuale
 .venv/
 venv/
+.venv-*/
+.pytest-*/
+runtime/
 
 # File di cache Python
 __pycache__/

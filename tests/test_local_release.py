@@ -46,7 +46,12 @@ def test_package_rejects_missing_lock_and_symlink(tmp_path):
     with pytest.raises(ValueError, match="lock"):
         package.build(root, tmp_path / "a.zip")
     (root / "requirements-local.txt").write_text("example==1.0\n")
-    (root / "src/link.py").symlink_to(root / "src/main.py")
+    try:
+        (root / "src/link.py").symlink_to(root / "src/main.py")
+    except OSError as exc:
+        if getattr(exc, "winerror", None) == 1314:
+            pytest.skip("Windows symlink privilege unavailable; verified on Linux")
+        raise
     with pytest.raises(ValueError, match="symlink"):
         package.build(root, tmp_path / "a.zip")
 

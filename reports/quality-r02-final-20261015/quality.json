@@ -1,0 +1,61 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "versions": {
+    "pytest": "9.1.1",
+    "coverage": "7.16.2",
+    "black": "26.10.1",
+    "ruff": "0.17.0"
+  },
+  "checks": [
+    {
+      "command": [
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "conftest.py",
+        "scripts/check_quality.py"
+      ],
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "black",
+        "--check",
+        "src",
+        "tests",
+        "conftest.py",
+        "scripts/check_quality.py"
+      ],
+      "exit_code": 0,
+      "output": "All done! \\u2728 \\U0001f370 \\u2728\n119 files would be left unchanged.\n"
+    },
+    {
+      "command": [
+        "coverage",
+        "run",
+        "--source=C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\src",
+        "-m",
+        "pytest",
+        "C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "output": "........................................................................ [ 19%]\n............................................................s........... [ 39%]\n............................................................ [ 55%]\n.................................................................... [ 74%]\n........................................................................ [ 93%]\n......................                                                   [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\.venv-r01\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\.venv-r01\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ===========================\nSKIPPED [1] ..\\..\\..\\..\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\tests\\test_local_release.py:53: Windows symlink privilege unavailable; verified on Linux\n365 passed, 1 skipped, 1 warning, 16 subtests passed in 132.53s (0:02:12)\n"
+    },
+    {
+      "command": [
+        "coverage",
+        "json",
+        "-o",
+        "C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\reports\\quality-r02-final-20261015\\coverage.json"
+      ],
+      "exit_code": 0,
+      "output": "Wrote JSON report to C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\reports\\quality-r02-final-20261015\\coverage.json\n"
+    }
+  ],
+  "whole_src_coverage": 92.95168762409001,
+  "core_coverage": 93.033479878255,
+  "passed": true
+}

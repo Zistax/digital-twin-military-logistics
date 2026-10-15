@@ -2,7 +2,8 @@
 
 **Voci F01–R01 completate nei rispettivi perimetri documentati.** R01 è
 la diciassettesima voce su 18. La posizione non equivale a una percentuale del lavoro:
-la demo online resta da realizzare; il candidato non è promosso.
+R02 è ora implementata e verificata offline; hosting e pubblicazione restano
+sospesi per richiesta del proprietario. Il candidato non è promosso.
 
 Sono stati prodotti sei incrementi operativi e avviato il generatore scenari: missioni; scorte/carico;
 calendari/scarico; trasporto; forniture/riordino; guasti/recuperi.
@@ -29,7 +30,7 @@ completa del prodotto.
 | **M03** | **Test indipendente e registro modelli** | **Completato**: test consumato su sei gruppi, confronto e gate documentati, registro verificato, promozione manuale/rollback; candidati non ammessi e nessun attivo |
 | **U01** | **API e quattro viste** | **Completato nel perimetro locale**: sessioni/API native, quattro schede Streamlit, missioni/approvazioni, separazione del futuro e scelta sperimentale esplicita verificati |
 | **R01** | **Pacchetto locale completo** | **Completato nel perimetro Python 3.12/Linux verificato**: lock, setup/doctor/smoke, launcher API/UI, ZIP deterministico con manifest e verifica da copia estratta |
-| R02 | Demo online limitata | Da implementare, verificare e pubblicare |
+| **R02** | **Demo limitata** | **Implementata e verificata offline**: accessi, isolamento, journal persistente, quote, timeout e quattro viste; pacchetto ZIP disponibile. Container e hosting non verificati, pubblicazione sospesa |
 
 ## Prossimo lavoro
 
@@ -50,7 +51,10 @@ L’audit finale è passato su tutti i bundle.
 **M03 (15ª su 18) è completata**: [rapporto indipendente e registro](../reports/m03-v1/Chiusura_M03.md).
 **U01 (16ª su 18) è completata**: [rapporto e verifica](../reports/u01-v1/Chiusura_U01.md).
 **R01 (17ª su 18) è completata**: [avvio e limiti](pacchetto-locale-r01.md).
-Resta **R02 (18ª su 18): demo online limitata**.
+**R02 (18ª voce) è implementata e verificata offline**, con [guida](demo-r02.md)
+e [rapporto](../reports/r02-v1/Chiusura_R02.md). La pubblicazione online resta
+separata e sospesa: nessun hosting è stato scelto. Non si dichiara conclusa
+la consegna online della roadmap.
 Il test finale D03 è stato consumato in M03; modelli M01/M02 non promossi. Il ritardo condizionato
 resta soggetto a censura ed errori elevati, esplicitati nel rapporto.
 

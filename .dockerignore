@@ -1,0 +1,12 @@
+.git
+.venv*
+.pytest*
+runtime
+data
+reports/**/data
+reports/**/*.zip
+reports/**/*.jsonl*
+reports/quality-*
+__pycache__
+**/__pycache__
+*.log

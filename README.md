@@ -2,7 +2,7 @@
 
 ## Stato del nuovo nucleo — 15 ottobre 2026
 
-**R01 completata nel perimetro locale, diciassettesima voce su 18.** Simulatore operativo, contratti v4,
+**R01 completata; R02 implementata e verificata offline.** Simulatore operativo, contratti v4,
 90 simulazioni native verificate, 30 gruppi seed e split 54/18/18.
 8239 missioni e 1040241 snapshot rolling. Baseline e previsione iniziale M01
 confrontate sul training; calibrazione separata e astensione implementate.
@@ -11,8 +11,11 @@ intervalli molto larghi e censura esplicitati nel rapporto.
 Test finale e registro M03 completati: candidato non ammesso alla promozione,
 nessun modello attivo. API native e quattro viste locali collegate e verificate.
 Pacchetto locale, installazione bloccata e verifica end-to-end disponibili.
-Resta **R02 — demo online limitata**.
+R02 aggiunge accessi temporanei, isolamento e persistenza SQLite. Hosting e
+pubblicazione restano sospesi per richiesta del proprietario.
 
+- [Demo R02: avvio offline e limiti](docs/demo-r02.md)
+- [Chiusura R02 nel perimetro offline](reports/r02-v1/Chiusura_R02.md)
 - [Installazione del pacchetto locale R01](docs/pacchetto-locale-r01.md)
 - [Chiusura R01](https://github.com/Zistax/digital-twin-military-logistics/blob/master/reports/r01-v1/Chiusura_R01.md)
 - [Avvio API e quattro viste native](docs/api-ui-u01.md)
@@ -33,7 +36,8 @@ I dati completi sono nel [ramo d03-dataset-v1](https://github.com/Zistax/digital
 con parti verificate e script di ricomposizione. Log, cache e diagnostica sono
 versionati nello [snapshot locale](reports/runtime-snapshot-20261014/README.md).
 
-Qualità verificata: 353 test e 16 sotto-test; copertura del nucleo 93.03%.
+Qualità R02 su Windows: 365 test e 16 sotto-test; un test symlink saltato
+per privilegio Windows mancante; copertura del nucleo 93.03%.
 Per ripetere i controlli, installare le dipendenze runtime e
 `requirements-quality.txt`, quindi eseguire:
 

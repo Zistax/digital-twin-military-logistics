@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "source_root": "C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\r02 extracted with spaces\\digital-twin-demo",
+  "real_http": true,
+  "real_experimental_worker": true,
+  "restart_persistence": true,
+  "durable_retry": true,
+  "conflicting_retry_rejected": true,
+  "cross_owner_rejected": true,
+  "admin_protected": true,
+  "untrusted_origin_rejected": true,
+  "revocation_cascades": true,
+  "latencies": [
+    {
+      "route": "/health",
+      "seconds": 1.566
+    },
+    {
+      "route": "/demo/access",
+      "seconds": 0.025
+    },
+    {
+      "route": "/demo/access",
+      "seconds": 0.022
+    },
+    {
+      "route": "/v1/sessions",
+      "seconds": 2.653
+    },
+    {
+      "route": "/v1/sessions",
+      "seconds": 0.817
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8",
+      "seconds": 0.008
+    },
+    {
+      "route": "/admin/status",
+      "seconds": 0.006
+    },
+    {
+      "route": "/demo/access",
+      "seconds": 0.001
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8/missions",
+      "seconds": 2.634
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8/advance",
+      "seconds": 2.614
+    },
+    {
+      "route": "/health",
+      "seconds": 1.02
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8",
+      "seconds": 0.011
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8/missions",
+      "seconds": 0.01
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8/missions",
+      "seconds": 0.009
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8",
+      "seconds": 0.01
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8",
+      "seconds": 0.012
+    },
+    {
+      "route": "/demo/access",
+      "seconds": 0.012
+    },
+    {
+      "route": "/v1/sessions/820e7424b37d523341ccec65c02f96b8",
+      "seconds": 0.017
+    },
+    {
+      "route": "/v1/sessions/1e07cd6be2bd429f8470d582bfb1c602",
+      "seconds": 0.009
+    },
+    {
+      "route": "/demo/access",
+      "seconds": 0.011
+    },
+    {
+      "route": "/admin/status",
+      "seconds": 0.008
+    }
+  ],
+  "online_published": false
+}
