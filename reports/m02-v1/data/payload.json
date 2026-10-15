@@ -1,0 +1,16 @@
+{
+  "sha256": "6a3e4caaeec00fa7a30d77efed42bc35bc32a1155420122e79dcadf5e8132b7e",
+  "size_bytes": 6453339,
+  "parts": [
+    {
+      "name": "sampled.jsonl.gz.part01",
+      "sha256": "302ba7efe060f7bc9a758cd31b79c5e108c8a3fa1dc56bebacdf0332edbb0227",
+      "size_bytes": 4194304
+    },
+    {
+      "name": "sampled.jsonl.gz.part02",
+      "sha256": "3654135baf81be36b5833a5fa293845dec6ff3e10f302607ba1f6fe59fd9c8ec",
+      "size_bytes": 2259035
+    }
+  ]
+}

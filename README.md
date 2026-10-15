@@ -2,14 +2,18 @@
 
 ## Stato del nuovo nucleo — 15 ottobre 2026
 
-**M01 completata, tredicesima voce su 18.** Simulatore operativo, contratti v4,
+**M02 completata, quattordicesima voce su 18.** Simulatore operativo, contratti v4,
 90 simulazioni native verificate, 30 gruppi seed e split 54/18/18.
 8239 missioni e 1040241 snapshot rolling. Baseline e previsione iniziale M01
 confrontate sul training; calibrazione separata e astensione implementate.
-Prossima voce: **M02 — rolling, residuo e incertezza**. Test finale riservato a M03.
+Rolling, residuo, intervalli e servizio di aggiornamento M02 implementati;
+intervalli molto larghi e censura esplicitati nel rapporto.
+Prossima voce: **M03 — test indipendente e registro modelli**.
 
 - [Roadmap completa](docs/stato-roadmap.md)
 - [Specifica unificata](docs/Specifica_Unificata_Logistica_Predittiva_v1.md)
+- [Chiusura M02 e comandi di riproduzione](reports/m02-v1/Chiusura_M02.md)
+- [Protocollo M02](docs/protocollo-m02-v1.md)
 - [Chiusura M01 e comandi di riproduzione](reports/m01-v1/Chiusura_M01.md)
 - [Protocollo M01](docs/protocollo-m01-v1.md)
 - [Chiusura D03](reports/d03-closeout-20261014/Chiusura_D03.md)
@@ -20,7 +24,7 @@ I dati completi sono nel [ramo d03-dataset-v1](https://github.com/Zistax/digital
 con parti verificate e script di ricomposizione. Log, cache e diagnostica sono
 versionati nello [snapshot locale](reports/runtime-snapshot-20261014/README.md).
 
-Qualità verificata: 288 test e 16 sotto-test; copertura del nucleo 91.87%.
+Qualità verificata: 317 test e 16 sotto-test; copertura del nucleo 92.46%.
 Per ripetere i controlli, installare le dipendenze runtime e
 `requirements-quality.txt`, quindi eseguire:
 
@@ -28,8 +32,8 @@ Per ripetere i controlli, installare le dipendenze runtime e
 python scripts/check_quality.py --report reports/quality-nuova-verifica
 ```
 
-Le sezioni seguenti descrivono il prototipo storico. Le previsioni aggiornate
-e la nuova API/UI restano nelle fasi M02–U01 della roadmap.
+Le sezioni seguenti descrivono il prototipo storico. Il test indipendente
+e la nuova API/UI restano nelle fasi M03–U01 della roadmap.
 
 ---
 

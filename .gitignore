@@ -16,6 +16,7 @@ __pycache__/
 .ruff_cache/
 reports/**/*.jsonl
 reports/**/*.zip
+reports/**/data/sampled.jsonl.gz
 reports/**/*.damaged
 reports/**/.*
 data/d03/*.zip

@@ -1,0 +1,1974 @@
+{
+  "started_utc": "2026-10-15T08:28:56.778302+00:00",
+  "protocol_sha256": "6b3ff4a1df971c4d5bac7a34284fc78ea06ca1fe81a7e67920b28994741a10c1",
+  "implementation_sha256": {
+    "src/logistics/rolling_prediction.py": "f37c431b271bbd89eeb63ce163ad0120fcbf3e1b9f721f1bf30dcb683e5c5c4e",
+    "src/logistics/forecast_session.py": "f69cccf561303a3ee95bf2f90ebd3172b644a8079222d303ffea8cd2c6bdee5f",
+    "scripts/train_m02.py": "7f1fbe72679a675980a7125497945c54eb49c5f7133376ca3207feb8d2f7f801",
+    "scripts/prepare_m02_data.py": "e18e6d53e5abe5a7b5464fbb424659bf435ece70d28e5d3db4d872247a892087"
+  },
+  "test_tables_read": 0,
+  "promoted": false,
+  "finished_utc": "2026-10-15T08:31:25.093484+00:00",
+  "selection": "training_only_group_oof_uncalibrated",
+  "selected": {
+    "classification": "boosting",
+    "pre": "boosting",
+    "post": "boosting"
+  },
+  "scores": {
+    "classification": {
+      "prevalence": {
+        "snapshots": 25927,
+        "missions": 4949,
+        "groups": 18,
+        "brier": 0.15199141845087014,
+        "ece": 0.00020099437702636447,
+        "roc_auc": 0.45764986956405485,
+        "pr_auc": 0.7989213897526217
+      },
+      "logistic": {
+        "snapshots": 25927,
+        "missions": 4949,
+        "groups": 18,
+        "brier": 0.06957281829701684,
+        "ece": 0.016768518582565235,
+        "roc_auc": 0.9486600319377333,
+        "pr_auc": 0.9878748058052569
+      },
+      "boosting": {
+        "snapshots": 25927,
+        "missions": 4949,
+        "groups": 18,
+        "brier": 0.06350789109312348,
+        "ece": 0.011652704326168802,
+        "roc_auc": 0.9567179795990888,
+        "pr_auc": 0.9898458990444482,
+        "group_bootstrap_95": [
+          0.05863345669054948,
+          0.06861315073188146
+        ]
+      }
+    },
+    "pre": {
+      "median": {
+        "snapshots": 13365,
+        "missions": 2576,
+        "groups": 18,
+        "mae_minutes": 2889.690191511387,
+        "error_over_1_day": 0.7399068322981367
+      },
+      "boosting": {
+        "snapshots": 13365,
+        "missions": 2576,
+        "groups": 18,
+        "mae_minutes": 1983.6914056174642,
+        "error_over_1_day": 0.5156032793552203,
+        "group_bootstrap_95": [
+          1860.7167570592985,
+          2105.0095519965726
+        ]
+      }
+    },
+    "post": {
+      "median": {
+        "snapshots": 15969,
+        "missions": 2544,
+        "groups": 18,
+        "mae_minutes": 1743.6307400076125,
+        "error_over_1_day": 0.2911879492362983
+      },
+      "boosting": {
+        "snapshots": 15969,
+        "missions": 2544,
+        "groups": 18,
+        "mae_minutes": 1111.5168382185525,
+        "error_over_1_day": 0.2601985998802037,
+        "group_bootstrap_95": [
+          1055.5304380134664,
+          1173.061356346288
+        ]
+      }
+    }
+  },
+  "segments": {
+    "classification|profile=perturbed": {
+      "snapshots": 6496,
+      "missions": 1227,
+      "groups": 18,
+      "brier": 0.07208024641387198,
+      "ece": 0.012652296704594675,
+      "roc_auc": 0.9457797318917784,
+      "pr_auc": 0.9861926962378513,
+      "small_segment": false
+    },
+    "classification|profile=pressure": {
+      "snapshots": 12841,
+      "missions": 2495,
+      "groups": 18,
+      "brier": 0.04779657056462851,
+      "ece": 0.015793284968995628,
+      "roc_auc": 0.96738836210064,
+      "pr_auc": 0.9948162249487734,
+      "small_segment": false
+    },
+    "classification|profile=regular": {
+      "snapshots": 6590,
+      "missions": 1227,
+      "groups": 18,
+      "brier": 0.08688316797986877,
+      "ece": 0.034483085908738706,
+      "roc_auc": 0.9449519399095226,
+      "pr_auc": 0.9784267334437662,
+      "small_segment": false
+    },
+    "classification|phase=en_route": {
+      "snapshots": 3576,
+      "missions": 1412,
+      "groups": 18,
+      "brier": 0.1416372998504398,
+      "ece": 0.043150759003895284,
+      "roc_auc": 0.8593038748579744,
+      "pr_auc": 0.7883490039011476,
+      "small_segment": false
+    },
+    "classification|phase=loading": {
+      "snapshots": 1801,
+      "missions": 1418,
+      "groups": 18,
+      "brier": 0.15026596666654432,
+      "ece": 0.03068766240618639,
+      "roc_auc": 0.8453131008035208,
+      "pr_auc": 0.8101487835902788,
+      "small_segment": false
+    },
+    "classification|phase=recovery_wait": {
+      "snapshots": 62,
+      "missions": 45,
+      "groups": 16,
+      "brier": 0.17224521174742383,
+      "ece": 0.14865424193770654,
+      "roc_auc": 0.8355894777265745,
+      "pr_auc": 0.9301027246343552,
+      "small_segment": false
+    },
+    "classification|phase=waiting": {
+      "snapshots": 20488,
+      "missions": 4676,
+      "groups": 18,
+      "brier": 0.07559879732494058,
+      "ece": 0.02869289008908098,
+      "roc_auc": 0.9301170542215974,
+      "pr_auc": 0.9873316818073079,
+      "small_segment": false
+    },
+    "classification|initial_urgent=0": {
+      "snapshots": 20428,
+      "missions": 3968,
+      "groups": 18,
+      "brier": 0.054019482320934696,
+      "ece": 0.009609085744772379,
+      "roc_auc": 0.9594543013232316,
+      "pr_auc": 0.9933856998370205,
+      "small_segment": false
+    },
+    "classification|initial_urgent=1": {
+      "snapshots": 5499,
+      "missions": 981,
+      "groups": 18,
+      "brier": 0.10188710211049862,
+      "ece": 0.026607395556342173,
+      "roc_auc": 0.930428775135826,
+      "pr_auc": 0.9531969411012762,
+      "small_segment": false
+    },
+    "classification|initial_cold=0": {
+      "snapshots": 21507,
+      "missions": 4100,
+      "groups": 18,
+      "brier": 0.06524074169568717,
+      "ece": 0.010301911350966194,
+      "roc_auc": 0.9557710718491731,
+      "pr_auc": 0.9894228181301613,
+      "small_segment": false
+    },
+    "classification|initial_cold=1": {
+      "snapshots": 4420,
+      "missions": 849,
+      "groups": 18,
+      "brier": 0.055139590185572,
+      "ece": 0.020259749684018783,
+      "roc_auc": 0.9605065829581747,
+      "pr_auc": 0.9915579438494182,
+      "small_segment": false
+    },
+    "pre|profile=perturbed": {
+      "snapshots": 4095,
+      "missions": 791,
+      "groups": 18,
+      "mae_minutes": 1647.8328480951636,
+      "error_over_1_day": 0.4546475227259044,
+      "small_segment": false
+    },
+    "pre|profile=pressure": {
+      "snapshots": 5457,
+      "missions": 1050,
+      "groups": 18,
+      "mae_minutes": 2385.33318356226,
+      "error_over_1_day": 0.5723265306122448,
+      "small_segment": false
+    },
+    "pre|profile=regular": {
+      "snapshots": 3813,
+      "missions": 735,
+      "groups": 18,
+      "mae_minutes": 1771.3652180774707,
+      "error_over_1_day": 0.5001700680272109,
+      "small_segment": false
+    },
+    "pre|phase=en_route": {
+      "snapshots": 1163,
+      "missions": 489,
+      "groups": 18,
+      "mae_minutes": 1196.0560202263239,
+      "error_over_1_day": 0.30265848670756645,
+      "small_segment": false
+    },
+    "pre|phase=loading": {
+      "snapshots": 674,
+      "missions": 549,
+      "groups": 18,
+      "mae_minutes": 1155.6886432774518,
+      "error_over_1_day": 0.28415300546448086,
+      "small_segment": false
+    },
+    "pre|phase=recovery_wait": {
+      "snapshots": 42,
+      "missions": 31,
+      "groups": 15,
+      "mae_minutes": 613.4138167427244,
+      "error_over_1_day": 0.12903225806451613,
+      "small_segment": false
+    },
+    "pre|phase=waiting": {
+      "snapshots": 11486,
+      "missions": 2532,
+      "groups": 18,
+      "mae_minutes": 2088.5909445462735,
+      "error_over_1_day": 0.5482227488151658,
+      "small_segment": false
+    },
+    "pre|initial_urgent=0": {
+      "snapshots": 10154,
+      "missions": 1978,
+      "groups": 18,
+      "mae_minutes": 2263.190526585237,
+      "error_over_1_day": 0.5884960758823247,
+      "small_segment": false
+    },
+    "pre|initial_urgent=1": {
+      "snapshots": 3211,
+      "missions": 598,
+      "groups": 18,
+      "mae_minutes": 1059.1943131856033,
+      "error_over_1_day": 0.27449633699633696,
+      "small_segment": false
+    },
+    "pre|initial_cold=0": {
+      "snapshots": 10842,
+      "missions": 2080,
+      "groups": 18,
+      "mae_minutes": 1891.1646789942627,
+      "error_over_1_day": 0.4918412316849817,
+      "small_segment": false
+    },
+    "pre|initial_cold=1": {
+      "snapshots": 2523,
+      "missions": 496,
+      "groups": 18,
+      "mae_minutes": 2371.706710811536,
+      "error_over_1_day": 0.6152505760368664,
+      "small_segment": false
+    },
+    "post|profile=perturbed": {
+      "snapshots": 4955,
+      "missions": 780,
+      "groups": 18,
+      "mae_minutes": 1014.2075305112824,
+      "error_over_1_day": 0.24893467643467646,
+      "small_segment": false
+    },
+    "post|profile=pressure": {
+      "snapshots": 6531,
+      "missions": 1041,
+      "groups": 18,
+      "mae_minutes": 1287.609407903787,
+      "error_over_1_day": 0.2872226796578381,
+      "small_segment": false
+    },
+    "post|profile=regular": {
+      "snapshots": 4483,
+      "missions": 723,
+      "groups": 18,
+      "mae_minutes": 962.9537607210984,
+      "error_over_1_day": 0.23344036092998752,
+      "small_segment": false
+    },
+    "post|phase=en_route": {
+      "snapshots": 5661,
+      "missions": 2542,
+      "groups": 18,
+      "mae_minutes": 491.205453472109,
+      "error_over_1_day": 0.06020849724626278,
+      "small_segment": false
+    },
+    "post|phase=loading": {
+      "snapshots": 2413,
+      "missions": 2018,
+      "groups": 18,
+      "mae_minutes": 528.678444323585,
+      "error_over_1_day": 0.0808804096465147,
+      "small_segment": false
+    },
+    "post|phase=recovery_wait": {
+      "snapshots": 249,
+      "missions": 158,
+      "groups": 18,
+      "mae_minutes": 859.5675653338495,
+      "error_over_1_day": 0.13871308016877637,
+      "small_segment": false
+    },
+    "post|phase=waiting": {
+      "snapshots": 7646,
+      "missions": 1983,
+      "groups": 18,
+      "mae_minutes": 1742.3904282781507,
+      "error_over_1_day": 0.4785089931080852,
+      "small_segment": false
+    },
+    "post|initial_urgent=0": {
+      "snapshots": 12439,
+      "missions": 1954,
+      "groups": 18,
+      "mae_minutes": 1258.584842326426,
+      "error_over_1_day": 0.3082937320270995,
+      "small_segment": false
+    },
+    "post|initial_urgent=1": {
+      "snapshots": 3530,
+      "missions": 590,
+      "groups": 18,
+      "mae_minutes": 624.4475500375607,
+      "error_over_1_day": 0.1009140435835351,
+      "small_segment": false
+    },
+    "post|initial_cold=0": {
+      "snapshots": 12827,
+      "missions": 2054,
+      "groups": 18,
+      "mae_minutes": 1108.0234414344272,
+      "error_over_1_day": 0.2612022998098948,
+      "small_segment": false
+    },
+    "post|initial_cold=1": {
+      "snapshots": 3142,
+      "missions": 490,
+      "groups": 18,
+      "mae_minutes": 1126.1605871871095,
+      "error_over_1_day": 0.2559912536443149,
+      "small_segment": false
+    }
+  },
+  "data": {
+    "protocol_sha256": "6b3ff4a1df971c4d5bac7a34284fc78ea06ca1fe81a7e67920b28994741a10c1",
+    "sha256": "6a3e4caaeec00fa7a30d77efed42bc35bc32a1155420122e79dcadf5e8132b7e",
+    "rows": {
+      "training": 49492,
+      "calibration": 16499
+    },
+    "test_tables_read": 0,
+    "provenance": [
+      {
+        "simulation_id": "scenario-1001-perturbed",
+        "group": "base-seed-1001",
+        "split": "training",
+        "native_snapshots": 12445,
+        "sampled_snapshots": 874,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 12445,
+            "sha256": "79f0cce5f32ef0f89a898d530c7524123727b23bb9736ac893f13a5d253a7a8a"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 12445,
+            "sha256": "299c35fd2f11b877e06549bdcc9349a847bd0a504190de05f52bcff0229ed945"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1001-pressure",
+        "group": "base-seed-1001",
+        "split": "training",
+        "native_snapshots": 29869,
+        "sampled_snapshots": 1706,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 29869,
+            "sha256": "8a33270a165ecfe59f36084714fb431efe91ec16ea91ea38d418561d4af290fe"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 29869,
+            "sha256": "092e838a788344e498442e5f9088f36497a84230a42314bb7b6c3dc7ae9ba199"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1001-regular",
+        "group": "base-seed-1001",
+        "split": "training",
+        "native_snapshots": 11340,
+        "sampled_snapshots": 865,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 11340,
+            "sha256": "4a389a522bba7873f5b9846fde760a944ea90ab093d3d08eeb6a2e5117daa770"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 11340,
+            "sha256": "2a44497b8c1292e5f9381def04c3152cb316ea8c2566fbfadd050772a5a88186"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1009-perturbed",
+        "group": "base-seed-1009",
+        "split": "training",
+        "native_snapshots": 6098,
+        "sampled_snapshots": 700,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6098,
+            "sha256": "58b4f5bd56dd96bf4ff03f6aca764c7d325d90e74822bdaf09afe83e47ae1c9b"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6098,
+            "sha256": "deb0e9e1117e9731c1286d18b3b74faacafb395c914ede291127f996ec3351a8"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1009-pressure",
+        "group": "base-seed-1009",
+        "split": "training",
+        "native_snapshots": 21389,
+        "sampled_snapshots": 1510,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 21389,
+            "sha256": "ad0869f4f39e9af823195d504e986fb08b1ed737484dc5872810149037237f9f"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 21389,
+            "sha256": "a7bb14ec2a35868ce18e359860929e6f11853c4f71f455f057a80e2a221ca599"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1009-regular",
+        "group": "base-seed-1009",
+        "split": "training",
+        "native_snapshots": 5052,
+        "sampled_snapshots": 656,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5052,
+            "sha256": "af3332fda7227a54f1aefc27b867ef415f2d33f1ec21234a984c2e85e11e04a1"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5052,
+            "sha256": "a2f916fee30e9fb2e80b498732706d486704a5214f482eeeaa2f81465b72f2ae"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1023-perturbed",
+        "group": "base-seed-1023",
+        "split": "training",
+        "native_snapshots": 8302,
+        "sampled_snapshots": 714,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8302,
+            "sha256": "4bd9057f335d31494bf99ce61d3edbd782626946f9935648ef468da90507c99d"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8302,
+            "sha256": "3b39e61faa898853c01548564c9e09bc304464e773c55f571de422ddc6210281"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1023-pressure",
+        "group": "base-seed-1023",
+        "split": "training",
+        "native_snapshots": 24152,
+        "sampled_snapshots": 1349,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 24152,
+            "sha256": "3ba171d701a9132cd3aabdf4c2fdce1d65af1d8bc081945f1f2670a5deaf3664"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 24152,
+            "sha256": "f2ce6111378116f2ae7b6673228759d88036319a8fe89f97ef6c1c3e09ba6657"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1023-regular",
+        "group": "base-seed-1023",
+        "split": "training",
+        "native_snapshots": 7032,
+        "sampled_snapshots": 687,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7032,
+            "sha256": "d76c758c0d5c576dbf24068a3c476903d44bcdf6b01a4f043d20ed0e1182fcbb"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7032,
+            "sha256": "1aeaf8efeb59529b9bc5678491d666ecfb780b654cb1e70f640e7abb048101b5"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1025-perturbed",
+        "group": "base-seed-1025",
+        "split": "training",
+        "native_snapshots": 6220,
+        "sampled_snapshots": 692,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6220,
+            "sha256": "60c3fa7bbe206da0ee1b7768944e1b54d66f0b963451749d5245a7d2256c4fe5"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6220,
+            "sha256": "58a27c64af7f902f8b974682334c38348c01eedc8be46788a602396df10448e2"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1025-pressure",
+        "group": "base-seed-1025",
+        "split": "training",
+        "native_snapshots": 21734,
+        "sampled_snapshots": 1422,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 21734,
+            "sha256": "88fa578356b0c5df436d0d75c92f8e4a72fe073a3e91eb24a86c3c7249c4d01a"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 21734,
+            "sha256": "00f1fcf26e2886bdd0c4c416167934fcd41d48e70655db05b22c986911092998"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1025-regular",
+        "group": "base-seed-1025",
+        "split": "training",
+        "native_snapshots": 4670,
+        "sampled_snapshots": 629,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4670,
+            "sha256": "3f418665f99f99d63e5ed31b0ffcdef6b393b65d69a757a00af1a9bb478b5fb5"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4670,
+            "sha256": "becef50355d732149ce312e06808810d997eb2e9f57a393e18a4c93f3a9b96d0"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1027-perturbed",
+        "group": "base-seed-1027",
+        "split": "training",
+        "native_snapshots": 8033,
+        "sampled_snapshots": 728,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8033,
+            "sha256": "9da61843f8bf0a444732c7db18cc5feb6df997f5bb77e879f291944ae9e59215"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8033,
+            "sha256": "11fddb971c654c0fed1de88368201cdc74b50d99bad26759a23a54f08179ea88"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1027-pressure",
+        "group": "base-seed-1027",
+        "split": "training",
+        "native_snapshots": 20610,
+        "sampled_snapshots": 1389,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 20610,
+            "sha256": "7ce2dd371986e121e213ec933ae2549e79c38ec376281f741c121f811d1698ff"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 20610,
+            "sha256": "3da25d30de462e77be2d977b0e3d7361ad856f8f8ef21dd88e98c8b56e0f4d6f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1027-regular",
+        "group": "base-seed-1027",
+        "split": "training",
+        "native_snapshots": 5702,
+        "sampled_snapshots": 668,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5702,
+            "sha256": "b0a1c0e41c442c8ffb2c51eadbeab1ec0b33d1ceaa8068d8579f0d7c71a59b45"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5702,
+            "sha256": "bdac1a7a3cfc119492cd54d19e8678e691f2991b38cfd5d8c2a7c6ca152e1f05"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1010-perturbed",
+        "group": "base-seed-1010",
+        "split": "calibration",
+        "native_snapshots": 4981,
+        "sampled_snapshots": 609,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4981,
+            "sha256": "ff4c1d7f3b0f2b1c2bb46c44a812468a4d0520d410ed0c89c1c20504d8945e5f"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4981,
+            "sha256": "3275407ef1d4f4e770d3d27db5c412c3073080521f51b1361dad52282cc19f02"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1010-pressure",
+        "group": "base-seed-1010",
+        "split": "calibration",
+        "native_snapshots": 17134,
+        "sampled_snapshots": 1258,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 17134,
+            "sha256": "1905eea26af205b2981e6597c92bd436e1305753628c24f3dad4c10a374aa3e8"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 17134,
+            "sha256": "208028e04959cbf2f18761f49b20d8dfee2004f9d08a3ed9f8f1b265ab40f648"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1010-regular",
+        "group": "base-seed-1010",
+        "split": "calibration",
+        "native_snapshots": 4279,
+        "sampled_snapshots": 590,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4279,
+            "sha256": "80594b2a5b083de7072f6c9ee950e9892817e29705ec6ecb59ab0cdc5811136e"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4279,
+            "sha256": "7624c4bb36d3068b3e0ff35c98eb230af34e3f81a1c085c97065e1d41049ec58"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1005-perturbed",
+        "group": "base-seed-1005",
+        "split": "training",
+        "native_snapshots": 7547,
+        "sampled_snapshots": 723,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7547,
+            "sha256": "73fb054716c3efb267e40bf854aeddf340020f9aeafc5b9178340f97e5e8265b"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7547,
+            "sha256": "a09749e2d891762a467e5fb40b2cb60733926d03caae09cbc1b59c544feef6eb"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1005-pressure",
+        "group": "base-seed-1005",
+        "split": "training",
+        "native_snapshots": 23896,
+        "sampled_snapshots": 1464,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 23896,
+            "sha256": "3bb1b3e9cc264d5c98a47b79cb1126ecbe307f95d3040cc0bacd3e87ef3b6bd5"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 23896,
+            "sha256": "d2a24c2dac7033ffee184fb8bcd404d395ba4ab915b90528a0436ef7cb58904c"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1005-regular",
+        "group": "base-seed-1005",
+        "split": "training",
+        "native_snapshots": 6843,
+        "sampled_snapshots": 686,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6843,
+            "sha256": "c187b1c4490884626be37022c7b2cfda64096ab08f098502f1a3d0276c8a2052"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6843,
+            "sha256": "aeed7da1fda99904383db77eba9a4697789360acf9b2ea13df861f4aee133ca8"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1007-perturbed",
+        "group": "base-seed-1007",
+        "split": "training",
+        "native_snapshots": 5647,
+        "sampled_snapshots": 625,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5647,
+            "sha256": "35bec75b9e8b16724616900ccc4d65172ae276b4a252867bcb17c193404df81d"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5647,
+            "sha256": "f854327284015ca1088741ddd24dc9373e1d5d669786dd696bd29693be6191da"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1007-pressure",
+        "group": "base-seed-1007",
+        "split": "training",
+        "native_snapshots": 20291,
+        "sampled_snapshots": 1304,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 20291,
+            "sha256": "b62c7f95c473a35b500d8f926011be49e225f3f159eb03c674fdb021994cfc6e"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 20291,
+            "sha256": "c570e7a58695b4b1aba2a76cd40ffe114af998be6ee6ed001df9f961bfe6055e"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1007-regular",
+        "group": "base-seed-1007",
+        "split": "training",
+        "native_snapshots": 5494,
+        "sampled_snapshots": 623,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5494,
+            "sha256": "d1a7c79f9e968fc760a0f043bbaac5c632e3b87631059dd2ac9a46754503b2d9"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5494,
+            "sha256": "a582d0ee60c21770d694c2b89f73393f3071ee460e715c20e8ecf22ada71e6c7"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1013-perturbed",
+        "group": "base-seed-1013",
+        "split": "training",
+        "native_snapshots": 8618,
+        "sampled_snapshots": 769,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8618,
+            "sha256": "f6c94af95c562132f7e5c44fb5f160d456fa0e3fc575016689f621d66968d697"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8618,
+            "sha256": "f89c7fe29ce37221746959d6da17a1e5fdc0f4493751245295e65e25e7c458a0"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1013-pressure",
+        "group": "base-seed-1013",
+        "split": "training",
+        "native_snapshots": 24571,
+        "sampled_snapshots": 1571,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 24571,
+            "sha256": "bdb00db7044ca0f679174a0e769fa918b578260f63e1a93b8b2ded6d5cee5b72"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 24571,
+            "sha256": "8900f391a50a669786b978ee3e15c36c61f0403781f153a12b042e1714f2090f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1013-regular",
+        "group": "base-seed-1013",
+        "split": "training",
+        "native_snapshots": 7743,
+        "sampled_snapshots": 750,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7743,
+            "sha256": "6e187bfab14de5df8bf8b0df5f90f0028acc0b7d1eb28ac584f2418f0876e2fd"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7743,
+            "sha256": "65442f1d2b8a6a3f1b2077be18880b0e617f12e8bb02b1c55c333612b28ebb4c"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1017-perturbed",
+        "group": "base-seed-1017",
+        "split": "training",
+        "native_snapshots": 8483,
+        "sampled_snapshots": 744,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8483,
+            "sha256": "08b6de19aff56442742f60a9584e832ceaa4d9b02883b325a1133c4d9d6b7249"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8483,
+            "sha256": "e64bb1ecb019080b2cc850fe4d322675ba0e1a7d44dd87bffafb439704b07a4d"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1017-pressure",
+        "group": "base-seed-1017",
+        "split": "training",
+        "native_snapshots": 26824,
+        "sampled_snapshots": 1633,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 26824,
+            "sha256": "99fc92e80c7c80fbadabb03f874b0443fa08c8fd0a90c2e68517fa6b1811d856"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 26824,
+            "sha256": "9b45ddfb6d87ce427ae2bef330b288ca2b103f91f1610943f03d76eb3ba1a881"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1017-regular",
+        "group": "base-seed-1017",
+        "split": "training",
+        "native_snapshots": 6596,
+        "sampled_snapshots": 692,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6596,
+            "sha256": "c1b1893ccb7f5b362e9465acc7b1ddef7807809d57d69d9ce07d8a8d552de2dd"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6596,
+            "sha256": "39cd239572fe0354fb27ba1c1f928b6385e9b8dc533438617cb285085d82d65e"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1029-perturbed",
+        "group": "base-seed-1029",
+        "split": "training",
+        "native_snapshots": 8184,
+        "sampled_snapshots": 734,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8184,
+            "sha256": "97efb60dfe8dae745d0be6032c969579682f62e4698a4b0903162cb954c16a7c"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8184,
+            "sha256": "ec45cb7704dc9bf179ba17f66a35dcfc321239be30bc62dc6398929fb7f0d629"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1029-pressure",
+        "group": "base-seed-1029",
+        "split": "training",
+        "native_snapshots": 18635,
+        "sampled_snapshots": 1359,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 18635,
+            "sha256": "a91b591298017bf1ca92b334759ca3c4fc981db692e49625318c13a7fefaaa61"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 18635,
+            "sha256": "6fe465669ea82b1853316873e8160078dd415014d3ce0c5fee9df1ea58bd6fff"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1029-regular",
+        "group": "base-seed-1029",
+        "split": "training",
+        "native_snapshots": 6088,
+        "sampled_snapshots": 632,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6088,
+            "sha256": "c4fb1340ddb5e15e3524bae0a4f607bb1826607f5ad109ad597a33185d74de0b"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6088,
+            "sha256": "7861378ae101aad6a3cfe1bbb310350e454e2e02a925bde98ac575fb8b48b1db"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1000-perturbed",
+        "group": "base-seed-1000",
+        "split": "training",
+        "native_snapshots": 4246,
+        "sampled_snapshots": 589,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4246,
+            "sha256": "2ace91642212a10745d9d2ed1863afaac510b99638e5ef8005637d094a4449b0"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4246,
+            "sha256": "e8748459551e6e2862bf051971fb455d4afbf76927b41f852006d9a08da0ed05"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1000-pressure",
+        "group": "base-seed-1000",
+        "split": "training",
+        "native_snapshots": 17014,
+        "sampled_snapshots": 1288,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 17014,
+            "sha256": "f6a061cf3587a7ed04ffca25afe521840f9d68dca4b5c3c9d31719eadd668ef8"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 17014,
+            "sha256": "bfce3c0e69ecc9e064b5693b020e4318cd9f14d6d52dd09e6bd87a0b5b89272b"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1000-regular",
+        "group": "base-seed-1000",
+        "split": "training",
+        "native_snapshots": 4376,
+        "sampled_snapshots": 601,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4376,
+            "sha256": "34f6b0d91420d1e78e4aa52b0e8b6c3dfc71a68f6d7a5f71b14ffbd7db129dcc"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4376,
+            "sha256": "76923ef14801f70dbff3fda2272f9f96067c7165a28a96a3605fb7b29c4efcf8"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1004-perturbed",
+        "group": "base-seed-1004",
+        "split": "training",
+        "native_snapshots": 5051,
+        "sampled_snapshots": 618,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5051,
+            "sha256": "ce645189c22354fe3315d58e3f5b6f7385dffde4536ded9c3e902d692a2e9342"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5051,
+            "sha256": "90d09d7d21390af95de5b8c1d75653b75b8ed141dbc42417523a8fcc8a23b33c"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1004-pressure",
+        "group": "base-seed-1004",
+        "split": "training",
+        "native_snapshots": 18644,
+        "sampled_snapshots": 1420,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 18644,
+            "sha256": "17350a9e4d5ad4ba4a2954b1269fabf9df8f4359a09e869a00a1aca0d3d73223"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 18644,
+            "sha256": "ddc51ea23e9ab5eb6fd14639839ef39f044069bc4ceb31bcb8bed57135e75b0a"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1004-regular",
+        "group": "base-seed-1004",
+        "split": "training",
+        "native_snapshots": 4549,
+        "sampled_snapshots": 580,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4549,
+            "sha256": "1a063176ec4861df924180046ef324db618e39f34e11308e9793639d216c6f66"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4549,
+            "sha256": "7287c438699b71c2e0b07b28105c72694af67ba17494984457df79edacb0b857"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1014-perturbed",
+        "group": "base-seed-1014",
+        "split": "training",
+        "native_snapshots": 7869,
+        "sampled_snapshots": 751,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7869,
+            "sha256": "d03b4ebd43e15302fff0d79bbfa1e169ba115a232e453755e0c4b468a880d92a"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7869,
+            "sha256": "727466396cf116e51cb4c6aeba32d654344dfb6d387c6551eb20e82c90c671d5"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1014-pressure",
+        "group": "base-seed-1014",
+        "split": "training",
+        "native_snapshots": 21588,
+        "sampled_snapshots": 1338,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 21588,
+            "sha256": "70825db9bf1644b665de3c770f249fda7f01fbe186f87f48ab5d93b13d6b8921"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 21588,
+            "sha256": "7f0bef1b3862d02ac2551e3abd3fc2a845b4d35552a45b9ece24730cd87c2f04"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1014-regular",
+        "group": "base-seed-1014",
+        "split": "training",
+        "native_snapshots": 6058,
+        "sampled_snapshots": 674,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6058,
+            "sha256": "b4d3600850700442294e9772c3b55a2481dc048bcf7a668749669f1847ec19d9"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6058,
+            "sha256": "f6688922a171fdb7eb1e0c42fe858aafc589037351dee6e5ca708234088fe9c6"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1018-perturbed",
+        "group": "base-seed-1018",
+        "split": "training",
+        "native_snapshots": 8362,
+        "sampled_snapshots": 671,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8362,
+            "sha256": "e37029528bc5b26863528443e7c5d17b6781e124650296121c909a68fa052a36"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8362,
+            "sha256": "5e04fa5bece9cddf4fa989787749dbd8948c4790fcd300d80237587436d579e5"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1018-pressure",
+        "group": "base-seed-1018",
+        "split": "training",
+        "native_snapshots": 19835,
+        "sampled_snapshots": 1294,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 19835,
+            "sha256": "886cfb156ce554cf43736b2e81ff1b3dca47fc76bae1d1226df2c2bfde8ee063"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 19835,
+            "sha256": "7b8051cfe48eba35f8ad9494a053eb4560ee46f024eb40a1323d2395df205e56"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1018-regular",
+        "group": "base-seed-1018",
+        "split": "training",
+        "native_snapshots": 7097,
+        "sampled_snapshots": 651,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7097,
+            "sha256": "8a6f45b1974e8260f36d0bd5e47d70805596ebe09689ccddc86cec67b4471632"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7097,
+            "sha256": "961f6328678ba3e023c8d71dbe3b7d91b35261263da2247142f89a470eab734c"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1019-perturbed",
+        "group": "base-seed-1019",
+        "split": "calibration",
+        "native_snapshots": 9105,
+        "sampled_snapshots": 724,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 9105,
+            "sha256": "b1a487d1858bd53e1bfec054dc2172e94bc3cc219d2990ea0c22fb062b41343e"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 9105,
+            "sha256": "1bd8c57c615c841a2bb98b7f7a3d9ab5c44ded0ff5e9332f359741a70392fa13"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1019-pressure",
+        "group": "base-seed-1019",
+        "split": "calibration",
+        "native_snapshots": 26414,
+        "sampled_snapshots": 1546,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 26414,
+            "sha256": "2b0dc42185394f90c24b20fd82d128c6eb957f6e55ca18dc3eed557a7102e71f"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 26414,
+            "sha256": "ba28b210ee253ae2087f6cbab7706b3a97a36d47664f181d75f0471878ea0282"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1019-regular",
+        "group": "base-seed-1019",
+        "split": "calibration",
+        "native_snapshots": 7508,
+        "sampled_snapshots": 690,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7508,
+            "sha256": "66f94aa63761d8db10afdc85f85cc2a02e1dd33798668122fb13ba24237f0bf1"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7508,
+            "sha256": "9dc950b4e2a67ea35f79c6affb5440c229e4111c8c0849d2c15a871397ddf71f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1022-perturbed",
+        "group": "base-seed-1022",
+        "split": "calibration",
+        "native_snapshots": 6759,
+        "sampled_snapshots": 764,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6759,
+            "sha256": "c9d233b56afb5bc3ae48a0f5057c5a98261d42e4ae2240a4cff0fca89a2ca0b9"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6759,
+            "sha256": "2d0e9cd36251f262b3475cf6baad281f1c3c74c34f608769e8a65eb3fc5e5e0f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1022-pressure",
+        "group": "base-seed-1022",
+        "split": "calibration",
+        "native_snapshots": 21006,
+        "sampled_snapshots": 1539,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 21006,
+            "sha256": "415d15747cad58402fccba6baeb2c101ae0e0329ec1ce2f1ed3eec5173788e8d"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 21006,
+            "sha256": "dd5de59820fabee681582c356df6101ea5c69c1a5cb4135ba5b2ace98e512f95"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1022-regular",
+        "group": "base-seed-1022",
+        "split": "calibration",
+        "native_snapshots": 5117,
+        "sampled_snapshots": 705,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5117,
+            "sha256": "ae9bebdd9ddc5407dba8e2d676b06d2660a3a40a6a18fa85231d63e9e246a475"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5117,
+            "sha256": "121ec082fc49ae4a59de9c69601d47ab0364cb49c12c7bfc3ee7b046de442ed2"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1008-perturbed",
+        "group": "base-seed-1008",
+        "split": "training",
+        "native_snapshots": 8091,
+        "sampled_snapshots": 712,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8091,
+            "sha256": "0fcebbf013483f88ba08a031bb14072eb3f924928018061d4f7212341b306cae"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8091,
+            "sha256": "af3b60debea7c2c1141ece9927a07dc97a598ef6c9e14a22efba9f97c87f974a"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1008-pressure",
+        "group": "base-seed-1008",
+        "split": "training",
+        "native_snapshots": 18547,
+        "sampled_snapshots": 1241,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 18547,
+            "sha256": "e7295fae1378b219aaf891155c9382ef2364ad6eeb83e7b03eb42c3165b9a7c8"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 18547,
+            "sha256": "4c65bcb17720e4f42ecf76a5fc0c68e552bec51eb49c787c3266c982e50222e0"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1008-regular",
+        "group": "base-seed-1008",
+        "split": "training",
+        "native_snapshots": 6145,
+        "sampled_snapshots": 650,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6145,
+            "sha256": "816ed1b6a5b78e8fe95485f4fdb8e4de188500a61dac91d6365bfcd0d1dc28ba"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6145,
+            "sha256": "d4002595e9c5e7d3fba07c526f5115846f23f52699455294cc39f20e95f1a7ea"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1012-perturbed",
+        "group": "base-seed-1012",
+        "split": "training",
+        "native_snapshots": 6918,
+        "sampled_snapshots": 590,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6918,
+            "sha256": "eb41f6c72388baab7eaf02be06251001c2149f0b9ff161f7a2d15604b6c5595e"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6918,
+            "sha256": "a6672a41bb5edc520ed00c20382a795c1a2ec560feb554fb9bf09e4f624ac497"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1012-pressure",
+        "group": "base-seed-1012",
+        "split": "training",
+        "native_snapshots": 18100,
+        "sampled_snapshots": 1233,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 18100,
+            "sha256": "ce2f42245ab13c875ae95edceb5c4db341137f3e33604479089ec3ab96a81b51"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 18100,
+            "sha256": "81950ef6dfbdbf221a8209cd58e498f812f3c167d59b978b0b4d93dbe0107c9f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1012-regular",
+        "group": "base-seed-1012",
+        "split": "training",
+        "native_snapshots": 5716,
+        "sampled_snapshots": 574,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5716,
+            "sha256": "456dbb4a9846d0fb46c034ce15515b899bcb4908d3f2b03bba16e03af65ffcc9"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5716,
+            "sha256": "1431bc4b0c895ab392172dca24246ba25c7983ca305e1cf5b76f2b9801f96d4f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1020-perturbed",
+        "group": "base-seed-1020",
+        "split": "training",
+        "native_snapshots": 4267,
+        "sampled_snapshots": 590,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4267,
+            "sha256": "ff12d757cb1b6e33e9721eef1cd9a6f38fccdd3c172ae091351e2372dd0986b4"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4267,
+            "sha256": "81c486f89f019419c0bcfa956760d0f59ada894b347d4dbcbe9615e6175733fa"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1020-pressure",
+        "group": "base-seed-1020",
+        "split": "training",
+        "native_snapshots": 14268,
+        "sampled_snapshots": 1128,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 14268,
+            "sha256": "e783fe64587493b3aba575ec61c97cd61e609795f1f944e8fc9c1d53a06f1469"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 14268,
+            "sha256": "46e37ecd32e2feda0b035f0ff829f3a8a5e54110cae2e8c3c8d7e21b2ccc5532"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1020-regular",
+        "group": "base-seed-1020",
+        "split": "training",
+        "native_snapshots": 4170,
+        "sampled_snapshots": 579,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4170,
+            "sha256": "f99acbd2b9a2517913da2bcb7876126e6899b7bc0ed9d2358536ed8c075581b0"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4170,
+            "sha256": "e64c88e2632393bb8578e2d66a24d1e43a95dd00eaa230baee4754d371f17b13"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1026-perturbed",
+        "group": "base-seed-1026",
+        "split": "training",
+        "native_snapshots": 7089,
+        "sampled_snapshots": 706,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7089,
+            "sha256": "581195f62f0707e01b8cb988a9bc18231c96837145290af959c5c60ddc56f3f6"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7089,
+            "sha256": "25588f5f11eb21ef2eaf602d7f09b8024a6de333f779628f8bcec14d9b3e4865"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1026-pressure",
+        "group": "base-seed-1026",
+        "split": "training",
+        "native_snapshots": 23580,
+        "sampled_snapshots": 1461,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 23580,
+            "sha256": "37c0e4551d0e4ff9d9ff02ad2f08b22c26ed3c213c071b0bc93566b3f9b29b71"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 23580,
+            "sha256": "5d3a99103c2f97c83b9709e38709763a754defacf6371049b445f1fcda2f0c58"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1026-regular",
+        "group": "base-seed-1026",
+        "split": "training",
+        "native_snapshots": 6992,
+        "sampled_snapshots": 655,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6992,
+            "sha256": "8169b1c64aa9d59183a250ccf5fd8aedcba3187465a4454c3d0cad44e77d0e7f"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6992,
+            "sha256": "d114036de8a31c558e6b788fa0edca86dd832b3eb00c3830501d5297cedae586"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1003-perturbed",
+        "group": "base-seed-1003",
+        "split": "calibration",
+        "native_snapshots": 8840,
+        "sampled_snapshots": 772,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 8840,
+            "sha256": "622b0365b22c0d4d5f9e51d6fa3ea4bcfedae7e9c39cc599406fa9c4467a4b6b"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 8840,
+            "sha256": "93d06a1bc00c06b35b110c3dd9f958c4336e3cd575fc11bf3dbc20703bed7385"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1003-pressure",
+        "group": "base-seed-1003",
+        "split": "calibration",
+        "native_snapshots": 21284,
+        "sampled_snapshots": 1343,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 21284,
+            "sha256": "77590b577a8b1f9086fecf4984584227fb3cf1d3e52e908dae804870b848a9b9"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 21284,
+            "sha256": "6825b594dc67fe3cd364867a9ee818268467febde75ad58604e1a5931db7d47f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1003-regular",
+        "group": "base-seed-1003",
+        "split": "calibration",
+        "native_snapshots": 7769,
+        "sampled_snapshots": 719,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 7769,
+            "sha256": "5bd9196beea7d8c8bf0ecdbc275d7825ce7ec0d5e29a97af6b4864f03a92243d"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 7769,
+            "sha256": "8c19d6415ba5a92882bba3795eb987d5a6c1fc1c909ced3ee6aaac9cc39babb9"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1006-perturbed",
+        "group": "base-seed-1006",
+        "split": "calibration",
+        "native_snapshots": 5271,
+        "sampled_snapshots": 627,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 5271,
+            "sha256": "3ba6b61ea81b28f7ec47fcb39e9452b004deed73867d0623535740aa43e5477b"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 5271,
+            "sha256": "3bc62fdeea1ac542a0a77a417730b082864a9069b9c3e1e944e1d56a0096aaa5"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1006-pressure",
+        "group": "base-seed-1006",
+        "split": "calibration",
+        "native_snapshots": 19798,
+        "sampled_snapshots": 1268,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 19798,
+            "sha256": "d360e30a5df0459c0268be59fa045ad3d5316f71797a6f5dbc6dd64b37df213d"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 19798,
+            "sha256": "dade052fbca5e7d756b01d57f0fcfa0d7caf685a7687d2a6e0770142fe336601"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1006-regular",
+        "group": "base-seed-1006",
+        "split": "calibration",
+        "native_snapshots": 4886,
+        "sampled_snapshots": 622,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 4886,
+            "sha256": "fcd75fed5608676b24f881dbfe742fbcd1d514d9f98d11db137977433056bae9"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 4886,
+            "sha256": "08fdcbd7dc3955a55623e0efa2153f4fdfa17f3e8a950082d9f0224dbf96ba9f"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1015-perturbed",
+        "group": "base-seed-1015",
+        "split": "calibration",
+        "native_snapshots": 6818,
+        "sampled_snapshots": 663,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6818,
+            "sha256": "a7962fdf1dbb60785b0c9eb9cfbca75465d4f31d1cd55c7a5cc2efac2e3c0ae7"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6818,
+            "sha256": "429c97a842544e0ee12685bd8887a4066ff87971715e29f022c619a1f813966d"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1015-pressure",
+        "group": "base-seed-1015",
+        "split": "calibration",
+        "native_snapshots": 20231,
+        "sampled_snapshots": 1406,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 20231,
+            "sha256": "23c4c57b741c8bc9d8d2254927c7d5005e9098839e64c709f39e8c213125161f"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 20231,
+            "sha256": "f02872406e32034be63fd27517cef9131b8091d0ec93ca5a9a6692da8a32f928"
+          }
+        }
+      },
+      {
+        "simulation_id": "scenario-1015-regular",
+        "group": "base-seed-1015",
+        "split": "calibration",
+        "native_snapshots": 6074,
+        "sampled_snapshots": 654,
+        "files": {
+          "rolling_observations.jsonl": {
+            "rows": 6074,
+            "sha256": "e2f5cdc4268d3822d916fcb9d13e183b00cf1bc14f0ec44a6c922bf3698efd8e"
+          },
+          "rolling_targets.jsonl": {
+            "rows": 6074,
+            "sha256": "5a5149a142e507a00cdabb34909f83e47778423b3f59b4af559d3310937d4597"
+          }
+        }
+      }
+    ]
+  },
+  "internal_interval_diagnostics": [
+    {
+      "fit_groups": [
+        "base-seed-1007",
+        "base-seed-1009",
+        "base-seed-1012",
+        "base-seed-1013",
+        "base-seed-1023",
+        "base-seed-1026"
+      ],
+      "calibration_groups": [
+        "base-seed-1004",
+        "base-seed-1005",
+        "base-seed-1008",
+        "base-seed-1020",
+        "base-seed-1027",
+        "base-seed-1029"
+      ],
+      "assessment_groups": [
+        "base-seed-1000",
+        "base-seed-1001",
+        "base-seed-1014",
+        "base-seed-1017",
+        "base-seed-1018",
+        "base-seed-1025"
+      ],
+      "radii": {
+        "pre": {
+          "radius": 10022.816012413627,
+          "groups": 6,
+          "nominal": 0.8
+        },
+        "post": {
+          "radius": 9000.664324173918,
+          "groups": 6,
+          "nominal": 0.8
+        },
+        "initial": {
+          "radius": 10788.924039832202,
+          "groups": 6,
+          "nominal": 0.8
+        }
+      },
+      "initial": {
+        "eligible_completed_late": 856,
+        "predicted_missions": 309,
+        "coverage": 1.0,
+        "width_minutes": 13216.655520281387
+      },
+      "rolling": {
+        "pre": {
+          "snapshots": 1684,
+          "missions": 309,
+          "groups": 6,
+          "coverage": 1.0,
+          "width_minutes": 12544.74664542224,
+          "sampled_group_simultaneous_coverage": 1.0
+        },
+        "post": {
+          "snapshots": 1741,
+          "missions": 299,
+          "groups": 6,
+          "coverage": 1.0,
+          "width_minutes": 10217.722410559645,
+          "sampled_group_simultaneous_coverage": 1.0
+        }
+      },
+      "availability": {
+        "pre": {
+          "snapshots": 8852,
+          "missions": 1689,
+          "statuses": {
+            "probability_only": 5984,
+            "available_conditional_duration": 2623,
+            "abstain": 245
+          },
+          "weighted_duration_availability": 0.27708703374777977,
+          "weighted_probability_availability": 0.9734014209591473,
+          "censored_missions": 560
+        },
+        "post": {
+          "snapshots": 8262,
+          "missions": 1403,
+          "statuses": {
+            "abstain": 6434,
+            "available_conditional_duration": 1828
+          },
+          "weighted_duration_availability": 0.22380612972202424,
+          "weighted_probability_availability": 0.0,
+          "censored_missions": 560
+        }
+      }
+    },
+    {
+      "fit_groups": [
+        "base-seed-1004",
+        "base-seed-1005",
+        "base-seed-1008",
+        "base-seed-1020",
+        "base-seed-1027",
+        "base-seed-1029"
+      ],
+      "calibration_groups": [
+        "base-seed-1000",
+        "base-seed-1001",
+        "base-seed-1014",
+        "base-seed-1017",
+        "base-seed-1018",
+        "base-seed-1025"
+      ],
+      "assessment_groups": [
+        "base-seed-1007",
+        "base-seed-1009",
+        "base-seed-1012",
+        "base-seed-1013",
+        "base-seed-1023",
+        "base-seed-1026"
+      ],
+      "radii": {
+        "pre": {
+          "radius": 11362.185354202136,
+          "groups": 6,
+          "nominal": 0.8
+        },
+        "post": {
+          "radius": 10725.658308501668,
+          "groups": 6,
+          "nominal": 0.8
+        },
+        "initial": {
+          "radius": 11054.210140336001,
+          "groups": 6,
+          "nominal": 0.8
+        }
+      },
+      "initial": {
+        "eligible_completed_late": 869,
+        "predicted_missions": 402,
+        "coverage": 0.9975124378109452,
+        "width_minutes": 14467.394384563291
+      },
+      "rolling": {
+        "pre": {
+          "snapshots": 2141,
+          "missions": 402,
+          "groups": 6,
+          "coverage": 1.0,
+          "width_minutes": 14681.5463277313,
+          "sampled_group_simultaneous_coverage": 1.0
+        },
+        "post": {
+          "snapshots": 2408,
+          "missions": 396,
+          "groups": 6,
+          "coverage": 0.9992784992784993,
+          "width_minutes": 12195.421247978747,
+          "sampled_group_simultaneous_coverage": 0.6666666666666666
+        }
+      },
+      "availability": {
+        "pre": {
+          "snapshots": 8557,
+          "missions": 1636,
+          "statuses": {
+            "abstain": 360,
+            "probability_only": 4580,
+            "available_conditional_duration": 3617
+          },
+          "weighted_duration_availability": 0.4060091395971592,
+          "weighted_probability_availability": 0.9602878682035161,
+          "censored_missions": 479
+        },
+        "post": {
+          "snapshots": 7920,
+          "missions": 1342,
+          "statuses": {
+            "abstain": 5061,
+            "available_conditional_duration": 2859
+          },
+          "weighted_duration_availability": 0.3592825207579306,
+          "weighted_probability_availability": 0.0,
+          "censored_missions": 479
+        }
+      }
+    },
+    {
+      "fit_groups": [
+        "base-seed-1000",
+        "base-seed-1001",
+        "base-seed-1014",
+        "base-seed-1017",
+        "base-seed-1018",
+        "base-seed-1025"
+      ],
+      "calibration_groups": [
+        "base-seed-1007",
+        "base-seed-1009",
+        "base-seed-1012",
+        "base-seed-1013",
+        "base-seed-1023",
+        "base-seed-1026"
+      ],
+      "assessment_groups": [
+        "base-seed-1004",
+        "base-seed-1005",
+        "base-seed-1008",
+        "base-seed-1020",
+        "base-seed-1027",
+        "base-seed-1029"
+      ],
+      "radii": {
+        "pre": {
+          "radius": 10414.989423673676,
+          "groups": 6,
+          "nominal": 0.8
+        },
+        "post": {
+          "radius": 10069.48985933611,
+          "groups": 6,
+          "nominal": 0.8
+        },
+        "initial": {
+          "radius": 11116.453888516826,
+          "groups": 6,
+          "nominal": 0.8
+        }
+      },
+      "initial": {
+        "eligible_completed_late": 851,
+        "predicted_missions": 402,
+        "coverage": 1.0,
+        "width_minutes": 14583.086142901502
+      },
+      "rolling": {
+        "pre": {
+          "snapshots": 2116,
+          "missions": 402,
+          "groups": 6,
+          "coverage": 1.0,
+          "width_minutes": 13968.158349964498,
+          "sampled_group_simultaneous_coverage": 1.0
+        },
+        "post": {
+          "snapshots": 1487,
+          "missions": 258,
+          "groups": 6,
+          "coverage": 1.0,
+          "width_minutes": 11381.58819453591,
+          "sampled_group_simultaneous_coverage": 1.0
+        }
+      },
+      "availability": {
+        "pre": {
+          "snapshots": 8518,
+          "missions": 1624,
+          "statuses": {
+            "probability_only": 4546,
+            "available_conditional_duration": 3788,
+            "abstain": 184
+          },
+          "weighted_duration_availability": 0.4300851806239738,
+          "weighted_probability_availability": 0.9776837027914613,
+          "censored_missions": 411
+        },
+        "post": {
+          "snapshots": 7383,
+          "missions": 1249,
+          "statuses": {
+            "abstain": 5845,
+            "available_conditional_duration": 1538
+          },
+          "weighted_duration_availability": 0.2132706164931946,
+          "weighted_probability_availability": 0.0,
+          "censored_missions": 411
+        }
+      }
+    }
+  ],
+  "intervals": {
+    "pre": {
+      "radius": 9821.688540426667,
+      "groups": 6,
+      "nominal": 0.8
+    },
+    "post": {
+      "radius": 8978.783093670796,
+      "groups": 6,
+      "nominal": 0.8
+    },
+    "initial": {
+      "radius": 10003.03808919112,
+      "groups": 6,
+      "nominal": 0.8
+    }
+  },
+  "calibration_inference_availability": {
+    "pre": {
+      "snapshots": 8685,
+      "missions": 1646,
+      "statuses": {
+        "probability_only": 5009,
+        "available_conditional_duration": 3655,
+        "abstain": 21
+      },
+      "weighted_duration_availability": 0.40704738760631837,
+      "weighted_probability_availability": 0.9975698663426489,
+      "censored_missions": 452
+    },
+    "post": {
+      "snapshots": 7814,
+      "missions": 1323,
+      "statuses": {
+        "abstain": 5077,
+        "available_conditional_duration": 2737
+      },
+      "weighted_duration_availability": 0.3431594860166289,
+      "weighted_probability_availability": 0.0,
+      "censored_missions": 452
+    }
+  },
+  "calibration_fit_interval_metrics_not_independent": {
+    "pre": {
+      "snapshots": 2022,
+      "missions": 385,
+      "groups": 6,
+      "coverage": 1.0,
+      "width_minutes": 13349.72890030914,
+      "sampled_group_simultaneous_coverage": 1.0
+    },
+    "post": {
+      "snapshots": 2361,
+      "missions": 383,
+      "groups": 6,
+      "coverage": 1.0,
+      "width_minutes": 10612.420069856375,
+      "sampled_group_simultaneous_coverage": 1.0
+    }
+  },
+  "calibration_fit_initial_interval_metrics": {
+    "eligible_completed_late": 876,
+    "predicted_missions": 385,
+    "coverage": 1.0,
+    "width_minutes": 13521.373432988219
+  },
+  "initial_source_sha256": "152be46560c1d3c5236b48cc1385badce1ad9e78c86057f702a236eac93d63c6",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "artifacts": {
+    "rolling_predictor.joblib": "963a2f5d612a224e91f2f08d498036ed68cd9d9210401aac9a5d0e9cac20801f",
+    "training-oof.jsonl.gz": "637146eee03470fb0023b05d4a4b5a7a7e3a9580e01551784b9bddf380a57215",
+    "calibration-inference.jsonl.gz": "ef06cb2d76bd3d6a081eed78b2b6f5c4a78fbd2275f7f5b17896c833042ee5cb",
+    "example_inputs.json": "1157876f82d279719a50cbd8aa8e5e5d090e52fccd46923c72d872527c8fcf4d"
+  }
+}

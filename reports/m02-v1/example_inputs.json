@@ -1,0 +1,324 @@
+{
+  "pre": {
+    "creation": {
+      "feature_version": "creation-v1",
+      "features": {
+        "deadline_s": 184151,
+        "deadline_source": "observable_estimate",
+        "destination_id": "local-b",
+        "estimate_unavailable_reason": null,
+        "estimated_duration_s": 58919,
+        "free_vehicles": 9,
+        "lines": [
+          {
+            "available_origin": 83,
+            "cold": false,
+            "item_id": "electronics-medium",
+            "kg": "10",
+            "m3": "0.10",
+            "minimum": 38,
+            "requested": 50,
+            "stock_destination": 26
+          },
+          {
+            "available_origin": 43,
+            "cold": false,
+            "item_id": "electronics-large",
+            "kg": "25",
+            "m3": "0.25",
+            "minimum": 16,
+            "requested": 21,
+            "stock_destination": 14
+          },
+          {
+            "available_origin": 174,
+            "cold": false,
+            "item_id": "food-small",
+            "kg": "5",
+            "m3": "0.02",
+            "minimum": 73,
+            "requested": 91,
+            "stock_destination": 55
+          },
+          {
+            "available_origin": 103,
+            "cold": false,
+            "item_id": "medical-small",
+            "kg": "2",
+            "m3": "0.02",
+            "minimum": 90,
+            "requested": 94,
+            "stock_destination": 54
+          },
+          {
+            "available_origin": 31,
+            "cold": false,
+            "item_id": "medical-large",
+            "kg": "10",
+            "m3": "0.08",
+            "minimum": 15,
+            "requested": 15,
+            "stock_destination": 12
+          },
+          {
+            "available_origin": 144,
+            "cold": false,
+            "item_id": "spares-small",
+            "kg": "10",
+            "m3": "0.025",
+            "minimum": 84,
+            "requested": 93,
+            "stock_destination": 47
+          },
+          {
+            "available_origin": 46,
+            "cold": false,
+            "item_id": "spares-medium",
+            "kg": "25",
+            "m3": "0.06",
+            "minimum": 9,
+            "requested": 10,
+            "stock_destination": 27
+          },
+          {
+            "available_origin": 25,
+            "cold": false,
+            "item_id": "spares-large",
+            "kg": "50",
+            "m3": "0.12",
+            "minimum": 19,
+            "requested": 21,
+            "stock_destination": 13
+          }
+        ],
+        "origin_id": "central-b",
+        "start_s": 91648,
+        "urgent": false
+      },
+      "mission_id": "request-11",
+      "observation_id": "request-11:creation",
+      "observed_s": 91648,
+      "observed_utc": "2026-10-06T01:27:28+00:00",
+      "schema_version": 1,
+      "simulation_id": "scenario-1010-perturbed"
+    },
+    "observation": {
+      "feature_version": "rolling-v1",
+      "features": {
+        "elapsed_s": 9152,
+        "lines": [
+          {
+            "accepted": 0,
+            "item_id": "electronics-medium",
+            "minimum": 38,
+            "reserved": 50,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "electronics-large",
+            "minimum": 16,
+            "reserved": 21,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "food-small",
+            "minimum": 73,
+            "reserved": 91,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "medical-small",
+            "minimum": 90,
+            "reserved": 94,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "medical-large",
+            "minimum": 15,
+            "reserved": 15,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "spares-small",
+            "minimum": 84,
+            "reserved": 93,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "spares-medium",
+            "minimum": 9,
+            "reserved": 10,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "spares-large",
+            "minimum": 19,
+            "reserved": 21,
+            "unusable_inspected": 0
+          }
+        ],
+        "recovery_statuses": [],
+        "seconds_to_deadline": 83351,
+        "status": "loading",
+        "urgent": false
+      },
+      "mission_id": "request-11",
+      "observation_id": "request-11:rolling:100800",
+      "observed_s": 100800,
+      "observed_utc": "2026-10-06T04:00:00+00:00",
+      "schema_version": 1,
+      "simulation_id": "scenario-1010-perturbed"
+    }
+  },
+  "post": {
+    "creation": {
+      "feature_version": "creation-v1",
+      "features": {
+        "deadline_s": 248604,
+        "deadline_source": "configured_allowance",
+        "destination_id": "local-c",
+        "estimate_unavailable_reason": "stock_without_usable_arrival_promise",
+        "estimated_duration_s": null,
+        "free_vehicles": 6,
+        "lines": [
+          {
+            "available_origin": 0,
+            "cold": false,
+            "item_id": "electronics-medium",
+            "kg": "10",
+            "m3": "0.10",
+            "minimum": 10,
+            "requested": 13,
+            "stock_destination": 24
+          },
+          {
+            "available_origin": 5,
+            "cold": false,
+            "item_id": "electronics-large",
+            "kg": "25",
+            "m3": "0.25",
+            "minimum": 18,
+            "requested": 24,
+            "stock_destination": 11
+          },
+          {
+            "available_origin": 0,
+            "cold": false,
+            "item_id": "food-small",
+            "kg": "5",
+            "m3": "0.02",
+            "minimum": 35,
+            "requested": 43,
+            "stock_destination": 42
+          },
+          {
+            "available_origin": 0,
+            "cold": false,
+            "item_id": "medical-small",
+            "kg": "2",
+            "m3": "0.02",
+            "minimum": 50,
+            "requested": 52,
+            "stock_destination": 149
+          },
+          {
+            "available_origin": 13,
+            "cold": false,
+            "item_id": "medical-large",
+            "kg": "10",
+            "m3": "0.08",
+            "minimum": 16,
+            "requested": 16,
+            "stock_destination": 9
+          },
+          {
+            "available_origin": 0,
+            "cold": false,
+            "item_id": "spares-medium",
+            "kg": "25",
+            "m3": "0.06",
+            "minimum": 41,
+            "requested": 45,
+            "stock_destination": 20
+          }
+        ],
+        "origin_id": "local-a",
+        "start_s": 131964,
+        "urgent": true
+      },
+      "mission_id": "request-14",
+      "observation_id": "request-14:creation",
+      "observed_s": 131964,
+      "observed_utc": "2026-10-06T12:39:24+00:00",
+      "schema_version": 1,
+      "simulation_id": "scenario-1010-perturbed"
+    },
+    "observation": {
+      "feature_version": "rolling-v1",
+      "features": {
+        "elapsed_s": 120036,
+        "lines": [
+          {
+            "accepted": 0,
+            "item_id": "electronics-medium",
+            "minimum": 10,
+            "reserved": 0,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "electronics-large",
+            "minimum": 18,
+            "reserved": 0,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "food-small",
+            "minimum": 35,
+            "reserved": 0,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "medical-small",
+            "minimum": 50,
+            "reserved": 0,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "medical-large",
+            "minimum": 16,
+            "reserved": 0,
+            "unusable_inspected": 0
+          },
+          {
+            "accepted": 0,
+            "item_id": "spares-medium",
+            "minimum": 41,
+            "reserved": 0,
+            "unusable_inspected": 0
+          }
+        ],
+        "recovery_statuses": [],
+        "seconds_to_deadline": -3396,
+        "status": "en_route",
+        "urgent": true
+      },
+      "mission_id": "request-14",
+      "observation_id": "request-14:rolling:252000",
+      "observed_s": 252000,
+      "observed_utc": "2026-10-07T22:00:00+00:00",
+      "schema_version": 1,
+      "simulation_id": "scenario-1010-perturbed"
+    }
+  }
+}
