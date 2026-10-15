@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from fastapi import FastAPI
+
+from src.api.logistics import router as logistics_router
 from pydantic import BaseModel, Field
 
 from src.ml.predict import load_risk_model, predict_convoy_risk_proba
@@ -12,9 +14,12 @@ from src.ml.model_info import get_model_version
 from src.api.api_audit import log_predict_call
 
 app = FastAPI(
-    title="Digital Twin Logistico – API Rischio Convoglio",
-    version="0.1.0",
+    title="Digital Twin Logistico – API nativa e prototipo storico",
+    version="1.0.0",
 )
+
+
+app.include_router(logistics_router)
 
 
 @app.get("/health")
