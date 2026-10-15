@@ -1,11 +1,12 @@
 """Four local operator views of the native /v1 API."""
 
+import os
 from uuid import uuid4
 
 import requests
 import streamlit as st
 
-API_BASE_URL = "http://127.0.0.1:8000"
+API_BASE_URL = os.environ.get("LOGISTICS_API_URL", "http://127.0.0.1:8000")
 TABS = (
     "Missioni e previsioni",
     "Depositi e scorte",

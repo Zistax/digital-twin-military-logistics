@@ -1,0 +1,14 @@
+# Validated local application and frozen M01/M02 serialization dependencies.
+# Resolve into requirements-local.txt; training uses the same scientific stack.
+numpy==2.3.5
+scipy==1.17.0
+scikit-learn==1.8.0
+joblib==1.5.3
+pandas==2.2.3
+fastapi==0.143.0
+pydantic==2.14.1
+streamlit==1.66.0
+uvicorn==0.54.0
+PyYAML==6.0.3
+requests==2.34.2
+tzdata==2026.5

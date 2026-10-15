@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/scratch/1dd3faccdc1f/r01-verify-venv/bin/python",
+  "virtual_environment": true,
+  "issues": [],
+  "active_model": null,
+  "package_manifest_checked": true,
+  "smoke": {
+    "passed": true,
+    "checks": [
+      "native_mission",
+      "idempotency",
+      "exact_deadline",
+      "periodic_forecast",
+      "cancellation",
+      "approved_model_refused",
+      "manual_recovery"
+    ],
+    "forecast_mode": "experimental_not_promoted"
+  }
+}

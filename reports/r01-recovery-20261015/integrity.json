@@ -1,0 +1,12 @@
+{
+  "recovered_from": "original interrupted R01 execution outputs",
+  "zip_sha256": "207a24509f07ec31dd480e5fc1e3dfec5edad1734e229ec8d9972bbaea6ba958",
+  "zip_integrity": true,
+  "packaged_files_verified": 250,
+  "available_frozen_hashes_verified": 18,
+  "separate_payloads_not_restored": [
+    "reports/m02-v1/data/sampled.jsonl.gz"
+  ],
+  "original_linux_quality_report_passed": true,
+  "active_model": null
+}

@@ -1,0 +1,38 @@
+{
+  "block": "R01",
+  "position": 17,
+  "total": 18,
+  "passed": true,
+  "tests_passed": 353,
+  "subtests_passed": 16,
+  "core_coverage": 93.02828319221761,
+  "platform_tested": "CPython 3.12.14 / Linux x86_64",
+  "clean_venv_install": true,
+  "pip_check_passed": true,
+  "extracted_path_contains_spaces": true,
+  "package_manifest_verified_after_smoke_servers_and_pilot": true,
+  "package": {
+    "path": "digital-twin-local-r01.zip",
+    "sha256": "207a24509f07ec31dd480e5fc1e3dfec5edad1734e229ec8d9972bbaea6ba958",
+    "bytes": 1950090,
+    "files": 250
+  },
+  "byte_identical_rebuild": true,
+  "real_api_and_streamlit": true,
+  "ui_experimental_flow_tested": true,
+  "pilot": {
+    "seed": 3,
+    "profiles": 3,
+    "all_valid": true,
+    "generation_days": 1,
+    "extension_days": 1
+  },
+  "frozen_m03_unchanged": true,
+  "active_model": null,
+  "limitations": [
+    "Windows/macOS commands prepared but not executed",
+    "Bulk D03/training payload separate",
+    "No public hosting or multiuser persistence"
+  ],
+  "next": "R02: demo online limitata"
+}

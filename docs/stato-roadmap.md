@@ -1,8 +1,8 @@
 # Stato della roadmap — 15 ottobre 2026
 
-**Voci F01–U01 completate nei rispettivi perimetri documentati.** U01 è
-la sedicesima voce su 18. La posizione non equivale a una percentuale del lavoro:
-packaging e pubblicazione restano da realizzare; il candidato non è promosso.
+**Voci F01–R01 completate nei rispettivi perimetri documentati.** R01 è
+la diciassettesima voce su 18. La posizione non equivale a una percentuale del lavoro:
+la demo online resta da realizzare; il candidato non è promosso.
 
 Sono stati prodotti sei incrementi operativi e avviato il generatore scenari: missioni; scorte/carico;
 calendari/scarico; trasporto; forniture/riordino; guasti/recuperi.
@@ -28,7 +28,7 @@ completa del prodotto.
 | **M02** | **Previsioni aggiornate e incertezza** | **Completato nel perimetro documentato**: pesi per missione, rolling/residuo, intervalli per gruppi, astensione e servizio a 30 minuti/eventi/scadenza; limiti su censura, ampiezza e frequenza visibili |
 | **M03** | **Test indipendente e registro modelli** | **Completato**: test consumato su sei gruppi, confronto e gate documentati, registro verificato, promozione manuale/rollback; candidati non ammessi e nessun attivo |
 | **U01** | **API e quattro viste** | **Completato nel perimetro locale**: sessioni/API native, quattro schede Streamlit, missioni/approvazioni, separazione del futuro e scelta sperimentale esplicita verificati |
-| R01 | Pacchetto locale completo | Demo CLI disponibili; packaging end-to-end del prodotto ancora da fare |
+| **R01** | **Pacchetto locale completo** | **Completato nel perimetro Python 3.12/Linux verificato**: lock, setup/doctor/smoke, launcher API/UI, ZIP deterministico con manifest e verifica da copia estratta |
 | R02 | Demo online limitata | Da implementare, verificare e pubblicare |
 
 ## Prossimo lavoro
@@ -49,7 +49,8 @@ L’audit finale è passato su tutti i bundle.
 **M02 (14ª su 18) è completata**: [rapporto e riproduzione](../reports/m02-v1/Chiusura_M02.md).
 **M03 (15ª su 18) è completata**: [rapporto indipendente e registro](../reports/m03-v1/Chiusura_M03.md).
 **U01 (16ª su 18) è completata**: [rapporto e verifica](../reports/u01-v1/Chiusura_U01.md).
-La prossima voce è **R01 (17ª su 18): pacchetto locale completo**; segue R02 online.
+**R01 (17ª su 18) è completata**: [avvio e limiti](pacchetto-locale-r01.md).
+Resta **R02 (18ª su 18): demo online limitata**.
 Il test finale D03 è stato consumato in M03; modelli M01/M02 non promossi. Il ritardo condizionato
 resta soggetto a censura ed errori elevati, esplicitati nel rapporto.
 

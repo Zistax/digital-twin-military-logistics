@@ -10,9 +10,9 @@ from typing import Annotated, Literal
 from uuid import uuid4
 
 from fastapi import APIRouter, HTTPException, Response
-import joblib
 from pydantic import BaseModel, ConfigDict, Field
 
+from src.api.model_compat import load_legacy_artifact
 from src.logistics.core import Mission, MissionLine
 from src.logistics.dataset import creation_observation
 from src.logistics.estimates import (
@@ -102,7 +102,7 @@ def load_forecaster(mode, root):
         entry = verify_version(
             registry, version, root, require_eligible=mode == "approved"
         )
-        model = joblib.load(artifact)
+        model = load_legacy_artifact(artifact)
         if not callable(getattr(model, "predict_creation", None)):
             reject(409, "forecast_mode", "rolling pipeline required")
         return ForecastSession(model, entry["artifact"]["sha256"])

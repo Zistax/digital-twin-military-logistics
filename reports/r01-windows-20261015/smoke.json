@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\Tiziano\\.codex\\.chatgpt-projects\\g-p-68f0c82969608191b4c3c5d8d4515d03\\roadmap-repo\\.venv-r01\\Scripts\\python.exe",
+  "virtual_environment": true,
+  "issues": [],
+  "active_model": null,
+  "package_manifest_checked": false,
+  "smoke": {
+    "passed": true,
+    "checks": [
+      "native_mission",
+      "idempotency",
+      "exact_deadline",
+      "periodic_forecast",
+      "cancellation",
+      "approved_model_refused",
+      "manual_recovery"
+    ],
+    "forecast_mode": "experimental_not_promoted"
+  }
+}
