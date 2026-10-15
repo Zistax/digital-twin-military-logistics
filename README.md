@@ -13,8 +13,10 @@ nessun modello attivo. API native e quattro viste locali collegate e verificate.
 Pacchetto locale, installazione bloccata e verifica end-to-end disponibili.
 R02 aggiunge accessi temporanei, isolamento e persistenza SQLite. Hosting e
 pubblicazione restano sospesi per richiesta del proprietario.
-Anche il container locale Linux amd64 è stato costruito e verificato.
+Anche il container locale Linux amd64 e il carico con otto visitatori sono verificati.
 
+- [Otto visitatori: risultati e limiti](reports/r02-load-v1/Chiusura_Load.md)
+- [Ripetere la prova di carico](docs/carico-r02.md)
 - [Container R02: avvio e verifica locale](docs/container-r02.md)
 - [Verifica del container R02](reports/r02-container-v1/Chiusura_Container.md)
 - [Demo R02: avvio offline e limiti](docs/demo-r02.md)
@@ -39,7 +41,7 @@ I dati completi sono nel [ramo d03-dataset-v1](https://github.com/Zistax/digital
 con parti verificate e script di ricomposizione. Log, cache e diagnostica sono
 versionati nello [snapshot locale](reports/runtime-snapshot-20261014/README.md).
 
-Qualità R02 su Windows: 365 test e 16 sotto-test; un test symlink saltato
+Qualità R02 su Windows: 378 test e 16 sotto-test; un test symlink saltato
 per privilegio Windows mancante; copertura del nucleo 93.03%.
 Per ripetere i controlli, installare le dipendenze runtime e
 `requirements-quality.txt`, quindi eseguire:

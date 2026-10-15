@@ -1,0 +1,409 @@
+{
+  "passed": true,
+  "scope": "local Linux Docker, eight visitors from one source IP",
+  "image_id": "sha256:ae2f84fafc5e174395daa9f65fc53d296d3065031dc57532c7a9a79ce77da0be",
+  "runtime": {
+    "python": "3.12.15 (main, Oct  6 2026, 02:02:22) [GCC 14.2.0]",
+    "http_concurrency_limit": 16,
+    "launcher_sha256": "c8b968ad3f1696683c67ff359c129fb23dc6330ca415596ac023d4b6f1044da5"
+  },
+  "visitors": 8,
+  "idle_read_samples": 16,
+  "idle_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "idle_all_accepted": true,
+  "idle_read_p95_seconds": 0.1493,
+  "idle_read_p95_target_seconds": 1,
+  "no_cross_owner_data": true,
+  "cross_owner_rejected": true,
+  "ninth_session_rejected": true,
+  "mutation_statuses": [
+    503,
+    200,
+    503,
+    503,
+    503,
+    200,
+    503,
+    503
+  ],
+  "successful_mutations": 2,
+  "mutation_backpressure_statuses_ok": true,
+  "committed_state_consistent": true,
+  "max_workers_observed": 1,
+  "periodic_purge_without_api_requests": true,
+  "before_periodic_purge": {
+    "leases": 1,
+    "sessions": 1,
+    "commands": 1
+  },
+  "final_table_counts": {
+    "leases": 0,
+    "sessions": 0,
+    "commands": 0
+  },
+  "observed_purge_delay_after_forced_expiry_s": 29.619,
+  "default_30_minute_lifetime_waited": false,
+  "expiry_fault_injection": "only one synthetic lease set to now+2 s",
+  "request_count": 67,
+  "timings": [
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0334
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 3.3849
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0131
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 0.8648
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0109
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 0.871
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0202
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 0.8805
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0204
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 0.8934
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0118
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 1.1116
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0099
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 0.816
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0102
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 201,
+      "seconds": 0.8232
+    },
+    {
+      "route": "/demo/access",
+      "status": 201,
+      "seconds": 0.0096
+    },
+    {
+      "route": "/v1/sessions",
+      "status": 429,
+      "seconds": 0.0074
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0213
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0287
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0359
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0528
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0558
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.077
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0983
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.1239
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0205
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0275
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0374
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0534
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0736
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0984
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.1251
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.1493
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.0071
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.0065
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.007
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.0069
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.0071
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.0074
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.0082
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 404,
+      "seconds": 0.007
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.8606
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 503,
+      "seconds": 1.0169
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 503,
+      "seconds": 1.0189
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 503,
+      "seconds": 1.0185
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 503,
+      "seconds": 1.0184
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 503,
+      "seconds": 1.0194
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 503,
+      "seconds": 1.0194
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 1.7812
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.01
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0088
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0088
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0087
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.008
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0079
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0079
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 200,
+      "seconds": 0.0078
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0094
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.01
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0098
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0105
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0118
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0105
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0101
+    },
+    {
+      "route": "/demo/access",
+      "status": 204,
+      "seconds": 0.0099
+    },
+    {
+      "route": "/v1/sessions/:id",
+      "status": 401,
+      "seconds": 0.0084
+    }
+  ],
+  "checker_sha256": "91f7c4f65b18b4145cc1f8048d05e24ebcbf9bbc13cd0bf902fe4afad1954be8",
+  "public_deployment_verified": false,
+  "hosting_created": false,
+  "validated_runtime_sha256": {
+    "src/api/demo_app.py": "dd94d43ff81d21a04bc6e13371bb43d9c9e25191e1311653d0592f9f351bb364",
+    "scripts/run_demo.py": "c8b968ad3f1696683c67ff359c129fb23dc6330ca415596ac023d4b6f1044da5"
+  }
+}

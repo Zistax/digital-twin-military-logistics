@@ -74,7 +74,7 @@ python scripts/run_demo.py --cleanup
 | SQLite | Max 16384 pagine, circa 64 MiB con pagine di default |
 | Richieste | 60/minuto per indirizzo visto dal servizio, 180/minuto globali |
 | Emissione token | 5/minuto per indirizzo visto dal servizio |
-| Server | Un worker, concorrenza HTTP 8, backlog 16, keepalive 5 secondi |
+| Server | Un worker, concorrenza HTTP 16 per 8 visitatori, backlog 16, keepalive 5 secondi |
 
 Gli errori 429 indicano quote esaurite; 503 indica servizio occupato, storage indisponibile o budget di calcolo superato. La finestra di rate limiting è al minuto: non è un sistema anti-DDoS. Le intestazioni proxy non sono considerate attendibili: dietro un reverse proxy i visitatori condividono prudentemente la quota del proxy. Non attivare l'attendibilità di `X-Forwarded-For` da Internet senza una configurazione verificata.
 

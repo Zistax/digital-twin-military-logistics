@@ -340,3 +340,20 @@ def test_configuration_and_release_fingerprint(tmp_path, monkeypatch):
     monkeypatch.setattr("src.api.demo_store.fingerprint", lambda root: "changed")
     with pytest.raises(ValueError, match="release changed"):
         DemoStore(store.path, SECRET)
+
+
+def test_revocation_does_not_consume_token_issuance_budget(app):
+    store = app.state.store
+    store.policy = replace(store.policy, access_per_minute=1)
+    with TestClient(app) as client:
+        headers = visitor(client)
+        view = create(client, headers)
+        response = client.delete("/demo/access", headers=headers)
+        assert response.status_code == 204, response.text
+        assert (
+            client.get(
+                f"/v1/sessions/{view['session_id']}", headers=headers
+            ).status_code
+            == 401
+        )
+        assert client.post("/demo/access").status_code == 429

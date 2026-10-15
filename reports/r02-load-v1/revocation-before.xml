@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.032" timestamp="2026-10-15T21:14:58.782551+02:00" hostname="Tiziano"><testcase classname="tests.test_demo_online" name="test_revocation_does_not_consume_token_issuance_budget" time="0.161"><failure message="AssertionError: {&quot;detail&quot;:&quot;request limit reached; retry next minute&quot;}&#10;assert 429 == 204&#10; +  where 429 = &lt;Response [429 Too Many Requests]&gt;.status_code">app = &lt;fastapi.applications.FastAPI object at 0x000002A8A6AD2930&gt;
+
+    def test_revocation_does_not_consume_token_issuance_budget(app):
+        store = app.state.store
+        store.policy = replace(store.policy, access_per_minute=1)
+        with TestClient(app) as client:
+            headers = visitor(client)
+            view = create(client, headers)
+            response = client.delete("/demo/access", headers=headers)
+&gt;           assert response.status_code == 204, response.text
+E           AssertionError: {"detail":"request limit reached; retry next minute"}
+E           assert 429 == 204
+E            +  where 429 = &lt;Response [429 Too Many Requests]&gt;.status_code
+
+tests\test_demo_online.py:352: AssertionError</failure></testcase></testsuite></testsuites>

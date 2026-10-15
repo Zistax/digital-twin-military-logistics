@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "manifest_files": 288,
+  "deterministic_rebuild": true,
+  "sha256": "38b9c16a9efdb116f7c0b96defd4222e83bec5d3096faba30428ffa59d59f01f",
+  "same_load_and_container_image": true,
+  "historical_packages": {
+    "r01-v1/digital-twin-local-r01.zip": "207a24509f07ec31dd480e5fc1e3dfec5edad1734e229ec8d9972bbaea6ba958",
+    "r02-v1/digital-twin-demo-r02.zip": "1c90db8c9ab2dc96d6c9dd6e5a94069f3059d61fe975f15625b19cbed5ed2af1",
+    "r02-container-v1/digital-twin-demo-r02-container.zip": "22ff0cb984df54ed4aac7172286f104fd2061c0995ed7001bab583530df49aec"
+  }
+}

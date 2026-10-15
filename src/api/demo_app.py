@@ -99,7 +99,7 @@ def create_demo_app(database=None, admin_secret=None, origin=None, policy=None):
                 await run_in_threadpool(
                     store.throttle,
                     request.client.host if request.client else "unknown",
-                    request.url.path == "/demo/access",
+                    request.method == "POST" and request.url.path == "/demo/access",
                 )
             response = await call_next(request)
         except TimeoutError:

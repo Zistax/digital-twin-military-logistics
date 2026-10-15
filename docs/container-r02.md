@@ -74,6 +74,10 @@ La prova verificata copre:
 
 I tempi nel rapporto sono misure locali di richieste sequenziali, non un benchmark pubblico o una prova di carico a otto visitatori. La suite completa precedente resta **365 test + 16 sotto-test su Windows**; non è stata rieseguita interamente nell'immagine di produzione, che non include dipendenze di test.
 
+## Verifica successiva con otto visitatori
+
+La [prova di carico](carico-r02.md) verifica separatamente otto visitatori, isolamento e pulizia periodica senza richieste API che attivino la pulizia. Corregge l’ammissione HTTP e la revoca dopo esaurimento della quota di emissione token. Il [nuovo rapporto](../reports/r02-load-v1/Chiusura_Load.md) conserva misure, limiti e nuova verifica dei 24 controlli container sulla stessa immagine. La suite aggiornata passa 378 test e 16 sotto-test, con un test symlink saltato su Windows. I rapporti precedenti restano evidenze storiche.
+
 ## Lavoro ancora aperto
 
 Restano provider/costi, dominio e HTTPS, storage e segreti del provider, prova del carico/isolamento/retention nella destinazione e pubblicazione separata. Questa verifica non espone il servizio su Internet. Il volume Docker del computer non equivale a un backup o a uno storage ospitato.
