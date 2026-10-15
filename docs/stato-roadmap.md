@@ -2,7 +2,7 @@
 
 **Voci F01–M01 completate nei rispettivi perimetri documentati.** M01 è
 la tredicesima voce su 18. La posizione non equivale a una percentuale del lavoro:
-modelli predittivi, UI, packaging e pubblicazione restano da realizzare.
+previsioni aggiornate, UI, packaging e pubblicazione restano da realizzare.
 
 Sono stati prodotti sei incrementi operativi e avviato il generatore scenari: missioni; scorte/carico;
 calendari/scarico; trasporto; forniture/riordino; guasti/recuperi.

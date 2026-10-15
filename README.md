@@ -28,8 +28,8 @@ Per ripetere i controlli, installare le dipendenze runtime e
 python scripts/check_quality.py --report reports/quality-nuova-verifica
 ```
 
-Le sezioni seguenti descrivono il prototipo storico. La nuova API/UI e i nuovi
-integrazione predittiva restano nelle fasi M02–U01 della roadmap.
+Le sezioni seguenti descrivono il prototipo storico. Le previsioni aggiornate
+e la nuova API/UI restano nelle fasi M02–U01 della roadmap.
 
 ---
 
