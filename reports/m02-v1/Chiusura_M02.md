@@ -172,7 +172,9 @@ rank degli intervalli, astensione, serializzazione, servizio vivo e ricomposizio
 dei dati. Rimane l'avviso esterno Starlette/httpx. La scalatura ponderata è stata
 corretta prima del fit finale: varianza a due passaggi evita cancellazione sulle
 colonne costanti. Un'interruzione temporanea dell'ambiente non è stata considerata
-una verifica superata. La suite finale è ripetuta a sorgenti fermi.
+una verifica superata. La suite finale è ripetuta a sorgenti fermi. La prima verifica storica,
+fallita sul controllo di congelamento mentre M02 era ancora in modifica, è
+conservata con spiegazione in `reports/quality-m02-20261015`; non è il gate finale.
 
 P14 è deciso per pipeline iniziale/rolling, residuo, mediana, pesi, calibrazione
 e astensione documentate. P15 resta M03: test indipendente, soglie quantitative,
