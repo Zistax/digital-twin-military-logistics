@@ -1,0 +1,21 @@
+{
+  "model_version": "m01-v1",
+  "domain": "synthetic_D03_v1_only",
+  "stage": "creation",
+  "probability_late": 0.07526311318203256,
+  "conditional_delay_minutes": 15.049069024921392,
+  "duration_target": "median_delay_given_late_and_quota_reached",
+  "interval": null,
+  "status": "available_conditional_duration",
+  "reasons": [
+    "duration_excludes_censored_outcomes",
+    "synthetic_domain_only"
+  ],
+  "training_segment": {
+    "n": 672,
+    "groups": 18,
+    "censored_rate": 0.043154761904761904,
+    "delay_n": 303,
+    "delay_groups": 18
+  }
+}

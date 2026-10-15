@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-10-15T07:58:58.502787+00:00",
+  "protocol_sha256": "27f252f4aa01cb8651dcc3c1fc31908bf14a9f460a347370327e38ad70240d47",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "test_tables_allowed": false,
+  "implementation_sha256": {
+    "src/logistics/initial_prediction.py": "7574272eca627616929d8bdea93f191a902164976bcdec18244a84908f249350",
+    "scripts/train_m01.py": "12aa013ded631fda51a993d2e0193fe5b1bcb906b211917ea3b9718cfaf1b5e0"
+  }
+}

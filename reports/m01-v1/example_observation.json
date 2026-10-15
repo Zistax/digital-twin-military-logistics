@@ -1,0 +1,52 @@
+{
+  "feature_version": "creation-v1",
+  "features": {
+    "deadline_s": 80400,
+    "deadline_source": "observable_estimate",
+    "destination_id": "local-a",
+    "estimate_unavailable_reason": null,
+    "estimated_duration_s": 46024,
+    "free_vehicles": 10,
+    "lines": [
+      {
+        "available_origin": 90,
+        "cold": false,
+        "item_id": "electronics-medium",
+        "kg": "10",
+        "m3": "0.10",
+        "minimum": 36,
+        "requested": 47,
+        "stock_destination": 30
+      },
+      {
+        "available_origin": 46,
+        "cold": false,
+        "item_id": "electronics-large",
+        "kg": "25",
+        "m3": "0.25",
+        "minimum": 14,
+        "requested": 18,
+        "stock_destination": 16
+      },
+      {
+        "available_origin": 90,
+        "cold": false,
+        "item_id": "medical-medium",
+        "kg": "5",
+        "m3": "0.04",
+        "minimum": 31,
+        "requested": 32,
+        "stock_destination": 30
+      }
+    ],
+    "origin_id": "central-a",
+    "start_s": 7682,
+    "urgent": false
+  },
+  "mission_id": "request-1",
+  "observation_id": "request-1:creation",
+  "observed_s": 7682,
+  "observed_utc": "2026-10-05T02:08:02+00:00",
+  "schema_version": 1,
+  "simulation_id": "scenario-1006-regular"
+}

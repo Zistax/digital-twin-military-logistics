@@ -1,0 +1,1617 @@
+{
+  "started_utc": "2026-10-15T07:58:58.502787+00:00",
+  "protocol_sha256": "27f252f4aa01cb8651dcc3c1fc31908bf14a9f460a347370327e38ad70240d47",
+  "plan_sha256": "0b947c221014b117cf6bb2f3b3f1116d5aff59e74258fe1a9a3e60d8a663dcd0",
+  "test_tables_allowed": false,
+  "implementation_sha256": {
+    "src/logistics/initial_prediction.py": "7574272eca627616929d8bdea93f191a902164976bcdec18244a84908f249350",
+    "scripts/train_m01.py": "12aa013ded631fda51a993d2e0193fe5b1bcb906b211917ea3b9718cfaf1b5e0"
+  },
+  "finished_utc": "2026-10-15T07:59:10.795093+00:00",
+  "selection_data": "training_group_out_of_fold_uncalibrated",
+  "selected_classifier": "boosting",
+  "selected_conditional_delay": "boosting",
+  "scores": {
+    "classification": {
+      "prevalence": {
+        "n": 4949,
+        "late_rate": 0.8134976762982421,
+        "brier": 0.15199141845087014,
+        "ece": 0.00020099437700238365,
+        "roc_auc": 0.45764986956397713,
+        "pr_auc": 0.7989213897526308,
+        "brier_group_bootstrap_95": [
+          0.139489954331963,
+          0.16460793727073078
+        ]
+      },
+      "operational": {
+        "n": 4949,
+        "late_rate": 0.8134976762982421,
+        "brier": 0.1147933715176441,
+        "ece": 0.0252708184019029,
+        "roc_auc": 0.7180282389818293,
+        "pr_auc": 0.8874440050955047,
+        "brier_group_bootstrap_95": [
+          0.10383435468947332,
+          0.12665919997789493
+        ]
+      },
+      "logistic": {
+        "n": 4949,
+        "late_rate": 0.8134976762982421,
+        "brier": 0.08644701881187943,
+        "ece": 0.017425806773102306,
+        "roc_auc": 0.9171930393934549,
+        "pr_auc": 0.979395567269934,
+        "brier_group_bootstrap_95": [
+          0.08121936423677002,
+          0.09324319660044297
+        ]
+      },
+      "boosting": {
+        "n": 4949,
+        "late_rate": 0.8134976762982421,
+        "brier": 0.08202365721439968,
+        "ece": 0.016312769228707998,
+        "roc_auc": 0.9277066349336034,
+        "pr_auc": 0.9827087516389168,
+        "brier_group_bootstrap_95": [
+          0.07652310212375678,
+          0.08797976660150167
+        ]
+      }
+    },
+    "conditional_delay": {
+      "operational": {
+        "n": 348,
+        "coverage": 0.13509316770186336,
+        "mae_minutes": 2955.371072796935,
+        "p90_absolute_error_minutes": 8298.708333333334,
+        "fraction_error_over_1_day": 0.4942528735632184
+      },
+      "median": {
+        "n": 2576,
+        "coverage": 1.0,
+        "mae_minutes": 2889.729839544513,
+        "p90_absolute_error_minutes": 5800.0666666666675,
+        "fraction_error_over_1_day": 0.7402950310559007,
+        "mae_group_bootstrap_95": [
+          2703.3556682263948,
+          3053.0934979839208
+        ],
+        "operational_common_subset": {
+          "n": 348,
+          "coverage": 1.0,
+          "mae_minutes": 2944.325909961686,
+          "p90_absolute_error_minutes": 4456.971666666667,
+          "fraction_error_over_1_day": 0.8247126436781609
+        }
+      },
+      "boosting": {
+        "n": 2576,
+        "coverage": 1.0,
+        "mae_minutes": 2031.5043553841288,
+        "p90_absolute_error_minutes": 4646.647854302597,
+        "fraction_error_over_1_day": 0.515139751552795,
+        "mae_group_bootstrap_95": [
+          1913.9869511938891,
+          2138.3339305719765
+        ],
+        "operational_common_subset": {
+          "n": 348,
+          "coverage": 1.0,
+          "mae_minutes": 2082.5573561271017,
+          "p90_absolute_error_minutes": 4941.669936179142,
+          "fraction_error_over_1_day": 0.5057471264367817
+        }
+      }
+    }
+  },
+  "segments": {
+    "profile=perturbed": {
+      "groups": 18,
+      "n": 1227,
+      "small_segment": false,
+      "censored": 194,
+      "classification": {
+        "boosting": {
+          "n": 1227,
+          "late_rate": 0.8027709861450693,
+          "brier": 0.0898637884769691,
+          "ece": 0.023255605570738472,
+          "roc_auc": 0.9168309770524814,
+          "pr_auc": 0.9785414227076283,
+          "brier_group_bootstrap_95": [
+            0.08242051438015383,
+            0.10002151521459274
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 91,
+          "coverage": 0.11504424778761062,
+          "mae_minutes": 2116.2173992673993,
+          "p90_absolute_error_minutes": 5722.716666666666,
+          "fraction_error_over_1_day": 0.3956043956043956
+        },
+        "boosting": {
+          "n": 791,
+          "coverage": 1.0,
+          "mae_minutes": 1687.4393687562233,
+          "p90_absolute_error_minutes": 3772.942867859866,
+          "fraction_error_over_1_day": 0.45512010113780027,
+          "mae_group_bootstrap_95": [
+            1516.0698067497253,
+            1850.8179031597165
+          ],
+          "operational_common_subset": {
+            "n": 91,
+            "coverage": 1.0,
+            "mae_minutes": 1511.486653751586,
+            "p90_absolute_error_minutes": 3793.296692725352,
+            "fraction_error_over_1_day": 0.38461538461538464
+          }
+        }
+      }
+    },
+    "profile=pressure": {
+      "groups": 18,
+      "n": 2495,
+      "small_segment": false,
+      "censored": 1109,
+      "classification": {
+        "boosting": {
+          "n": 2495,
+          "late_rate": 0.8653306613226452,
+          "brier": 0.063214947045988,
+          "ece": 0.020267221049474406,
+          "roc_auc": 0.9425715167956947,
+          "pr_auc": 0.9907325359153845,
+          "brier_group_bootstrap_95": [
+            0.05775013338891455,
+            0.06845593836026678
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 162,
+          "coverage": 0.15428571428571428,
+          "mae_minutes": 3885.295267489713,
+          "p90_absolute_error_minutes": 9684.600000000002,
+          "fraction_error_over_1_day": 0.5617283950617284
+        },
+        "boosting": {
+          "n": 1050,
+          "coverage": 1.0,
+          "mae_minutes": 2432.774071207309,
+          "p90_absolute_error_minutes": 5687.577518435479,
+          "fraction_error_over_1_day": 0.58,
+          "mae_group_bootstrap_95": [
+            2236.62460407637,
+            2617.6024560344217
+          ],
+          "operational_common_subset": {
+            "n": 162,
+            "coverage": 1.0,
+            "mae_minutes": 2719.2556278208176,
+            "p90_absolute_error_minutes": 6317.592679342816,
+            "fraction_error_over_1_day": 0.6296296296296297
+          }
+        }
+      }
+    },
+    "profile=regular": {
+      "groups": 18,
+      "n": 1227,
+      "small_segment": false,
+      "censored": 147,
+      "classification": {
+        "boosting": {
+          "n": 1227,
+          "late_rate": 0.7188264058679706,
+          "brier": 0.11242943619648157,
+          "ece": 0.04974997886971663,
+          "roc_auc": 0.9086890794965329,
+          "pr_auc": 0.9632521040342866,
+          "brier_group_bootstrap_95": [
+            0.10159766469150973,
+            0.12462614385937736
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 95,
+          "coverage": 0.1292517006802721,
+          "mae_minutes": 2173.42649122807,
+          "p90_absolute_error_minutes": 5327.3666666666695,
+          "fraction_error_over_1_day": 0.47368421052631576
+        },
+        "boosting": {
+          "n": 735,
+          "coverage": 1.0,
+          "mae_minutes": 1828.5413660077118,
+          "p90_absolute_error_minutes": 4143.116574564136,
+          "fraction_error_over_1_day": 0.48707482993197276,
+          "mae_group_bootstrap_95": [
+            1679.7646270887592,
+            1986.3581310263726
+          ],
+          "operational_common_subset": {
+            "n": 95,
+            "coverage": 1.0,
+            "mae_minutes": 1543.8448708827843,
+            "p90_absolute_error_minutes": 3599.3253868423344,
+            "fraction_error_over_1_day": 0.4105263157894737
+          }
+        }
+      }
+    },
+    "urgent=0": {
+      "groups": 18,
+      "n": 3968,
+      "small_segment": false,
+      "censored": 1444,
+      "classification": {
+        "boosting": {
+          "n": 3968,
+          "late_rate": 0.8623991935483871,
+          "brier": 0.0675375447218723,
+          "ece": 0.020294408698428544,
+          "roc_auc": 0.9366379042737898,
+          "pr_auc": 0.9894950809687514,
+          "brier_group_bootstrap_95": [
+            0.06101362673939732,
+            0.07519187949103019
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 324,
+          "coverage": 0.16380182002022245,
+          "mae_minutes": 3084.9918209876546,
+          "p90_absolute_error_minutes": 8374.688333333334,
+          "fraction_error_over_1_day": 0.5154320987654321
+        },
+        "boosting": {
+          "n": 1978,
+          "coverage": 1.0,
+          "mae_minutes": 2309.4139454933384,
+          "p90_absolute_error_minutes": 5120.078921469299,
+          "fraction_error_over_1_day": 0.582912032355915,
+          "mae_group_bootstrap_95": [
+            2137.6528391612724,
+            2471.48648701841
+          ],
+          "operational_common_subset": {
+            "n": 324,
+            "coverage": 1.0,
+            "mae_minutes": 2164.3974804768354,
+            "p90_absolute_error_minutes": 5084.890175841179,
+            "fraction_error_over_1_day": 0.5216049382716049
+          }
+        }
+      }
+    },
+    "urgent=1": {
+      "groups": 18,
+      "n": 981,
+      "small_segment": false,
+      "censored": 6,
+      "classification": {
+        "boosting": {
+          "n": 981,
+          "late_rate": 0.6156982670744139,
+          "brier": 0.14061784107815975,
+          "ece": 0.03991270745698071,
+          "roc_auc": 0.8655141672668505,
+          "pr_auc": 0.8985020092415368,
+          "brier_group_bootstrap_95": [
+            0.11967185611506127,
+            0.15780479079182197
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 24,
+          "coverage": 0.04013377926421405,
+          "mae_minutes": 1205.4909722222221,
+          "p90_absolute_error_minutes": 3667.305,
+          "fraction_error_over_1_day": 0.20833333333333334
+        },
+        "boosting": {
+          "n": 598,
+          "coverage": 1.0,
+          "mae_minutes": 1112.2649419459738,
+          "p90_absolute_error_minutes": 2678.8831586249166,
+          "fraction_error_over_1_day": 0.2909698996655518,
+          "mae_group_bootstrap_95": [
+            978.3160614650491,
+            1218.5415706819786
+          ],
+          "operational_common_subset": {
+            "n": 24,
+            "coverage": 1.0,
+            "mae_minutes": 977.7156774056913,
+            "p90_absolute_error_minutes": 2174.025924115544,
+            "fraction_error_over_1_day": 0.2916666666666667
+          }
+        }
+      }
+    },
+    "cold=0": {
+      "groups": 18,
+      "n": 4100,
+      "small_segment": false,
+      "censored": 1238,
+      "classification": {
+        "boosting": {
+          "n": 4100,
+          "late_rate": 0.8092682926829269,
+          "brier": 0.08297338138092583,
+          "ece": 0.020663310566608858,
+          "roc_auc": 0.9293048534768888,
+          "pr_auc": 0.9828918167220281,
+          "brier_group_bootstrap_95": [
+            0.07689542395328657,
+            0.08994324111865352
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 323,
+          "coverage": 0.15528846153846154,
+          "mae_minutes": 2998.4562951496387,
+          "p90_absolute_error_minutes": 8163.5633333333335,
+          "fraction_error_over_1_day": 0.5077399380804953
+        },
+        "boosting": {
+          "n": 2080,
+          "coverage": 1.0,
+          "mae_minutes": 1938.518816829837,
+          "p90_absolute_error_minutes": 4454.834608101339,
+          "fraction_error_over_1_day": 0.49230769230769234,
+          "mae_group_bootstrap_95": [
+            1825.6293949220194,
+            2071.9019567712135
+          ],
+          "operational_common_subset": {
+            "n": 323,
+            "coverage": 1.0,
+            "mae_minutes": 2095.00002054227,
+            "p90_absolute_error_minutes": 4793.507639111819,
+            "fraction_error_over_1_day": 0.5139318885448917
+          }
+        }
+      }
+    },
+    "cold=1": {
+      "groups": 18,
+      "n": 849,
+      "small_segment": false,
+      "censored": 212,
+      "classification": {
+        "boosting": {
+          "n": 849,
+          "late_rate": 0.833922261484099,
+          "brier": 0.07743723897793653,
+          "ece": 0.013862973576835932,
+          "roc_auc": 0.9163461153183476,
+          "pr_auc": 0.9812999117191701,
+          "brier_group_bootstrap_95": [
+            0.0605722282696429,
+            0.09969187385651147
+          ]
+        }
+      },
+      "conditional_delay": {
+        "operational": {
+          "n": 25,
+          "coverage": 0.05040322580645161,
+          "mae_minutes": 2398.71,
+          "p90_absolute_error_minutes": 9607.263333333336,
+          "fraction_error_over_1_day": 0.32
+        },
+        "boosting": {
+          "n": 496,
+          "coverage": 1.0,
+          "mae_minutes": 2421.4437106118025,
+          "p90_absolute_error_minutes": 5233.337122666227,
+          "fraction_error_over_1_day": 0.6108870967741935,
+          "mae_group_bootstrap_95": [
+            2173.5660958614294,
+            2600.0722760060303
+          ],
+          "operational_common_subset": {
+            "n": 25,
+            "coverage": 1.0,
+            "mae_minutes": 1921.7981318831253,
+            "p90_absolute_error_minutes": 6006.5462519411785,
+            "fraction_error_over_1_day": 0.4
+          }
+        }
+      }
+    }
+  },
+  "training_missions": 4949,
+  "calibration_missions": 1646,
+  "calibration_inference_status_counts": {
+    "abstain": 4,
+    "available_conditional_duration": 670,
+    "probability_only": 972
+  },
+  "test_tables_read": 0,
+  "training_censored": 1450,
+  "regression_completed_late": 2576,
+  "sigmoid_fit": {
+    "data": "calibration_only",
+    "coefficient": 0.9661756721839626,
+    "intercept": -0.22346233484384131,
+    "independent_performance_estimate": false
+  },
+  "support": {
+    "urgent=0|cold=0|missing=0": {
+      "n": 672,
+      "groups": 18,
+      "censored_rate": 0.043154761904761904,
+      "delay_n": 303,
+      "delay_groups": 18
+    },
+    "urgent=0|cold=0|missing=1": {
+      "n": 2638,
+      "groups": 18,
+      "censored_rate": 0.45716451857467777,
+      "delay_n": 1303,
+      "delay_groups": 18
+    },
+    "urgent=0|cold=1|missing=0": {
+      "n": 63,
+      "groups": 17,
+      "censored_rate": 0.0,
+      "delay_n": 21,
+      "delay_groups": 14
+    },
+    "urgent=0|cold=1|missing=1": {
+      "n": 595,
+      "groups": 18,
+      "censored_rate": 0.35126050420168065,
+      "delay_n": 351,
+      "delay_groups": 18
+    },
+    "urgent=1|cold=0|missing=0": {
+      "n": 168,
+      "groups": 18,
+      "censored_rate": 0.0,
+      "delay_n": 20,
+      "delay_groups": 11
+    },
+    "urgent=1|cold=0|missing=1": {
+      "n": 622,
+      "groups": 18,
+      "censored_rate": 0.00482315112540193,
+      "delay_n": 454,
+      "delay_groups": 18
+    },
+    "urgent=1|cold=1|missing=0": {
+      "n": 22,
+      "groups": 10,
+      "censored_rate": 0.0,
+      "delay_n": 4,
+      "delay_groups": 3
+    },
+    "urgent=1|cold=1|missing=1": {
+      "n": 169,
+      "groups": 18,
+      "censored_rate": 0.01775147928994083,
+      "delay_n": 120,
+      "delay_groups": 17
+    }
+  },
+  "provenance": [
+    {
+      "simulation_id": "scenario-1029-regular",
+      "group": "base-seed-1029",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 75,
+          "sha256": "ea446eb6ee592387f6b33240ea426a48307f254e7216dbe13d4cde7d018e9533"
+        },
+        "labels.jsonl": {
+          "rows": 75,
+          "sha256": "36ce6898ac7044f8b2a5a1b73347d13da9f806a96b37c694ef6b151b99c9018a"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1029-pressure",
+      "group": "base-seed-1029",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 135,
+          "sha256": "1589606f7a567e59972b99dc1cca0e9d3e17e193a5afac71c12ed04746a6849d"
+        },
+        "labels.jsonl": {
+          "rows": 135,
+          "sha256": "a37230daf9572afa32b3e7170347814ae0e712282a6a36bd960aa24a8e50ef20"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1029-perturbed",
+      "group": "base-seed-1029",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 75,
+          "sha256": "2db800e5f1751d339f037e3b350f916e464a2e6929daa9bc25ed31cc67f63c59"
+        },
+        "labels.jsonl": {
+          "rows": 75,
+          "sha256": "a72156b2dc54117913d6d8dbf1f13ec44a2f928478758054a80cb2d05da8a3f5"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1017-regular",
+      "group": "base-seed-1017",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 72,
+          "sha256": "1b354d1b15ac4167c0b281797b1ab8e1fbf36ac204baedf1813a5be8df0b73d1"
+        },
+        "labels.jsonl": {
+          "rows": 72,
+          "sha256": "60b074e7cb89bd896a3d98922db2be4b99ccf192a26280d7fad57363966c09e4"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1017-pressure",
+      "group": "base-seed-1017",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 163,
+          "sha256": "e7bde9c84acb28e2bddfce46a91bd63634310861fb649c09c46597c804d1e877"
+        },
+        "labels.jsonl": {
+          "rows": 163,
+          "sha256": "5dbc356c12894a07b1c12ff9b51dcb340cc745a43ac49b141452dc5872186aff"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1017-perturbed",
+      "group": "base-seed-1017",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 72,
+          "sha256": "3d7e7ce61d9584072e8f42284318f6b4a9962a30465e43bc2f3e6890eaea8d69"
+        },
+        "labels.jsonl": {
+          "rows": 72,
+          "sha256": "add5a8192be7dd858f3a85e7b0b6fbb3167eb320b59ea2e75dc4ed83c600238a"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1004-regular",
+      "group": "base-seed-1004",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 63,
+          "sha256": "ea188bd723b76f44ab7f824cde82b3a09d87674ea014f71c80eaf075e6282508"
+        },
+        "labels.jsonl": {
+          "rows": 63,
+          "sha256": "f71f941118c26a13bb27bbf2d463d79132197c551e40d145f890a9f0c027e628"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1004-pressure",
+      "group": "base-seed-1004",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 143,
+          "sha256": "890aabf12b2bddd68ce35f5cc626b364731fa04f1d290c46a24b9d8b4a5928e1"
+        },
+        "labels.jsonl": {
+          "rows": 143,
+          "sha256": "231452972f70b0d1a6f3418c3886ef8cef7df8af0c8f44ad545b8f117f24eae7"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1004-perturbed",
+      "group": "base-seed-1004",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 63,
+          "sha256": "175583a302a07ea99c7dbe11ad77d600b0972cbef1045bcb9304af4fa24e5c0e"
+        },
+        "labels.jsonl": {
+          "rows": 63,
+          "sha256": "f122f319c4785a805170a44bc13403e165d8d006b4542119503da5ec743f5b49"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1023-regular",
+      "group": "base-seed-1023",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 70,
+          "sha256": "52476b6ce5cf53397cfaaa33816a6fc5b689302cae24a26fa98b5ac3aec0fefb"
+        },
+        "labels.jsonl": {
+          "rows": 70,
+          "sha256": "dd005cd116908f47ed20cc04d511538d09d8532f5b83414dd4dc27db135d399c"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1023-pressure",
+      "group": "base-seed-1023",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 134,
+          "sha256": "a793e10326773b29a1c521e2899e7624d52d7d5c9d7d549fa204ab03d28d591f"
+        },
+        "labels.jsonl": {
+          "rows": 134,
+          "sha256": "74b136c3c4b7080c6d9b768b03c5afd90c897fa12e0213e608f61732171aafdf"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1023-perturbed",
+      "group": "base-seed-1023",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 70,
+          "sha256": "b9b64452e7961ba13f1f74d53662795f8c1c1557f4ea2015a98194b5ce2466a5"
+        },
+        "labels.jsonl": {
+          "rows": 70,
+          "sha256": "01cf46bca23914bd2e72198ba7c7e6c8a890a6f790b76007fd2cc1b53a6fef56"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1025-regular",
+      "group": "base-seed-1025",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 65,
+          "sha256": "f9faac84af51ea67443dfad93cf858a1d0863d3c3eecfcbb85a75a2723661d4e"
+        },
+        "labels.jsonl": {
+          "rows": 65,
+          "sha256": "cce4f50a3b891a3b50f53084f29d4b3635f2d27a29aa378580a6ed78c6651410"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1025-pressure",
+      "group": "base-seed-1025",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 145,
+          "sha256": "4d27e60d38a30388c6d07d10d936ff5f04c016a8fe7b9e49d7a4d9905650b177"
+        },
+        "labels.jsonl": {
+          "rows": 145,
+          "sha256": "ff6c668f1aa7b75828915905d4ad68486f3a6d1d57c3584ad29328ff4d7a740b"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1025-perturbed",
+      "group": "base-seed-1025",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 65,
+          "sha256": "411b647d1919dae09dbd917e35f3b35689ad06d35b5a082f999b3dc42413c43f"
+        },
+        "labels.jsonl": {
+          "rows": 65,
+          "sha256": "a33c8e97333775873a22f5947c2c17278827a4ac97cdb1de336b391243c5ed3c"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1027-regular",
+      "group": "base-seed-1027",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 69,
+          "sha256": "7b0d28ac7aff7ee5369f4a7bc7b6d5e359bee19d8b6d83555ba74402aaf40cbb"
+        },
+        "labels.jsonl": {
+          "rows": 69,
+          "sha256": "e63da59c0b334895beea325b7ed289c7328d6c275ff0f02738ab8ecceb9616f0"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1027-pressure",
+      "group": "base-seed-1027",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 138,
+          "sha256": "1d4fc247edfbf1329629bd15a8bfd2f5f52c9819000ed5fa4ec14c41e204bef7"
+        },
+        "labels.jsonl": {
+          "rows": 138,
+          "sha256": "5bce93b78bd5f72c6fc0779a21f32c6f56a8d2a726a69687b6992759788b7900"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1027-perturbed",
+      "group": "base-seed-1027",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 69,
+          "sha256": "6700fecef5a600c0823a71ace38fbca61f749f4bdb77d48b2f6b2e4cc0b24ca3"
+        },
+        "labels.jsonl": {
+          "rows": 69,
+          "sha256": "bee0c8d4454bb588006c43c825cf40121532908ed6b3807a86d8c626d8fe5858"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1013-regular",
+      "group": "base-seed-1013",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 75,
+          "sha256": "915c1b1144bb960e6374b4bf6b989011b470731a8e3ab3cd593050e75343d03b"
+        },
+        "labels.jsonl": {
+          "rows": 75,
+          "sha256": "4ce9c5cab48c5ad585116a293f5d633cdaa2c2cf00c99f6953d7edb8ad3f5b2c"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1013-pressure",
+      "group": "base-seed-1013",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 156,
+          "sha256": "6a3d571548258bdb6f0b6d049e21b7044a482b1229792aca9935996818cdb26a"
+        },
+        "labels.jsonl": {
+          "rows": 156,
+          "sha256": "866ef6f6d06fe9027800cec7ce679d3aa5739f63682252b24285b8ae1ed1e330"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1013-perturbed",
+      "group": "base-seed-1013",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 75,
+          "sha256": "ec57bdebf43a3ee5837ebf27d18c11e383d7a969bd822ef49dc7c76dadce37e2"
+        },
+        "labels.jsonl": {
+          "rows": 75,
+          "sha256": "568bc59688d4572c7616e6d51a1dec615a7789594ad05d753c7c7a170e3e6a8a"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1005-regular",
+      "group": "base-seed-1005",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 73,
+          "sha256": "e874d1c2a39a6e1a6ee0a6127ff83ffccfe1cb7ed34310ce9bdf257e26c1a6a8"
+        },
+        "labels.jsonl": {
+          "rows": 73,
+          "sha256": "002b25356fbb420a275c45b6e56e924439726f2d4909961ca9fb36e29e9c0b00"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1005-pressure",
+      "group": "base-seed-1005",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 145,
+          "sha256": "6917c0be08914eabd1893e3721ae612bacf6d19209688643108d06319a110dc5"
+        },
+        "labels.jsonl": {
+          "rows": 145,
+          "sha256": "40459c7c3f00c9487bdf5768a70f22db0b8c27b12b70bab598e6cecbfde6b573"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1005-perturbed",
+      "group": "base-seed-1005",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 73,
+          "sha256": "f4b1c2c25cd2e0e7eeadf53ec85db249ce75d390b647156a69c564920d1e2605"
+        },
+        "labels.jsonl": {
+          "rows": 73,
+          "sha256": "1d3bda877105239ab54e9e8d4a73141f36a7f8ab39c99df74ee1ffa1f0295d7d"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1001-regular",
+      "group": "base-seed-1001",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 82,
+          "sha256": "9c50822dd4061d92ef471d8e186e457f1d235cfe19d514aeb07a4468ce79dd40"
+        },
+        "labels.jsonl": {
+          "rows": 82,
+          "sha256": "e78c7a5778501b8c2742042610e1ebe5d0a9b6f149ffcb086e83ef9a5974be45"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1001-pressure",
+      "group": "base-seed-1001",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 167,
+          "sha256": "6bc2b8ee738bcaa11bdb16fae5b5e8dc802fa72b78e7158b36642a465f9084a8"
+        },
+        "labels.jsonl": {
+          "rows": 167,
+          "sha256": "1581ee97f190c41e039f78cb9cd76cd38bf73018da6c1b450b4bdec162d6de58"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1001-perturbed",
+      "group": "base-seed-1001",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 82,
+          "sha256": "228ec07629155ec0f681eee4d85661ed491cfc1f3881cf135d84d708373d43d5"
+        },
+        "labels.jsonl": {
+          "rows": 82,
+          "sha256": "af05b724499d250b8c75cdbfd9d4908901ef7f81dd564f64a273a012e8e4512b"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1008-regular",
+      "group": "base-seed-1008",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 71,
+          "sha256": "e6937a1657cf556c178e93d88c50d19ee768569a153508c04691875428263028"
+        },
+        "labels.jsonl": {
+          "rows": 71,
+          "sha256": "adf4c0900d5b40a274cd3b4fe047c810b080e2036cba1f1cb5e5ca54b9f6a7e4"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1008-pressure",
+      "group": "base-seed-1008",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 128,
+          "sha256": "331cb76d2d271822e2587868c228c11dd84f1c03d791c92e816791d990a0428d"
+        },
+        "labels.jsonl": {
+          "rows": 128,
+          "sha256": "80024f8407a3a3c73ec6d488a92a2963e931aa3f6c3eaefbb99d4ada59d72d5d"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1008-perturbed",
+      "group": "base-seed-1008",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 71,
+          "sha256": "f2a138fd038a10016578b4d8ce0a63240054676375788efe341903b634086007"
+        },
+        "labels.jsonl": {
+          "rows": 71,
+          "sha256": "1ca2df95011ac6d5117fc7ea8302400558db59babbae3eb3fe6039994b4a5d7b"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1007-regular",
+      "group": "base-seed-1007",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 64,
+          "sha256": "f4d74bee2debf24a24064df809ab76f56ea4f84160a1e9ed46e9ac18321c6991"
+        },
+        "labels.jsonl": {
+          "rows": 64,
+          "sha256": "cc2892be07f18bc0820f8f8910f827bd85157dc7906f6780a93c03fa78602883"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1007-pressure",
+      "group": "base-seed-1007",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 129,
+          "sha256": "6edd49e5636b1288cacb534bab3d0b205bbbca181631308ffff2a2edfc5dbe3f"
+        },
+        "labels.jsonl": {
+          "rows": 129,
+          "sha256": "05b348cb86c5fff838270ff24ea85c5319693b7109e81af54f55d5f6a4dac19b"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1007-perturbed",
+      "group": "base-seed-1007",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 64,
+          "sha256": "f89957fc17b81fe9108fff79a0722c50d6bdf5a870bd9ab766610967990437ed"
+        },
+        "labels.jsonl": {
+          "rows": 64,
+          "sha256": "3bcde767786d53f8de71f3b9886cffc1150e50fe77286e6689d483d918ed3042"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1000-regular",
+      "group": "base-seed-1000",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 61,
+          "sha256": "9b1bbad12f43c30fd5c66281978334cecaba75f6b4027ce22d2bdfbe3b347e86"
+        },
+        "labels.jsonl": {
+          "rows": 61,
+          "sha256": "94d08d3fba5f859d53c8d0aea42aac553b5d837eb4ae98bce538e123b68b9bc5"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1000-pressure",
+      "group": "base-seed-1000",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 127,
+          "sha256": "8e407972003e3c74ca53961b2fab7c7f3a6384525c43713a5c993e25ac3a12a8"
+        },
+        "labels.jsonl": {
+          "rows": 127,
+          "sha256": "057259ace0c1d3c46ccbb28f96e80394873c11d7996072af6621d9bb41d42945"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1000-perturbed",
+      "group": "base-seed-1000",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 61,
+          "sha256": "eed775e88dda6d7a7165e4284aca2a87c43f6314c5d47b762319a9b432912a14"
+        },
+        "labels.jsonl": {
+          "rows": 61,
+          "sha256": "e8d78d8dd9bffa5979c5e2703b752f1dbc82ba5ff6aa679634cde92b29a6811f"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1009-regular",
+      "group": "base-seed-1009",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 66,
+          "sha256": "a763934badbe957e2be45a0ce3be19840f5b65f8b3d3f2b3884c6c461f912721"
+        },
+        "labels.jsonl": {
+          "rows": 66,
+          "sha256": "79e4ca6279aaf737563a45a7fbd862ee0acb090ec3037fd6073636f9071177ed"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1009-pressure",
+      "group": "base-seed-1009",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 145,
+          "sha256": "7f53a0eea3fd023897626db1e7decc2c9611d4b4c1ae1fe64dc08a963df78b47"
+        },
+        "labels.jsonl": {
+          "rows": 145,
+          "sha256": "0c33f3c62ec2495dae6d5f7e95ed95dfbf43ec9f13ac46f43b5e4be461239c10"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1009-perturbed",
+      "group": "base-seed-1009",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 66,
+          "sha256": "e3253b78bfc38af03fe59a50e3b76d93fb6ce2e3188413d8ae3e51fc5adad755"
+        },
+        "labels.jsonl": {
+          "rows": 66,
+          "sha256": "eecfbbd48366da6b84d12c8d4f58b90f089ff18fac8ae852657be8a3a1d5ea91"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1026-regular",
+      "group": "base-seed-1026",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 68,
+          "sha256": "b8b01b0fd2aa004c6da8e32f902dbbaafb86ce5229a0ec763d54f12bc26aa0a1"
+        },
+        "labels.jsonl": {
+          "rows": 68,
+          "sha256": "a3d9111e87946637a0ee6bc81f226c7e853eb126b6943920d66f3258a234a63d"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1026-pressure",
+      "group": "base-seed-1026",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 144,
+          "sha256": "1f1567295a3e26f76f7d1ccb986581f4e592736987f075e751728c9eaf313d0f"
+        },
+        "labels.jsonl": {
+          "rows": 144,
+          "sha256": "451da6ed38af01f5706e1e0a04cf449998a4d0b9e762e62307ad0754e6550b43"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1026-perturbed",
+      "group": "base-seed-1026",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 68,
+          "sha256": "2f6ab47d5a059322ae85276cd321bee58e037f1ce24735223e995091e5feef45"
+        },
+        "labels.jsonl": {
+          "rows": 68,
+          "sha256": "b9cb3a940ad0ba1c3cbfb2b5c53780c4403d543f0850867c7168a4d2d70ccae1"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1020-regular",
+      "group": "base-seed-1020",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 58,
+          "sha256": "e8912623409021f3cdae4cbd668976f79ae99384efd7de7983ed6005ece48324"
+        },
+        "labels.jsonl": {
+          "rows": 58,
+          "sha256": "2b51fc6b01a9072e117db6283d6dd53094dd851fab95b8f5a949d31139917123"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1020-pressure",
+      "group": "base-seed-1020",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 117,
+          "sha256": "02653d497f3a9bde8785d36bf74cf0253bd0dccd6bb82da3aaeb444600b5030c"
+        },
+        "labels.jsonl": {
+          "rows": 117,
+          "sha256": "95dffb306f8c608776a1b52359dc60498b21018cb34b24214bdb9ac9f85b7c4a"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1020-perturbed",
+      "group": "base-seed-1020",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 58,
+          "sha256": "cd6ba774c40212c7b576f4db13a4d4781c48a18769e30a43f04e9db9417165d3"
+        },
+        "labels.jsonl": {
+          "rows": 58,
+          "sha256": "4c547b95b131ee51f71000a6d2daa15cf8d814b43897f00d949459d4d36f5215"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1014-regular",
+      "group": "base-seed-1014",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 69,
+          "sha256": "f81a83834fcdb51d05f1607cb2992242d9adb636886423d17a56982d6ecc5618"
+        },
+        "labels.jsonl": {
+          "rows": 69,
+          "sha256": "85c07cb76991175b08a0ecbb1d63888cf774ba306ce6cf04fc85887e59215edc"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1014-pressure",
+      "group": "base-seed-1014",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 128,
+          "sha256": "ae3f80d53e32600ab12c70fc1c7adaf9b7746b02c028fef34f60f9b1cb277b9b"
+        },
+        "labels.jsonl": {
+          "rows": 128,
+          "sha256": "2a4fa619a4a287ce744b3991bf0bc1b3a9274f1de8655ebf86625c0e9167ab28"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1014-perturbed",
+      "group": "base-seed-1014",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 69,
+          "sha256": "445dcdf375371a5588b5568a89aac3ccb4ad2deaa724a7a9ce7592bec16cd176"
+        },
+        "labels.jsonl": {
+          "rows": 69,
+          "sha256": "e58a74ef101308cc89a1627359a2508e865b7154711d8f96f7e1820e36c66dd1"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1018-regular",
+      "group": "base-seed-1018",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 66,
+          "sha256": "d1a00699eb72f7489f271af84b37c770eed924be0758315f087db49742af7581"
+        },
+        "labels.jsonl": {
+          "rows": 66,
+          "sha256": "818500a29ac41f37200a8fdc4980b8f747f8f1bc06a2eece2b6b18a8ec002782"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1018-pressure",
+      "group": "base-seed-1018",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 129,
+          "sha256": "62d805f479d2e3e9078782c700889bdd4537583daa204bc0846b4d69da86212b"
+        },
+        "labels.jsonl": {
+          "rows": 129,
+          "sha256": "b00f7d5e539c833207f126fc9075ee5a39c58b52d43f3913eb5e23548a7fd44e"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1018-perturbed",
+      "group": "base-seed-1018",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 66,
+          "sha256": "1396c46d5939302df294143456420d82400157c712601eb4e155823623f991b1"
+        },
+        "labels.jsonl": {
+          "rows": 66,
+          "sha256": "27f58ea1c91da8b2517b65aec882c992b5d722d3c73fd247557ea78293869c4e"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1012-regular",
+      "group": "base-seed-1012",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 60,
+          "sha256": "845d5386f6177474ccb97b6f90eda7415c94da626f82ed9e2d14dbfbf13d2a14"
+        },
+        "labels.jsonl": {
+          "rows": 60,
+          "sha256": "e27b43a06fcf88fea6d2d15fb8b44be4bcf37a38732f1e604be9093b3da69966"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1012-pressure",
+      "group": "base-seed-1012",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 122,
+          "sha256": "d0f82cf82c8b8f4b3182915f14e6038a9c295b1108f7e413ffb8cdf3daa862ba"
+        },
+        "labels.jsonl": {
+          "rows": 122,
+          "sha256": "d0b6d37328ff450d8de7d820628465efa2b66d484d2f2493b7c44963265a067b"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1012-perturbed",
+      "group": "base-seed-1012",
+      "split": "training",
+      "files": {
+        "observations.jsonl": {
+          "rows": 60,
+          "sha256": "7813dc0392567418ace85455ba4b57f9a87dd0fcf411afda3e972ad8151cd6fa"
+        },
+        "labels.jsonl": {
+          "rows": 60,
+          "sha256": "2cde119797bc474338ffa52ebdd6015dba3e70216c1d7ad5cf7d1b6350d69186"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1006-regular",
+      "group": "base-seed-1006",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 62,
+          "sha256": "191fa0be637ccc50cfd04342b70d838f6d6c0bb118a3346febf0b08af235b87d"
+        },
+        "labels.jsonl": {
+          "rows": 62,
+          "sha256": "c10bb6183b54591808c6bb148d2f7df2bc21224620ccaa75567f8799e479f90d"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1006-pressure",
+      "group": "base-seed-1006",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 127,
+          "sha256": "7adc61e03342e982dd4bffc84846e9b3c57f52966f1d7699e80e6fe62bac5c87"
+        },
+        "labels.jsonl": {
+          "rows": 127,
+          "sha256": "cb39e6afb065563a4356f6ed098149a1a0fcb6cce09319aa8f7c64765c3010fd"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1006-perturbed",
+      "group": "base-seed-1006",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 62,
+          "sha256": "26042d1a80e0e40c3e5625e267111d4b8dd9a11bcec1b1901f5f4dcc4c383c99"
+        },
+        "labels.jsonl": {
+          "rows": 62,
+          "sha256": "d1b8a20eb61db05fca675dd180999845824458a0bd8626aef827a706af7bdf11"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1015-regular",
+      "group": "base-seed-1015",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 66,
+          "sha256": "75dbcbccba328a8c2c9ea61e00304052563ef9ad443acf46639bdba1b6b96aac"
+        },
+        "labels.jsonl": {
+          "rows": 66,
+          "sha256": "d448b0d9a7bb509ff525d280fe8b8e791c168deb1864ca6781bd4fd24e8414f2"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1015-pressure",
+      "group": "base-seed-1015",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 138,
+          "sha256": "1abee8ca3136ca614c6f72f0e7fc84c3ad8297147196d87f6efe90aa79e3bc53"
+        },
+        "labels.jsonl": {
+          "rows": 138,
+          "sha256": "6f47baf8032cbde7bb04c00487354d4be9c151da5ffb5171c24561d158af5bb9"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1015-perturbed",
+      "group": "base-seed-1015",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 66,
+          "sha256": "9111c2379cb444cae4f0e415c6bf73d3f3b878c42d0a986ef070af070858f8ea"
+        },
+        "labels.jsonl": {
+          "rows": 66,
+          "sha256": "23ef3916f1f517d2fd0ed77aa082920330507b6209ac6ba9e7468bb76243a296"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1010-regular",
+      "group": "base-seed-1010",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 58,
+          "sha256": "3860095759b1c515e50a4a43ddafd958bfc79ee10693f94abe8d296effefa8b3"
+        },
+        "labels.jsonl": {
+          "rows": 58,
+          "sha256": "1eccb8199f7495d739908514fd8750210196db34cd117e7f70848d38ba09f72f"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1010-pressure",
+      "group": "base-seed-1010",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 125,
+          "sha256": "1661037120935f34723da0d4b66289440bb0184b28fdada4f65031e80e412024"
+        },
+        "labels.jsonl": {
+          "rows": 125,
+          "sha256": "8dae5d3c6bd93139dbcde17a0eb7be3f6f6dc5b7fe406197b552dff667583f99"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1010-perturbed",
+      "group": "base-seed-1010",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 58,
+          "sha256": "f9e3b93860b1289d8f2d5f5d0164131d3d126e08f22ac808ee3aed77801dd928"
+        },
+        "labels.jsonl": {
+          "rows": 58,
+          "sha256": "4b451bad4ff8535acc75d9a9ec7f9dda2500ad2fcac082436a2c554e98050b6e"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1019-regular",
+      "group": "base-seed-1019",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 69,
+          "sha256": "87bd72e59db3bdea45724762d48cbc0883c56fefc54206c1296fd6c496a2e2ce"
+        },
+        "labels.jsonl": {
+          "rows": 69,
+          "sha256": "0201bdea5394281361e441d0efbbab5be3c10e2becf4d7c70500377f3a423a9e"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1019-pressure",
+      "group": "base-seed-1019",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 153,
+          "sha256": "b66db12f9aeccc5b03e886092f654927edb973ed3b819a68959266f2ea0f1757"
+        },
+        "labels.jsonl": {
+          "rows": 153,
+          "sha256": "13e852f5dbc56b5e5b0c7842d10be69b175a40924d25c40992d9f10bd1f84447"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1019-perturbed",
+      "group": "base-seed-1019",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 69,
+          "sha256": "4e0bffadb5f80a145f34de4d261c0a7d25051ee01ed1cf018eee0b7253de373a"
+        },
+        "labels.jsonl": {
+          "rows": 69,
+          "sha256": "923f7dbfd05aa08dc87d6c3e4177914bcb7c41cfe042362ed3827a78dd58de6a"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1022-regular",
+      "group": "base-seed-1022",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 74,
+          "sha256": "bea1358a8301ca54dc58feb85cf45c695105a8483545ed274fa9258ca4cb06ec"
+        },
+        "labels.jsonl": {
+          "rows": 74,
+          "sha256": "8239315712c649871542be6e464706888a321f48c6584422c491fd9a577a99fa"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1022-pressure",
+      "group": "base-seed-1022",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 156,
+          "sha256": "0bb218bb84d28a30282719734a2ad716b62e000c334b8ffbe024aa6a97fe1b14"
+        },
+        "labels.jsonl": {
+          "rows": 156,
+          "sha256": "d0c6e9c1a674ddb601fddad18b8e7f6baf49047f49438e5dd9df369ad272bb3c"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1022-perturbed",
+      "group": "base-seed-1022",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 74,
+          "sha256": "c65325e16017210d403a5c911318e9e804746048b07e76b1489ca33885f43955"
+        },
+        "labels.jsonl": {
+          "rows": 74,
+          "sha256": "373feef84c8bd581d3ef70be09c6063af4bbf262609c10da1163d46bce2e3b5d"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1003-regular",
+      "group": "base-seed-1003",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 76,
+          "sha256": "c7dcada2711ff6dc48f33a1cad5c85970794f5164f9f56215ac27e36ff29f36f"
+        },
+        "labels.jsonl": {
+          "rows": 76,
+          "sha256": "eb69320e8edcc08fb1f634162b2ceb27daf9d22b3294549af98a77b4e0900313"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1003-pressure",
+      "group": "base-seed-1003",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 137,
+          "sha256": "32f520c0e98d04a511ec4afc9a835f9fbc929b0b1685b3b1179606811e9f34b2"
+        },
+        "labels.jsonl": {
+          "rows": 137,
+          "sha256": "d657f6c00781733942fed75683aef9a3a36375ddb5d5d0a9217a9aaa07d0611a"
+        }
+      }
+    },
+    {
+      "simulation_id": "scenario-1003-perturbed",
+      "group": "base-seed-1003",
+      "split": "calibration",
+      "files": {
+        "observations.jsonl": {
+          "rows": 76,
+          "sha256": "9d17972fd6d5acbb65dd8a2f4dda92e7c63ebdca3dd933a56f36cf96d9b48b82"
+        },
+        "labels.jsonl": {
+          "rows": 76,
+          "sha256": "b64e5c682b983f3e365be61a3b74e8c511716e8d10ea252ffa77bada5191d206"
+        }
+      }
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "artifacts": {
+    "initial_predictor.joblib": "152be46560c1d3c5236b48cc1385badce1ad9e78c86057f702a236eac93d63c6",
+    "training-oof.jsonl": "b0acea2a4cc229ccc4168fe20a6627f26f4d643950be1b0e5a78c50669afaa74",
+    "calibration-inference.jsonl": "02ae067a5837dee1ddf244cce6234afb93e684c2171442170fb983728912d6be"
+  },
+  "promoted": false,
+  "intervals": "M02 pending",
+  "limitations": [
+    "synthetic data",
+    "duration conditional on completed late missions",
+    "censoring is not ignorable",
+    "no final-test performance claim"
+  ]
+}

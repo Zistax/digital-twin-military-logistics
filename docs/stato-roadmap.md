@@ -1,7 +1,7 @@
-# Stato della roadmap — 14 ottobre 2026
+# Stato della roadmap — 15 ottobre 2026
 
-**Voci F01–D03 completate nel perimetro del nucleo operativo v1.** D03 è
-la dodicesima voce su 18. La posizione non equivale a una percentuale del lavoro:
+**Voci F01–M01 completate nei rispettivi perimetri documentati.** M01 è
+la tredicesima voce su 18. La posizione non equivale a una percentuale del lavoro:
 modelli predittivi, UI, packaging e pubblicazione restano da realizzare.
 
 Sono stati prodotti sei incrementi operativi e avviato il generatore scenari: missioni; scorte/carico;
@@ -24,7 +24,7 @@ completa del prodotto.
 | **D01** | **Eventi, dataset e KPI** | **Completato per il nucleo v1**: otto tabelle, replay operativo, genealogia, contesti osservabili collegati agli ordinali, KPI, import di tutti i contratti con quarantena e blocco critico |
 | **D02** | **Pilota e revisione parametri** | **Completato per il nuovo nucleo operativo**: nove run finali validi sui seed 0/1/2, attese spiegate, errore nel reintegro urgente corretto, gate passato; limiti e decisioni documentati |
 | **D03** | **Lotto da 90 simulazioni e split** | **Completato**: 90 run nativi verificati anche nell’audit finale, 30 gruppi indivisibili, split 54/18/18; 8239 missioni e 1040241 snapshot rolling; rapporto e catalogo prodotti |
-| M01 | Baseline e previsione iniziale | Da implementare sul nuovo target |
+| **M01** | **Baseline e previsione iniziale** | **Completato**: confronti training per gruppi, calibrazione separata, pipeline persistita e astensione; ritardo condizionato con limiti espliciti; test finale riservato a M03 |
 | M02 | Previsioni aggiornate e incertezza | Da implementare |
 | M03 | Test indipendente e registro modelli | Da implementare/verificare |
 | U01 | API e quattro viste | Nuovo nucleo non ancora collegato; UI e flussi di approvazione da integrare |
@@ -45,8 +45,10 @@ L’audit finale è passato su tutti i bundle.
 
 [Rapporto di chiusura D03](../reports/d03-closeout-20261014/Chiusura_D03.md).
 
-La prossima voce è **M01 (13ª su 18): baseline e previsione iniziale**.
-Non è ancora iniziata; nessun modello è stato addestrato o selezionato in D03.
+**M01 (13ª su 18) è completata**: [rapporto e riproduzione](../reports/m01-v1/Chiusura_M01.md).
+La prossima voce è **M02 (14ª su 18): previsioni aggiornate e incertezza**.
+Il test finale resta intatto; modello M01 non promosso. Il ritardo condizionato
+resta soggetto a censura ed errori elevati, esplicitati nel rapporto.
 
 [Protocollo D03](protocollo-d03-v1.md) e [ripresa operativa](esecuzione-d03-risorse.md).
 Il gate storico D02 mantiene il proprio stato e i propri limiti: i nove run v3
